@@ -3131,6 +3131,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.5}
   m_EdgeRadius: 0
+--- !u!95 &1680551657 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95721569756477734, guid: 588d570a52e35c5458973a7d067a2875,
+    type: 2}
+  m_PrefabInternal: {fileID: 153563134}
 --- !u!114 &1680551659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3143,6 +3148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1680551652}
+  animator: {fileID: 1680551657}
   runSpeed: 20
 --- !u!1001 &1707264433
 Prefab:

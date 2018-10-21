@@ -592,7 +592,7 @@ Prefab:
     - target: {fileID: 212140600227288710, guid: 588d570a52e35c5458973a7d067a2875,
         type: 2}
       propertyPath: m_SortingLayer
-      value: -2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
       propertyPath: m_LocalScale.z
@@ -3290,6 +3290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b091cf1bf97274b8b8dcf5bad2e66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1680551657}
   timeBtwAttack: 0
   startBtwAttack: 0.3
   attackPos: {fileID: 406910190}

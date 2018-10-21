@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Follow: {fileID: 868316992}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 5
+    OrthographicSize: 4
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -172,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 155895180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2895646, y: -0.053777695, z: -10}
+  m_LocalPosition: {x: -5.2895646, y: -0.48177767, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1140392279}
@@ -3112,7 +3112,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3135,7 +3135,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487621371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2895646, y: -0.053777695, z: -10}
+  m_LocalPosition: {x: -5.2895646, y: -0.48177767, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3435,6 +3435,26 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 95721569756477734, guid: 588d570a52e35c5458973a7d067a2875,
     type: 2}
   m_PrefabInternal: {fileID: 499989730}
+--- !u!114 &868316991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868316984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b091cf1bf97274b8b8dcf5bad2e66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 868316990}
+  timeBtwAttack: 0
+  startBtwAttack: 1
+  attackPos: {fileID: 0}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 10
+  damage: 5
 --- !u!4 &868316992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875,

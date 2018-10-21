@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour {
 
+    public Animator animator;
+
     public float timeBtwAttack;
-    public float startBtwAttack;
+    public float attackTimer = 1f;
 
     public Transform attackPos;
     public LayerMask whatIsEnemy;
@@ -13,25 +15,30 @@ public class Attack : MonoBehaviour {
     public int damage;
 	
 	void Update () {
-		
-        if(timeBtwAttack <= 0)
+
+
+        if (timeBtwAttack <= 0)
         {
+            animator.SetBool("IsAttacking", false);
+
             //then you can attack
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.K))
             {
+                animator.SetBool("IsAttacking", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 for(int i=0; i<enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                 }
+                timeBtwAttack = attackTimer;
             }
             
-            timeBtwAttack = startBtwAttack;
         }
 
         else
         {
             timeBtwAttack -= Time.deltaTime;
+            
         }
 	}
 

@@ -7,6 +7,7 @@ public class Swap : MonoBehaviour
     public int position;
     Vector3 newPosition;
 
+    public Animator animator;
     public float timeBtwSwap;
     public float swapTimer = 0.5f;
 
@@ -74,6 +75,7 @@ public class Swap : MonoBehaviour
         {
             timeBtwSwap -= Time.deltaTime;
         }
+        animator.SetInteger("Position", position);
     }
 
 }

@@ -9,13 +9,13 @@ public class WalkingThroughWalls : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if(Input.GetKeyDown (KeyCode.N))
+
+        if (Input.GetKeyDown(KeyCode.N) && GlobalVariable.isMageInMiddle)
         {
             GetComponent<Rigidbody2D>().gravityScale = 0;
             GetComponent<BoxCollider2D>().isTrigger = true;
@@ -23,7 +23,7 @@ public class WalkingThroughWalls : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, .5f);
         }
 
-        if(Input.GetKeyDown (KeyCode.M))
+        if(Input.GetKeyDown (KeyCode.M) && GlobalVariable.isMageInMiddle)
         {
             GetComponent<Rigidbody2D>().gravityScale = 1;
             GetComponent<BoxCollider2D>().isTrigger = false;

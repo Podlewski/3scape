@@ -5717,7 +5717,7 @@ MonoBehaviour:
   firePoint: {fileID: 2049320014}
   arrowPrefab: {fileID: 1406025611992852, guid: be416ff8347d0eb4dbb2277977a54671,
     type: 2}
-  button: 304
+  button: 107
   animator: {fileID: 377217289}
 --- !u!4 &377217291 stripped
 Transform:
@@ -6740,7 +6740,7 @@ MonoBehaviour:
   firePoint: {fileID: 340432114}
   arrowPrefab: {fileID: 1017192415200598, guid: cba0785e57678874cb3256a053f67bd9,
     type: 2}
-  button: 308
+  button: 107
   animator: {fileID: 1439515476}
 --- !u!114 &1439515484
 MonoBehaviour:

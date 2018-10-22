@@ -5718,6 +5718,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1406025611992852, guid: be416ff8347d0eb4dbb2277977a54671,
     type: 2}
   button: 304
+  animator: {fileID: 377217289}
 --- !u!4 &377217291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875,
@@ -6740,6 +6741,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1017192415200598, guid: cba0785e57678874cb3256a053f67bd9,
     type: 2}
   button: 308
+  animator: {fileID: 1439515476}
 --- !u!114 &1439515484
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,9 +27,9 @@ Głównym celem tego sprintu było stworzenie działąjącego prototypu oraz nau
 
 * Poruszamy się bohaterami za pomocą *strzałek* bądź klawiszy *W S A D*,
 * Bohaterowie skaczą po naciśnięciu *spacji*,
-* Zmieniamy kolejność bohaterów za pomocą klawiszy *O* (zamiana postaci z prawej strony oraz środka) oraz *P* (zamiana postaci ze środka i lewej strony),
-* Aby wykonać atak na wojowniku należy użyć przycisku *K* (tylko będąc z lewej strony),
-* Aby łotrzyk strzelił należy wcisnąć *K* (tylko będąc z lewej strony),
+* Zmieniamy kolejność bohaterów za pomocą klawiszy *O* (zamiana postaci z lewej strony oraz środka) oraz *P* (zamiana postaci ze środka i prawej strony),
+* Aby wykonać atak na wojowniku należy użyć przycisku *K* (tylko będąc z prawej strony),
+* Aby łotrzyk strzelił należy wcisnąć *K* (tylko będąc z prawej strony),
 * Mag potrafi zamienić całą druzynę w mgłę, potrzebujemy do tego przycisku *N* (tylko będąc na środku).
 
 <<<

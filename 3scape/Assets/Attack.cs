@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : MonoBehaviour {
+public class Attack : MonoBehaviour
+{
 
     public Animator animator;
 
@@ -13,8 +14,10 @@ public class Attack : MonoBehaviour {
     public LayerMask whatIsEnemy;
     public float attackRange;
     public int damage;
-	
-	void Update () {
+
+    void Update()
+    {
+
 
 
         if (timeBtwAttack <= 0)
@@ -22,25 +25,27 @@ public class Attack : MonoBehaviour {
             animator.SetBool("IsAttacking", false);
 
             //then you can attack
-            if (Input.GetKey(KeyCode.K))
+            if (Input.GetKey(KeyCode.K) && animator.GetInteger("Position") == 1)
             {
                 animator.SetBool("IsAttacking", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
-                for(int i=0; i<enemiesToDamage.Length; i++)
+                for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                 }
                 timeBtwAttack = attackTimer;
             }
-            
+
         }
 
         else
         {
             timeBtwAttack -= Time.deltaTime;
-            
+
         }
-	}
+
+    }
+
 
     /*void OnDrawGizmosSelected()
     {
@@ -49,3 +54,4 @@ public class Attack : MonoBehaviour {
 
     }*/
 }
+

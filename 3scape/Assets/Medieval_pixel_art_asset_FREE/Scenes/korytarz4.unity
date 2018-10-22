@@ -5735,6 +5735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: 3
+  animator: {fileID: 377217289}
   timeBtwSwap: 0
   swapTimer: 0.5
 --- !u!114 &377217293
@@ -5950,6 +5951,16 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95721569756477734, guid: 588d570a52e35c5458973a7d067a2875,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95721569756477734, guid: 588d570a52e35c5458973a7d067a2875,
+        type: 2}
+      propertyPath: m_UpdateMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
@@ -6281,6 +6292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: 1
+  animator: {fileID: 868316990}
   timeBtwSwap: 0
   swapTimer: 0.5
 --- !u!114 &868316995
@@ -6740,6 +6752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: 2
+  animator: {fileID: 1439515476}
   timeBtwSwap: 0
   swapTimer: 0.5
 --- !u!114 &1439515485
@@ -6753,6 +6766,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552e71ae763e4e54c86ff40db47b7b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1439515486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439515475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5dda29e8bc17a4baaa14a4691041b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1439515476}
 --- !u!1001 &1514300232
 Prefab:
   m_ObjectHideFlags: 0

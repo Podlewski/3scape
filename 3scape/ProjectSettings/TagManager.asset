@@ -41,8 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: props
+  - name: Background
     uniqueID: 2040994347
+    locked: 0
+  - name: BlueBackground
+    uniqueID: 4039804263
+    locked: 0
+  - name: BackgroundDetails
+    uniqueID: 3722301623
     locked: 0
   - name: Player
     uniqueID: 78243847

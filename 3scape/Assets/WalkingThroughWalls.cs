@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WalkingThroughWalls : MonoBehaviour {
 
-    public KeyCode immaterial;
-    public KeyCode material;
+    //public KeyCode immaterial;
+    //public KeyCode material;
 
 	// Use this for initialization
 	void Start () {
@@ -15,17 +15,19 @@ public class WalkingThroughWalls : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(Input.GetKeyDown (immaterial))
+        if(Input.GetKeyDown (KeyCode.N))
         {
             GetComponent<Rigidbody2D>().gravityScale = 0;
             GetComponent<BoxCollider2D>().isTrigger = true;
+            GetComponent<CircleCollider2D>().isTrigger = true;
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, .5f);
         }
 
-        if(Input.GetKeyDown (material))
+        if(Input.GetKeyDown (KeyCode.M))
         {
             GetComponent<Rigidbody2D>().gravityScale = 1;
             GetComponent<BoxCollider2D>().isTrigger = false;
+            GetComponent<CircleCollider2D>().isTrigger = false;
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
 	}

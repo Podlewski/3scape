@@ -1,0 +1,102 @@
+= 3scape - przegląd i planowanie sprintu
+Ancient Yaks
+4, 2018-10-22
+:toc:
+:toc-title: Spis Treści
+:version-label: Tydzień
+:icons: font
+
+== Obecne założenia gry
+
+3scape jest zręcznościowo-logiczną grą platformową, która działa na silniku Unity.
+
+Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
+
+* wojownik - dysponuje on siłą, która okaże się nieoceninia nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
+* czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
+
+Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ustawienia w rzędzie, dysponują oni innymi umiejętnościami, które potrafią oddziaływać ze sobą w najróżniejszy sposób. Dobre przetasowywanie naszej drużyny to klucz do sukcesu w 3scape.
+
+<<<
+== Przegląd sprintu (tydzień 4)
+
+Głównym celem tego sprintu było stworzenie działąjącego prototypu oraz nauka podstaw silnika w jakim pracujemy - Unity. Oba cele zostały osiągnietę. W grze możemy sterować trójką naszych bohaterów. Potrafią oni zmieniać się między sobą pozycjami pozycjami, dysponują już też pierwszymi umiejętnościami (które są dostępne tylko na określonych pozycjach). 
+
+==== Sterowanie
+
+* Poruszamy się bohaterami za pomocą *strzałek* bądź klawiszy *W S A D*,
+* Bohaterowie skaczą po naciśnięciu *spacji*,
+* Zmieniamy kolejność bohaterów za pomocą klawiszy *O* (zamiana 3 postaci z 2) oraz *P* (zamiana postaci 2 z 1),
+* Aby wykonać atak na wojowniku należy użyć przycisku *WPISZ*,
+* Aby łotrzyk strzelił należy wcisnąć *WPISZ*,
+* Mag potrafi zamienić całą druzynę w mgłę, potrzebujemy do tego przycisku *WPISZ*.
+
+<<<
+== Plan sprintu (tydzień 6)
+
+Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6). Nie jest to podział stały, a propozycja. Członkowie w zespole dowolnie mogą się zamieniać zadaniami jeżeli wyrażą taką chęć.
+
+==== Cały zespół
+
+* [ ] Wymyślenie kolejnych umiejętności dla naszych bohaterów.
+* [ ] Level design - w jaki sposób mają wyglądać nasze poziomy, w jaki sposób gracz może się wykazać logiką, a w jaki zręcznością.
+* [ ] Ustalenia co do korzystania z repozytorium.
+*     _Na potrzeby porstego projektu wrzucanie wszystkiego na Mastera było wystarczające, jednak na dłuższy okres czasu przy takim projekcie jest to niedopuszczalne. Członkowie którzy lepiej znają się na korzystaniu z gałęzi przedstawią tą ideę reszcie._
+* [ ] Przemyślenie sterowania - w jaki dokładnie sposób będziemy sterować naszymi bohaterami, korzystać z ich umiejętności, zmieniać ich kolejność w rzędzie.
+*     _Planowane przez nas sterowanie zakłada, że dane klawisze są przypisane do pozycji, a nie do postaci. Postać na 1 pozycji zawsze będzie korzystać z tych samych klawiszy, niezależnie od tego kto dokłdnie tam stoi. Jeżeli w dalszej fazie projektu okaże się, że jest to rozwiązanie gorsze zmienimy to, bądź postaramy się zachować dwie możliwości - gracz w ustawieniach będzie mógł wybrać swoje preferencje._
+
+==== Krzysiek
+
+* [ ] Porządek w projekcie.
+*     _Każdy z nas zaczynął swoją naukę Unity pracując bezpośrednio na projekcie 3scape. Udało nam się osiągnąć cel, jednak przez to w projekcie zaczyna powoli panowac bałagan. Postaramy się uporządkować projekt (co nie będzie takie trudne) oraz wprowadzić zasady, które pomogą zachować taki porządek na przyszłość._
+* [ ] Dodanie wspólnej kolizji.
+*     _W przypadku kiedy jeden bohater nie będzie mógł iść (np. trafi na przeszkodę przed sobą) każdy z bohaterów się zatrzyma i bohaterowie nie będą na siebie nachodzić._
+
+
+==== Justyna
+
+* [ ] Praca nad poziomem tutorialowym/prototypowym - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów.
+*     _Poziom nad którym pracujemy jako prototyp chcemy w przyszłości przekształcić w pierwszy poziom/tutorial, gdzie gracze nauczą się jak korzystać ze zdolności naszych bohaterów. Do tego jednak jeszcze daleko, co nie zmniejsza jego roli. Poziom ten trzeba rozwijać by pokazywać nowe możliwości w grze, jakie udało nam się zaimplementować._ 
+* [ ] Implementacja umiejętności łotrzyka - rozbrajanie pułapek/otwieranie zamków.
+*     _Jest to jeden z naszych pierwszych pomysłów na umiejętność, z którego wdrożeniem czekamy na uporządkowanie kodu (niżej)._ 
+
+==== Bartek
+
+* [ ] Implementacja umiejętności wojownika - podnoszenie kompanów.
+*     _Jest to jeden z naszych pierwszych pomysłów na umiejętność, z którego wdrożeniem czekamy na uporządkowanie kodu (niżej)._ 
+* [ ] Poprawienie implementacji skoku.
+*     _Na ten moment nie jesteśmy zadowoleni z tego jak działa skok. Chcielibymy to poprawić._ 
+
+==== Karol
+
+* [ ] Doprowadznie kodu do porządku, narzucenie nazwewnictwa zmiennych oraz klas.
+*     _Początkowo, nasza praca nie była tak dobrze zorganizowana jak byśmy chcieli. Dla wszystkich był to początek zabawy w Unity, przez co skupiliśmy się bardziej na poznaniu silnika niż na porządku w projekcie. Dopóki więcej rzeczy wciąż mamy w głowie niż w komputerach należy uporządkować nasz projekt oraz skrypty._
+* [ ] Implementacja umiejętności maga - ochronne pole.
+*     _Jest to jeden z naszych pierwszych pomysłów na umiejętność, z którego wdrożeniem czekamy na uporządkowanie kodu (niżej)._
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+
+==== Potencjalna nowa osoba w zespole
+
+* [ ] Przedstawienie swojej opini dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
+*     _Nowa osoba pozwoli wprowadzić swieżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
+* [ ] Implementacja umiejętności, którą uznamy za najpotrzebniejszą w tym momencie.
+*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowa przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
+
+==== Nieprzypisane zadania
+
+Tutaj są zadania, którymi będzie się można zająć, jeżeli nasza estymata okazała się niedopowiednia i ktoś ma za dużo wolnego czasu.
+
+* [ ] Poprawa modelów postaci w grze.
+*     _W tym momencie nie przejmujemy się dokładnym wyglądem naszej produkcji. O ile gra nie musi być ładna, tak wypadałoby by modele (oraz ich animacje) zachowywały się w taki sam sposób, pasowały do swoich colliderów, nie działąły z opóźnieniem czy demonstowały to co robią._ 
+* [ ] Implementacja umiejętności, którą uznamy za najpotrzebniejszą w tym momencie.
+*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowa przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
+
+==== Dodatkowe zadania
+
+Tutaj wypisaliśmy rzeczy, które kiedyś koniecznie chcemy wprowadzić do gry, jednak ciężko powiedzieć kiedy uda nam się nimi zająć.
+
+* [ ] Menu gry.
+* [ ] Pasek umiejętności bohaterów.
+*     _W zależności od pozycji danego bohatera w rzędzie, dysponuje on innymi umiejętnościami. By ułatwić rozgrywkę, w dolnej części ekranu będzie wyświetlony pasek z ikonami umiejętności dla każdego bohatera. Gracz zarówno będzie miał podpowiedź do jakich umiejętności w tym momencie ma dostęp, oraz jaki klawisz pozwala skorzystać z jakiej umiejętności._
+* [ ] Fabuła gry.

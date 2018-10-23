@@ -30,7 +30,7 @@ Głównym celem tego sprintu było stworzenie działąjącego prototypu oraz nau
 * Zmieniamy kolejność bohaterów za pomocą klawiszy *O* (zamiana postaci z lewej strony oraz środka) oraz *P* (zamiana postaci ze środka i prawej strony),
 * Aby wykonać atak na wojowniku należy użyć przycisku *K* (tylko będąc z prawej strony),
 * Aby łotrzyk strzelił należy wcisnąć *K* (tylko będąc z prawej strony),
-* Mag potrafi zamienić całą druzynę w mgłę, potrzebujemy do tego przycisku *N* (tylko będąc na środku).
+* Mag potrafi zamienić całą druzynę w mgłę, potrzebujemy do tego przycisku *N* (tylko będąc na środku). Żeby powrócić do stanu normalnego używamy przycisku *M*.
 
 <<<
 == Plan sprintu (tydzień 6)

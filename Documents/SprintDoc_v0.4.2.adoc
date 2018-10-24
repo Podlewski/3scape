@@ -1,6 +1,6 @@
 = 3scape - przegląd i planowanie sprintu: *Tydzień 4*
 Ancient Yaks
-0.4.2, 2018-10-22
+0.4.2, 2018-10-24
 :toc:
 :toc-title: Spis Treści
 :version-label: Wersja

@@ -52,7 +52,7 @@ Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6).
 *     _Każdy z nas zaczynął swoją naukę Unity pracując bezpośrednio na projekcie 3scape. Udało nam się osiągnąć cel, jednak przez to w projekcie zaczyna powoli panowac bałagan. Postaramy się uporządkować projekt (co nie będzie takie trudne) oraz wprowadzić zasady, które pomogą zachować taki porządek na przyszłość._
 * [ ] Dodanie wspólnej kolizji.
 *     _W przypadku kiedy jeden bohater nie będzie mógł iść (np. trafi na przeszkodę przed sobą) każdy z bohaterów się zatrzyma i bohaterowie nie będą na siebie nachodzić._
-
+* [ ] Reset poziomu po śmierci.
 
 === Justyna
 
@@ -60,13 +60,33 @@ Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6).
 *     _Poziom nad którym pracujemy jako prototyp chcemy w przyszłości przekształcić w pierwszy poziom/tutorial, gdzie gracze nauczą się jak korzystać ze zdolności naszych bohaterów. Do tego jednak jeszcze daleko, co nie zmniejsza jego roli. Poziom ten trzeba rozwijać by pokazywać nowe możliwości w grze, jakie udało nam się zaimplementować._ 
 * [ ] Implementacja umiejętności łotrzyka - rozbrajanie pułapek/otwieranie zamków.
 *     _Jest to jeden z naszych pierwszych pomysłów na umiejętność, z którego wdrożeniem czekamy na uporządkowanie kodu (niżej)._ 
+* [ ] Przeszkody od teraz zadają obrażenia.
+*     _W obecnej wersji gry kolce nie działały w ogóle. Trudno określić to celowym działaniem, chociaż na pewno spodziewanym w momencie ewaluacji. Chcemy to zmienić._ 
 
 === Bartek
 
 * [ ] Implementacja umiejętności wojownika - podnoszenie kompanów.
 *     _Jest to jeden z naszych pierwszych pomysłów na umiejętność, z którego wdrożeniem czekamy na uporządkowanie kodu (niżej)._ 
+* [ ] Dodanie bohaterom poziomu zdrowia.
+*     _Na ten moment bohaterowie w żaden sposób nie mogą zginąć, ani otrzymać obrażeń. Jest to jednak koniecznie w przypadku dalszego rozwoju gry._ 
+
+=== Konrad
+
+* [ ] Przedstawienie swojej opini dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
+*     _Nowa osoba pozwoli wprowadzić swieżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
 * [ ] Poprawienie implementacji skoku.
 *     _Na ten moment nie jesteśmy zadowoleni z tego jak działa skok. Chcielibymy to poprawić._ 
+* [ ] Implementacja umiejętności, którą uznamy za najpotrzebniejszą w tym momencie.
+*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowa przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
+
+=== Zbyszek
+
+* [ ] Przedstawienie swojej opini dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
+*     _Nowa osoba pozwoli wprowadzić swieżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
+* [ ] Nauka silnika Unity.
+*     _Zbyszek w poprzednim projekcie miał (nie)przyjemność pracować na innym silniku niż Unity. Musi poświęcić trochę czasu na zrozumeinie tego co się dzieje u nas w projekcie i jak poprawnie korzystać z Unity._
+* [ ] Ekran pauzy.
+*     _Już na początku ewaluacji zauważyliśmy pewien problem. Musieliśmy uruchamiać grę na bieżąco przy testerze. Samo menu tez pewnie by pomogło, jednak tłumaczenie zasad na ekranie pauzy wydawało by się idealne._
 
 === Karol
 
@@ -74,14 +94,9 @@ Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6).
 *     _Początkowo, nasza praca nie była tak dobrze zorganizowana jak byśmy chcieli. Dla wszystkich był to początek zabawy w Unity, przez co skupiliśmy się bardziej na poznaniu silnika niż na porządku w projekcie. Dopóki więcej rzeczy wciąż mamy w głowie niż w komputerach należy uporządkować nasz projekt oraz skrypty._
 * [ ] Implementacja umiejętności maga - ochronne pole.
 *     _Jest to jeden z naszych pierwszych pomysłów na umiejętność, z którego wdrożeniem czekamy na uporządkowanie kodu (niżej)._
+* [ ] Dopracowanie sterowania.
+*     _Kiedy już ustalimy w jaki sposób dokładnie chcemy sterować, trzeba się będzie zająć wdrożeniem tego do gry._
 * [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
-
-=== Potencjalna nowa osoba w zespole
-
-* [ ] Przedstawienie swojej opini dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
-*     _Nowa osoba pozwoli wprowadzić swieżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
-* [ ] Implementacja umiejętności, którą uznamy za najpotrzebniejszą w tym momencie.
-*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowa przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
 
 === Nieprzypisane zadania
 

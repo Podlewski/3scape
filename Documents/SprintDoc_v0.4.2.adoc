@@ -52,7 +52,6 @@ Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6).
 *     _Każdy z nas zaczynął swoją naukę Unity pracując bezpośrednio na projekcie 3scape. Udało nam się osiągnąć cel, jednak przez to w projekcie zaczyna powoli panowac bałagan. Postaramy się uporządkować projekt (co nie będzie takie trudne) oraz wprowadzić zasady, które pomogą zachować taki porządek na przyszłość._
 * [ ] Dodanie wspólnej kolizji.
 *     _W przypadku kiedy jeden bohater nie będzie mógł iść (np. trafi na przeszkodę przed sobą) każdy z bohaterów się zatrzyma i bohaterowie nie będą na siebie nachodzić._
-* [ ] Reset poziomu po śmierci.
 
 === Justyna
 
@@ -81,12 +80,13 @@ Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6).
 
 === Zbyszek
 
+Mamy na uwadze fakt, że Zbyszek pracował w innym silniku niż Unity (cocos2d-x). Przypisane mu zadania mogą się okazać zbyt czasochłonne - w razie czego ktoś przejmie jedno z zadań/pomoże mu je wykonać.
+
 * [ ] Przedstawienie swojej opini dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
 *     _Nowa osoba pozwoli wprowadzić swieżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
-* [ ] Nauka silnika Unity.
-*     _Zbyszek w poprzednim projekcie miał (nie)przyjemność pracować na innym silniku niż Unity. Musi poświęcić trochę czasu na zrozumeinie tego co się dzieje u nas w projekcie i jak poprawnie korzystać z Unity._
 * [ ] Ekran pauzy.
 *     _Już na początku ewaluacji zauważyliśmy pewien problem. Musieliśmy uruchamiać grę na bieżąco przy testerze. Samo menu tez pewnie by pomogło, jednak tłumaczenie zasad na ekranie pauzy wydawało by się idealne._
+* [ ] Reset poziomu po śmierci.
 
 === Karol
 

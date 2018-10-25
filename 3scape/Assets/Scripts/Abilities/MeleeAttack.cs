@@ -1,15 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class MeleeAttack : Ability
 {
-
-    public Animator animator;
-
-    public float timeBtwAttack;
-    public float attackTimer = 1f;
-
     public Transform attackPos;
     public LayerMask whatIsEnemy;
     public float attackRange;
@@ -17,30 +9,28 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-
-
-
-        if (timeBtwAttack <= 0)
+        if (isAbilityReady())
         {
             animator.SetBool("IsAttacking", false);
 
-            //then you can attack
-            if (Input.GetKey(KeyCode.K) && animator.GetInteger("Position") == 1)
+            if (isPressedKeyProper() && isPositionProper())
             {
                 animator.SetBool("IsAttacking", true);
+
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                 }
-                timeBtwAttack = attackTimer;
+
+                setCooldown();
             }
 
         }
 
         else
         {
-            timeBtwAttack -= Time.deltaTime;
+            currentCooldown -= Time.deltaTime;
 
         }
 

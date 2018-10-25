@@ -5714,11 +5714,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c71bf2be77ca344b3a26ebb80c67af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 377217289}
+  abilityKey: 0
+  requiredPosition: 0
+  castTime: 0
+  cooldown: 0
   firePoint: {fileID: 2049320014}
   arrowPrefab: {fileID: 1406025611992852, guid: be416ff8347d0eb4dbb2277977a54671,
     type: 2}
-  button: 107
-  animator: {fileID: 377217289}
 --- !u!4 &377217291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875,
@@ -6267,15 +6270,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b091cf1bf97274b8b8dcf5bad2e66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 868316990}
-  timeBtwAttack: 0
-  attackTimer: 1
+  animator: {fileID: 0}
+  abilityKey: 0
+  requiredPosition: 1
+  castTime: 0.8
+  cooldown: 1
   attackPos: {fileID: 353220930}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 1024
   attackRange: 0.2
-  damage: 5
+  damage: 10
 --- !u!4 &868316992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875,
@@ -6737,11 +6742,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c71bf2be77ca344b3a26ebb80c67af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1439515476}
+  abilityKey: 0
+  requiredPosition: 0
+  castTime: 0
+  cooldown: 0
   firePoint: {fileID: 340432114}
   arrowPrefab: {fileID: 1017192415200598, guid: cba0785e57678874cb3256a053f67bd9,
     type: 2}
-  button: 107
-  animator: {fileID: 1439515476}
 --- !u!114 &1439515484
 MonoBehaviour:
   m_ObjectHideFlags: 0

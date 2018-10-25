@@ -12,7 +12,7 @@ Ancient Yaks
 
 Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
 
-* wojownik - dysponuje on siłą, która okaże się nieoceninia nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* wojownik - dysponuje on siłą, która okaże się nieocenioną nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
 * łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
 * czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
 
@@ -21,7 +21,7 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 <<<
 == Przegląd sprintu (tydzień 4)
 
-Głównym celem tego sprintu było stworzenie działąjącego prototypu oraz nauka podstaw silnika w jakim pracujemy - Unity. Oba cele zostały osiągnietę. W grze możemy sterować trójką naszych bohaterów. Potrafią oni zmieniać się między sobą pozycjami pozycjami, dysponują już też pierwszymi umiejętnościami (które są dostępne tylko na określonych pozycjach). 
+Głównym celem tego sprintu było stworzenie działającego prototypu oraz nauka podstaw silnika w jakim pracujemy - Unity. Oba cele zostały osiągnięte. W grze możemy sterować trójką naszych bohaterów. Potrafią oni zmieniać się między sobą pozycjami pozycjami, dysponują już też pierwszymi umiejętnościami (które są dostępne tylko na określonych pozycjach). 
 
 === Sterowanie
 
@@ -30,7 +30,7 @@ Głównym celem tego sprintu było stworzenie działąjącego prototypu oraz nau
 * Zmieniamy kolejność bohaterów za pomocą klawiszy *O* (zamiana postaci z lewej strony oraz środka) oraz *P* (zamiana postaci ze środka i prawej strony),
 * Aby wykonać atak na wojowniku należy użyć przycisku *K* (tylko będąc z prawej strony),
 * Aby łotrzyk strzelił należy wcisnąć *K* (tylko będąc z prawej strony),
-* Mag potrafi zamienić całą druzynę w mgłę, potrzebujemy do tego przycisku *N* (tylko będąc na środku). Żeby powrócić do stanu normalnego używamy przycisku *M*.
+* Mag potrafi zamienić całą drużynę w mgłę, potrzebujemy do tego przycisku *N* (tylko będąc na środku). Żeby powrócić do stanu normalnego używamy przycisku *M*.
 
 <<<
 == Plan sprintu (tydzień 6)
@@ -42,14 +42,14 @@ Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6).
 * [ ] Wymyślenie kolejnych umiejętności dla naszych bohaterów.
 * [ ] Level design - w jaki sposób mają wyglądać nasze poziomy, w jaki sposób gracz może się wykazać logiką, a w jaki zręcznością.
 * [ ] Ustalenia co do korzystania z repozytorium.
-*     _Na potrzeby porstego projektu wrzucanie wszystkiego na Mastera było wystarczające, jednak na dłuższy okres czasu przy takim projekcie jest to niedopuszczalne. Członkowie którzy lepiej znają się na korzystaniu z gałęzi przedstawią tą ideę reszcie._
+*     _Na potrzeby prostego projektu wrzucanie wszystkiego na Mastera było wystarczające, jednak na dłuższy okres czasu przy takim projekcie jest to niedopuszczalne. Członkowie którzy lepiej znają się na korzystaniu z gałęzi przedstawią tą ideę reszcie._
 * [ ] Przemyślenie sterowania - w jaki dokładnie sposób będziemy sterować naszymi bohaterami, korzystać z ich umiejętności, zmieniać ich kolejność w rzędzie.
-*     _Planowane przez nas sterowanie zakłada, że dane klawisze są przypisane do pozycji, a nie do postaci. Postać na 1 pozycji zawsze będzie korzystać z tych samych klawiszy, niezależnie od tego kto dokłdnie tam stoi. Jeżeli w dalszej fazie projektu okaże się, że jest to rozwiązanie gorsze zmienimy to, bądź postaramy się zachować dwie możliwości - gracz w ustawieniach będzie mógł wybrać swoje preferencje._
+*     _Planowane przez nas sterowanie zakłada, że dane klawisze są przypisane do pozycji, a nie do postaci. Postać na 1 pozycji zawsze będzie korzystać z tych samych klawiszy, niezależnie od tego kto dokładnie tam stoi. Jeżeli w dalszej fazie projektu okaże się, że jest to rozwiązanie gorsze zmienimy to, bądź postaramy się zachować dwie możliwości - gracz w ustawieniach będzie mógł wybrać swoje preferencje._
 
 === Krzysiek
 
 * [ ] Porządek w projekcie.
-*     _Każdy z nas zaczynął swoją naukę Unity pracując bezpośrednio na projekcie 3scape. Udało nam się osiągnąć cel, jednak przez to w projekcie zaczyna powoli panowac bałagan. Postaramy się uporządkować projekt (co nie będzie takie trudne) oraz wprowadzić zasady, które pomogą zachować taki porządek na przyszłość._
+*     _Każdy z nas zaczynał swoją naukę Unity pracując bezpośrednio na projekcie 3scape. Udało nam się osiągnąć cel, jednak przez to w projekcie zaczyna powoli panować bałagan. Postaramy się uporządkować projekt (co nie będzie takie trudne) oraz wprowadzić zasady, które pomogą zachować taki porządek na przyszłość._
 * [ ] Dodanie wspólnej kolizji.
 *     _W przypadku kiedy jeden bohater nie będzie mógł iść (np. trafi na przeszkodę przed sobą) każdy z bohaterów się zatrzyma i bohaterowie nie będą na siebie nachodzić._
 
@@ -71,26 +71,26 @@ Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 6).
 
 === Konrad
 
-* [ ] Przedstawienie swojej opini dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
-*     _Nowa osoba pozwoli wprowadzić swieżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
+* [ ] Przedstawienie swojej opinii dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
+*     _Nowa osoba pozwoli wprowadzić świeżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
 * [ ] Poprawienie implementacji skoku.
-*     _Na ten moment nie jesteśmy zadowoleni z tego jak działa skok. Chcielibymy to poprawić._ 
+*     _Na ten moment nie jesteśmy zadowoleni z tego jak działa skok. Chcielibyśmy to poprawić._ 
 * [ ] Implementacja umiejętności, którą uznamy za najpotrzebniejszą w tym momencie.
-*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowa przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
+*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowana przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
 
 === Zbyszek
 
 Mamy na uwadze fakt, że Zbyszek pracował w innym silniku niż Unity (cocos2d-x). Przypisane mu zadania mogą się okazać zbyt czasochłonne - w razie czego ktoś przejmie jedno z zadań/pomoże mu je wykonać.
 
-* [ ] Przedstawienie swojej opini dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
-*     _Nowa osoba pozwoli wprowadzić swieżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
+* [ ] Przedstawienie swojej opinii dotyczącej planowanych mechanik w grze oraz sugestii dotyczących ich rozwoju.
+*     _Nowa osoba pozwoli wprowadzić świeżość do zespołu. Niewykorzystane pomysły w swojej poprzedniej grze będzie mogła przenieść do nowej produkcji, a swoją dozę kreatywności wykorzystać w zupełnie innych realiach. Ważne jest dla nas, by poznać opinię dotyczącą tego co już jest w grze i co planujemy do niej dodać._
 * [ ] Ekran pauzy.
 *     _Już na początku ewaluacji zauważyliśmy pewien problem. Musieliśmy uruchamiać grę na bieżąco przy testerze. Samo menu tez pewnie by pomogło, jednak tłumaczenie zasad na ekranie pauzy wydawało by się idealne._
 * [ ] Reset poziomu po śmierci.
 
 === Karol
 
-* [ ] Doprowadznie kodu do porządku, narzucenie nazwewnictwa zmiennych oraz klas.
+* [ ] Doprowadzenie kodu do porządku, narzucenie nazewnictwa zmiennych oraz klas.
 *     _Początkowo, nasza praca nie była tak dobrze zorganizowana jak byśmy chcieli. Dla wszystkich był to początek zabawy w Unity, przez co skupiliśmy się bardziej na poznaniu silnika niż na porządku w projekcie. Dopóki więcej rzeczy wciąż mamy w głowie niż w komputerach należy uporządkować nasz projekt oraz skrypty._
 * [ ] Implementacja umiejętności maga - ochronne pole.
 *     _Jest to jeden z naszych pierwszych pomysłów na umiejętność, z którego wdrożeniem czekamy na uporządkowanie kodu (niżej)._
@@ -100,12 +100,12 @@ Mamy na uwadze fakt, że Zbyszek pracował w innym silniku niż Unity (cocos2d-x
 
 === Nieprzypisane zadania
 
-Tutaj są zadania, którymi będzie się można zająć, jeżeli nasza estymata okazała się niedopowiednia i ktoś ma za dużo wolnego czasu.
+Tutaj są zadania, którymi będzie się można zająć, jeżeli nasza estymata okazała się nieodpowiednia i ktoś ma za dużo wolnego czasu.
 
 * [ ] Poprawa modelów postaci w grze.
-*     _W tym momencie nie przejmujemy się dokładnym wyglądem naszej produkcji. O ile gra nie musi być ładna, tak wypadałoby by modele (oraz ich animacje) zachowywały się w taki sam sposób, pasowały do swoich colliderów, nie działąły z opóźnieniem czy demonstowały to co robią._ 
+*     _W tym momencie nie przejmujemy się dokładnym wyglądem naszej produkcji. O ile gra nie musi być ładna, tak wypadałoby by modele (oraz ich animacje) zachowywały się w taki sam sposób, pasowały do swoich colliderów, nie działały z opóźnieniem czy demonstrowały to co robią._ 
 * [ ] Implementacja umiejętności, którą uznamy za najpotrzebniejszą w tym momencie.
-*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowa przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
+*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowana przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
 * [ ] Menu gry.
 
 ==== Dodatkowe zadania

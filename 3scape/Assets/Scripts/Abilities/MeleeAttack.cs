@@ -11,11 +11,11 @@ public class MeleeAttack : Ability
     {
         if (isAbilityReady())
         {
-            animator.SetBool("IsAttacking", false);
+            //animator.SetBool("IsAttacking", false);
 
             if (isPressedKeyProper() && isPositionProper())
             {
-                animator.SetBool("IsAttacking", true);
+                //animator.SetBool("IsAttacking", true);
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -25,7 +25,6 @@ public class MeleeAttack : Ability
 
                 setCooldown();
             }
-
         }
 
         else
@@ -35,13 +34,5 @@ public class MeleeAttack : Ability
         }
 
     }
-
-
-    /*void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
-
-    }*/
 }
 

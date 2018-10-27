@@ -8,7 +8,6 @@ public class Arrow : MonoBehaviour {
     public Rigidbody2D rb;
     public int damage;
 
-	// Use this for initialization
 	void Start () {
         rb.velocity = transform.right * speed;
 	}

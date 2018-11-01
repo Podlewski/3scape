@@ -16,18 +16,18 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        ResumeB.onClick.AddListener(()=>Resume());
-        RestartB.onClick.AddListener(()=>Restart());
-        OptionsB.onClick.AddListener(()=>Options());
-        MenuB.onClick.AddListener(()=>Menu());
-        QuitB.onClick.AddListener(()=>Quit());
+        ResumeB.onClick.AddListener(() => Resume());
+        RestartB.onClick.AddListener(() => Restart());
+        OptionsB.onClick.AddListener(() => Options());
+        MenuB.onClick.AddListener(() => Menu());
+        QuitB.onClick.AddListener(() => Quit());
     }
 
-	void Update()
+    void Update()
     {
-		if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            if(gamePaused)
+            if (gamePaused)
                 Resume();
             else
                 Pause();
@@ -61,8 +61,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Menu()
     {
-        // TODO
-        //SceneManager.LoadScene(SceneManager.GetSceneByName(/*menu scene name*/));
+        SceneManager.LoadSceneAsync("main_menu", LoadSceneMode.Single);
     }
 
     private void Quit()

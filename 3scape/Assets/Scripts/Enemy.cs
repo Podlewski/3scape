@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
-    public float startHealth = 2;
+    public float startHealth;
     private float health;
 
     public float speed;

@@ -56,3 +56,6 @@ TagManager:
   - name: Barrier
     uniqueID: 341150673
     locked: 0
+  - name: Overlay
+    uniqueID: 139985423
+    locked: 0

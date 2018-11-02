@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         StartB.onClick.AddListener(() => StartGame());
-        SelectLevelB.onClick.AddListener(() => SelectLevel());
+        SelectLevelB.onClick.AddListener(() => SelectLevelMenu());
         OptionsB.onClick.AddListener(() => Options());
         QuitB.onClick.AddListener(() => Quit());
     }
@@ -27,7 +27,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
     }
 
-    private void SelectLevel() { }
+    private void SelectLevelMenu()
+    {
+        SceneManager.LoadSceneAsync("select_level_menu", LoadSceneMode.Single);
+    }
 
     private void Options() { }
 

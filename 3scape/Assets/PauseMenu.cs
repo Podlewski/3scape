@@ -51,6 +51,7 @@ public class PauseMenu : MonoBehaviour
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Resume();
     }
 
     private void Options()
@@ -62,6 +63,7 @@ public class PauseMenu : MonoBehaviour
     private void Menu()
     {
         SceneManager.LoadSceneAsync("main_menu", LoadSceneMode.Single);
+        Resume();
     }
 
     private void Quit()

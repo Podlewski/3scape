@@ -5632,7 +5632,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 377217284}
   animator: {fileID: 377217289}
-  runSpeed: 20
 --- !u!58 &377217286
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5971,7 +5970,7 @@ Prefab:
     - target: {fileID: 212140600227288710, guid: 588d570a52e35c5458973a7d067a2875,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 95721569756477734, guid: 588d570a52e35c5458973a7d067a2875,
         type: 2}
@@ -6247,7 +6246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 868316986}
   animator: {fileID: 868316990}
-  runSpeed: 20
 --- !u!114 &868316986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6355,7 +6353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b091cf1bf97274b8b8dcf5bad2e66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 95721569756477734, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
+  animator: {fileID: 868316990}
   abilityKey: 107
   requiredPosition: 1
   castTime: 0.8
@@ -6386,6 +6384,18 @@ MonoBehaviour:
   animator: {fileID: 868316990}
   timeBtwSwap: 0
   swapTimer: 0.5
+--- !u!114 &868316994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868316984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c2b86c2b002214291a84cff706b313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 868316990}
 --- !u!114 &868316995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6397,6 +6407,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552e71ae763e4e54c86ff40db47b7b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &868316997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868316984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fd0e14067815d4abbcfb175a5662ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &868316998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868316984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c2b86c2b002214291a84cff706b313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 868316990}
 --- !u!1 &880870451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1025605486487810, guid: 0eb2f5adb2435e74a9f73ead305b1ac3,
@@ -6738,7 +6771,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1439515478}
   animator: {fileID: 1439515476}
-  runSpeed: 20
 --- !u!58 &1439515480
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6751,7 +6783,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11881977, y: -0.3}
+  m_Offset: {x: 0.11881977, y: -0.29}
   serializedVersion: 2
   m_Radius: 0.18276833
 --- !u!61 &1439515481

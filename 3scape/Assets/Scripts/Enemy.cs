@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
-    public int health;
+    public float startHealth;
+    private float health;
+
     public float speed;
+    public Image healthBar;
     //public Animator animator;
 
     void Start () {
         //animator.SetBool("IsAttacking", true);
+        health = startHealth;
     }
 	
 	void Update () {
@@ -25,6 +30,7 @@ public class Enemy : MonoBehaviour {
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log("damage taken!");
+        healthBar.fillAmount = health / startHealth;
+        Debug.Log(damage + " damage was taken!");
     }
 }

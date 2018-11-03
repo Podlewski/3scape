@@ -17,7 +17,7 @@ public class Swap : MonoBehaviour
     {
         if (timeBtwSwap <= 0)
         {
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.E))
             {
                 if (position == 1 && blockSwap == false)
                 {
@@ -44,7 +44,7 @@ public class Swap : MonoBehaviour
 
             }
 
-            if (Input.GetKey(KeyCode.O))
+            if (Input.GetKey(KeyCode.Q))
             {
                 if (position == 2 && blockSwap == false)
                 {

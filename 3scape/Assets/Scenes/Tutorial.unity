@@ -5710,7 +5710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 377217289}
-  abilityKey: 107
+  abilityKey: 108
   requiredPosition: 1
   castTime: 0.8
   cooldown: 0.5
@@ -6519,8 +6519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b091cf1bf97274b8b8dcf5bad2e66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 95721569756477734, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
-  abilityKey: 107
+  animator: {fileID: 868316990}
+  abilityKey: 108
   requiredPosition: 1
   castTime: 0.8
   cooldown: 1

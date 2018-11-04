@@ -5,6 +5,7 @@ using UnityEngine;
 public class KnightFasterWalking : MonoBehaviour
 {
     GameObject mage;
+    CharacterController2D characterController2D;
     bool pressed = false;
 
     // Use this for initialization
@@ -21,23 +22,15 @@ public class KnightFasterWalking : MonoBehaviour
             pressed = true;
 
             PlayerMovement.runSpeed = 30f;
-            /*Vector3 posistion = archer.transform.position;
-            Debug.Log(archer.transform.position + " " + posistion.y);
-            archer.transform.Translate(0,1,0);
-            Debug.Log(archer.transform.position + " " + posistion.y);*/
-            //mage.GetComponent<CircleCollider2D>().transform.Translate(0, -1, 0);
-            
+            mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.5f);
+
         }
 
-        if (Input.GetKeyDown(KeyCode.M) && GlobalVariable.isKnightInMiddle)
+        if ((Input.GetKeyDown(KeyCode.M) && GlobalVariable.isKnightInMiddle) || (!GlobalVariable.isKnightInMiddle))
         {
+            mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.29f);
             PlayerMovement.runSpeed = 20f;
             pressed = false;
-        }
-
-        if (!GlobalVariable.isKnightInMiddle)
-        {
-            PlayerMovement.runSpeed = 20f;
         }
     }
 

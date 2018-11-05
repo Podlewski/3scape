@@ -7,62 +7,73 @@ public class Swap : MonoBehaviour
     public int position;
 
     public Animator animator;
-    public float timeBtwSwap;
+    public GameObject first;
+    public GameObject second;
     public float swapTimer = 0.5f;
-
-    bool blockSwap = false;
 
     void Update()
     {
-        if (timeBtwSwap <= 0)
+        if (GlobalVariable.swapCooldown <= 0)
         {
             if (Input.GetKey(KeyCode.E))
             {
-                if (position == 1 && blockSwap == false)
+                if (position == 1)
                 {
                     position = 2;
-                    transform.position = GlobalVariable.second.position;
-                    blockSwap = true;
+                    if (first.GetComponent<Animator>().GetInteger("Position") == 2)
+                    {
+                        var tmp = transform.position;
+                        transform.position = first.transform.position;
+                        first.transform.position = tmp;
+                        first.GetComponent<Animator>().SetInteger("Position", 1);
+                    }
+                    else if (second.GetComponent<Animator>().GetInteger("Position") == 2)
+                    {
+                        var tmp = transform.position;
+                        transform.position = second.transform.position;
+                        second.transform.position = tmp;
+                        second.GetComponent<Animator>().SetInteger("Position", 1);
+                    }
                 }
 
-                if (position == 2 && blockSwap == false)
-                {
-                    position = 1;
-                    transform.position = GlobalVariable.first.position;
-
-                }
-
-                blockSwap = false;
-                timeBtwSwap = swapTimer;
+                GlobalVariable.swapCooldown = swapTimer;
 
             }
 
             if (Input.GetKey(KeyCode.Q))
             {
-                if (position == 2 && blockSwap == false)
+                if (position == 2)
                 {
                     position = 3;
-                    transform.position = GlobalVariable.third.position;
-
-                    blockSwap = true;
+                    if (first.GetComponent<Animator>().GetInteger("Position") == 3)
+                    {
+                        var tmp = transform.position;
+                        transform.position = first.transform.position;
+                        first.transform.position = tmp;
+                        first.GetComponent<Animator>().SetInteger("Position", 2);
+                    }
+                    else if (first.GetComponent<Animator>().GetInteger("Position") == 3)
+                    {
+                        var tmp = transform.position;
+                        transform.position = second.transform.position;
+                        second.transform.position = tmp;
+                        second.GetComponent<Animator>().SetInteger("Position", 2);
+                    }
                 }
 
-                if (position == 3 && blockSwap == false)
-                {
-                    position = 2;
-                    transform.position = GlobalVariable.second.position;
-                }
-
-                blockSwap = false;
-                timeBtwSwap = swapTimer;
+                GlobalVariable.swapCooldown = swapTimer;
             }
         }
 
         else
         {
-            timeBtwSwap -= Time.deltaTime;
+            if (GlobalVariable.swapCooldown > -1)
+                GlobalVariable.swapCooldown -= Time.deltaTime;
         }
         animator.SetInteger("Position", position);
     }
+    private void LateUpdate()
+    {
 
+    }
 }

@@ -6,6 +6,7 @@ public static class GlobalVariable
 {
     public static bool isMageInMiddle = true;
     public static bool isKnightInMiddle = true;
+    public static float swapCooldown = 0;
     public static Transform first;
     public static Transform second;
     public static Transform third;

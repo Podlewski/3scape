@@ -6118,7 +6118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb3b0a409290c644acbe8a5fd1e797d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 200
+  m_JumpForce: 300
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0
   m_AirControl: 1
@@ -6229,8 +6229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 377217289}
-  abilityKey: 108
-  requiredPosition: 1
+  abilityKey: 107
+  requiredPosition: 2
   castTime: 0.8
   cooldown: 0.5
   firePoint: {fileID: 2049320014}
@@ -6279,7 +6279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 377217289}
-  abilityKey: 107
+  abilityKey: 108
   requiredPosition: 1
   castTime: 0.8
   cooldown: 1
@@ -7171,7 +7171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb3b0a409290c644acbe8a5fd1e797d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 200
+  m_JumpForce: 300
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0
   m_AirControl: 1
@@ -7320,6 +7320,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 552e71ae763e4e54c86ff40db47b7b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &868316996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868316984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c2b86c2b002214291a84cff706b313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 868316990}
+--- !u!114 &868316997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868316984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9044613f78a01b47ac09603c20e45a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &880870451 stripped
@@ -8148,7 +8171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb3b0a409290c644acbe8a5fd1e797d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 200
+  m_JumpForce: 300
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0
   m_AirControl: 1
@@ -9001,6 +9024,7 @@ MonoBehaviour:
   OptionsB: {fileID: 1600928964}
   MenuB: {fileID: 2089481579}
   QuitB: {fileID: 1675104063}
+  pauseKeyCode: 27
 --- !u!114 &1631337227
 MonoBehaviour:
   m_ObjectHideFlags: 0

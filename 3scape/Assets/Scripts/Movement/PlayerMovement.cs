@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         CheckPosition(animator.GetInteger("Position"));
         // Cache the initial offset at time of load/spawn:
-        _followOffset = transform.position - leader.position;
+        // _followOffset = transform.position - leader.position;
     }
 
     // Update is called once per frame

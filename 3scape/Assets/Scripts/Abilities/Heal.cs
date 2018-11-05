@@ -12,7 +12,7 @@ public class Heal : Ability
         if (isAbilityReady())
         {
             animator.SetBool("IsHealing", false);
-            animator.SetBool("IsUsing", true);
+            //animator.SetBool("IsUsing", true);
 
             if (isPressedKeyProper() && isPositionProper())
             {
@@ -21,7 +21,7 @@ public class Heal : Ability
                 knight.Heal(5);
                 archer.Heal(5);
                 mage.Heal(5);
-                animator.SetBool("IsUsing", false);
+                //animator.SetBool("IsUsing", false);
                 setCooldown();
             }
         }

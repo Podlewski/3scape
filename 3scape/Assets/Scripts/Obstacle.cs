@@ -1,17 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Obstacle : MonoBehaviour {
+public class Obstacle : MonoBehaviour
+{
 
-    public int health;
+    public float startHealth;
+    private float health;
+    //public Image healthBar;
+    //public GameObject loadingScreen;
+    //public Slider slider;
 
+    void Start()
+    {
+        health = startHealth;
+    }
 
-    void Start () {
-		
-	}
-	
-	void Update () {
+    void Update()
+    {
+        //slider.value = health;
 
         if (health <= 0)
         {
@@ -19,9 +27,10 @@ public class Obstacle : MonoBehaviour {
         }
     }
 
-    public void DestroyObstacle(int damage)
+    public void DestroyObstacle(float damage)
     {
         health -= damage;
+        //healthBar.fillAmount = health / startHealth;
         Debug.Log("damage taken!");
     }
 }

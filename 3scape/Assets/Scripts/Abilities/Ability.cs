@@ -23,7 +23,12 @@ public class Ability : MonoBehaviour
     {
         return Input.GetKeyDown(abilityKey);
     }
-    
+
+    protected bool isUpKeyProper()
+    {
+        return Input.GetKeyUp(abilityKey);
+    }
+
     protected bool isPositionProper()
     {
         return animator.GetInteger("Position") == requiredPosition;

@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     private int position = 1;
     Vector3 _followOffset;
 
-    public float runSpeed = 20f;
+    public static float runSpeed = 20f;
 
     bool jump = false;
     bool crouch = false;

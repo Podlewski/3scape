@@ -7,7 +7,7 @@ public class DestroyingObstacles : Ability
     public Transform destroyPos;
     public LayerMask whatIsObstacle;
     public float destroyRange;
-    public float damage;
+    public float damage = 1;
 
     //Variables for measuring time of key hold down
     public float downTime, upTime, pressTime = 0;

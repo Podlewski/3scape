@@ -6152,7 +6152,6 @@ MonoBehaviour:
   controller: {fileID: 377217284}
   animator: {fileID: 377217289}
   followSharpness: 1
-  runSpeed: 20
 --- !u!58 &377217286
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6280,7 +6279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 377217289}
-  abilityKey: 108
+  abilityKey: 107
   requiredPosition: 1
   castTime: 0.8
   cooldown: 1
@@ -6289,7 +6288,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   destroyRange: 0.2
-  damage: 0
+  damage: 1
   downTime: 0
   upTime: 0
   pressTime: 0
@@ -7161,7 +7160,6 @@ MonoBehaviour:
   controller: {fileID: 868316986}
   animator: {fileID: 868316990}
   followSharpness: 1
-  runSpeed: 20
 --- !u!114 &868316986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7521,7 +7519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504136760aace984e852496a426a0132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 0
+  startHealth: 1
 --- !u!61 &1099208169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8184,7 +8182,6 @@ MonoBehaviour:
   controller: {fileID: 1439515478}
   animator: {fileID: 1439515476}
   followSharpness: 1
-  runSpeed: 20
 --- !u!58 &1439515480
 CircleCollider2D:
   m_ObjectHideFlags: 0

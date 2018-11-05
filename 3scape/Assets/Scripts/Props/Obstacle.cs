@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Obstacle : MonoBehaviour
 {
 
-    public float startHealth;
+    public float startHealth = 1;
     private float health;
     //public Image healthBar;
     //public GameObject loadingScreen;

@@ -7,11 +7,8 @@ public class PlayerMovement : MonoBehaviour {
     public CharacterController2D controller;
     public Animator animator;
 
-    private Transform leader;
-    public float followSharpness = 1.0f;
     private int position = 1;
-    Vector3 _followOffset;
-
+    public float distance = 3;
     public static float runSpeed = 20f;
 
     bool jump = false;
@@ -21,15 +18,12 @@ public class PlayerMovement : MonoBehaviour {
 
     void Start()
     {
-        CheckPosition(animator.GetInteger("Position"));
-        // Cache the initial offset at time of load/spawn:
-        _followOffset = transform.position - leader.position;
+        PositionChecker();
     }
 
     // Update is called once per frame
     void Update () {
-        position = animator.GetInteger("Position");
-        CheckPosition(position);
+
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
@@ -52,33 +46,33 @@ public class PlayerMovement : MonoBehaviour {
         animator.SetBool("IsGrounded", controller.GetGrounded());
     }
     void LateUpdate()
-    {/*
-        CheckPosition(position);
-        // Apply that offset to get a target position.
-        Vector3 targetPosition = leader.position + _followOffset;
-
-        // Keep our y position unchanged.
-        targetPosition.y = transform.position.y;
-
-        // Smooth follow.    
-        transform.position += (targetPosition - transform.position) * followSharpness ;*/
+    {
+        PositionChecker();
     }
 
-    void CheckPosition(int pos)
+    void PositionChecker()
     {
-        if (pos == 1)
+        position = animator.GetInteger("Position");
+        if (position == 1)
         {
-            GlobalVariable.leader = transform;
-            leader = transform;
+            GlobalVariable.first = transform;
         }
-        else if (pos == 2)
+        else if (position == 2)
         {
-            GlobalVariable.middle = transform;
-            leader = GlobalVariable.leader;
+            GlobalVariable.second = transform;
         }
         else
         {
-            leader = GlobalVariable.middle;
+            GlobalVariable.third = transform;
+        }
+        float dst = Vector3.Distance(GlobalVariable.second.position, transform.position);
+        if (dst > distance)
+        {
+            Vector3 vect = GlobalVariable.second.position - transform.position;
+            vect = vect.normalized;
+            vect *= (dst - distance);
+            transform.position += vect;
         }
     }
+
 }

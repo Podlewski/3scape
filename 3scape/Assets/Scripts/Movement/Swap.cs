@@ -5,7 +5,6 @@ using UnityEngine;
 public class Swap : MonoBehaviour
 {
     public int position;
-    Vector3 newPosition;
 
     public Animator animator;
     public float timeBtwSwap;
@@ -22,21 +21,15 @@ public class Swap : MonoBehaviour
                 if (position == 1 && blockSwap == false)
                 {
                     position = 2;
-                    newPosition = transform.position;
-                    newPosition.x -= 1;
-                    transform.position = newPosition;
-
+                    transform.position = GlobalVariable.second.position;
                     blockSwap = true;
                 }
 
                 if (position == 2 && blockSwap == false)
                 {
                     position = 1;
-                    newPosition = transform.position;
-                    newPosition.x += 1;
-                    transform.position = newPosition;
+                    transform.position = GlobalVariable.first.position;
 
-                    blockSwap = true;
                 }
 
                 blockSwap = false;
@@ -49,9 +42,7 @@ public class Swap : MonoBehaviour
                 if (position == 2 && blockSwap == false)
                 {
                     position = 3;
-                    newPosition = transform.position;
-                    newPosition.x -= 1;
-                    transform.position = newPosition;
+                    transform.position = GlobalVariable.third.position;
 
                     blockSwap = true;
                 }
@@ -59,11 +50,7 @@ public class Swap : MonoBehaviour
                 if (position == 3 && blockSwap == false)
                 {
                     position = 2;
-                    newPosition = transform.position;
-                    newPosition.x += 1;
-                    transform.position = newPosition;
-
-                    blockSwap = true;
+                    transform.position = GlobalVariable.second.position;
                 }
 
                 blockSwap = false;

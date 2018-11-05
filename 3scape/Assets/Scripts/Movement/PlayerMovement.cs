@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("Jump", true);
+            animator.SetBool("IsGrounded", controller.GetGrounded());
         }
         crouch = Input.GetButton("Crouch");
 
@@ -46,6 +48,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+        animator.SetBool("Jump", false);
+        animator.SetBool("IsGrounded", controller.GetGrounded());
     }
     void LateUpdate()
     {/*

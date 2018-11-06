@@ -15,7 +15,7 @@ public class Swap : MonoBehaviour
     {
         if (GlobalVariable.swapCooldown <= 0)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 if (position == 1)
                 {
@@ -40,7 +40,7 @@ public class Swap : MonoBehaviour
 
             }
 
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.E))
             {
                 if (position == 2)
                 {

@@ -17,7 +17,7 @@ public class KnightFasterWalking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N) && GlobalVariable.isKnightInMiddle && !pressed)
+        if (Input.GetKeyDown(KeyCode.K) && GlobalVariable.isKnightInMiddle && !pressed)
         {
             pressed = true;
 
@@ -25,8 +25,7 @@ public class KnightFasterWalking : MonoBehaviour
             mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.5f);
 
         }
-
-        if ((Input.GetKeyDown(KeyCode.M) && GlobalVariable.isKnightInMiddle) || (!GlobalVariable.isKnightInMiddle))
+        else if((Input.GetKeyDown(KeyCode.K) && GlobalVariable.isKnightInMiddle) || (!GlobalVariable.isKnightInMiddle))
         {
             mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.29f);
             PlayerMovement.runSpeed = 20f;

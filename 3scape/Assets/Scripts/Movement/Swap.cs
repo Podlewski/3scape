@@ -52,7 +52,7 @@ public class Swap : MonoBehaviour
                         first.transform.position = tmp;
                         first.GetComponent<Animator>().SetInteger("Position", 2);
                     }
-                    else if (first.GetComponent<Animator>().GetInteger("Position") == 3)
+                    else if (second.GetComponent<Animator>().GetInteger("Position") == 3)
                     {
                         var tmp = transform.position;
                         transform.position = second.transform.position;

@@ -436,6 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270030678}
   - component: {fileID: 270030679}
+  - component: {fileID: 270030680}
   m_Layer: 0
   m_Name: Characters
   m_TagString: Untagged
@@ -484,6 +485,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4740882, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &270030680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270030677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8794dcc4ec269494387362243b816cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knight: {fileID: 868316984}
+  archer: {fileID: 377217283}
+  mage: {fileID: 1439515475}
 --- !u!1 &298454950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5888,7 +5903,7 @@ MonoBehaviour:
     m_Bits: 567
   m_GroundCheck: {fileID: 1965487657}
   m_CeilingCheck: {fileID: 1691751041}
-  m_CrouchDisableCollider: {fileID: 377217287}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5912,9 +5927,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 377217284}
   animator: {fileID: 377217289}
-  runSpeed: 20
---- !u!58 &377217286
-CircleCollider2D:
+  followSharpness: 1
+  position: 1
+--- !u!70 &377217286
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5925,34 +5941,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11593469, y: -0.25}
-  serializedVersion: 2
-  m_Radius: 0.1482458
---- !u!61 &377217287
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 377217283}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7c43c8b821a989743af2363ecd2660c1, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.112962246, y: 0.023926198}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.29054654, y: 0.5521476}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.13973188, y: -0.0088091595}
+  m_Size: {x: 0.5554028, y: 0.80429417}
+  m_Direction: 0
 --- !u!50 &377217288
 Rigidbody2D:
   serializedVersion: 4
@@ -6050,6 +6041,11 @@ MonoBehaviour:
     m_Bits: 2048
   destroyRange: 0.2
   damage: 1
+  downTime: 0
+  upTime: 0
+  pressTime: 0
+  countDown: 2
+  ready: 0
 --- !u!114 &377217296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6801,7 +6797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 868316986}
   animator: {fileID: 868316990}
-  runSpeed: 20
+  followSharpness: 1
+  position: 1
 --- !u!114 &868316986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6822,7 +6819,7 @@ MonoBehaviour:
     m_Bits: 567
   m_GroundCheck: {fileID: 1591685326}
   m_CeilingCheck: {fileID: 422256720}
-  m_CrouchDisableCollider: {fileID: 868316987}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6833,8 +6830,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!61 &868316987
-BoxCollider2D:
+--- !u!70 &868316987
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6845,34 +6842,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.026783735}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.54643255}
-  m_EdgeRadius: 0
---- !u!58 &868316988
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 868316984}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7c43c8b821a989743af2363ecd2660c1, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
-  serializedVersion: 2
-  m_Radius: 0.175
+  m_Offset: {x: 0, y: -0.047167256}
+  m_Size: {x: 0.6107755, y: 0.78676224}
+  m_Direction: 0
 --- !u!50 &868316989
 Rigidbody2D:
   serializedVersion: 4
@@ -7123,7 +7095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504136760aace984e852496a426a0132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  startHealth: 1
 --- !u!61 &1099208169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7646,7 +7618,7 @@ MonoBehaviour:
     m_Bits: 567
   m_GroundCheck: {fileID: 2064047968}
   m_CeilingCheck: {fileID: 1338531571}
-  m_CrouchDisableCollider: {fileID: 1439515481}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7670,9 +7642,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1439515478}
   animator: {fileID: 1439515476}
-  runSpeed: 20
---- !u!58 &1439515480
-CircleCollider2D:
+  followSharpness: 1
+  position: 1
+--- !u!70 &1439515480
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -7683,34 +7656,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11881977, y: -0.3}
-  serializedVersion: 2
-  m_Radius: 0.18276833
---- !u!61 &1439515481
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1439515475}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7c43c8b821a989743af2363ecd2660c1, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11432734, y: -0.04884138}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1636363, y: 1.1636363}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36385816, y: 0.50830656}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.11505251, y: -0.13507703}
+  m_Size: {x: 0.5609143, y: 0.6703116}
+  m_Direction: 0
 --- !u!50 &1439515482
 Rigidbody2D:
   serializedVersion: 4

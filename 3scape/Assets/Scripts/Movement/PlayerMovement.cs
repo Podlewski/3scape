@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private Transform leader;
     public float followSharpness = 1.0f;
-    private int position = 1;
+    public int position = 1;
     Vector3 _followOffset;
 
     public static float runSpeed = 20f;

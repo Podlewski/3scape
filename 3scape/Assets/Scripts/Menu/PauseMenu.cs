@@ -14,6 +14,8 @@ public class PauseMenu : MonoBehaviour
     public Button MenuB;
     public Button QuitB;
 
+    public KeyCode pauseKeyCode;
+
     void Start()
     {
         ResumeB.onClick.AddListener(() => Resume());
@@ -25,7 +27,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(pauseKeyCode))
         {
             if (gamePaused)
                 Resume();

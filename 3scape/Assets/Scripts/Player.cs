@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
@@ -12,12 +13,13 @@ public class Player : MonoBehaviour {
     void Start () {
         health = startHealth;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         if (health <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

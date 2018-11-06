@@ -13,11 +13,10 @@ public class SelectLevelMenu : MonoBehaviour
     void Start()
     {
         BackB.onClick.AddListener(() => Back());
-        LevelsB[0].onClick.AddListener(() => Select("HealthBar")); // with proper scene naming these can be assigned in a loop
-        //LevelsB[1].onClick.AddListener(() => Select("koryatrz"));
+        LevelsB[0].onClick.AddListener(() => Select("tutorial")); // with proper scene naming these can be assigned in a loop
     }
 
-    void Update() { }
+    //void Update() { }
 
     private void Back()
     {

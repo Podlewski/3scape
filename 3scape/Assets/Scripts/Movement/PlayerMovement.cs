@@ -9,10 +9,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private Transform leader;
     public float followSharpness = 1.0f;
-    private int position = 1;
+    public int position = 1;
     Vector3 _followOffset;
 
-    public float runSpeed = 20f;
+    public static float runSpeed = 20f;
 
     bool jump = false;
     bool crouch = false;
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         CheckPosition(animator.GetInteger("Position"));
         // Cache the initial offset at time of load/spawn:
-        _followOffset = transform.position - leader.position;
+        // _followOffset = transform.position - leader.position;
     }
 
     // Update is called once per frame
@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("Jump", true);
+            animator.SetBool("IsGrounded", controller.GetGrounded());
         }
         crouch = Input.GetButton("Crouch");
 
@@ -46,6 +48,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+        animator.SetBool("Jump", false);
+        animator.SetBool("IsGrounded", controller.GetGrounded());
     }
     void LateUpdate()
     {/*

@@ -27,4 +27,15 @@ public class Player : MonoBehaviour {
         healthBar.fillAmount = health / startHealth;
         Debug.Log(damage + " damage was taken!");
     }
+
+    public void Heal(float percentages)
+    {
+        float previousHealth = health;
+        health += startHealth * percentages / 100;
+        if (health > startHealth)
+        {
+            health = startHealth;
+        }
+        healthBar.fillAmount = health / startHealth;
+    }
 }

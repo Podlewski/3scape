@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour {
         transform.position += (targetPosition - transform.position) * followSharpness ;*/
     }
 
-    void CheckPosition(int pos)
+    public void CheckPosition(int pos)
     {
         if (pos == 1)
         {

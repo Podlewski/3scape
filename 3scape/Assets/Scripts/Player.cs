@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public float startHealth;
-    private float health;
+    public float health;
     public Image healthBar;
 
     // Use this for initialization
@@ -19,7 +19,6 @@ public class Player : MonoBehaviour {
         if (health <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

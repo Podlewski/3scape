@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(pauseKeyCode))
+        if (!DeathScreen.activeDeathScreen && Input.GetKeyDown(pauseKeyCode))
         {
             if (gamePaused)
                 Resume();
@@ -39,14 +39,14 @@ public class PauseMenu : MonoBehaviour
     private void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1;
         gamePaused = false;
+        Time.timeScale = 1;
     }
 
     private void Pause()
     {
-        pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
+        pauseMenuUI.SetActive(true);
         gamePaused = true;
     }
 

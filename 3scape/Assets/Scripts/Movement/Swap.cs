@@ -2,80 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Swap : MonoBehaviour
+public class Swap : Ability
 {
     public int position;
-    Vector3 newPosition;
-
-    public Animator animator;
-    public float timeBtwSwap;
-    public float swapTimer = 0.5f;
-
-    bool blockSwap = false;
+    private Vector3 newPosition;
 
     void Update()
     {
-        if (timeBtwSwap <= 0)
+        if (isAbilityReady() && isPressedKeyProper())
         {
-            if (Input.GetKey(KeyCode.Q))
-            {
-                if (position == 2 && blockSwap == false)
-                {
-                    position = 3;
-                    newPosition = transform.position;
-                    newPosition.x -= 1;
-                    transform.position = newPosition;
+            List<float> positions = getCurrentPossitions();
+            newPosition = transform.position;
 
-                    blockSwap = true;
-                }
+            if (position == 1)
+                newPosition.x = positions[2] + 2;
 
-                if (position == 3 && blockSwap == false)
-                {
-                    position = 2;
-                    newPosition = transform.position;
-                    newPosition.x += 1;
-                    transform.position = newPosition;
+            else if (position == 2)
+                newPosition.x = positions[0] + 2;
 
-                    blockSwap = true;
-                }
+            else if (position == 3)
+                newPosition.x = positions[1] + 2;
 
-                blockSwap = false;
-                timeBtwSwap = swapTimer;
-            }
-
-            if (Input.GetKey(KeyCode.E))
-            {
-                if (position == 1 && blockSwap == false)
-                {
-                    position = 2;
-                    newPosition = transform.position;
-                    newPosition.x -= 1;
-                    transform.position = newPosition;
-
-                    blockSwap = true;
-                }
-
-                if (position == 2 && blockSwap == false)
-                {
-                    position = 1;
-                    newPosition = transform.position;
-                    newPosition.x += 1;
-                    transform.position = newPosition;
-
-                    blockSwap = true;
-                }
-
-                blockSwap = false;
-                timeBtwSwap = swapTimer;
-
-            }
+            transform.position = newPosition;
         }
-
-        else
-        {
-            timeBtwSwap -= Time.deltaTime;
-        }
-        animator.SetInteger("Position", position);
     }
 
+    private List<float> getCurrentPossitions()
+    {
+        List<float> positions = new List<float>();
+
+        positions.Add(GameObject.Find("knight").transform.position.x);
+        positions.Add(GameObject.Find("archer").transform.position.x);
+        positions.Add(GameObject.Find("mage").transform.position.x);
+
+        positions.Sort();
+
+        return positions;
+    }
 }

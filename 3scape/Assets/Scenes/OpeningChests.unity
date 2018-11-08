@@ -5570,25 +5570,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 377217283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20820ce9a75ecc14792830e321c246cb, type: 3}
+  m_Script: {fileID: 11500000, guid: a02bb54ecfb328d4788163c9e71caa1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 377217289}
   abilityKey: 108
-  requiredPosition: 1
+  requiredPosition: 3
   castTime: 0.8
-  cooldown: 1
-  destroyPos: {fileID: 2049320014}
-  whatIsObstacle:
-    serializedVersion: 2
-    m_Bits: 2048
-  destroyRange: 0.2
-  damage: 2
+  cooldown: 0.1
   downTime: 0
   upTime: 0
   pressTime: 0
   countDown: 2
   ready: 0
+  unlockPos: {fileID: 2049320014}
+  unlockRange: 1
+  whatCanOpen:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &422256719
 GameObject:
   m_ObjectHideFlags: 0
@@ -6293,6 +6292,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1375488013871096, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_Name
+      value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375488013871096, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
+      propertyPath: m_TagString
       value: Chest
       objectReference: {fileID: 0}
     m_RemovedComponents: []

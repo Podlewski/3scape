@@ -8,6 +8,9 @@ public class Chest : MonoBehaviour{
     public Sprite openSprite;
     private bool isOpen = false;
 
+    public GameObject[] objects;
+    public Transform spawnPoint;
+
     public void checkIfOpen()
     {
         if (isOpen)
@@ -20,6 +23,7 @@ public class Chest : MonoBehaviour{
             Debug.Log("opening");
             isOpen = true;
             spriteRenderer.sprite = openSprite;
+            GameObject item = Instantiate(objects[Random.Range(0, objects.Length)], spawnPoint.position, spawnPoint.rotation) as GameObject;
         }
     }
 }

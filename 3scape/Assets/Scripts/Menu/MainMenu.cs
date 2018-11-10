@@ -7,29 +7,40 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenuUI;
-    public Button StartB;
+    public Button ContinueB;
+    public Button NewGameB;
     public Button SelectLevelB;
+    public Button TutorialB;
     public Button OptionsB;
     public Button QuitB;
 
     void Start()
     {
-        StartB.onClick.AddListener(() => StartGame());
+        ContinueB.onClick.AddListener(() => Continue());
+        NewGameB.onClick.AddListener(() => NewGame());
         SelectLevelB.onClick.AddListener(() => SelectLevelMenu());
+        TutorialB.onClick.AddListener(() => StartTutorial());
         OptionsB.onClick.AddListener(() => Options());
         QuitB.onClick.AddListener(() => Quit());
     }
 
     void Update() { }
 
-    private void StartGame()
+    private void Continue() { }
+
+    private void NewGame()
     {
-        SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
+        //SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
     }
 
     private void SelectLevelMenu()
     {
         SceneManager.LoadSceneAsync("select_level_menu", LoadSceneMode.Single);
+    }
+
+    private void StartTutorial()
+    {
+        SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
     }
 
     private void Options() { }

@@ -6,8 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public CharacterController2D controller;
     public Animator animator;
-
-    private int position = 1;
+    public int position = 1;
     public float distance = 3;
     public static float runSpeed = 20f;
 

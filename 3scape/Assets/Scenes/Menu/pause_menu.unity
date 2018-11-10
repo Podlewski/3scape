@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 894234885}
   - component: {fileID: 894234889}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasPauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,6 +541,7 @@ MonoBehaviour:
   OptionsB: {fileID: 57056721}
   MenuB: {fileID: 1872799227}
   QuitB: {fileID: 1074104124}
+  pauseKeyCode: 0
 --- !u!1 &971794121
 GameObject:
   m_ObjectHideFlags: 0

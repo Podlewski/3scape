@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
     private float health;
 
     public float speed;
-    public Image healthBar;
+    public Image optionalHealthBar;
     //public Animator animator;
 
     void Start () {
@@ -30,7 +30,10 @@ public class Enemy : MonoBehaviour {
     public void TakeDamage(int damage)
     {
         health -= damage;
-        healthBar.fillAmount = health / startHealth;
+
+        if (optionalHealthBar != null)
+            optionalHealthBar.fillAmount = health / startHealth;
+
         Debug.Log(damage + " damage was taken!");
     }
 }

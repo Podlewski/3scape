@@ -219,7 +219,7 @@ MonoBehaviour:
   attackPos: {fileID: 473766725}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2304
   attackRange: 0.2
   damage: 5
 --- !u!1 &155895180
@@ -436,6 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270030678}
   - component: {fileID: 270030679}
+  - component: {fileID: 270030680}
   m_Layer: 0
   m_Name: Characters
   m_TagString: Untagged
@@ -484,6 +485,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4740882, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &270030680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270030677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8794dcc4ec269494387362243b816cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knight: {fileID: 868316984}
+  archer: {fileID: 377217283}
+  mage: {fileID: 1439515475}
 --- !u!1 &298454950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5888,7 +5903,7 @@ MonoBehaviour:
     m_Bits: 567
   m_GroundCheck: {fileID: 1965487657}
   m_CeilingCheck: {fileID: 1691751041}
-  m_CrouchDisableCollider: {fileID: 377217287}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5912,9 +5927,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 377217284}
   animator: {fileID: 377217289}
-  distance: 1
---- !u!58 &377217286
-CircleCollider2D:
+  followSharpness: 1
+  position: 1
+--- !u!70 &377217286
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5925,34 +5941,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11593469, y: -0.25}
-  serializedVersion: 2
-  m_Radius: 0.1482458
---- !u!61 &377217287
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 377217283}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7c43c8b821a989743af2363ecd2660c1, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.112962246, y: 0.023926198}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.29054654, y: 0.5521476}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.13973188, y: -0.0088091595}
+  m_Size: {x: 0.5554028, y: 0.80429417}
+  m_Direction: 0
 --- !u!50 &377217288
 Rigidbody2D:
   serializedVersion: 4
@@ -6806,7 +6797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 868316986}
   animator: {fileID: 868316990}
-  distance: 1
+  followSharpness: 1
+  position: 1
 --- !u!114 &868316986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6827,7 +6819,7 @@ MonoBehaviour:
     m_Bits: 567
   m_GroundCheck: {fileID: 1591685326}
   m_CeilingCheck: {fileID: 422256720}
-  m_CrouchDisableCollider: {fileID: 868316987}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6838,8 +6830,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!61 &868316987
-BoxCollider2D:
+--- !u!70 &868316987
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6850,34 +6842,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.026783735}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.54643255}
-  m_EdgeRadius: 0
---- !u!58 &868316988
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 868316984}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7c43c8b821a989743af2363ecd2660c1, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
-  serializedVersion: 2
-  m_Radius: 0.175
+  m_Offset: {x: 0, y: -0.047167256}
+  m_Size: {x: 0.6107755, y: 0.78676224}
+  m_Direction: 0
 --- !u!50 &868316989
 Rigidbody2D:
   serializedVersion: 4
@@ -6945,24 +6912,6 @@ MonoBehaviour:
   animator: {fileID: 868316990}
   timeBtwSwap: 0
   swapTimer: 0.5
---- !u!232 &868316994
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 868316984}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1439515482}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.1231589, y: -0.103712514}
-  m_AutoConfigureDistance: 1
-  m_Distance: 1.1107444
-  m_MaxDistanceOnly: 0
 --- !u!114 &868316995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6987,18 +6936,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   healthBar: {fileID: 822908147}
---- !u!114 &868316998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 868316984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a452e1038fc631941947519c8bd9fcee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 868316990}
 --- !u!1 &880870451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1025605486487810, guid: 0eb2f5adb2435e74a9f73ead305b1ac3,
@@ -7576,11 +7513,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.59
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7681,7 +7618,7 @@ MonoBehaviour:
     m_Bits: 567
   m_GroundCheck: {fileID: 2064047968}
   m_CeilingCheck: {fileID: 1338531571}
-  m_CrouchDisableCollider: {fileID: 1439515481}
+  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7705,9 +7642,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1439515478}
   animator: {fileID: 1439515476}
-  distance: 1
---- !u!58 &1439515480
-CircleCollider2D:
+  followSharpness: 1
+  position: 1
+--- !u!70 &1439515480
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -7718,34 +7656,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11881977, y: -0.3}
-  serializedVersion: 2
-  m_Radius: 0.18276833
---- !u!61 &1439515481
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1439515475}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7c43c8b821a989743af2363ecd2660c1, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11432734, y: -0.04884138}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1636363, y: 1.1636363}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36385816, y: 0.50830656}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.11505251, y: -0.13507703}
+  m_Size: {x: 0.5609143, y: 0.6703116}
+  m_Direction: 0
 --- !u!50 &1439515482
 Rigidbody2D:
   serializedVersion: 4
@@ -7836,18 +7749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 200
   healthBar: {fileID: 1303557610}
---- !u!114 &1439515489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1439515475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e705934234eb04e93217b9f9569eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 1439515476}
 --- !u!1001 &1514300232
 Prefab:
   m_ObjectHideFlags: 0

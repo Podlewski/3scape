@@ -1,79 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class Swap : MonoBehaviour
+public class Swap : Ability
 {
     public int position;
+    private Vector3 newPosition;
+    private List<Vector3> positions;
 
-    public Animator animator;
-    public GameObject first;
-    public GameObject second;
-    public float swapTimer = 0.5f;
-
-    void Update()
+    void FixedUpdate()
     {
-        if (GlobalVariable.swapCooldown <= 0)
+        if (isAbilityReady() && isPressedKeyProper())
         {
-            if (Input.GetKey(KeyCode.Q))
+            GetComponent<CapsuleCollider2D>().enabled = false;
+
+            newPosition = transform.position;
+
+            if (position == 1)
             {
-                if (position == 1)
-                {
-                    position = 2;
-                    if (first.GetComponent<Animator>().GetInteger("Position") == 2)
-                    {
-                        var tmp = transform.position;
-                        transform.position = first.transform.position;
-                        first.transform.position = tmp;
-                        first.GetComponent<Animator>().SetInteger("Position", 1);
-                    }
-                    else if (second.GetComponent<Animator>().GetInteger("Position") == 2)
-                    {
-                        var tmp = transform.position;
-                        transform.position = second.transform.position;
-                        second.transform.position = tmp;
-                        second.GetComponent<Animator>().SetInteger("Position", 1);
-                    }
-                }
-
-                GlobalVariable.swapCooldown = swapTimer;
-
+                newPosition = positions[2];
             }
 
-            if (Input.GetKey(KeyCode.E))
+            else if (position == 2)
             {
-                if (position == 2)
-                {
-                    position = 3;
-                    if (first.GetComponent<Animator>().GetInteger("Position") == 3)
-                    {
-                        var tmp = transform.position;
-                        transform.position = first.transform.position;
-                        first.transform.position = tmp;
-                        first.GetComponent<Animator>().SetInteger("Position", 2);
-                    }
-                    else if (second.GetComponent<Animator>().GetInteger("Position") == 3)
-                    {
-                        var tmp = transform.position;
-                        transform.position = second.transform.position;
-                        second.transform.position = tmp;
-                        second.GetComponent<Animator>().SetInteger("Position", 2);
-                    }
-                }
-
-                GlobalVariable.swapCooldown = swapTimer;
+                newPosition = positions[0];
             }
+
+            else if (position == 3)
+            {
+                newPosition = positions[1];
+            }
+
+            transform.position = newPosition;
         }
 
         else
         {
-            if (GlobalVariable.swapCooldown > -1)
-                GlobalVariable.swapCooldown -= Time.deltaTime;
-        }
-        animator.SetInteger("Position", position);
-    }
-    private void LateUpdate()
-    {
+            positions = getCurrentPossitions();
 
+            GetComponent<CapsuleCollider2D>().enabled = true;
+
+            currentCooldown -= Time.deltaTime;
+        }
+        position = GetComponent<PlayerMovement>().position;
+    }
+
+    private List<Vector3> getCurrentPossitions()
+    {
+        List<Vector3> positions = new List<Vector3>();
+
+        positions.Add(GameObject.Find("knight").transform.position);
+        positions.Add(GameObject.Find("archer").transform.position);
+        positions.Add(GameObject.Find("mage").transform.position);
+
+        positions = positions.OrderBy(v => v.x).ToList<Vector3>();
+        positions.Reverse();
+
+        return positions;
     }
 }

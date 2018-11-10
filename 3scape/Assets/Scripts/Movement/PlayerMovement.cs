@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     public CharacterController2D controller;
-    public Animator animator;
-
-    private Transform leader;
-    public float followSharpness = 1.0f;
+    private Animator animator;
     public int position = 1;
-    Vector3 _followOffset;
-
+    public float distance = 3;
     public static float runSpeed = 20f;
+    public float x;
 
     bool jump = false;
     bool crouch = false;
@@ -21,18 +19,15 @@ public class PlayerMovement : MonoBehaviour {
 
     void Start()
     {
-        CheckPosition(animator.GetInteger("Position"));
-        // Cache the initial offset at time of load/spawn:
-        // _followOffset = transform.position - leader.position;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update () {
-        position = animator.GetInteger("Position");
-        CheckPosition(position);
+    void Update()
+    {
+        x = transform.position.x;
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -41,44 +36,18 @@ public class PlayerMovement : MonoBehaviour {
         }
         crouch = Input.GetButton("Crouch");
 
-
     }
 
     void FixedUpdate()
     {
+
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
         animator.SetBool("Jump", false);
         animator.SetBool("IsGrounded", controller.GetGrounded());
     }
     void LateUpdate()
-    {/*
-        CheckPosition(position);
-        // Apply that offset to get a target position.
-        Vector3 targetPosition = leader.position + _followOffset;
-
-        // Keep our y position unchanged.
-        targetPosition.y = transform.position.y;
-
-        // Smooth follow.    
-        transform.position += (targetPosition - transform.position) * followSharpness ;*/
-    }
-
-    public void CheckPosition(int pos)
     {
-        if (pos == 1)
-        {
-            GlobalVariable.leader = transform;
-            leader = transform;
-        }
-        else if (pos == 2)
-        {
-            GlobalVariable.middle = transform;
-            leader = GlobalVariable.leader;
-        }
-        else
-        {
-            leader = GlobalVariable.middle;
-        }
     }
+
 }

@@ -9,30 +9,26 @@ public class Swap : Ability
     private Vector3 newPosition;
     private List<Vector3> positions;
 
-    void Update()
+    void FixedUpdate()
     {
         if (isAbilityReady() && isPressedKeyProper())
         {
-            GetComponent<BoxCollider2D>().enabled = false;
-            GetComponent<CircleCollider2D>().enabled = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
 
             newPosition = transform.position;
 
             if (position == 1)
             {
-                position = 3;
                 newPosition = positions[2];
             }
 
             else if (position == 2)
             {
-                position = 1;
                 newPosition = positions[0];
             }
 
             else if (position == 3)
             {
-                position = 2;
                 newPosition = positions[1];
             }
 
@@ -43,14 +39,11 @@ public class Swap : Ability
         {
             positions = getCurrentPossitions();
 
-            GetComponent<BoxCollider2D>().enabled = true;
-            GetComponent<CircleCollider2D>().enabled = true;
+            GetComponent<CapsuleCollider2D>().enabled = true;
 
             currentCooldown -= Time.deltaTime;
         }
-
-        GetComponent<PlayerMovement>().CheckPosition(position);
-        animator.SetInteger("Position", position);
+        position = GetComponent<PlayerMovement>().position;
     }
 
     private List<Vector3> getCurrentPossitions()

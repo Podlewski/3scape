@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyAttack : EnemyAbility
+public class ZombieAttack : EnemyAbility
 {
     public Transform attackPos;
     public LayerMask whatIsEnemy;
@@ -16,7 +16,7 @@ public class EnemyAttack : EnemyAbility
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                enemiesToDamage[i].GetComponent<Player>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<Player>().TakeMagicDamage(damage);
             }
 
             setCooldown();

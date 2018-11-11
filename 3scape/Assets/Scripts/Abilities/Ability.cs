@@ -5,9 +5,10 @@ public class Ability : MonoBehaviour
     public Animator animator;
     public KeyCode abilityKey;
     public int requiredPosition;
-    public float castTime;
     public float cooldown;
     protected float currentCooldown;
+    public float duration;
+    protected float remaindingDuration;
 
     protected bool isAbilityReady()
     {
@@ -17,6 +18,7 @@ public class Ability : MonoBehaviour
     protected void setCooldown()
     {
         currentCooldown = cooldown;
+        remaindingDuration = duration;
     }
 
     protected bool isPressedKeyProper()
@@ -32,5 +34,22 @@ public class Ability : MonoBehaviour
     protected bool isPositionProper()
     {
         return animator.GetInteger("Position") == requiredPosition;
+    }
+
+    protected void reduceCooldown()
+    {
+        currentCooldown -= Time.deltaTime;
+    }
+
+    protected bool isAbilityStillWorking()
+    {
+        if (remaindingDuration > 0)
+        {
+            remaindingDuration -= Time.deltaTime;
+            return true;
+        }
+
+        else
+            return false;
     }
 }

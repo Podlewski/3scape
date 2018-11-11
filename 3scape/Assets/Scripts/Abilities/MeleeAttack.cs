@@ -28,10 +28,7 @@ public class MeleeAttack : Ability
         }
 
         else
-        {
-            currentCooldown -= Time.deltaTime;
-
-        }
+            reduceCooldown();
 
     }
 }

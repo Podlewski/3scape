@@ -550,9 +550,9 @@ MonoBehaviour:
   RestartB: {fileID: 2008562744}
   MenuB: {fileID: 1096946277}
   player:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 382437318}
+  - {fileID: 833718570}
+  - {fileID: 1170955591}
 --- !u!114 &244195807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6292,7 +6292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  health: 0
+  health: 100
   healthBar: {fileID: 1222304422}
 --- !u!114 &382437319
 MonoBehaviour:
@@ -7433,7 +7433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  health: 0
+  health: 100
   healthBar: {fileID: 83955448}
 --- !u!114 &833718571
 MonoBehaviour:
@@ -8355,7 +8355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 200
-  health: 0
+  health: 200
   healthBar: {fileID: 800577054}
 --- !u!114 &1170955592
 MonoBehaviour:

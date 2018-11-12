@@ -12,10 +12,16 @@ public class DeathScreen : MonoBehaviour
     public Button MenuB;
     public Player[] player;
 
+    private readonly int allowedDistance = 20;
+    private Dictionary<Player, Vector3> startingCoords = new Dictionary<Player, Vector3>();
+
     void Start()
     {
         RestartB.onClick.AddListener(() => Restart());
         MenuB.onClick.AddListener(() => Menu());
+
+        foreach (var p in player)
+            startingCoords.Add(p, p.GetComponent<Transform>().position);
     }
 
     void Update()
@@ -23,6 +29,14 @@ public class DeathScreen : MonoBehaviour
         foreach (var p in player)
             if (!activeDeathScreen && p.health <= 0)
                 ActivateDeathScreen();
+
+        foreach(var p1 in player)
+        {
+            foreach (var p2 in player)
+                if(p1 != null && p2 != null)
+                    if (Mathf.Sqrt(Mathf.Pow(p1.GetComponent<Transform>().position.x - p2.GetComponent<Transform>().position.x, 2) + Mathf.Pow(p1.GetComponent<Transform>().position.y - p2.GetComponent<Transform>().position.y, 2)) > allowedDistance)
+                        ActivateDeathScreen();
+        }
     }
 
     public void ActivateDeathScreen()
@@ -54,9 +68,13 @@ public class DeathScreen : MonoBehaviour
         DeactivateDeathScreen();
     }
 
-    private void RestartCharacters()
-    {
+    private void RestartCharacters()    // this function needs to restore starting setup of parameters used to determine if DeathScreen should be activated,
+    {                                   // otherwise this script will activate DeathScreen and/or pause game before they change themselves after Restart
         foreach (var p in player)
             p.health = p.startHealth;
+
+        foreach (var p in player)
+            if (p != null)
+                p.GetComponent<Transform>().position = startingCoords[p];
     }
 }

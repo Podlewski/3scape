@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 30
   speed: 0.2
-  healthBar: {fileID: 1630929612}
+  optionalHealthBar: {fileID: 0}
 --- !u!58 &70525289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2304
   attackRange: 0.2
-  damage: 4
+  damage: 10
 --- !u!1 &155895180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6230,10 +6230,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 377217289}
-  abilityKey: 107
-  requiredPosition: 2
-  castTime: 0.8
+  abilityKey: 108
+  requiredPosition: 1
   cooldown: 0.5
+  duration: 0
   firePoint: {fileID: 2049320014}
   arrowPrefab: {fileID: 1406025611992852, guid: be416ff8347d0eb4dbb2277977a54671,
     type: 2}
@@ -6256,20 +6256,9 @@ MonoBehaviour:
   animator: {fileID: 377217289}
   abilityKey: 32
   requiredPosition: 0
-  castTime: 0.1
   cooldown: 1
+  duration: 0
   position: 3
---- !u!114 &377217293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 377217283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552e71ae763e4e54c86ff40db47b7b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &377217294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6282,10 +6271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 377217289}
-  abilityKey: 108
-  requiredPosition: 1
-  castTime: 0.8
+  abilityKey: 107
+  requiredPosition: 2
   cooldown: 1
+  duration: 0
   destroyPos: {fileID: 2049320014}
   whatIsObstacle:
     serializedVersion: 2
@@ -6309,6 +6298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
+  health: 0
   healthBar: {fileID: 1335011662}
 --- !u!1 &422256719
 GameObject:
@@ -7274,8 +7264,8 @@ MonoBehaviour:
   animator: {fileID: 868316990}
   abilityKey: 108
   requiredPosition: 1
-  castTime: 0.8
   cooldown: 1
+  duration: 0
   attackPos: {fileID: 353220930}
   whatIsEnemy:
     serializedVersion: 2
@@ -7301,8 +7291,8 @@ MonoBehaviour:
   animator: {fileID: 868316990}
   abilityKey: 32
   requiredPosition: 0
-  castTime: 0.1
   cooldown: 1
+  duration: 0
   position: 1
 --- !u!114 &868316994
 MonoBehaviour:
@@ -7316,18 +7306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
+  health: 0
   healthBar: {fileID: 338235065}
---- !u!114 &868316995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 868316984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552e71ae763e4e54c86ff40db47b7b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &868316996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7399,7 +7379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 20
   speed: 0
-  healthBar: {fileID: 0}
+  optionalHealthBar: {fileID: 0}
 --- !u!1 &932789203
 GameObject:
   m_ObjectHideFlags: 0
@@ -8050,7 +8030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.078233, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.07450981, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8118,10 +8098,9 @@ GameObject:
   - component: {fileID: 1439515479}
   - component: {fileID: 1439515483}
   - component: {fileID: 1439515484}
-  - component: {fileID: 1439515485}
-  - component: {fileID: 1439515486}
   - component: {fileID: 1439515489}
   - component: {fileID: 1439515487}
+  - component: {fileID: 1439515485}
   m_Layer: 8
   m_Name: mage
   m_TagString: Untagged
@@ -8286,8 +8265,8 @@ MonoBehaviour:
   animator: {fileID: 1439515476}
   abilityKey: 0
   requiredPosition: 1
-  castTime: 0.8
   cooldown: 0.5
+  duration: 0
   firePoint: {fileID: 340432114}
   arrowPrefab: {fileID: 1017192415200598, guid: cba0785e57678874cb3256a053f67bd9,
     type: 2}
@@ -8305,8 +8284,8 @@ MonoBehaviour:
   animator: {fileID: 1439515476}
   abilityKey: 32
   requiredPosition: 0
-  castTime: 0.1
   cooldown: 1
+  duration: 0
   position: 2
 --- !u!114 &1439515485
 MonoBehaviour:
@@ -8316,21 +8295,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439515475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552e71ae763e4e54c86ff40db47b7b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1439515486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1439515475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e5dda29e8bc17a4baaa14a4691041b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8efad9659c6b0dc4f9d4e82676777b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1439515476}
+  abilityKey: 107
+  requiredPosition: 2
+  cooldown: 2
+  duration: 2
+  magicColor:
+    serializedVersion: 2
+    rgba: 4294901941
 --- !u!114 &1439515487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8343,6 +8318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
+  health: 0
   healthBar: {fileID: 1227423019}
 --- !u!212 &1439515488
 SpriteRenderer:
@@ -8405,11 +8381,9 @@ MonoBehaviour:
   animator: {fileID: 1439515476}
   abilityKey: 106
   requiredPosition: 3
-  castTime: 1
-  cooldown: 20
-  knight: {fileID: 868316994}
-  mage: {fileID: 1439515487}
-  archer: {fileID: 377217295}
+  cooldown: 2
+  duration: 0
+  healValue: 50
 --- !u!1 &1444410893
 GameObject:
   m_ObjectHideFlags: 0
@@ -8867,7 +8841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 50
   speed: 0
-  healthBar: {fileID: 1970480494}
+  optionalHealthBar: {fileID: 0}
 --- !u!61 &1607049832
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class Thorns : EnemyAbility
 
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                enemiesToDamage[i].GetComponent<Player>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<Player>().TakeMagicDamage(damage);
                 setCooldown();
             }
             

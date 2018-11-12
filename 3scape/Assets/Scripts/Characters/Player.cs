@@ -1,37 +1,70 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
     public float startHealth;
     public float health;
     public Image healthBar;
 
-    // Use this for initialization
-    void Start () {
+    private bool physicalImmunity = false;
+    private bool magicImmunity = false;
+
+    void Start()
+    {
         health = startHealth;
     }
 
-	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
         if (health <= 0)
         {
             Destroy(gameObject);
         }
     }
 
+    public void TakePhysicalDamage(int damage)
+    {
+        if (!physicalImmunity)
+            TakeDamage(damage);
+    }
+
+    public void TakeMagicDamage(int damage)
+    {
+        if (!magicImmunity)
+            TakeDamage(damage);
+    }
+
     public void TakeDamage(int damage)
     {
         health -= damage;
         healthBar.fillAmount = health / startHealth;
-        Debug.Log(damage + " damage was taken!");
+        Debug.Log(this.gameObject.name + ": " + damage + " damage was taken!");
+    }
+
+    public void SetPhysicalImmunity()
+    {
+        physicalImmunity = true;
+    }
+
+    public void SetMagicImmunity()
+    {
+        magicImmunity = true;
+    }
+
+    public void DisbalePhysicalImmunity()
+    {
+        physicalImmunity = false;
+    }
+
+    public void DisableMagicImmunity()
+    {
+        magicImmunity = false;
     }
 
     public void Heal(float percentages)
     {
-        float previousHealth = health;
+        //float previousHealth = health;
         health += startHealth * percentages / 100;
         if (health > startHealth)
         {

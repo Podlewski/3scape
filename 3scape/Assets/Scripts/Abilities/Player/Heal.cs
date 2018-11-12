@@ -2,10 +2,18 @@
 
 public class Heal : Ability
 {
-    public Player knight;
-    public Player mage;
-    public Player archer;
-    
+    public int healValue;
+
+    private Player knight;
+    private Player mage;
+    private Player archer;
+
+    private void Start()
+    {
+        knight = GameObject.Find("knight").GetComponent<Player>();
+        mage = GameObject.Find("mage").GetComponent<Player>();
+        archer = GameObject.Find("archer").GetComponent<Player>();
+    }
 
     void Update()
     {
@@ -19,9 +27,9 @@ public class Heal : Ability
             {
                 animator.SetBool("IsHealing", true);
                 
-                knight.Heal(5);
-                archer.Heal(5);
-                mage.Heal(5);
+                knight.Heal(healValue);
+                archer.Heal(healValue);
+                mage.Heal(healValue);
                 //animator.SetBool("IsUsing", false);
                 setCooldown();
             }

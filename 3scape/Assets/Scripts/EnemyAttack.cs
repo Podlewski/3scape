@@ -12,7 +12,7 @@ public class EnemyAttack : EnemyAbility
         {
             // animator.SetBool("IsAttacking", true);
 
-            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.Find("ZombieAttackPoint").position, attackRange, whatIsEnemy);
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.Find("AttackPoint").position, attackRange, whatIsEnemy);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<Player>().TakeDamage(damage);

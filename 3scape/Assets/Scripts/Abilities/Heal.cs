@@ -9,9 +9,10 @@ public class Heal : Ability
 
     void Update()
     {
+        animator.SetBool("IsHealing", false);
         if (isAbilityReady())
         {
-            animator.SetBool("IsHealing", false);
+
             //animator.SetBool("IsUsing", true);
 
             if (isPressedKeyProper() && isPositionProper())

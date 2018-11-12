@@ -5519,6 +5519,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1965487657}
   m_CeilingCheck: {fileID: 1691751041}
   m_CrouchDisableCollider: {fileID: 377217287}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5541,9 +5542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 377217284}
-  animator: {fileID: 377217289}
-  followSharpness: 1
   position: 1
+  distance: 3
+  x: 0
 --- !u!58 &377217286
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5644,10 +5645,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: 3
   animator: {fileID: 377217289}
-  timeBtwSwap: 0
-  swapTimer: 0.5
+  abilityKey: 0
+  requiredPosition: 0
+  castTime: 0
+  cooldown: 0
+  position: 3
 --- !u!114 &377217293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6233,9 +6236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 868316986}
-  animator: {fileID: 868316990}
-  followSharpness: 1
   position: 1
+  distance: 3
+  x: 0
 --- !u!114 &868316986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6257,6 +6260,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1591685326}
   m_CeilingCheck: {fileID: 422256720}
   m_CrouchDisableCollider: {fileID: 868316987}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6370,10 +6374,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: 1
   animator: {fileID: 868316990}
-  timeBtwSwap: 0
-  swapTimer: 0.5
+  abilityKey: 0
+  requiredPosition: 0
+  castTime: 0
+  cooldown: 0
+  position: 1
 --- !u!114 &868316994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6386,6 +6392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
+  health: 0
   healthBar: {fileID: 750748570}
 --- !u!114 &868316995
 MonoBehaviour:
@@ -6646,12 +6653,12 @@ Prefab:
     - target: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: -572665673
+      value: 78243847
       objectReference: {fileID: 0}
     - target: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalScale.x
@@ -6787,6 +6794,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 2064047968}
   m_CeilingCheck: {fileID: 1338531571}
   m_CrouchDisableCollider: {fileID: 1439515481}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6809,9 +6817,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1439515478}
-  animator: {fileID: 1439515476}
-  followSharpness: 1
   position: 1
+  distance: 3
+  x: 0
 --- !u!58 &1439515480
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6902,10 +6910,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: 2
   animator: {fileID: 1439515476}
-  timeBtwSwap: 0
-  swapTimer: 0.5
+  abilityKey: 0
+  requiredPosition: 0
+  castTime: 0
+  cooldown: 0
+  position: 2
 --- !u!114 &1439515485
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thorns : EnemyAbility
+public class Thorns : AnimatedAbility
 { 
     public Transform attackPos;
     public LayerMask whatIsEnemy;

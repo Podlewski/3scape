@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-public class RangedAttack : Ability
+public class RangedAttack : PlayerAbility
 {
     public Transform firePoint;
     public GameObject arrowPrefab;
 
     void Update()
     {
-		if(isPressedKeyProper() && isPositionProper())
+		if(isButtonDownProper() && isPositionProper())
         {
             Shoot();
         }

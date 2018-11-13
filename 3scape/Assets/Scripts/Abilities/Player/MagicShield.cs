@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MagicShield : Ability
+public class MagicShield : PlayerAbility
 {
     private Player knight;
     private Player mage;
@@ -29,7 +29,7 @@ public class MagicShield : Ability
     {
         if (isAbilityReady())
         {
-            if (isPressedKeyProper() && isPositionProper())
+            if (isButtonDownProper() && isPositionProper())
             {
                 knight.SetMagicImmunity();
                 mage.SetMagicImmunity();

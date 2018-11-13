@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ZombieAttack : EnemyAbility
+public class ZombieAttack : AnimatedAbility
 {
     public LayerMask whatIsEnemy;
     public float attackRange;

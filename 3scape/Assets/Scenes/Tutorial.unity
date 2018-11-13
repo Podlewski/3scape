@@ -213,9 +213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 70525292}
-  castTime: 0.8
   cooldown: 0.5
+  duration: 0
+  animator: {fileID: 70525292}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 2304
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 216459080}
   whatIsEnemy:
     serializedVersion: 2
@@ -6805,12 +6805,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 382437316}
-  abilityKey: 32
-  requiredPosition: 0
   cooldown: 0.5
   duration: 0
+  animator: {fileID: 382437316}
+  requiredPosition: 10
   position: 1
+  requiredPosition: 0
 --- !u!114 &382437321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6822,11 +6822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b091cf1bf97274b8b8dcf5bad2e66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 382437316}
-  abilityKey: 108
-  requiredPosition: 1
   cooldown: 1
   duration: 0
+  animator: {fileID: 382437316}
+  requiredPosition: 1
   attackPos: {fileID: 1254526929}
   whatIsEnemy:
     serializedVersion: 2
@@ -6926,11 +6925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9044613f78a01b47ac09603c20e45a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 382437316}
-  abilityKey: 107
-  requiredPosition: 2
   cooldown: 1
   duration: 0
+  animator: {fileID: 382437316}
+  requiredPosition: 2
 --- !u!1001 &451791599
 Prefab:
   m_ObjectHideFlags: 0
@@ -7644,9 +7642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 768224965}
-  castTime: 0.8
   cooldown: 0.5
+  duration: 0
+  animator: {fileID: 768224965}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 2304
@@ -8141,12 +8139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 833718568}
-  abilityKey: 32
-  requiredPosition: 0
   cooldown: 0.5
   duration: 0
+  animator: {fileID: 833718568}
+  requiredPosition: 10
   position: 3
+  requiredPosition: 0
 --- !u!114 &833718574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8158,11 +8156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c71bf2be77ca344b3a26ebb80c67af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 833718568}
-  abilityKey: 108
-  requiredPosition: 1
   cooldown: 0.5
   duration: 0
+  animator: {fileID: 833718568}
+  requiredPosition: 1
   firePoint: {fileID: 1428519553}
   arrowPrefab: {fileID: 1406025611992852, guid: be416ff8347d0eb4dbb2277977a54671,
     type: 2}
@@ -8259,11 +8256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02bb54ecfb328d4788163c9e71caa1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 833718568}
-  abilityKey: 106
-  requiredPosition: 3
   cooldown: 0
   duration: 0
+  animator: {fileID: 833718568}
+  requiredPosition: 3
   downTime: 0
   upTime: 0
   pressTime: 0
@@ -8376,9 +8372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 1564633166}
   whatIsEnemy:
     serializedVersion: 2
@@ -8789,9 +8785,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 352473889}
   whatIsEnemy:
     serializedVersion: 2
@@ -9293,11 +9289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efad9659c6b0dc4f9d4e82676777b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1170955589}
-  abilityKey: 107
-  requiredPosition: 2
   cooldown: 4
   duration: 4
+  animator: {fileID: 1170955589}
+  requiredPosition: 2
   magicColor:
     serializedVersion: 2
     rgba: 3789094656
@@ -9312,12 +9307,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1170955589}
-  abilityKey: 32
-  requiredPosition: 0
   cooldown: 0.5
   duration: 0
+  animator: {fileID: 1170955589}
+  requiredPosition: 10
   position: 2
+  requiredPosition: 0
 --- !u!114 &1170955595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9329,11 +9324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c71bf2be77ca344b3a26ebb80c67af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1170955589}
-  abilityKey: 108
-  requiredPosition: 1
   cooldown: 0.5
   duration: 0
+  animator: {fileID: 1170955589}
+  requiredPosition: 1
   firePoint: {fileID: 622408857}
   arrowPrefab: {fileID: 1017192415200598, guid: cba0785e57678874cb3256a053f67bd9,
     type: 2}
@@ -9430,11 +9424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df9857405a9bbf4a83af1854b597288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1170955589}
-  abilityKey: 106
-  requiredPosition: 3
   cooldown: 5
   duration: 0
+  animator: {fileID: 1170955589}
+  requiredPosition: 3
   healValue: 50
 --- !u!1 &1213992529
 GameObject:
@@ -9789,9 +9782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 1052662432}
   whatIsEnemy:
     serializedVersion: 2
@@ -9885,9 +9878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 238638796}
   whatIsEnemy:
     serializedVersion: 2
@@ -10056,9 +10049,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 1952747826}
   whatIsEnemy:
     serializedVersion: 2
@@ -13361,9 +13354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 2084715891}
   whatIsEnemy:
     serializedVersion: 2
@@ -13485,9 +13478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff801b121335d044a93dd0b515f642e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  castTime: 0
   cooldown: 0.1
+  duration: 0
+  animator: {fileID: 0}
   attackPos: {fileID: 2015174458}
   whatIsEnemy:
     serializedVersion: 2

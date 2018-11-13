@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyingObstacles : Ability
+public class DestroyingObstacles : PlayerAbility
 {
     public Transform destroyPos;
     public LayerMask whatIsObstacle;
@@ -21,14 +21,14 @@ public class DestroyingObstacles : Ability
         {
             // jakies animacje nk
 
-            if (isPressedKeyProper() && ready == false)
+            if (isButtonPressedProper() && ready == false)
             {
                 downTime = Time.time;
                 pressTime = downTime + countDown;
                 ready = true;
             }
 
-            if (isUpKeyProper())
+            if (isButtonUpProper())
             {
                 ready = false;
             }

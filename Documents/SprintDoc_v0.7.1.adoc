@@ -1,0 +1,128 @@
+= 3scape - przegląd i planowanie sprintu: *Tydzień 6*
+Ancient Yaks
+0.7.1, 2018-11-05
+:toc:
+:toc-title: Spis Treści
+:version-label: Wersja
+:icons: font
+
+== Obecne założenia gry
+
+3scape jest zręcznościowo-logiczną grą platformową, która działa na silniku Unity.
+
+Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
+
+* wojownik - dysponuje on siłą, która okaże się nieoceniona nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
+* czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
+
+Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ustawienia w rzędzie, dysponują oni innymi umiejętnościami, które potrafią oddziaływać ze sobą w najróżniejszy sposób. Dobre przetasowywanie naszej drużyny to klucz do sukcesu w 3scape.
+
+=== Sterowanie
+
+* Poruszamy się bohaterami za pomocą klawiszy *W A D*, bądź *strzałek*.
+* Zmieniamy kolejność bohaterów za pomocą klawisza *Spacji* (każdy posuwa się od lewej do prawej, chyba, że dalej nie może - wtedy się cofa),
+* Klawisze *J K L* odpowiadają za umiejętności naszych bohaterów.
+* Klawisz *J* odpowiada za umiejętności na lewej pozycji:
+** Mag będzie leczył drużynę.
+** Łotrzyk potrafi otworzyć skrzynię.
+* Klawisz *K* odpowiada za umiejętności na środkowej pozycji:
+** Mag sprawi, że drużyna otrzyma tymczasową odporność na magiczne obrażenia.
+** Wojownik podniesie Maga, przez co drużyna będzie w stanie poruszać się szybciej i skakać dalej.
+* Klawisz *L* odpowiada za umiejętności na prawej pozycji:
+** Każda postać zaatakuje.
+* Klawisz *Esc* otwiera menu pauzy. 
+
+<<<
+== Przegląd sprintu (tygodnie 5-7)
+
+Głównym celem tego spirntu było rozwijanie naszej gry, poprzez wprowadzanie nowych umiejętności dla naszych bohaterów oraz nauka w jaki sposób wspólnie pracować na repozytorium tak, by praca w Unity była przyjemna. Cele te udało nam się spełnić. Nowych członkowie zespołu szybko się zaklimatyzowali, co pozwoliło nam na szybszy rozwój gry.  
+
+=== Cały zespół
+
+* [x] Wymyślenie kolejnych umiejętności dla naszych bohaterów.
+* [x] Ustalenia co do korzystania z repozytorium.
+
+=== Krzysiek
+
+* [x] Poprawa kolizji bohaterów.
+
+=== Justyna
+
+* [x] Praca nad poziomem tutorialowym/prototypowym - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów. 
+* [x] Implementacja umiejętności łotrzyka - rozbrajanie pułapek/otwieranie zamków.
+* [x] Przeciwnicy od teraz zadają obrażenia.
+
+=== Bartek
+
+* [x] Implementacja umiejętności wojownika - podnoszenie kompanów.
+* [x] Dodanie bohaterom poziomu zdrowia.
+
+=== Konrad
+
+* [x] Zebranie feedbacku dotyczącego gry.
+* [x] Poprawienie animacji skoku.
+* [x] Implementacja umiejętności maga - leczenie drużyny.
+
+=== Zbyszek
+
+* [x] Zebranie feedbacku dotyczącego gry.
+* [x] Ekran pauzy.
+* [x] Reset poziomu po śmierci.
+* [x] Ekran menu.
+
+=== Karol
+
+* [x] Doprowadzenie kodu do porządku, narzucenie nazewnictwa zmiennych oraz klas.
+* [x] Implementacja umiejętności maga - ochronne pole.
+* [x] Dopracowanie sterowania.
+* [x] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+
+<<<
+== Plan sprintu (tydzień 8)
+
+Poniżej przedstawiamy podział obowiązków na najbliższy sprint (tydzień 8). Nie jest to podział stały, a propozycja. Członkowie w zespole dowolnie mogą się zamieniać zadaniami jeżeli wyrażą taką chęć.
+
+=== Cały zespół
+
+* [ ] Wymyślenie kolejnych umiejętności dla naszych bohaterów.
+* [ ] Poprawa błędów powstałych na skutek łączenia kodu z różnych gałęzi.
+* [ ] Maintenance kodu i projektu.
+
+=== Krzysiek
+
+* [ ] Dodanie wspólnej kolizji.
+* [ ] Wprowadzenie timera poziomu.
+
+=== Justyna
+
+* [ ] Dodanie timera dla umiejętności w postaci ładującego się paska. Pozwoli on zorientować się ile czasu zostało danej umiejętności do zakończenia działania (np. otwieranie skrzynek) 
+* [ ] Wprowadzenie punktacji poziomu. 
+
+=== Bartek
+ 
+* [ ] Nałożenie na umiejętności długotrwałe (np. przenikanie) dezaktywacji przy zmianie pozycji / blokady zmiany pozycji.
+* [ ] Wprowadzenie przewodnika, który będzie przekazywał graczowi wskazówki w grze.
+
+=== Konrad
+
+* [ ] Przygotowanie HUDu, na którym planujemy umieścić ikony obecnie dostępnych umiejętności, stan życia itp -> razem ze Zbyszkiem.
+
+=== Zbyszek
+
+* [ ] Przygotowanie HUDu, na którym planujemy umieścić ikony obecnie dostępnych umiejętności, stan życia itp -> razem z Konradem.
+
+=== Karol
+
+* [ ] Projektowanie poziomu tutorialowym/prototypowym - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów. 
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+
+=== Nieprzypisane zadania
+
+Tutaj są zadania, którymi będzie się można zająć, jeżeli nasza estymata okazała się nieodpowiednia i ktoś ma za dużo wolnego czasu.
+
+* [ ] Poprawa modelów postaci w grze.
+*     _W tym momencie nie przejmujemy się dokładnym wyglądem naszej produkcji. O ile gra nie musi być ładna, tak wypadałoby by modele (oraz ich animacje) zachowywały się w taki sam sposób, pasowały do swoich colliderów, nie działały z opóźnieniem czy demonstrowały to co robią._ 
+* [ ] Implementacja umiejętności, którą uznamy za najpotrzebniejszą w tym momencie.
+*     _Po burzy mózgów na pewno uda nam się wymyślić nowe umiejętności. Najważniejsza z nich zostanie zaimplementowana przez nowego członka (lub osobę, która boryka się z problemem zbyt dużej ilości wolnego czasu)._
+* [ ] Fabuła gry.

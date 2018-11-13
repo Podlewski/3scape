@@ -1,6 +1,6 @@
-= 3scape - przegląd i planowanie sprintu: *Tydzień 6*
+= 3scape - przegląd i planowanie sprintu: *Tydzień 7*
 Ancient Yaks
-0.7.1, 2018-11-05
+0.7.1, 2018-11-11
 :toc:
 :toc-title: Spis Treści
 :version-label: Wersja

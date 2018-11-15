@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
         QuitB.onClick.AddListener(() => Quit());
     }
 
-    void Update() { }
+    //void Update() { }
 
     private void Continue() { }
 
@@ -43,7 +43,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
     }
 
-    private void Options() { }
+    private void Options()
+    {
+        SceneManager.LoadScene("settings_menu", LoadSceneMode.Single);
+    }
 
     private void Quit()
     {

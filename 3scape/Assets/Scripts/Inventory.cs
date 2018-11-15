@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour {
-
+// Class where characters can keep their "things" for example keys
+// Maybe in future it will be used
+public class Inventory : MonoBehaviour
+{
     public bool[] isFull;
-    public GameObject[] slots;
-
+    public float slots;
 }

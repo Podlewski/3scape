@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour 
 {
-
     private Inventory inventory;
     public GameObject itemButton;
 
@@ -17,13 +17,12 @@ public class PickUp : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
+            for (int i = 0; i < inventory.slots; i++)
             {
                 if(inventory.isFull[i]==false)
                 {
                     // item can be added to inventory
                     inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
                     break;
                 }

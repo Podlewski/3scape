@@ -20,8 +20,6 @@ public class InputSettingsMenu : MonoBehaviour
     public Button RightB;
     private GameObject currentKey;
 
-    public static InputSettingsMenu settings;
-
     Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
 
     void Start()
@@ -32,10 +30,20 @@ public class InputSettingsMenu : MonoBehaviour
         LeftB.onClick.AddListener(() => ChangeKey(currentKey));
         RightB.onClick.AddListener(() => ChangeKey(currentKey));
 
-        keys.Add("Up", KeyCode.W);
-        keys.Add("Down", KeyCode.S);
-        keys.Add("Left", KeyCode.A);
-        keys.Add("Right", KeyCode.D);
+        if(CheckSaves())
+        {
+            //Debug.Log("Save exists");
+            Load();
+        }
+        else
+        {
+            //Debug.Log("Save doesn't exist");
+            keys.Add("Up", KeyCode.W);
+            keys.Add("Down", KeyCode.S);
+            keys.Add("Left", KeyCode.A);
+            keys.Add("Right", KeyCode.D);
+            Save();
+        }
 
         JumpB.GetComponentInChildren<Text>().text = keys["Up"].ToString();
         CrouchB.GetComponentInChildren<Text>().text = keys["Down"].ToString();
@@ -56,9 +64,7 @@ public class InputSettingsMenu : MonoBehaviour
         }
     }*/
 
-    void Update()
-    {
-    }
+    //void Update() { }
 
     void OnGUI()
     {
@@ -70,12 +76,18 @@ public class InputSettingsMenu : MonoBehaviour
             {
                 keys[currentKey.name] = e.keyCode;
                 currentKey.GetComponentInChildren<Text>().text = e.keyCode.ToString();
+                Save();
                 currentKey = null;
+
+                foreach(var k in keys)
+                {
+                    Debug.Log(k.Key.ToString() + "_ _" + k.Value.ToString());
+                }
             }
         }
     }
 
-    public void ChangeKey(GameObject clicked)
+    private void ChangeKey(GameObject clicked)
     {
         clicked.GetComponentInChildren<Text>().text = "?";
         currentKey = clicked;
@@ -86,47 +98,40 @@ public class InputSettingsMenu : MonoBehaviour
         SceneManager.LoadSceneAsync("settings_menu", LoadSceneMode.Single);
     }
 
-    public void Save()
+    private void Save()
     {
+        //Debug.Log("\tStart save");
         BinaryFormatter binaryFormatter = new BinaryFormatter();
-        FileStream file = File.Open("./saves/data.sav", FileMode.Open);
+        FileStream file = File.Create("./data.sav");
 
-        Data data = new Data();
-        // data.sth = sth;
-
-        binaryFormatter.Serialize(file, data);
+        binaryFormatter.Serialize(file, keys);
         file.Close();
+        Debug.Log("\tStop save");
     }
 
-    public void Load()
+    private void Load()
     {
-        if(File.Exists("./saves/data.sav"))
+        //Debug.Log("\tStart load");
+        if(CheckSaves())
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileStream file = File.Create("./saves/data.sav");
+            FileStream file = File.Open("./data.sav", FileMode.Open);
 
-            Data data = (Data)binaryFormatter.Deserialize(file);
+            keys = (Dictionary<string, KeyCode>)binaryFormatter.Deserialize(file);
             file.Close();
 
-            // sth = data.sth
+            /*JumpB.GetComponentInChildren<Text>().text = keys["Up"].ToString();
+            CrouchB.GetComponentInChildren<Text>().text = keys["Down"].ToString();
+            LeftB.GetComponentInChildren<Text>().text = keys["Left"].ToString();
+            RightB.GetComponentInChildren<Text>().text = keys["Right"].ToString();*/
         }
+        Debug.Log("\tStop load");
     }
 
-    private KeyCode GetKey()
+    private bool CheckSaves(string filepath = "./data.sav")
     {
-        foreach(KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
-        {
-            if(Input.GetKeyDown(keyCode))
-            {
-                Debug.Log("yes" + keyCode);
-                return keyCode;
-            }
-            Debug.Log("no" + keyCode);
-        }
-
-        throw new Exception();
+        if (File.Exists(filepath))
+            return true;
+        return false;
     }
 }
-
-[Serializable]
-class Data { }

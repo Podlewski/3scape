@@ -18,7 +18,7 @@ public class UnlockingChests : Ability
         {
             //animator.SetBool("jakasAnimacja", false);
             if (isPressedKeyProper() && ready == false)
-                {
+            {
                     downTime = Time.time;
                     pressTime = downTime + countDown;
                     ready = true;
@@ -33,7 +33,6 @@ public class UnlockingChests : Ability
                 {
                     ready = false;
                     //animator.SetBool("jakasAnimacja", true);
-
                     Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
                     Debug.Log(col.Length);
 

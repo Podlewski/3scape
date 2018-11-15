@@ -47,7 +47,7 @@ public class MagicShield : Ability
             }
         }
 
-        else if (!isAbilityStillWorking())
+        else if (!isAbilityStillWorking() || !isPositionProper())
         {
             knight.DisableMagicImmunity();
             mage.DisableMagicImmunity();
@@ -63,5 +63,6 @@ public class MagicShield : Ability
 
             reduceCooldown();
         }
+
     }
 }

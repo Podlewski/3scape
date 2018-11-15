@@ -12,7 +12,7 @@ public class Guide : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        txt.enabled = false;
+        if(txt != null) txt.enabled = false;
 	}
 	
 	// Update is called once per frame

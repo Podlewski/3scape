@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class InputSettingsMenu : MonoBehaviour
 {
@@ -25,44 +26,25 @@ public class InputSettingsMenu : MonoBehaviour
     void Start()
     {
         BackB.onClick.AddListener(() => Back());
-        JumpB.onClick.AddListener(() => ChangeKey(currentKey));
-        CrouchB.onClick.AddListener(() => ChangeKey(currentKey));
-        LeftB.onClick.AddListener(() => ChangeKey(currentKey));
-        RightB.onClick.AddListener(() => ChangeKey(currentKey));
 
-        if(CheckSaves())
+        if (CheckSaves())
         {
-            //Debug.Log("Save exists");
             Load();
         }
         else
         {
-            //Debug.Log("Save doesn't exist");
-            keys.Add("Up", KeyCode.W);
-            keys.Add("Down", KeyCode.S);
-            keys.Add("Left", KeyCode.A);
-            keys.Add("Right", KeyCode.D);
+            keys.Add("JumpB", KeyCode.W);
+            keys.Add("CrouchB", KeyCode.S);
+            keys.Add("LeftB", KeyCode.A);
+            keys.Add("RightB", KeyCode.D);
             Save();
         }
 
-        JumpB.GetComponentInChildren<Text>().text = keys["Up"].ToString();
-        CrouchB.GetComponentInChildren<Text>().text = keys["Down"].ToString();
-        LeftB.GetComponentInChildren<Text>().text = keys["Left"].ToString();
-        RightB.GetComponentInChildren<Text>().text = keys["Right"].ToString();
+        JumpB.GetComponentInChildren<Text>().text = keys["JumpB"].ToString();
+        CrouchB.GetComponentInChildren<Text>().text = keys["CrouchB"].ToString();
+        LeftB.GetComponentInChildren<Text>().text = keys["LeftB"].ToString();
+        RightB.GetComponentInChildren<Text>().text = keys["RightB"].ToString();
     }
-
-    /*void Awake()
-    {
-        if(settings == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            settings = this;
-        }
-        else if(settings != this)
-        {
-            Destroy(gameObject);
-        }
-    }*/
 
     //void Update() { }
 
@@ -78,11 +60,6 @@ public class InputSettingsMenu : MonoBehaviour
                 currentKey.GetComponentInChildren<Text>().text = e.keyCode.ToString();
                 Save();
                 currentKey = null;
-
-                foreach(var k in keys)
-                {
-                    Debug.Log(k.Key.ToString() + "_ _" + k.Value.ToString());
-                }
             }
         }
     }
@@ -100,18 +77,15 @@ public class InputSettingsMenu : MonoBehaviour
 
     private void Save()
     {
-        //Debug.Log("\tStart save");
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file = File.Create("./data.sav");
 
         binaryFormatter.Serialize(file, keys);
         file.Close();
-        Debug.Log("\tStop save");
     }
 
     private void Load()
     {
-        //Debug.Log("\tStart load");
         if(CheckSaves())
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -119,19 +93,13 @@ public class InputSettingsMenu : MonoBehaviour
 
             keys = (Dictionary<string, KeyCode>)binaryFormatter.Deserialize(file);
             file.Close();
-
-            /*JumpB.GetComponentInChildren<Text>().text = keys["Up"].ToString();
-            CrouchB.GetComponentInChildren<Text>().text = keys["Down"].ToString();
-            LeftB.GetComponentInChildren<Text>().text = keys["Left"].ToString();
-            RightB.GetComponentInChildren<Text>().text = keys["Right"].ToString();*/
         }
-        Debug.Log("\tStop load");
     }
 
     private bool CheckSaves(string filepath = "./data.sav")
     {
-        if (File.Exists(filepath))
-            return true;
-        return false;
+        //if (File.Exists(filepath))
+        //    return true;
+        return File.Exists(filepath);
     }
 }

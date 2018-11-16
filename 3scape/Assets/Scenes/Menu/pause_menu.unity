@@ -541,7 +541,7 @@ MonoBehaviour:
   OptionsB: {fileID: 57056721}
   MenuB: {fileID: 1872799227}
   QuitB: {fileID: 1074104124}
-  pauseKeyCode: 0
+  pauseKeyCode: 27
 --- !u!1 &971794121
 GameObject:
   m_ObjectHideFlags: 0

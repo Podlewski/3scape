@@ -26,7 +26,11 @@ public class Heal : Ability
             if (isPressedKeyProper() && isPositionProper())
             {
                 animator.SetBool("IsHealing", true);
-                
+
+                knight.isBeingHealed = true;
+                archer.isBeingHealed = true;
+                mage.isBeingHealed = true;
+
                 knight.Heal(healValue);
                 archer.Heal(healValue);
                 mage.Heal(healValue);
@@ -34,11 +38,13 @@ public class Heal : Ability
                 setCooldown();
             }
         }
-
         else
         {
             currentCooldown -= Time.deltaTime;
         }
 
+        if (knight.isBeingHealed) knight.HealAnimation();
+        if (mage.isBeingHealed) mage.HealAnimation();
+        if (archer.isBeingHealed) archer.HealAnimation();
     }
 }

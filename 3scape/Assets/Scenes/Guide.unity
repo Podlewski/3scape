@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  health: 100
+  health: 90
   healthBar: {fileID: 1482019507}
 --- !u!70 &575923234
 CapsuleCollider2D:

@@ -10,9 +10,12 @@ public class Player : MonoBehaviour
     private bool physicalImmunity = false;
     private bool magicImmunity = false;
 
+    internal bool isBeingHealed = false;
+
     void Start()
     {
         health = startHealth;
+        GameObject.Find("knight").GetComponent<Player>().TakeDamage(30);
     }
 
     void Update()
@@ -62,14 +65,28 @@ public class Player : MonoBehaviour
         magicImmunity = false;
     }
 
-    public void Heal(float percentages)
+    public void Heal(float healValue)
     {
-        //float previousHealth = health;
-        health += startHealth * percentages / 100;
+        health += healValue;
         if (health > startHealth)
         {
             health = startHealth;
         }
-        healthBar.fillAmount = health / startHealth;
+    }
+
+    public void HealAnimation()
+    {
+        float waitTime = 1.0f;
+        if (healthBar.fillAmount < health / startHealth)
+        {
+            healthBar.fillAmount += 1.0f / waitTime * Time.deltaTime;
+        }
+        else
+        {
+            isBeingHealed = false;
+        }
+        /*Debug.Log("To: " + 1.0f / waitTime * Time.deltaTime + "\t" +
+            "Health: " + health + ", health / startHealth: " + health / startHealth + "\t" + 
+        "FillAmount: " + healthBar.fillAmount);*/
     }
 }

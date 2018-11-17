@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gamePaused = false;
     public GameObject pauseMenuUI;
+    public GameObject settingsMenuUI;
     public Button ResumeB;
     public Button RestartB;
     public Button OptionsB;
@@ -58,8 +59,8 @@ public class PauseMenu : MonoBehaviour
 
     private void Options()
     {
-        // TODO
-        //SceneManager.LoadScene(SceneManager.GetSceneByName(/*options scene name*/));
+        pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(true);
     }
 
     private void Menu()

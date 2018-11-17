@@ -24,6 +24,7 @@ public class Guide : MonoBehaviour {
             {
                 Debug.Log("triggered" + distance);
                 txt.enabled = true;
+                //txt.color = new Color(1, 1, 1, 0.5f);
             } else
             {
                 txt.enabled = false;

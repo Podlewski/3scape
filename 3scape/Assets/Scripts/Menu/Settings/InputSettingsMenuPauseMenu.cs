@@ -7,8 +7,10 @@ using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class InputSettingsMenu : MonoBehaviour
+public class InputSettingsMenuPauseMenu : MonoBehaviour
 {
+    public GameObject inputSettingsMenuUI;
+    public GameObject settingsMenuUI;
     public Text JumpT;
     public Text CrouchT;
     public Text LeftT;
@@ -67,7 +69,7 @@ public class InputSettingsMenu : MonoBehaviour
         {
             Event e = Event.current;
 
-            if(e.isKey)
+            if (e.isKey)
             {
                 keys[currentKey.name] = e.keyCode;
                 currentKey.GetComponentInChildren<Text>().text = e.keyCode.ToString();
@@ -88,7 +90,8 @@ public class InputSettingsMenu : MonoBehaviour
 
     private void Back()
     {
-        SceneManager.LoadSceneAsync("settings_menu", LoadSceneMode.Single);
+        inputSettingsMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(true);
     }
 
     private void Reset()
@@ -127,7 +130,7 @@ public class InputSettingsMenu : MonoBehaviour
 
     private bool Load()
     {
-        if(CheckSaves())
+        if (CheckSaves())
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             FileStream file = File.Open(GlobalVariable.saveFilepath, FileMode.Open);

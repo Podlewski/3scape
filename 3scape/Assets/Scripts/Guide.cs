@@ -22,7 +22,7 @@ public class Guide : MonoBehaviour {
             float distance = Math.Abs(guide.transform.position.y - partyMember.transform.position.y);
             if (distance < range)
             {
-                Debug.Log("triggered" + distance);
+                //Debug.Log("triggered" + distance);
                 txt.enabled = true;
                 //txt.color = new Color(1, 1, 1, 0.5f);
             } else

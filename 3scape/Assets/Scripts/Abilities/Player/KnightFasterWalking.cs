@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnightFasterWalking : Ability
+public class KnightFasterWalking : PlayerAbility
 {
     //GameObject mage;
     CharacterController2D characterController2D;
@@ -17,14 +17,14 @@ public class KnightFasterWalking : Ability
     // Update is called once per frame
     void Update()
     {
-        if (isPressedKeyProper() && isPositionProper() && !pressed)
+        if (isButtonPressedProper() && isPositionProper() && !pressed)
         {
             pressed = true;
             PlayerMovement.runSpeed = 50f;
             //mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.5f);
 
         }
-        else if((isUpKeyProper() && isPositionProper()) || (!isPositionProper()))
+        else if((isButtonPressedProper() && isPositionProper()) || (!isPositionProper()))
         {
             //mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.29f);
             PlayerMovement.runSpeed = 20f;

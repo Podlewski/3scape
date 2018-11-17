@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MeleeAttack : Ability
+public class MeleeAttack : PlayerAbility
 {
     public Transform attackPos;
     public LayerMask whatIsEnemy;
@@ -13,7 +13,7 @@ public class MeleeAttack : Ability
         {
             animator.SetBool("IsAttacking", false);
 
-            if (isPressedKeyProper() && isPositionProper())
+            if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsAttacking", true);
 

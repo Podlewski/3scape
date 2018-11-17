@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Heal : Ability
+public class Heal : PlayerAbility
 {
     public int healValue;
 
@@ -20,10 +20,9 @@ public class Heal : Ability
         animator.SetBool("IsHealing", false);
         if (isAbilityReady())
         {
-
             //animator.SetBool("IsUsing", true);
 
-            if (isPressedKeyProper() && isPositionProper())
+            if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsHealing", true);
 
@@ -35,13 +34,12 @@ public class Heal : Ability
                 archer.Heal(healValue);
                 mage.Heal(healValue);
                 //animator.SetBool("IsUsing", false);
+
                 setCooldown();
             }
         }
         else
-        {
-            currentCooldown -= Time.deltaTime;
-        }
+            reduceCooldown();
 
         if (knight.isBeingHealed) knight.HealAnimation();
         if (mage.isBeingHealed) mage.HealAnimation();

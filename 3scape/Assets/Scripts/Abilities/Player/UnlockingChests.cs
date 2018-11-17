@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnlockingChests : Ability
+public class UnlockingChests : PlayerAbility
 {
     public float downTime, upTime, pressTime = 0;
     public float countDown = 2.0f;
@@ -17,14 +17,14 @@ public class UnlockingChests : Ability
         if (isAbilityReady())
         {
             //animator.SetBool("jakasAnimacja", false);
-            if (isPressedKeyProper() && ready == false)
+            if (isButtonPressedProper() && ready == false)
                 {
                     downTime = Time.time;
                     pressTime = downTime + countDown;
                     ready = true;
             }
 
-                if (isUpKeyProper())
+                if (isButtonUpProper())
                 {
                     ready = false;
                 }

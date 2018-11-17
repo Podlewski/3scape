@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class Swap : Ability
+public class Swap : PlayerAbility
 {
     public int position;
     private Vector3 newPosition;
     private List<Vector3> positions;
 
+    public void Change()
+    {
+        // [HideInInspector]
+        requiredPosition = 10;
+    }
+
     void FixedUpdate()
     {
-        if (isAbilityReady() && isPressedKeyProper())
+        if (isAbilityReady() && isButtonDownProper())
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
 

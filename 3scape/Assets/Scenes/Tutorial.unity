@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 163290227}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 1578790721}
 --- !u!114 &163290230
 MonoBehaviour:
@@ -25543,7 +25543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 471314882}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 1169361657}
 --- !u!114 &471314885
 MonoBehaviour:
@@ -26014,7 +26014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 546092537}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 996888308}
 --- !u!114 &546092540
 MonoBehaviour:
@@ -26277,7 +26277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 589431083}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 743947124}
 --- !u!114 &589431086
 MonoBehaviour:
@@ -26717,7 +26717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 659102542}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 242213477}
 --- !u!114 &659102545
 MonoBehaviour:
@@ -29016,7 +29016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 945116830}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 67964098}
 --- !u!114 &945116833
 MonoBehaviour:
@@ -29401,7 +29401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1044127055}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 1795716684}
 --- !u!114 &1044127058
 MonoBehaviour:
@@ -30668,7 +30668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5dda29e8bc17a4baaa14a4691041b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1170955589}
 --- !u!114 &1170955593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30900,7 +30899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1217166119}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 855117223}
 --- !u!114 &1217166122
 MonoBehaviour:
@@ -31042,7 +31041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1224376140}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 207329585}
 --- !u!114 &1224376143
 MonoBehaviour:
@@ -31288,7 +31287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1290346906}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 1333921244}
 --- !u!114 &1290346909
 MonoBehaviour:
@@ -32056,7 +32055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1402044077}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 797954100}
 --- !u!114 &1402044080
 MonoBehaviour:
@@ -33056,7 +33055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1510323370}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 365038830}
 --- !u!114 &1510323373
 MonoBehaviour:
@@ -34478,7 +34477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1764878544}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 384972247}
 --- !u!114 &1764878547
 MonoBehaviour:
@@ -35553,7 +35552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guide: {fileID: 1955002259}
   partyMember: {fileID: 382437315}
-  range: 0.5
+  range: 3
   txt: {fileID: 1579081025}
 --- !u!1 &1955673396
 GameObject:

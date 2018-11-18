@@ -19,7 +19,7 @@ public class Guide : MonoBehaviour {
 	void Update () {
         if (guide != null && partyMember != null && range > 0 && txt != null)
         {
-            float distance = Math.Abs(guide.transform.position.y - partyMember.transform.position.y);
+            float distance = Math.Abs(guide.transform.position.x - partyMember.transform.position.x);
             if (distance < range)
             {
                 //Debug.Log("triggered" + distance);

@@ -48,7 +48,7 @@ public class UnlockingChests : PlayerAbility
                 }
             }
 
-            if (isUpKeyProper())
+            if (isButtonUpProper())
             {
                 ready = false;
                 tmp = false;

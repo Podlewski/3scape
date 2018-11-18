@@ -73,5 +73,10 @@ public class Heal : PlayerAbility
         if (knight.isBeingHealed) knight.HealAnimation();
         if (mage.isBeingHealed) mage.HealAnimation();
         if (archer.isBeingHealed) archer.HealAnimation();
+
+        if (!isPositionProper())
+            FirstSkillCoolDown.fillAmount = 1;
+        else
+            FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 }

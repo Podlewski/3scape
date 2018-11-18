@@ -1864,8 +1864,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 162307614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.081, y: -0.081, z: 0}
-  m_LocalScale: {x: 0.88757, y: 0.88757, z: 0.88757}
+  m_LocalPosition: {x: -0.758, y: -0.081, z: 0}
+  m_LocalScale: {x: 0.4270006, y: 0.4270006, z: 0.4270006}
   m_Children: []
   m_Father: {fileID: 458597222}
   m_RootOrder: 0
@@ -25615,8 +25615,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 458597225}
   openSprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
   objects:
-  - {fileID: 1123459535405354, guid: b07f05abe70a0fd4eb651bc98906bada, type: 2}
-  - {fileID: 1495761790419622, guid: 0a5b238b94ced514b95987aa6f5181d5, type: 2}
+  - {fileID: 1677963153683394, guid: d10eecba309275f41bae684175521e72, type: 2}
+  - {fileID: 1520974470845184, guid: 850b47d6bac17ea4684c0ba1c0850320, type: 2}
   spawnPoint: {fileID: 162307615}
   timeBar: {fileID: 706158491}
 --- !u!61 &458597224
@@ -27985,7 +27985,7 @@ MonoBehaviour:
   whatCanOpen:
     serializedVersion: 2
     m_Bits: 2048
-  timeAmt: 0.02
+  timeAmt: 10
   tmp: 0
 --- !u!1 &845794526
 GameObject:
@@ -30191,7 +30191,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 78243847
+  m_SortingLayerID: 1276026449
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1096946276
@@ -32089,8 +32089,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1357438741}
   openSprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
   objects:
-  - {fileID: 1123459535405354, guid: b07f05abe70a0fd4eb651bc98906bada, type: 2}
-  - {fileID: 1495761790419622, guid: 0a5b238b94ced514b95987aa6f5181d5, type: 2}
+  - {fileID: 1677963153683394, guid: d10eecba309275f41bae684175521e72, type: 2}
+  - {fileID: 1520974470845184, guid: 850b47d6bac17ea4684c0ba1c0850320, type: 2}
   spawnPoint: {fileID: 1809447488}
   timeBar: {fileID: 424486218}
 --- !u!61 &1357438743
@@ -35347,7 +35347,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809447487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.081, y: -0.081, z: 0}
+  m_LocalPosition: {x: -0.809, y: -0.056, z: 0}
   m_LocalScale: {x: 0.88757, y: 0.88757, z: 0.88757}
   m_Children: []
   m_Father: {fileID: 1357438739}

@@ -73,6 +73,10 @@ public class KnightFasterWalking : PlayerAbility
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
+        if (!isPositionProper())
+            SecondSkillCoolDown.fillAmount = 1;
+        else
+            SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 
 }

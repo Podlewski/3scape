@@ -58,5 +58,10 @@ public class UnlockingChests : PlayerAbility
 
             //FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
+
+        if (!isPositionProper())
+            FirstSkillCoolDown.fillAmount = 1;
+        else
+            FirstSkillCoolDown.fillAmount = 0;
     }
 }

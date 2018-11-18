@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Heal : PlayerAbility
 {
@@ -14,6 +15,8 @@ public class Heal : PlayerAbility
 
     private Color32 playerColor = new Color32(255, 255, 255, 225);
     public Color32 magicColor = new Color32(255, 18, 234, 14);
+
+    public Image FirstSkillCoolDown;
 
     private void Start()
     {
@@ -53,6 +56,8 @@ public class Heal : PlayerAbility
                 //animator.SetBool("IsUsing", false);
 
                 setCooldown();
+
+                FirstSkillCoolDown.fillAmount = 1;
             }
         }
         else if (!isAbilityStillWorking() || !isPositionProper())
@@ -61,6 +66,8 @@ public class Heal : PlayerAbility
             srMage.color = playerColor;
             srArcher.color = playerColor;
             reduceCooldown();
+
+            FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
         if (knight.isBeingHealed) knight.HealAnimation();

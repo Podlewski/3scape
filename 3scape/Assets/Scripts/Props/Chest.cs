@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Chest : MonoBehaviour{
 
@@ -10,6 +11,8 @@ public class Chest : MonoBehaviour{
 
     public GameObject[] objects;
     public Transform spawnPoint;
+
+    public Image timeBar;
 
     public void checkIfOpen()
     {

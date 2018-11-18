@@ -12,39 +12,63 @@ public class UnlockingChests : PlayerAbility
     public float unlockRange;
     public LayerMask whatCanOpen;
 
-	void Update ()
+    public float timeAmt = 0.02f;
+    float time;
+    public bool tmp = false;
+
+    private void Start()
+    {
+        time = timeAmt;
+    }
+
+    void Update ()
     {
         if (isAbilityReady())
         {
+            Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
+
             //animator.SetBool("jakasAnimacja", false);
             if (isButtonPressedProper() && ready == false)
             {
-                    downTime = Time.time;
-                    pressTime = downTime + countDown;
-                    ready = true;
+                downTime = Time.time;
+                pressTime = downTime + countDown;
+                ready = true;
+                tmp = true;
             }
 
-                if (isButtonUpProper())
+            if (time > 0 && tmp == true)
+            {
+                time -= Time.deltaTime * 4.8f;
+                for (int i = 0; i < col.Length; i++)
                 {
-                    ready = false;
-                }
-
-                if (Time.time >= pressTime && ready == true && isPositionProper())
-                {
-                    ready = false;
-                    //animator.SetBool("jakasAnimacja", true);
-                    Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
-                    Debug.Log(col.Length);
-
-                    for (int i = 0; i < col.Length; i++)
-                    {
                     if (col[i].tag == "Chest")
-                        {
-                        col[i].GetComponent<Chest>().checkIfOpen();
-                            setCooldown();
-                        }
+                    {
+                        col[i].GetComponent<Chest>().timeBar.fillAmount = time / timeAmt;
                     }
                 }
+            }
+
+            if (isUpKeyProper())
+            {
+                ready = false;
+                tmp = false;
+                time = timeAmt;
+            }
+
+            if (Time.time >= pressTime && ready == true && isPositionProper())
+            {
+                ready = false;
+                //animator.SetBool("jakasAnimacja", true);
+
+                for (int i = 0; i < col.Length; i++)
+                {
+                    if (col[i].tag == "Chest")
+                    {
+                        col[i].GetComponent<Chest>().checkIfOpen();
+                        setCooldown();
+                    }
+                }
+            }
         }
 
         else

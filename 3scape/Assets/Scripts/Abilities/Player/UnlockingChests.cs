@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnlockingChests : PlayerAbility
 {
@@ -12,44 +13,50 @@ public class UnlockingChests : PlayerAbility
     public float unlockRange;
     public LayerMask whatCanOpen;
 
-	void Update ()
+    public Image FirstSkillCoolDown;
+
+    void Update()
     {
         if (isAbilityReady())
         {
             //animator.SetBool("jakasAnimacja", false);
             if (isButtonPressedProper() && ready == false)
             {
-                    downTime = Time.time;
-                    pressTime = downTime + countDown;
-                    ready = true;
+                downTime = Time.time;
+                pressTime = downTime + countDown;
+                ready = true;
             }
 
-                if (isButtonUpProper())
-                {
-                    ready = false;
-                }
+            if (isButtonUpProper())
+            {
+                ready = false;
+            }
 
-                if (Time.time >= pressTime && ready == true && isPositionProper())
-                {
-                    ready = false;
-                    //animator.SetBool("jakasAnimacja", true);
-                    Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
-                    Debug.Log(col.Length);
+            if (Time.time >= pressTime && ready == true && isPositionProper())
+            {
+                ready = false;
+                //animator.SetBool("jakasAnimacja", true);
+                Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
+                Debug.Log(col.Length);
 
-                    for (int i = 0; i < col.Length; i++)
-                    {
+                for (int i = 0; i < col.Length; i++)
+                {
                     if (col[i].tag == "Chest")
-                        {
+                    {
                         col[i].GetComponent<Chest>().checkIfOpen();
-                            setCooldown();
-                        }
+                        setCooldown();
+
+                        //FirstSkillCoolDown.fillAmount = 1;
                     }
                 }
+            }
         }
 
         else
         {
             currentCooldown -= Time.deltaTime;
+
+            //FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
     }
 }

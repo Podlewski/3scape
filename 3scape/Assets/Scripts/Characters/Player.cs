@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         health = startHealth;
-        GameObject.Find("knight").GetComponent<Player>().TakeDamage(30);
     }
 
     void Update()

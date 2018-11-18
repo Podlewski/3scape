@@ -4,32 +4,68 @@ using UnityEngine;
 
 public class KnightFasterWalking : PlayerAbility
 {
-    //GameObject mage;
     CharacterController2D characterController2D;
-    bool pressed = false;
+
+    private Player knight;
+    private Player mage;
+    private Player archer;
+
+    private SpriteRenderer srKnight;
+    private SpriteRenderer srMage;
+    private SpriteRenderer srArcher;
+
+    private Color32 playerColor = new Color32(255, 255, 255, 225);
+    private Color32 healtColor = new Color32(19, 255, 0, 255);
+    public Color32 fastColor = new Color32(255, 0, 80, 225);
 
     // Use this for initialization
     void Start()
     {
-        //mage = GameObject.Find("mage");
+        knight = GameObject.Find("knight").GetComponent<Player>();
+        mage = GameObject.Find("mage").GetComponent<Player>();
+        archer = GameObject.Find("archer").GetComponent<Player>();
+
+        srKnight = GameObject.Find("knight").GetComponent<SpriteRenderer>();
+        srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
+        srArcher = GameObject.Find("archer").GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isButtonPressedProper() && isPositionProper() && !pressed)
+        if (isAbilityReady())
         {
-            pressed = true;
-            PlayerMovement.runSpeed = 50f;
-            //mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.5f);
+            if (isButtonDownProper() && isPositionProper())
+            {
+                PlayerMovement.runSpeed = 50f;
 
+                knight.healthBar.color = fastColor;
+                mage.healthBar.color = fastColor;
+                archer.healthBar.color = fastColor;
+
+                srKnight.color = fastColor;
+                srMage.color = fastColor;
+                srArcher.color = fastColor;
+
+                setCooldown();
+            }
         }
-        else if((isButtonPressedProper() && isPositionProper()) || (!isPositionProper()))
+
+        else if (!isAbilityStillWorking() || !isPositionProper())
         {
-            //mage.GetComponent<CircleCollider2D>().offset = new Vector2(0.1188198f, -0.29f);
             PlayerMovement.runSpeed = 20f;
-            pressed = false;
+
+            knight.healthBar.color = healtColor;
+            mage.healthBar.color = healtColor;
+            archer.healthBar.color = healtColor;
+
+            srKnight.color = playerColor;
+            srMage.color = playerColor;
+            srArcher.color = playerColor;
+
+            reduceCooldown();
         }
+
     }
 
 }

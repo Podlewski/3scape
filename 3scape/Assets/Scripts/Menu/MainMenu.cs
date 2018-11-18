@@ -40,7 +40,7 @@ public class MainMenu : MonoBehaviour
 
     private void StartTutorial()
     {
-        SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
+        SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
     }
 
     private void Options()

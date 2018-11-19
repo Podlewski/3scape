@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class UnlockingChests : PlayerAbility
+/*
+public class UnlockingChestsHUD : PlayerAbility
 {
     public float downTime, upTime, pressTime = 0;
     public float countDown = 2.0f;
@@ -67,3 +67,4 @@ public class UnlockingChests : PlayerAbility
             FirstSkillCoolDown.fillAmount = 0;
     }
 }
+*/

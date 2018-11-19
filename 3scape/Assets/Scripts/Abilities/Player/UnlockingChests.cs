@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnlockingChests : PlayerAbility
 {
@@ -15,6 +16,8 @@ public class UnlockingChests : PlayerAbility
     public float timeAmt = 0.02f;
     float time;
     public bool tmp = false;
+
+    public Image FirstSkillCoolDown;
 
     private void Start()
     {
@@ -66,6 +69,8 @@ public class UnlockingChests : PlayerAbility
                     {
                         col[i].GetComponent<Chest>().checkIfOpen();
                         setCooldown();
+
+
                     }
                 }
             }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KnightFasterWalking : PlayerAbility
 {
@@ -17,6 +18,8 @@ public class KnightFasterWalking : PlayerAbility
     private Color32 playerColor = new Color32(255, 255, 255, 225);
     private Color32 healtColor = new Color32(19, 255, 0, 255);
     public Color32 fastColor = new Color32(255, 0, 80, 225);
+
+    public Image SecondSkillCoolDown;
 
     // Use this for initialization
     void Start()
@@ -48,6 +51,8 @@ public class KnightFasterWalking : PlayerAbility
                 srArcher.color = fastColor;
 
                 setCooldown();
+
+                SecondSkillCoolDown.fillAmount = 1;
             }
         }
 
@@ -64,8 +69,14 @@ public class KnightFasterWalking : PlayerAbility
             srArcher.color = playerColor;
 
             reduceCooldown();
+
+            SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
+        if (!isPositionProper())
+            SecondSkillCoolDown.fillAmount = 1;
+        else
+            SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 
 }

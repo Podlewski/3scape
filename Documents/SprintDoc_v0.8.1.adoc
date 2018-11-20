@@ -1,6 +1,6 @@
 = 3scape - przegląd i planowanie sprintu: *Tydzień 8*
 Ancient Yaks
-0.8.1, 2018-11-19
+0.8.1, 2018-11-20
 :toc:
 :toc-title: Spis Treści
 :version-label: Wersja
@@ -35,8 +35,6 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 <<<
 == Przegląd sprintu (tydzień 8)
-
-CEL SPRINTU
 
 === Cały zespół
 
@@ -78,60 +76,69 @@ Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie s�
 * [x] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
 * [x] Połączenie zmian wprowadzonych przez team w jedną część.
 * [x] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
-* [x] [???][NOWE] Ustawienia sterowania (zmiany w kodzie koniecznie do przeniesienia sterowania do Input Managera) -> razem ze Zbyszkiem. 
-*     Niestety, ale Unity nie pozwala zmieniać sterowania we wbudowanym Input Managerze, co okazało się przeszkodą nie do przeskoczenia z dostępnym czasem.
+* [x] [NOWE] Ustawienia sterowania (zmiany w kodzie koniecznie do przeniesienia sterowania do Input Managera) -> razem ze Zbyszkiem. 
 
 <<<
 == Plan sprintu (tygodnie 9-10)
 
-Poniżej przedstawiamy podział obowiązków na najbliższy sprint.
+Poniżej przedstawiamy podział obowiązków na najbliższy sprint. 
 
 === Cały zespół
 
 Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie są one przeznaczone ocenie podczas ewaluacji z prowadzącymi.
 
-* [ ] Poprawa błędów powstałych na skutek łączenia kodu z różnych gałęzi.
 * [ ] Maintenance kodu i projektu - usuwanie starych skryptów/scen, które sami stworzyliśmy i wiemy, ze się do niczego nie przydadzą.
 * [ ] Wymyślenie kolejnych umiejętności dla bohaterów.
 
+=== Edyta
+
+* [ ] Zebranie dźwięków i muzyki przydatnych w grze -> razem z Gracjanem.
+* [ ] Poprawa wyglądu licznika czasu oraz zebranych skarbów.
+* [ ] Poprawa wyglądu najbardziej zastępczych assetów - tak, by nie trzeba było domyślać się/zgadywać co to jest.
+
 === Krzysiek
 
+* [ ] Poprawa fizyki gry -> razem z Bartoszem.
+* [ ] Poprawa działania kamery.
+* [ ] Dopracowanie SI Zombie.
 
-* [ ] Dodanie wspólnej kolizji
-* [ ] Poprawa inteligencji zombie - powinien ruszać w stronę naszych bohaterów (nie zależenie, czy w prawo, czy w lewo) kiedy ich zobaczy
-* [ ] Poprawa zamiany kolejności bohaterów.
+=== Gracjan
+
+* [ ] Wprowadzenie dźwięków i muzyki do gry -> razem z Edytą.
+* [ ] Poprawa animacji zamiany kolejności bohaterów. 
 
 === Justyna
 
-* [ ] Poprawienie działania kamery.
+* [ ] Poprawa umiejętności otwierania skrzyń.
+* [ ] Poprawa zbierania przedmiotów - od teraz będzie do widoczniejsze dla gracza, że podniósł rzecz, która zwiększa mu punkty.
+* [ ] Rozpoczęcie prac nad zwykłym, grywalnym poziomem -> razem z Karolem.
 
 === Bartosz
  
-* [ ] Zmiany w używaniu umiejętności - kierunek w który zwróceni są bohaterowie determinuje kto jest 1 w rzędzie, kto 2, a kto trzeci (obecnie osoba z prawej strony zawsze jest pierwsza)
+* [ ] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Karolem.
+* [ ] Wprowadzenie życia dla beczki, oraz efektów związanych z jej niszczeniem.
+* [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
 
 === Konrad
 
-* [ ] Poprawienie animacji.
+* [ ] Poprawa animacji postaci przy używaniu umiejętności.
+* [ ] Rozwijanie HUDu. 
+* [ ] Zebranie feedbacku związanego ze zmianami w grze.
 
 === Zbyszek
 
-* [ ] Dopracowanie menu. 
-* [ ] Wprowadzenie nowej umiejętności, którą uda nam się wymyślić.
+* [ ] Rozwijanie HUDu. 
+* [ ] Przeniesienie sterowania do własnego InputManagera.
+* [ ] Dopracowywanie działania menu gry oraz menu pauzy.
 
 === Karol
 
 * [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
 * [ ] Połączenie zmian wprowadzonych przez team w jedną część.
-* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zo
-* [ ] Wprowadzenie nowej umiejętności, którą uda nam się wymyślić.
-
-=== Nowy członek w zespole
-
-* [ ] Dodanie prostych odgłosów oraz muzyki.
-
-=== Rzeczy do zrobienia w przyszłości
-
-* [ ] Dodanie kolejnych umiejętności.
+* [ ] Rozpoczęcie prac nad zwykłym, grywalnym poziomem -> razem z Justyną.
+* [ ] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Bartoszem.
+* [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
 
 === Rzeczy dodatkowe
 

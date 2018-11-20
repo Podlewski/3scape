@@ -1,0 +1,138 @@
+= 3scape - przegląd i planowanie sprintu: *Tydzień 8*
+Ancient Yaks
+0.8.1, 2018-11-19
+:toc:
+:toc-title: Spis Treści
+:version-label: Wersja
+:icons: font
+
+== Obecne założenia gry
+
+3scape jest zręcznościowo-logiczną grą platformową, która działa na silniku Unity.
+
+Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
+
+* wojownik - dysponuje on siłą, która okaże się nieoceniona nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
+* czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
+
+Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ustawienia w rzędzie, dysponują oni innymi umiejętnościami, które potrafią oddziaływać ze sobą w najróżniejszy sposób. Dobre przetasowywanie naszej drużyny to klucz do sukcesu w 3scape.
+
+=== Sterowanie
+
+* Poruszamy się bohaterami za pomocą klawiszy *W A D*, bądź *strzałek*.
+* Zmieniamy kolejność bohaterów za pomocą klawisza *Cudzysłów/Apostrof* (każdy posuwa się od lewej do prawej, chyba, że dalej nie może - wtedy się cofa),
+* Klawisze *J K L* odpowiadają za umiejętności naszych bohaterów.
+* Klawisz *J* odpowiada za umiejętności na lewej pozycji:
+** Mag będzie leczył drużynę.
+** Łotrzyk potrafi otworzyć skrzynię.
+* Klawisz *K* odpowiada za umiejętności na środkowej pozycji:
+** Mag sprawi, że drużyna otrzyma tymczasową odporność na magiczne obrażenia.
+** Wojownik podniesie morale drużyny, przez co wszyscy będą w stanie poruszać się szybciej i skakać dalej.
+* Klawisz *L* odpowiada za umiejętności na prawej pozycji:
+** Każda postać zaatakuje.
+* Klawisz *Esc* otwiera menu pauzy. 
+
+<<<
+== Przegląd sprintu (tydzień 8)
+
+CEL SPRINTU
+
+=== Cały zespół
+
+Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie są one przeznaczone ocenie podczas ewaluacji z prowadzącymi.
+
+* [x] Poprawa błędów powstałych na skutek łączenia kodu z różnych gałęzi.
+* [x] Maintenance kodu i projektu - usuwanie starych skryptów/scen, które sami stworzyliśmy i wiemy, ze się do niczego nie przydadzą.
+
+=== Krzysiek
+
+* [x] Wprowadzenie timera poziomu.
+* [x] [NOWE] Kamera od teraz trzyma się środka drużyny, a nie rycerza.
+* [x] [NOWE] Jeżeli bohaterowie będą rozdzieleni przez 4 sekundy, złączą się.
+
+=== Justyna
+
+* [x] Dodanie timera dla umiejętności w postaci ładującego się paska. Pozwoli on zorientować się ile czasu zostało danej umiejętności do zakończenia działania (np. otwieranie skrzynek) 
+* [x] Wprowadzenie punktacji poziomu. 
+* [x] [NOWE] Skrzynia potrafi wydropić losowe rzeczy, które dają punkty.
+
+=== Bartosz
+ 
+* [x] Nałożenie na umiejętności długotrwałe (buffy dla postaci) dezaktywacji przy zmianie pozycji.
+* [x] Zastąpienie tekstów na ścianie tabliczkami, które będą zawierały porady w jaki sposób grać w grę.
+* [x] [NOWE] Zmiany w pasku życia - podczas leczenia pasek będzie się zwiększał stopniowo zamiast jednorazowego skoku.
+
+=== Konrad
+
+* [x] Przygotowanie HUDu, na którym planujemy umieścić ikony obecnie dostępnych umiejętności, stan życia itp -> razem ze Zbyszkiem.
+* [x] [NOWE] Przedstawienie najważniejszych uwag związanych z zebranym feedbackiem zespołowi, w celu opracowania planu na kolejny sprint (tygodnie 9-10).
+
+=== Zbyszek
+
+* [x] Przygotowanie HUDu, na którym planujemy umieścić ikony obecnie dostępnych umiejętności, stan życia itp -> razem z Konradem.
+* [x] [NOWE] Ustawienia sterowania (przygotowanie odpowiednich okien w menu pozwalających na zmianę sterowania) -> razem z Karolem.
+
+=== Karol
+
+* [x] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
+* [x] Połączenie zmian wprowadzonych przez team w jedną część.
+* [x] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+* [x] [???][NOWE] Ustawienia sterowania (zmiany w kodzie koniecznie do przeniesienia sterowania do Input Managera) -> razem ze Zbyszkiem. 
+*     Niestety, ale Unity nie pozwala zmieniać sterowania we wbudowanym Input Managerze, co okazało się przeszkodą nie do przeskoczenia z dostępnym czasem.
+
+<<<
+== Plan sprintu (tygodnie 9-10)
+
+Poniżej przedstawiamy podział obowiązków na najbliższy sprint.
+
+=== Cały zespół
+
+Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie są one przeznaczone ocenie podczas ewaluacji z prowadzącymi.
+
+* [ ] Poprawa błędów powstałych na skutek łączenia kodu z różnych gałęzi.
+* [ ] Maintenance kodu i projektu - usuwanie starych skryptów/scen, które sami stworzyliśmy i wiemy, ze się do niczego nie przydadzą.
+* [ ] Wymyślenie kolejnych umiejętności dla bohaterów.
+
+=== Krzysiek
+
+
+* [ ] Dodanie wspólnej kolizji
+* [ ] Poprawa inteligencji zombie - powinien ruszać w stronę naszych bohaterów (nie zależenie, czy w prawo, czy w lewo) kiedy ich zobaczy
+* [ ] Poprawa zamiany kolejności bohaterów.
+
+=== Justyna
+
+* [ ] Poprawienie działania kamery.
+
+=== Bartosz
+ 
+* [ ] Zmiany w używaniu umiejętności - kierunek w który zwróceni są bohaterowie determinuje kto jest 1 w rzędzie, kto 2, a kto trzeci (obecnie osoba z prawej strony zawsze jest pierwsza)
+
+=== Konrad
+
+* [ ] Poprawienie animacji.
+
+=== Zbyszek
+
+* [ ] Dopracowanie menu. 
+* [ ] Wprowadzenie nowej umiejętności, którą uda nam się wymyślić.
+
+=== Karol
+
+* [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
+* [ ] Połączenie zmian wprowadzonych przez team w jedną część.
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zo
+* [ ] Wprowadzenie nowej umiejętności, którą uda nam się wymyślić.
+
+=== Nowy członek w zespole
+
+* [ ] Dodanie prostych odgłosów oraz muzyki.
+
+=== Rzeczy do zrobienia w przyszłości
+
+* [ ] Dodanie kolejnych umiejętności.
+
+=== Rzeczy dodatkowe
+
+* [ ] Fabuła gry.

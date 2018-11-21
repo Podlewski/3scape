@@ -1,0 +1,144 @@
+= 3scape - przegląd i planowanie sprintu: *Tydzień 10*
+Ancient Yaks
+0.10.1, 2018-12-04
+:toc:
+:toc-title: Spis Treści
+:version-label: Wersja
+:icons: font
+
+== Obecne założenia gry
+
+3scape jest zręcznościowo-logiczną grą platformową, która działa na silniku Unity.
+
+Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
+
+* wojownik - dysponuje on siłą, która okaże się nieoceniona nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
+* czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
+
+Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ustawienia w rzędzie, dysponują oni innymi umiejętnościami, które potrafią oddziaływać ze sobą w najróżniejszy sposób. Dobre przetasowywanie naszej drużyny to klucz do sukcesu w 3scape.
+
+=== Sterowanie
+
+* Poruszamy się bohaterami za pomocą klawiszy *W A D*, bądź *strzałek*.
+* Zmieniamy kolejność bohaterów za pomocą klawisza *Cudzysłów/Apostrof* (każdy posuwa się od lewej do prawej, chyba, że dalej nie może - wtedy się cofa),
+* Klawisze *J K L* odpowiadają za umiejętności naszych bohaterów.
+* Klawisz *J* odpowiada za umiejętności na lewej pozycji:
+** Mag będzie leczył drużynę.
+** Łotrzyk potrafi otworzyć skrzynię.
+* Klawisz *K* odpowiada za umiejętności na środkowej pozycji:
+** Mag sprawi, że drużyna otrzyma tymczasową odporność na magiczne obrażenia.
+** Wojownik podniesie morale drużyny, przez co wszyscy będą w stanie poruszać się szybciej i skakać dalej.
+* Klawisz *L* odpowiada za umiejętności na prawej pozycji:
+** Każda postać zaatakuje.
+* Klawisz *Esc* otwiera menu pauzy. 
+
+<<<
+== Przegląd sprintu (tydzień 10)
+
+=== Edyta
+
+* [ ] Zebranie dźwięków i muzyki przydatnych w grze -> razem z Gracjanem.
+* [ ] Poprawa wyglądu licznika czasu oraz zebranych skarbów.
+* [ ] Poprawa wyglądu najbardziej zastępczych assetów - tak, by nie trzeba było domyślać się/zgadywać co to jest.
+
+=== Krzysiek
+
+* [ ] Poprawa fizyki gry.
+* [ ] Poprawa działania kamery.
+* [ ] Dopracowanie SI Zombie.
+
+=== Gracjan
+
+* [ ] Wprowadzenie dźwięków i muzyki do gry -> razem z Edytą.
+* [ ] Poprawa animacji zamiany kolejności bohaterów. 
+
+=== Justyna
+
+* [ ] Poprawa umiejętności otwierania skrzyń.
+* [ ] Poprawa zbierania przedmiotów - od teraz będzie do widoczniejsze dla gracza, że podniósł rzecz, która zwiększa mu punkty.
+* [ ] Rozpoczęcie prac nad zwykłym, grywalnym poziomem -> razem z Karolem.
+
+=== Bartosz
+ 
+* [ ] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Karolem.
+* [ ] Wprowadzenie życia dla beczki, oraz efektów związanych z jej niszczeniem.
+* [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
+
+=== Konrad
+
+* [ ] Rozwijanie HUDu. 
+* [ ] Poprawa animacji postaci przy używaniu umiejętności.
+* [ ] Zebranie feedbacku związanego ze zmianami w grze.
+
+=== Zbyszek
+
+* [ ] Rozwijanie HUDu. 
+* [ ] Przeniesienie sterowania do własnego InputManagera.
+* [ ] Dopracowywanie działania menu gry oraz menu pauzy.
+
+=== Karol
+
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+* [ ] Połączenie zmian wprowadzonych przez team w jedną część.
+* [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
+* [ ] Rozpoczęcie prac nad zwykłym, grywalnym poziomem -> razem z Justyną.
+* [ ] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Bartoszem.
+* [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
+
+<<<
+== Plan sprintu (tydzień 12)
+
+Poniżej przedstawiamy podział obowiązków na najbliższy sprint. 
+
+=== Cały zespół
+
+Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie są one przeznaczone ocenie podczas ewaluacji z prowadzącymi.
+
+* [ ] _
+
+=== Edyta
+
+* [ ] _
+
+=== Krzysiek
+
+* [ ] Poprawa fizyki gry.
+* [ ] _
+
+=== Gracjan
+
+* [ ] _
+
+=== Justyna
+
+* [ ] Praca nad grywalnym poziomem -> razem z Karolem.
+* [ ] _
+
+=== Bartosz
+ 
+* [ ] _
+
+=== Konrad
+
+* [ ] Rozwijanie HUDu. 
+* [ ] Zebranie feedbacku po 10 tygodniu zajęć.
+* [ ] _
+
+=== Zbyszek
+
+* [ ] Rozwijanie HUDu. 
+* [ ] _
+
+=== Karol
+
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+* [ ] Połączenie zmian wprowadzonych przez team w jedną część.
+* [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
+* [ ] Praca nad grywalnym poziomem -> razem z Justyną.
+* [ ] _
+
+=== Rzeczy dodatkowe
+
+* [ ] Fabuła gry.
+* [ ] _

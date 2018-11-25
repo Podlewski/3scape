@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         health = startHealth;
+        PlayerMovement.runSpeed = 20f;
     }
 
     void Update()

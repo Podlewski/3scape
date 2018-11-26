@@ -11,6 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public static class InputM
 {
     public static Dictionary<string, KeyCode> keys;
+    public static Dictionary<string, int> ui;
 
     static InputM()
     {
@@ -37,25 +38,37 @@ public static class InputM
     private static void Save()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
-        FileStream file = File.Create(GlobalVariable.saveFilepath);
+        FileStream file = File.Create(GlobalVariable.keysFilepath);
 
         binaryFormatter.Serialize(file, keys);
+        file.Close();
+
+        file = File.Create(GlobalVariable.uiFilepath);
+        binaryFormatter.Serialize(file, ui);
         file.Close();
     }
 
     private static void Load()
     {
-        if(CheckSaves())
-        {
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileStream file = File.Open(GlobalVariable.saveFilepath, FileMode.Open);
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream file;
 
+        if (CheckSaves(GlobalVariable.keysFilepath))
+        {
+            file = File.Open(GlobalVariable.keysFilepath, FileMode.Open);
             keys = (Dictionary<string, KeyCode>)binaryFormatter.Deserialize(file);
+            file.Close();
+        }
+
+        if(CheckSaves(GlobalVariable.uiFilepath))
+        {
+            file = File.Open(GlobalVariable.uiFilepath, FileMode.Open);
+            ui = (Dictionary<string, int>)binaryFormatter.Deserialize(file);
             file.Close();
         }
     }
 
-    private static bool CheckSaves(string filepath = GlobalVariable.saveFilepath)
+    private static bool CheckSaves(string filepath)
     {
         return File.Exists(filepath);
     }

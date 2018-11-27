@@ -1022,7 +1022,6 @@ MonoBehaviour:
   startHealth: 30
   speed: 0.2
   optionalHealthBar: {fileID: 1630929612}
-  characters: {fileID: 0}
 --- !u!58 &70525289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25219,7 +25218,6 @@ MonoBehaviour:
   startHealth: 5
   speed: 0
   optionalHealthBar: {fileID: 0}
-  characters: {fileID: 0}
 --- !u!61 &337865956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32705,7 +32703,6 @@ MonoBehaviour:
   startHealth: 5
   speed: 0
   optionalHealthBar: {fileID: 0}
-  characters: {fileID: 0}
 --- !u!61 &1169179304
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33663,7 +33660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1
   duration: 0
   animator: {fileID: 1275448193}
   castTime: 0
@@ -33686,7 +33683,6 @@ MonoBehaviour:
   startHealth: 30
   speed: 0.2
   optionalHealthBar: {fileID: 849073463}
-  characters: {fileID: 0}
 --- !u!61 &1275448190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36395,7 +36391,6 @@ MonoBehaviour:
   startHealth: 5
   speed: 0
   optionalHealthBar: {fileID: 0}
-  characters: {fileID: 0}
 --- !u!61 &1560743269
 BoxCollider2D:
   m_ObjectHideFlags: 0

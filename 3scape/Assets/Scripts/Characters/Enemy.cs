@@ -10,10 +10,9 @@ public class Enemy : MonoBehaviour {
 
     public float speed;
     public Image optionalHealthBar;
-    //public Animator animator;
+    public Transform characters;
 
     void Start () {
-        //animator.SetBool("IsAttacking", true);
         health = startHealth;
     }
 	
@@ -24,8 +23,14 @@ public class Enemy : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
-	}
+        if (Physics2D.Raycast(transform.position, Vector2.left, 7, 1 << 8 /*player layerMask*/)) {
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+        }
+        if (Physics2D.Raycast(transform.position, Vector2.right, 7, 1 << 8 /*player layerMask*/))
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
+    }
 
     public void TakeDamage(int damage)
     {

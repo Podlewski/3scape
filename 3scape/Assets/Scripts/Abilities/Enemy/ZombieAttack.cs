@@ -10,7 +10,7 @@ public class ZombieAttack : AnimatedAbility
     {
         if (isAbilityReady())
         {
-            // animator.SetBool("IsAttacking", true);
+            animator.SetBool("IsAttacking", true);
 
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.Find("AttackPoint").position, attackRange, whatIsEnemy);
             for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -19,7 +19,7 @@ public class ZombieAttack : AnimatedAbility
             }
 
             setCooldown();
-            //animator.SetBool("IsAttacking", false);
+            animator.SetBool("IsAttacking", false);
         }
 
         else

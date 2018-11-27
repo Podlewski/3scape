@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public CharacterController2D controller;
     private Animator animator;
     public int position = 1;
@@ -26,15 +25,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         x = transform.position.x;
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = InputM.GetAxisRaw("Horizontal") * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (Input.GetButtonDown("Jump"))
+        if (InputM.GetButtonDown("Jump"))
         {
             jump = true;
             animator.SetBool("Jump", true);
             animator.SetBool("IsGrounded", controller.GetGrounded());
         }
-        crouch = Input.GetButton("Crouch");
+        crouch = InputM.GetButton("Crouch");
 
     }
 

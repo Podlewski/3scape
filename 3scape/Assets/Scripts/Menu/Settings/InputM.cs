@@ -30,9 +30,59 @@ public static class InputM
         Save();
     }
 
+    public static bool GetButton(string buttonName)
+    {
+        return Input.GetButton(buttonName);
+    }
+
+    public static bool GetButtonDown(string buttonName)
+    {
+        return Input.GetButtonDown(buttonName);
+    }
+
+    public static bool GetButtonUp(string buttonName)
+    {
+        return Input.GetButtonUp(buttonName);
+    }
+
+    public static bool GetKey(string name)
+    {
+        return Input.GetKey(name);
+    }
+
     public static bool GetKeyDown(string keyMap)
     {
         return Input.GetKeyDown(keys[keyMap]);
+    }
+
+    public static bool GetKeyUp(string name)
+    {
+        return Input.GetKeyUp(keys[name]);
+    }
+
+    public static float GetAxisRaw(string axisName)
+    {
+        switch(axisName)
+        {
+            case "Horizontal":
+                if (Input.GetKeyDown(keys["Right"]))
+                    return 1;
+                else if (Input.GetKeyDown(keys["Left"]))
+                    return -1;
+                else
+                    return 0;
+                break;
+            case "Vertical":
+                if (Input.GetKeyDown(keys["Jump"]))
+                    return 1;
+                else if (Input.GetKeyDown(keys["Crouch"]))
+                    return -1;
+                else
+                    return 0;
+                break;
+            default:
+                throw new ArgumentException();
+        }
     }
 
     private static void Save()

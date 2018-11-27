@@ -24,17 +24,17 @@ public class PlayerAbility : AnimatedAbility
 
     protected bool isButtonPressedProper()
     {
-        return Input.GetButton(getKeyCode());
+        return InputM.GetButton(getKeyCode());
     }
 
     protected bool isButtonDownProper()
     {
-        return Input.GetButtonDown(getKeyCode());
+        return InputM.GetButtonDown(getKeyCode());
     }
 
     protected bool isButtonUpProper()
     {
-        return Input.GetButtonUp(getKeyCode());
+        return InputM.GetButtonUp(getKeyCode());
     }
 
     protected bool isPositionProper()

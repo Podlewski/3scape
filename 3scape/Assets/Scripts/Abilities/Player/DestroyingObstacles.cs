@@ -21,14 +21,18 @@ public class DestroyingObstacles : PlayerAbility
         {
             // jakies animacje nk
 
-            if (isButtonPressedProper() == 2 && ready == false)
+            if (InputM.GetAxisRaw("Ability") == 2 && ready == false)
+            //if (isButtonPressedProper() == 2 && ready == false)
+            //if (isButtonPressedProper() && ready == false)
             {
                 downTime = Time.time;
                 pressTime = downTime + countDown;
                 ready = true;
             }
 
-            if (isButtonUpProper() == 2)
+            if (InputM.GetAxisRaw("Ability") == 2)
+            //if (isButtonUpProper() == 2)
+            //if (isButtonUpProper())
             {
                 ready = false;
             }

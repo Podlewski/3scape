@@ -22,19 +22,22 @@ public class PlayerAbility : AnimatedAbility
             return "";
     }
 
-    protected bool isButtonPressedProper()
+    protected float isButtonPressedProper()
     {
-        return InputM.GetButton(getKeyCode());
+        return InputM.GetAxisRaw("Ability");
+        //return InputM.GetButton(getKeyCode());
     }
 
-    protected bool isButtonDownProper()
+    protected float isButtonDownProper()
     {
-        return InputM.GetButtonDown(getKeyCode());
+        return InputM.GetAxisRaw("Ability");
+        //return InputM.GetButtonDown(getKeyCode());
     }
 
-    protected bool isButtonUpProper()
+    protected float isButtonUpProper()
     {
-        return InputM.GetButtonUp(getKeyCode());
+        return InputM.GetAxisRaw("Ability");
+        //return InputM.GetButtonUp(getKeyCode());
     }
 
     protected bool isPositionProper()

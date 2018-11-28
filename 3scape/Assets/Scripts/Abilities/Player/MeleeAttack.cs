@@ -13,7 +13,8 @@ public class MeleeAttack : PlayerAbility
         {
             animator.SetBool("IsAttacking", false);
 
-            if (isButtonDownProper() && isPositionProper())
+            if (InputM.GetAxisRaw("Ability") == 8 && isPositionProper())
+            //if (isButtonDownProper() == 8 && isPositionProper())
             {
                 animator.SetBool("IsAttacking", true);
 

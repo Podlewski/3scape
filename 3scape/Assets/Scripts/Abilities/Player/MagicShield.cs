@@ -32,7 +32,7 @@ public class MagicShield : PlayerAbility
     {
         if (isAbilityReady())
         {
-            if (isButtonDownProper() && isPositionProper())
+            if (isButtonDownProper() == 4 && isPositionProper())
             {
                 knight.SetMagicImmunity();
                 mage.SetMagicImmunity();

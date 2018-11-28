@@ -25,7 +25,7 @@ public class Heal : PlayerAbility
         {
             //animator.SetBool("IsUsing", true);
 
-            if (isButtonDownProper() && isPositionProper())
+            if (isButtonDownProper() == 2 && isPositionProper())
             {
                 animator.SetBool("IsHealing", true);
 

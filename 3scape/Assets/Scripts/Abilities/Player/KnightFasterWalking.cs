@@ -38,7 +38,7 @@ public class KnightFasterWalking : PlayerAbility
     {
         if (isAbilityReady())
         {
-            if (isButtonDownProper() && isPositionProper())
+            if (isButtonDownProper() == 2 && isPositionProper())
             {
                 PlayerMovement.runSpeed = 50f;
 

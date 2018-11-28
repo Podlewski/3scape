@@ -30,31 +30,37 @@ public static class InputM
         Save();
     }
 
+    // True while = button held down
     public static bool GetButton(string buttonName)
     {
         return Input.GetButton(buttonName);
     }
 
+    // True for frame = button pressed
     public static bool GetButtonDown(string buttonName)
     {
         return Input.GetButtonDown(buttonName);
     }
 
+    // True for frame = button released
     public static bool GetButtonUp(string buttonName)
     {
         return Input.GetButtonUp(buttonName);
     }
 
+    // True while = key held down; autofire
     public static bool GetKey(string name)
     {
         return Input.GetKey(name);
     }
 
+    // True for frame = key pressed
     public static bool GetKeyDown(string keyMap)
     {
         return Input.GetKeyDown(keys[keyMap]);
     }
 
+    // True for frame = key released
     public static bool GetKeyUp(string name)
     {
         return Input.GetKeyUp(keys[name]);
@@ -65,20 +71,64 @@ public static class InputM
         switch(axisName)
         {
             case "Horizontal":
-                if (Input.GetKeyDown(keys["Right"]))
+                if (Input.GetKey(keys["Right"]))
+                {
+                    Debug.Log("Horizontal-Right-1");
                     return 1;
-                else if (Input.GetKeyDown(keys["Left"]))
+                }
+                else if (Input.GetKey(keys["Left"]))
+                {
+                    Debug.Log("Horizontal-Left- -1");
                     return -1;
+                }
                 else
+                {
                     return 0;
+                }
                 break;
             case "Vertical":
-                if (Input.GetKeyDown(keys["Jump"]))
+                if (Input.GetKeyDown(keys["Up"]))
+                {
+                    Debug.Log("Vertical-Up-1");
                     return 1;
-                else if (Input.GetKeyDown(keys["Crouch"]))
+                }
+                else if (Input.GetKey(keys["Down"]))
+                {
+                    Debug.Log("Vertical-Down- -1");
                     return -1;
+                }
                 else
+                {
                     return 0;
+                }
+                break;
+            case "Ability":
+                //Debug.Log("Ability-START");
+                if (Input.GetKeyDown(keys["Swap"]))
+                {
+                    Debug.Log("Ability-Swap-1");
+                    return 1;
+                }
+                else if (Input.GetKey(keys["Skill1"])) // J
+                {
+                    Debug.Log("Ability-Skill1-2");
+                    return 2;
+                }
+                else if (Input.GetKey(keys["Skill2"])) // K
+                {
+                    Debug.Log("Ability-Skill2-4");
+                    return 4;
+                }
+                else if (Input.GetKey(keys["Attack"])) // L
+                {
+                    Debug.Log("Ability-Attack-8");
+                    return 8;
+                }
+                else
+                {
+                    Debug.Log("Ability-none-0");
+                    return 0;
+                }
                 break;
             default:
                 throw new ArgumentException();

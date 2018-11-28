@@ -18,11 +18,11 @@ public class InputSettingsMenu : MonoBehaviour
     public Text Skill1T;
     public Text Skill2T;
     public Text AttackT;
-    public Button Jump;
-    public Button Crouch;
+    public Button Up;
+    public Button Down;
     public Button Left;
     public Button Right;
-    public Button Rotate;
+    public Button Swap;
     public Button Skill1;
     public Button Skill2;
     public Button Attack;
@@ -46,11 +46,11 @@ public class InputSettingsMenu : MonoBehaviour
 
         if (Load() != 0)
         {
-            keys.Add("Jump", KeyCode.W);
-            keys.Add("Crouch", KeyCode.S);
+            keys.Add("Up", KeyCode.W);
+            keys.Add("Down", KeyCode.S);
             keys.Add("Left", KeyCode.A);
             keys.Add("Right", KeyCode.D);
-            keys.Add("Rotate", KeyCode.Space);
+            keys.Add("Swap", KeyCode.Space);
             keys.Add("Skill1", KeyCode.J);
             keys.Add("Skill2", KeyCode.K);
             keys.Add("Attack", KeyCode.L);
@@ -59,11 +59,11 @@ public class InputSettingsMenu : MonoBehaviour
             Save();
         }
 
-        Jump.GetComponentInChildren<Text>().text = keys["Jump"].ToString();
-        Crouch.GetComponentInChildren<Text>().text = keys["Crouch"].ToString();
+        Up.GetComponentInChildren<Text>().text = keys["Up"].ToString();
+        Down.GetComponentInChildren<Text>().text = keys["Down"].ToString();
         Left.GetComponentInChildren<Text>().text = keys["Left"].ToString();
         Right.GetComponentInChildren<Text>().text = keys["Right"].ToString();
-        Rotate.GetComponentInChildren<Text>().text = keys["Rotate"].ToString();
+        Swap.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();
@@ -102,11 +102,11 @@ public class InputSettingsMenu : MonoBehaviour
 
     private void Reset()
     {
-        keys["Jump"] = KeyCode.W;
-        keys["Crouch"] = KeyCode.S;
+        keys["Up"] = KeyCode.W;
+        keys["Down"] = KeyCode.S;
         keys["Left"] = KeyCode.A;
         keys["Right"] = KeyCode.D;
-        keys["Rotate"] = KeyCode.Space;
+        keys["Swap"] = KeyCode.Space;
         keys["Skill1"] = KeyCode.J;
         keys["Skill2"] = KeyCode.K;
         keys["Attack"] = KeyCode.L;
@@ -115,11 +115,11 @@ public class InputSettingsMenu : MonoBehaviour
 
         Save();
 
-        Jump.GetComponentInChildren<Text>().text = keys["Jump"].ToString();
-        Crouch.GetComponentInChildren<Text>().text = keys["Crouch"].ToString();
+        Up.GetComponentInChildren<Text>().text = keys["Up"].ToString();
+        Down.GetComponentInChildren<Text>().text = keys["Down"].ToString();
         Left.GetComponentInChildren<Text>().text = keys["Left"].ToString();
         Right.GetComponentInChildren<Text>().text = keys["Right"].ToString();
-        Rotate.GetComponentInChildren<Text>().text = keys["Rotate"].ToString();
+        Swap.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();

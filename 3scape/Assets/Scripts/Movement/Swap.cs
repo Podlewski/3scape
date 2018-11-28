@@ -17,7 +17,8 @@ public class Swap : PlayerAbility
 
     void FixedUpdate()
     {
-        if (isAbilityReady() && isButtonDownProper())
+        if (isAbilityReady() && InputM.GetAxisRaw("Ability") == 1)
+        //if (isAbilityReady() && isButtonDownProper() == 1)
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
 

@@ -434,11 +434,11 @@ MonoBehaviour:
   Skill1T: {fileID: 585650134}
   Skill2T: {fileID: 1434752338}
   AttackT: {fileID: 1276345337}
-  Jump: {fileID: 206817229}
-  Crouch: {fileID: 1944450793}
+  Up: {fileID: 206817229}
+  Down: {fileID: 1944450793}
   Left: {fileID: 1773775017}
   Right: {fileID: 1039864747}
-  Rotate: {fileID: 895364936}
+  Swap: {fileID: 895364936}
   Skill1: {fileID: 359365738}
   Skill2: {fileID: 448821716}
   Attack: {fileID: 1567857574}
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 206817230}
   - component: {fileID: 206817229}
   m_Layer: 5
-  m_Name: Jump
+  m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2277,7 +2277,7 @@ GameObject:
   - component: {fileID: 895364937}
   - component: {fileID: 895364936}
   m_Layer: 5
-  m_Name: Rotate
+  m_Name: Swap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4792,7 +4792,7 @@ GameObject:
   - component: {fileID: 1822730155}
   - component: {fileID: 1822730154}
   m_Layer: 5
-  m_Name: RotateB_Text
+  m_Name: SwapB_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4985,7 +4985,7 @@ GameObject:
   - component: {fileID: 1944450794}
   - component: {fileID: 1944450793}
   m_Layer: 5
-  m_Name: Crouch
+  m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

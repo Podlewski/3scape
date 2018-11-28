@@ -27,26 +27,25 @@ public class PlayerMovement : MonoBehaviour
         x = transform.position.x;
         horizontalMove = InputM.GetAxisRaw("Horizontal") * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (InputM.GetButtonDown("Jump"))
+        if (InputM.GetAxisRaw("Vertical") == 1)
+        //if (InputM.GetButtonDown("Up"))
         {
             jump = true;
             animator.SetBool("Jump", true);
             animator.SetBool("IsGrounded", controller.GetGrounded());
         }
-        crouch = InputM.GetButton("Crouch");
-
+        crouch = InputM.GetAxisRaw("Vertical") == -1 ? true : false;
+        //crouch = InputM.GetKey("Down");
     }
 
     void FixedUpdate()
     {
-
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
         animator.SetBool("Jump", false);
         animator.SetBool("IsGrounded", controller.GetGrounded());
     }
-    void LateUpdate()
-    {
-    }
 
+    void LateUpdate()
+    {}
 }

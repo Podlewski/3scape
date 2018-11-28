@@ -49,7 +49,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
             keys.Add("Crouch", KeyCode.S);
             keys.Add("Left", KeyCode.A);
             keys.Add("Right", KeyCode.D);
-            keys.Add("Rotate", KeyCode.Space);
+            keys.Add("Swap", KeyCode.Space);
             keys.Add("Skill1", KeyCode.J);
             keys.Add("Skill2", KeyCode.K);
             keys.Add("Attack", KeyCode.L);
@@ -62,7 +62,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         Crouch.GetComponentInChildren<Text>().text = keys["Crouch"].ToString();
         Left.GetComponentInChildren<Text>().text = keys["Left"].ToString();
         Right.GetComponentInChildren<Text>().text = keys["Right"].ToString();
-        Rotate.GetComponentInChildren<Text>().text = keys["Rotate"].ToString();
+        Rotate.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();
@@ -106,7 +106,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         keys["Crouch"] = KeyCode.S;
         keys["Left"] = KeyCode.A;
         keys["Right"] = KeyCode.D;
-        keys["Rotate"] = KeyCode.Space;
+        keys["Swap"] = KeyCode.Space;
         keys["Skill1"] = KeyCode.J;
         keys["Skill2"] = KeyCode.K;
         keys["Attack"] = KeyCode.L;
@@ -119,7 +119,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         Crouch.GetComponentInChildren<Text>().text = keys["Crouch"].ToString();
         Left.GetComponentInChildren<Text>().text = keys["Left"].ToString();
         Right.GetComponentInChildren<Text>().text = keys["Right"].ToString();
-        Rotate.GetComponentInChildren<Text>().text = keys["Rotate"].ToString();
+        Rotate.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();

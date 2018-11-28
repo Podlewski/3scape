@@ -19,11 +19,11 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
     public Text Skill1T;
     public Text Skill2T;
     public Text AttackT;
-    public Button Jump;
-    public Button Crouch;
+    public Button Up;
+    public Button Down;
     public Button Left;
     public Button Right;
-    public Button Rotate;
+    public Button Swap;
     public Button Skill1;
     public Button Skill2;
     public Button Attack;
@@ -45,8 +45,8 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
 
         if (Load() != 0)
         {
-            keys.Add("Jump", KeyCode.W);
-            keys.Add("Crouch", KeyCode.S);
+            keys.Add("Up", KeyCode.W);
+            keys.Add("Down", KeyCode.S);
             keys.Add("Left", KeyCode.A);
             keys.Add("Right", KeyCode.D);
             keys.Add("Swap", KeyCode.Space);
@@ -58,11 +58,11 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
             Save();
         }
 
-        Jump.GetComponentInChildren<Text>().text = keys["Jump"].ToString();
-        Crouch.GetComponentInChildren<Text>().text = keys["Crouch"].ToString();
+        Up.GetComponentInChildren<Text>().text = keys["Up"].ToString();
+        Down.GetComponentInChildren<Text>().text = keys["Down"].ToString();
         Left.GetComponentInChildren<Text>().text = keys["Left"].ToString();
         Right.GetComponentInChildren<Text>().text = keys["Right"].ToString();
-        Rotate.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
+        Swap.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();
@@ -102,8 +102,8 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
 
     private void Reset()
     {
-        keys["Jump"] = KeyCode.W;
-        keys["Crouch"] = KeyCode.S;
+        keys["Up"] = KeyCode.W;
+        keys["Down"] = KeyCode.S;
         keys["Left"] = KeyCode.A;
         keys["Right"] = KeyCode.D;
         keys["Swap"] = KeyCode.Space;
@@ -115,11 +115,11 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
 
         Save();
 
-        Jump.GetComponentInChildren<Text>().text = keys["Jump"].ToString();
-        Crouch.GetComponentInChildren<Text>().text = keys["Crouch"].ToString();
+        Up.GetComponentInChildren<Text>().text = keys["Up"].ToString();
+        Down.GetComponentInChildren<Text>().text = keys["Down"].ToString();
         Left.GetComponentInChildren<Text>().text = keys["Left"].ToString();
         Right.GetComponentInChildren<Text>().text = keys["Right"].ToString();
-        Rotate.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
+        Swap.GetComponentInChildren<Text>().text = keys["Swap"].ToString();
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();
@@ -127,11 +127,11 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         //HealthbarDD.value = 0;
     }
 
-    public void Dropdowns(Dropdown clicked)
+    /*public void Dropdowns(Dropdown clicked)
     {
         ui[clicked.ToString()] = clicked.value;
         Save();
-    }
+    }*/
 
     private void Save()
     {

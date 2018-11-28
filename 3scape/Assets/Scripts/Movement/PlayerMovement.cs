@@ -28,14 +28,12 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = InputM.GetAxisRaw("Horizontal") * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         if (InputM.GetAxisRaw("Vertical") == 1)
-        //if (InputM.GetButtonDown("Up"))
         {
             jump = true;
             animator.SetBool("Jump", true);
             animator.SetBool("IsGrounded", controller.GetGrounded());
         }
         crouch = InputM.GetAxisRaw("Vertical") == -1 ? true : false;
-        //crouch = InputM.GetKey("Down");
     }
 
     void FixedUpdate()

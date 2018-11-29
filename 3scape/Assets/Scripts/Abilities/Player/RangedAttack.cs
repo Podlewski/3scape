@@ -7,7 +7,7 @@ public class RangedAttack : PlayerAbility
 
     void Update()
     {
-		if(isButtonDownProper() && isPositionProper())
+        if (isButtonDownProper() && isPositionProper())
         {
             Shoot();
         }

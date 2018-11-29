@@ -46,7 +46,7 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 * [ ] Poprawa fizyki gry.
 * [ ] Poprawa działania kamery.
-* [ ] Dopracowanie SI Zombie.
+* [x] Dopracowanie SI Zombie.
 
 === Gracjan
 
@@ -75,7 +75,7 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 === Zbyszek
 
 * [ ] Rozwijanie HUDu. 
-* [ ] Przeniesienie sterowania do własnego InputManagera.
+* [x] Przeniesienie sterowania do własnego InputManagera.
 * [ ] Dopracowywanie działania menu gry oraz menu pauzy.
 
 === Karol

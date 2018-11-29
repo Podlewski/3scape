@@ -13,6 +13,10 @@ public static class InputM
     public static Dictionary<string, KeyCode> keys;
     public static Dictionary<string, int> ui;
 
+    /// <summary>
+    /// It is noteworthy that GetButton-like function won't really work as expected and
+    /// they should not be used. It is strongly recommended to use GetKey-like functions only
+    /// </summary>
     static InputM()
     {
         Load();
@@ -28,6 +32,7 @@ public static class InputM
     }
 
     /// <summary>
+    /// DEPRECATED
     /// True while = button held down
     /// </summary>
     /// <param name="buttonName"></param>
@@ -38,6 +43,7 @@ public static class InputM
     }
 
     /// <summary>
+    /// DEPRECATED
     /// True for frame = button pressed
     /// </summary>
     /// <param name="buttonName"></param>
@@ -48,6 +54,7 @@ public static class InputM
     }
 
     /// <summary>
+    /// DEPRECATED
     /// True for frame = button released
     /// </summary>
     /// <param name="buttonName"></param>
@@ -64,17 +71,17 @@ public static class InputM
     /// <returns></returns>
     public static bool GetKey(string name)
     {
-        return Input.GetKey(name);
+        return Input.GetKey(keys[name]);
     }
 
     /// <summary>
     /// True for frame = key pressed
     /// </summary>
-    /// <param name="keyMap"></param>
+    /// <param name="name"></param>
     /// <returns></returns>
-    public static bool GetKeyDown(string keyMap)
+    public static bool GetKeyDown(string name)
     {
-        return Input.GetKeyDown(keys[keyMap]);
+        return Input.GetKeyDown(keys[name]);
     }
 
     /// <summary>
@@ -88,8 +95,8 @@ public static class InputM
     }
 
     /// <summary>
-    /// Since usual functions don't work as expected it is needed to create an Axis to handle input
-    /// WRONG! - no it's not, yes they do
+    /// Unlike GetKey-like functions GetAxis-like ones won't work with custom Input
+    /// so here it is. And since we use only M+K setup ternary system is sufficient
     /// </summary>
     /// <param name="axisName"></param>
     /// <returns></returns>
@@ -113,7 +120,7 @@ public static class InputM
                 else
                     return 0;
                 break;
-            case "Ability":
+            /*case "Ability":
                 if (Input.GetKeyDown(keys["Swap"]))
                     return 1;
                 else if (Input.GetKey(keys["Skill1"])) // J
@@ -124,7 +131,7 @@ public static class InputM
                     return 8;
                 else
                     return 0;
-                break;
+                break;*/
             default:
                 throw new ArgumentException();
         }

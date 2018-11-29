@@ -7,8 +7,6 @@ public class RangedAttack : PlayerAbility
 
     void Update()
     {
-        //if (InputM.GetAxisRaw("Ability") == 8 && isPositionProper())
-		//if (isButtonDownProper() == 8 && isPositionProper())
         if (isButtonDownProper() && isPositionProper())
         {
             Shoot();

@@ -38,8 +38,6 @@ public class KnightFasterWalking : PlayerAbility
     {
         if (isAbilityReady())
         {
-            //if (InputM.GetAxisRaw("Ability") == 4 && isPositionProper())
-            //if (isButtonDownProper() == 4 && isPositionProper())
             if (isButtonDownProper() && isPositionProper())
             {
                 PlayerMovement.runSpeed = 50f;

@@ -21,8 +21,6 @@ public class DestroyingObstacles : PlayerAbility
         {
             // jakies animacje nk
 
-            //if (InputM.GetAxisRaw("Ability") == 2 && ready == false)
-            //if (isButtonPressedProper() == 2 && ready == false)
             if (isButtonPressedProper() && ready == false)
             {
                 downTime = Time.time;
@@ -30,8 +28,6 @@ public class DestroyingObstacles : PlayerAbility
                 ready = true;
             }
 
-            //if (InputM.GetAxisRaw("Ability") == 2)
-            //if (isButtonUpProper() == 2)
             if (isButtonUpProper())
             {
                 ready = false;

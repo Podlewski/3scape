@@ -88,7 +88,8 @@ public static class InputM
     }
 
     /// <summary>
-    /// Since usual functions doesn't work as expected it is needed to create an Axis to handle input
+    /// Since usual functions don't work as expected it is needed to create an Axis to handle input
+    /// WRONG! - no it's not, yes they do
     /// </summary>
     /// <param name="axisName"></param>
     /// <returns></returns>

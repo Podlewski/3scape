@@ -61,7 +61,8 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 === Bartosz
  
-* [ ] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Karolem.
+* [x] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Karolem.
+** [x] Przyśpieszenie bohaterów (umiejętność rycerza) dezaktywuje się po śmierci, zamiast działać do jej ponownej aktywacji 
 * [ ] Wprowadzenie życia dla beczki, oraz efektów związanych z jej niszczeniem.
 * [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
 
@@ -83,7 +84,8 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 * [ ] Połączenie zmian wprowadzonych przez team w jedną część.
 * [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
 * [ ] Rozpoczęcie prac nad zwykłym, grywalnym poziomem -> razem z Justyną.
-* [ ] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Bartoszem.
+* [x] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Bartoszem.
+** [x] Pasek życia nie obraca się razem z bohaterami.
 * [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
 
 <<<

@@ -22,6 +22,7 @@ public class UnlockingChests : PlayerAbility
     private void Start()
     {
         time = timeAmt;
+        
     }
 
     void Update ()
@@ -47,6 +48,7 @@ public class UnlockingChests : PlayerAbility
                     if (col[i].tag == "Chest")
                     {
                         col[i].GetComponent<Chest>().timeBar.fillAmount = time / timeAmt;
+
                     }
                 }
             }

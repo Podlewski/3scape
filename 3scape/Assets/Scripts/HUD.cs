@@ -59,5 +59,24 @@ public class HUD : MonoBehaviour
             archerRT.transform.localPosition = new Vector3(0.0f, archerRT.localPosition.y, archerRT.localPosition.z);
             knightRT.transform.localPosition = new Vector3(850.0f, knightRT.localPosition.y, knightRT.localPosition.z);
         }
+        else if (posKnight == 3 && posArcher == 2 && posMage == 1)
+        {
+
+            knightRT.transform.localPosition = new Vector3(-850.0f, knightRT.localPosition.y, knightRT.localPosition.z);
+            archerRT.transform.localPosition = new Vector3(0.0f, archerRT.localPosition.y, archerRT.localPosition.z);
+            mageRT.transform.localPosition = new Vector3(850.0f, mageRT.localPosition.y, mageRT.localPosition.z);
+        }
+        else if (posArcher == 3 && posMage == 2 && posKnight == 1)
+        {
+            archerRT.transform.localPosition = new Vector3(-850.0f, archerRT.localPosition.y, archerRT.localPosition.z);
+            mageRT.transform.localPosition = new Vector3(0.0f, mageRT.localPosition.y, mageRT.localPosition.z);
+            knightRT.transform.localPosition = new Vector3(850.0f, knightRT.localPosition.y, knightRT.localPosition.z);
+        }
+        else if (posMage == 3 && posKnight == 2 && posArcher == 1)
+        {
+            mageRT.transform.localPosition = new Vector3(-850.0f, mageRT.localPosition.y, mageRT.localPosition.z);
+            knightRT.transform.localPosition = new Vector3(0.0f, knightRT.localPosition.y, knightRT.localPosition.z);
+            archerRT.transform.localPosition = new Vector3(850.0f, archerRT.localPosition.y, archerRT.localPosition.z);
+        }
     }
 }

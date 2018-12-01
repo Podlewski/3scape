@@ -13,16 +13,26 @@ public class Enemy : MonoBehaviour
     public Image optionalHealthBar;
 
     bool m_FacingLeft = true;
+
+    public AudioClip barrelSound;
+    public AudioSource source;
+
     void Start()
     {
         health = startHealth;
+        source.clip = barrelSound;
     }
 
     void Update()
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            if (gameObject.tag=="Barrel")
+            {
+                source.Play();
+            }
+
+            Destroy(gameObject);  
         }
     }
 

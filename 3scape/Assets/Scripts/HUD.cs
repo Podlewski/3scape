@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
-
     /*private Canvas archerHUD;
     private Canvas mageHUD;
     private Canvas knightHUD;*/
@@ -21,7 +20,6 @@ public class HUD : MonoBehaviour
     private Player mage;
     private Player archer;
 
-    // Use this for initialization
     void Start ()
     {
         knightRT = GameObject.Find("knightCanvas").GetComponent<RectTransform>();
@@ -32,9 +30,9 @@ public class HUD : MonoBehaviour
         knight = GameObject.Find("knight").GetComponent<Player>();
         mage = GameObject.Find("mage").GetComponent<Player>();
 
+        enabled = InputM.ui["HudDD"] == 1;
     }
-	
-	// Update is called once per frame
+
 	void Update ()
     {
         posKnight = knight.GetComponent<PlayerMovement>().position;
@@ -61,7 +59,6 @@ public class HUD : MonoBehaviour
         }
         else if (posKnight == 3 && posArcher == 2 && posMage == 1)
         {
-
             knightRT.transform.localPosition = new Vector3(-850.0f, knightRT.localPosition.y, knightRT.localPosition.z);
             archerRT.transform.localPosition = new Vector3(0.0f, archerRT.localPosition.y, archerRT.localPosition.z);
             mageRT.transform.localPosition = new Vector3(850.0f, mageRT.localPosition.y, mageRT.localPosition.z);

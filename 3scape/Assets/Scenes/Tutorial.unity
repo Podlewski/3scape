@@ -25938,9 +25938,9 @@ MonoBehaviour:
   animator: {fileID: 382437316}
   castTime: 0
   requiredPosition: 2
-  fastColor:
+  abilityColor:
     serializedVersion: 2
-    rgba: 3779789055
+    rgba: 3774875647
   SecondSkillCoolDown: {fileID: 1180003489}
 --- !u!1 &384972245
 GameObject:
@@ -26881,7 +26881,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487621371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.377295, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.377182, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 155895182}
@@ -32455,7 +32455,7 @@ MonoBehaviour:
   animator: {fileID: 1170955589}
   castTime: 0
   requiredPosition: 2
-  magicColor:
+  abilityColor:
     serializedVersion: 2
     rgba: 3789094656
   SecondSkillCoolDown: {fileID: 54887875}

@@ -38,20 +38,20 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 === Edyta
 
-* [ ] Zebranie dźwięków i muzyki przydatnych w grze -> razem z Gracjanem.
-* [ ] Poprawa wyglądu licznika czasu oraz zebranych skarbów.
-* [ ] Poprawa wyglądu najbardziej zastępczych assetów - tak, by nie trzeba było domyślać się/zgadywać co to jest.
+* [x] Zebranie dźwięków i muzyki przydatnych w grze.
+* [ ] Wprowadzenie dźwięków i muzyki do gry.
+* [ ] Poprawa wyglądu licznika czasu oraz zebranych skarbów -> ze względu na zamieszanie z grupami, przeniesione na następny sprint.
 
 === Krzysiek
 
 * [ ] Poprawa fizyki gry.
-* [ ] Poprawa działania kamery.
+* [x] Poprawa działania kamery.
 * [x] Dopracowanie SI Zombie.
 
 === Gracjan
 
-* [ ] Wprowadzenie dźwięków i muzyki do gry -> razem z Edytą.
-* [ ] Poprawa animacji zamiany kolejności bohaterów. 
+* [ ] Poprawa wyglądu najbardziej zastępczych assetów - tak, by nie trzeba było domyślać się/zgadywać co to jest.
+* [ ] Poprawa animacji zamiany kolejności bohaterów -> prace rozpoczęte, jednak ze względu na zamieszanie z grupami nie udało się tego dokończyć.
 
 === Justyna
 
@@ -61,14 +61,16 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 === Bartosz
  
-* [x] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Karolem.
-** [x] Przyśpieszenie bohaterów (umiejętność rycerza) dezaktywuje się po śmierci, zamiast działać do jej ponownej aktywacji 
+* [x] Bugmaster -  usuwanie błędów z gry -> razem z Karolem.
+** [x] Przyśpieszenie bohaterów (umiejętność rycerza) dezaktywuje się po śmierci, zamiast działać do jej ponownej aktywacji.
+** [x] Leczenie (umiejętność maga) działa znowu na całą drużynę (po wprowadzeniu pasku życia na HUDzie działa tylko na rycerza)
 * [ ] Wprowadzenie życia dla beczki, oraz efektów związanych z jej niszczeniem.
-* [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
+* [ ] Dodanie nowej umiejętności - zastawianie pułapek przez łotrzyka.
 
 === Konrad
 
-* [ ] Rozwijanie HUDu. 
+* [x] Rozwijanie HUDu. 
+** [x] Interfejs każdego bohatera zmienia sie wraz z jego zmiana pozycji
 * [ ] Poprawa animacji postaci przy używaniu umiejętności.
 * [ ] Zebranie feedbacku związanego ze zmianami w grze.
 
@@ -76,7 +78,8 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 * [ ] Rozwijanie HUDu. 
 * [x] Przeniesienie sterowania do własnego InputManagera.
-* [ ] Dopracowywanie działania menu gry oraz menu pauzy.
+* [x] Dopracowywanie działania menu gry oraz menu pauzy.
+** [x] Będąc w menu pauzy do gry możemy już wrócić tylko przyciskiem w GUI [??]
 
 === Karol
 
@@ -84,8 +87,10 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 * [ ] Połączenie zmian wprowadzonych przez team w jedną część.
 * [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
 * [ ] Rozpoczęcie prac nad zwykłym, grywalnym poziomem -> razem z Justyną.
-* [x] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Bartoszem.
+* [x] Bugmaster - usuwanie błędów z gry -> razem z Bartoszem.
 ** [x] Pasek życia nie obraca się razem z bohaterami.
+** [x] Umiejętności które zmieniają kolory bohaterów podczas ich trwania od teraz ZAWSZE zmieniają ten kolor.
+** [x] Zamiana bohaterów nie blokuje się bez powodu na czas paru sekund -> dotarcie do sedna problemu, usprawnienie działania (nie całkowite wyeliminowanie) oraz przygotowanie kodu do dalszych poprawek (ze względu na planowane zmiany w "zamianie bohaterów" dalsze inwestygowanie nie przyniosło by wymiernych korzyści wzgledem potrzebnego czasu na rozwiązanie problemu przy obecnej implementacji )
 * [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
 
 <<<

@@ -20,43 +20,63 @@ public class ColorAbility : PlayerAbility
     void Start()
     {
         knight = GameObject.Find("knight").GetComponent<Player>();
-        mage = GameObject.Find("mage").GetComponent<Player>();
         archer = GameObject.Find("archer").GetComponent<Player>();
+        mage = GameObject.Find("mage").GetComponent<Player>();
 
         srKnight = GameObject.Find("knight").GetComponent<SpriteRenderer>();
-        srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
         srArcher = GameObject.Find("archer").GetComponent<SpriteRenderer>();
+        srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
     }
 
-    public void BackToNormalColor()
+    public void BackToNormalColor(bool changeKnight = true,
+                                  bool changeArcher = true,
+                                  bool changeMage = true)
     {
         if (needToSwapColor)
         {
-            Debug.Log("Back to normal color");
+            if (changeKnight)
+            {
+                srKnight.color = playerColor;
+                knight.healthBar.color = healtColor;
+            }
 
-            srKnight.color = playerColor;
-            srMage.color = playerColor;
-            srArcher.color = playerColor;
+            if (changeArcher)
+            {
+                srArcher.color = playerColor;
+                archer.healthBar.color = healtColor;
+            }
 
-            knight.healthBar.color = healtColor;
-            mage.healthBar.color = healtColor;
-            archer.healthBar.color = healtColor;
+            if (changeMage)
+            {
+                srMage.color = playerColor;
+                mage.healthBar.color = healtColor;
+            }
 
             needToSwapColor = false;
         }
     }
 
-    public void SetAbilityColor()
+    public void SetAbilityColor(bool changeKnight = true,
+                                bool changeArcher = true,
+                                bool changeMage = true)
     {
-        Debug.Log("Trying to swap to: " + abilityColor);
+        if (changeKnight)
+        {
+            srKnight.color = abilityColor;
+            knight.healthBar.color = abilityColor;
+        }
 
-        srKnight.color = abilityColor;
-        srMage.color = abilityColor;
-        srArcher.color = abilityColor;
+        if (changeArcher)
+        {
+            srArcher.color = abilityColor;
+            archer.healthBar.color = abilityColor;
+        }
 
-        knight.healthBar.color = abilityColor;
-        mage.healthBar.color = abilityColor;
-        archer.healthBar.color = abilityColor;
+        if (changeMage)
+        {
+            srMage.color = abilityColor;
+            mage.healthBar.color = abilityColor;
+        }
 
         needToSwapColor = true;
     }

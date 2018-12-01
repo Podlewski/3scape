@@ -14,6 +14,8 @@ public class Chest : MonoBehaviour{
 
     public Image timeBar;
 
+ 
+
     public void checkIfOpen()
     {
         if (isOpen)

@@ -9,6 +9,10 @@ public class UnlockingChests : PlayerAbility
     public float countDown = 2.0f;
     public bool ready = false;
 
+    // public AudioClip attemptSound;
+    public AudioClip openingSound;
+    public AudioSource source;
+
     public Transform unlockPos;
     public float unlockRange;
     public LayerMask whatCanOpen;
@@ -22,6 +26,7 @@ public class UnlockingChests : PlayerAbility
     private void Start()
     {
         time = timeAmt;
+        source.clip = openingSound;
     }
 
     void Update ()
@@ -33,6 +38,10 @@ public class UnlockingChests : PlayerAbility
             //animator.SetBool("jakasAnimacja", false);
             if (isButtonPressedProper() && ready == false)
             {
+                if (source != null)
+                {
+                    source.Play();
+                }
                 downTime = Time.time;
                 pressTime = downTime + countDown;
                 ready = true;
@@ -47,6 +56,7 @@ public class UnlockingChests : PlayerAbility
                     if (col[i].tag == "Chest")
                     {
                         col[i].GetComponent<Chest>().timeBar.fillAmount = time / timeAmt;
+
                     }
                 }
             }

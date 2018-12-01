@@ -2146,8 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 163290227}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 1578790721}
 --- !u!114 &163290230
 MonoBehaviour:
@@ -26784,8 +26783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 471314882}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 1169361657}
 --- !u!114 &471314885
 MonoBehaviour:
@@ -26881,7 +26879,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487621371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.377182, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.376625, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 155895182}
@@ -27308,8 +27306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 546092537}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 996888308}
 --- !u!114 &546092540
 MonoBehaviour:
@@ -27571,8 +27568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 589431083}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 743947124}
 --- !u!114 &589431086
 MonoBehaviour:
@@ -27963,7 +27959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 889, y: 277}
+  m_AnchoredPosition: {x: 964, y: 691}
   m_SizeDelta: {x: 873.1, y: 354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659102544
@@ -27978,8 +27974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 659102542}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 242213477}
 --- !u!114 &659102545
 MonoBehaviour:
@@ -30528,7 +30523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14517, y: 664}
+  m_AnchoredPosition: {x: 13814, y: 1040.6}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945116832
@@ -30543,8 +30538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 945116830}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 67964098}
 --- !u!114 &945116833
 MonoBehaviour:
@@ -31167,7 +31161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50303, y: 1088.7}
+  m_AnchoredPosition: {x: 50739, y: 1388.7}
   m_SizeDelta: {x: 939.2, y: 360.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044127057
@@ -31182,8 +31176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1044127055}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 1795716684}
 --- !u!114 &1044127058
 MonoBehaviour:
@@ -32815,8 +32808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26767, y: 706.2}
-  m_SizeDelta: {x: 800, y: 352.4}
+  m_AnchoredPosition: {x: 26771, y: 338.3}
+  m_SizeDelta: {x: 964.2, y: 351.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217166121
 MonoBehaviour:
@@ -32830,8 +32823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1217166119}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 855117223}
 --- !u!114 &1217166122
 MonoBehaviour:
@@ -33027,7 +33019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10231, y: 397.55}
+  m_AnchoredPosition: {x: -8608, y: 691}
   m_SizeDelta: {x: 800, y: 266.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224376142
@@ -33042,8 +33034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1224376140}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 207329585}
 --- !u!114 &1224376143
 MonoBehaviour:
@@ -33288,8 +33279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1290346906}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 1333921244}
 --- !u!114 &1290346909
 MonoBehaviour:
@@ -34292,8 +34282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1402044077}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 797954100}
 --- !u!114 &1402044080
 MonoBehaviour:
@@ -35044,7 +35033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1472064910}
   m_Layer: 0
-  m_Name: PlayerAvgPos
+  m_Name: playerAvgPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35336,8 +35325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1510323370}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 365038830}
 --- !u!114 &1510323373
 MonoBehaviour:
@@ -35498,7 +35486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1375488013871096, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_Name
-      value: Chest (1)
+      value: Chest
       objectReference: {fileID: 0}
     - target: {fileID: 1375488013871096, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_TagString
@@ -37205,8 +37193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30666, y: 528}
-  m_SizeDelta: {x: 1269.1, y: 346.94}
+  m_AnchoredPosition: {x: 30809, y: 314.15}
+  m_SizeDelta: {x: 1255.5, y: 399.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764878546
 MonoBehaviour:
@@ -37220,8 +37208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1764878544}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 384972247}
 --- !u!114 &1764878547
 MonoBehaviour:
@@ -39127,7 +39114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6415, y: 1058.4}
+  m_AnchoredPosition: {x: 6427, y: 1058.4}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955002261
@@ -39164,8 +39151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1955002259}
-  partyMember: {fileID: 382437315}
-  range: 3
+  range: 5
   txt: {fileID: 1579081025}
 --- !u!1 &1964088760
 GameObject:

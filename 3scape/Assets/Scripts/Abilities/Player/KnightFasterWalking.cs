@@ -80,7 +80,7 @@ public class KnightFasterWalking : PlayerAbility
 
         if (isAbilityStillWorking())
         {
-            SecondSkillCoolDown.color = new Color(0.5f, 0.3f, 0.5f, 0.5f);
+            SecondSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
             SecondSkillCoolDown.fillClockwise = !defaultDirection;
             SecondSkillCoolDown.fillAmount = remaindingDuration / duration;
         }

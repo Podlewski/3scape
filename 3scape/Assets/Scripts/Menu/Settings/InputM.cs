@@ -10,8 +10,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class InputM
 {
-    public static Dictionary<string, KeyCode> keys;
-    public static Dictionary<string, int> ui;
+    public static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
+    public static Dictionary<string, int> ui = new Dictionary<string, int>();
 
     /// <summary>
     /// It is noteworthy that GetButton-like function won't really work as expected and
@@ -150,7 +150,7 @@ public static class InputM
         file.Close();
     }
 
-    private static void Load()
+    private static int Load()
     {
         int returnValue = 0;
 
@@ -165,7 +165,7 @@ public static class InputM
         }
         else
         {
-            keys = new Dictionary<string, KeyCode>();
+            Debug.Log("keys reset");
             keys.Add("Up", KeyCode.W);
             keys.Add("Down", KeyCode.S);
             keys.Add("Left", KeyCode.A);
@@ -186,7 +186,6 @@ public static class InputM
         else
         {
             Debug.Log("ui reset");
-            ui = new Dictionary<string, int>();
             ui.Add("HudDD", 0);
             ui.Add("HealthbarDD", 0);
             returnValue += 2;
@@ -196,6 +195,7 @@ public static class InputM
             Save();
 
         Debug.Log("InputM load error: " + returnValue);
+        return returnValue;
     }
 
     private static bool CheckSaves(string filepath)

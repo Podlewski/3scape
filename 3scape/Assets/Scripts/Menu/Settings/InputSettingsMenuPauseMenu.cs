@@ -53,8 +53,8 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
             keys.Add("Skill1", KeyCode.J);
             keys.Add("Skill2", KeyCode.K);
             keys.Add("Attack", KeyCode.L);
-            //ui.Add(HudDD.ToString(), 0);
-            //ui.Add(HealthbarDD.ToString(), 0);
+            ui.Add("HudDD", 0);
+            ui.Add("HealthbarDD", 0);
             Save();
         }
 
@@ -66,8 +66,8 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();
-        //HudDD.value = ui[HudDD.ToString()];
-        //HealthbarDD.value = ui[HealthbarDD.ToString()];
+        //HudDD.value = ui["HudDD"];
+        //HealthbarDD.value = ui["HealthbarDD"];
 
         //InputM.keys = this.keys;
     }
@@ -110,8 +110,8 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         keys["Skill1"] = KeyCode.J;
         keys["Skill2"] = KeyCode.K;
         keys["Attack"] = KeyCode.L;
-        //ui[HudDD.ToString()] = 0;
-        //ui[HealthbarDD.ToString()] = 0;
+        ui["HudDD"] = 0;
+        ui["HealthbarDD"] = 0;
 
         Save();
 
@@ -127,9 +127,13 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         //HealthbarDD.value = 0;
     }
 
-    /*public void Dropdowns(Dropdown clicked)
+    /*private void Dropdowns(string key)
     {
-        ui[clicked.ToString()] = clicked.value;
+        if (key == "HudDD")
+            ui["HudDD"] = HudDD.value;
+        else if (key == "HealthbarDD")
+            ui["HealthbarDD"] = HealthbarDD.value;
+
         Save();
     }*/
 
@@ -178,6 +182,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
             returnValue += 2;
         }
 
+        Debug.Log("Load error: " + returnValue);
         return returnValue;
     }
 

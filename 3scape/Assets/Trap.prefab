@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d638cdfdd84c1304798561a542617afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 1295460340698860, guid: d04769e63bd97fc40bda433f0c6e95bf, type: 2}
-  trapPos: {fileID: 4760732017134530}
+  explosion: {fileID: 1464438809117552, guid: d04769e63bd97fc40bda433f0c6e95bf, type: 2}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 1024

@@ -6,7 +6,6 @@ public class Trap : MonoBehaviour
 {
     public GameObject explosion;
 
-    public Transform trapPos;
     public LayerMask whatIsEnemy;
     public float explosionRange;
     public int damage;
@@ -15,7 +14,7 @@ public class Trap : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(trapPos.position, explosionRange, whatIsEnemy);
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.position, explosionRange, whatIsEnemy);
 
         if (!triggered && enemiesToDamage.Length > 0 )
         {
@@ -23,7 +22,9 @@ public class Trap : MonoBehaviour
             {
                 Debug.Log(i);
                 triggered = true;
-                //Instantiate(explosion, trapPos.position);
+                Vector3 vector3 = gameObject.transform.position;
+                vector3.y += 0.8f;
+                Instantiate(explosion, vector3, transform.rotation = Quaternion.identity);
                 Destroy(gameObject);
                 enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
             }

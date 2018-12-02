@@ -14,6 +14,18 @@ public class Chest : MonoBehaviour{
 
     public Image timeBar;
 
+    private void Update()
+    {
+        if(timeBar.fillAmount == 1 || timeBar.fillAmount == 0)
+        {
+            timeBar.enabled = false;
+        }
+        if (timeBar.fillAmount < 1 && timeBar.fillAmount > 0)
+        {
+            timeBar.enabled = true;
+        }
+    }
+
     public void checkIfOpen()
     {
         if (isOpen)

@@ -10,13 +10,12 @@ public class RangedAttack : PlayerAbility
 
     void Start()
     {
-       
         source.clip = shootSound;
     }
 
     void Update()
     {
-		if(isButtonDownProper() && isPositionProper())
+        if (isButtonDownProper() && isPositionProper())
         {
             Shoot();
         }

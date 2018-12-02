@@ -4,42 +4,41 @@ public class PlayerAbility : AnimatedAbility
 {
     public int requiredPosition;
 
-    protected string getKeyCode()
+    protected KeyCode getKeyCode()
     {
         if (requiredPosition == 1)
-            return "PositionR";
+            return InputM.keys["Attack"];
 
         else if (requiredPosition == 2)
-            return "PositionM";
+            return InputM.keys["Skill2"];
 
         else if (requiredPosition == 3)
-            return "PositionL";
+            return InputM.keys["Skill1"];
 
         else if (requiredPosition == 10)
-            return "Swap";
+            return InputM.keys["Swap"];
 
         else
-            return "";
+            throw new System.Exception();
     }
 
     protected bool isButtonPressedProper()
     {
-        return Input.GetButton(getKeyCode());
+        return Input.GetKey(getKeyCode());
     }
 
     protected bool isButtonDownProper()
     {
-        return Input.GetButtonDown(getKeyCode());
+        return Input.GetKeyDown(getKeyCode());
     }
 
     protected bool isButtonUpProper()
     {
-        return Input.GetButtonUp(getKeyCode());
+        return Input.GetKeyUp(getKeyCode());
     }
 
     protected bool isPositionProper()
     {
         return animator.GetInteger("Position") == requiredPosition;
     }
-
 }

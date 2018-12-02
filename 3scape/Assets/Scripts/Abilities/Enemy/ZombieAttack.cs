@@ -16,11 +16,11 @@ public class ZombieAttack : AnimatedAbility
 
     void Update()
     {
-        if (isAbilityReady())
+        if (isAbilityReady() && (Physics2D.Raycast(transform.position, Vector2.left, 1, 1 << 8 /*player layerMask*/)
+                              || Physics2D.Raycast(transform.position, Vector2.right, 1, 1 << 8 /*player layerMask*/)))
         {
-            // animator.SetBool("IsAttacking", true);
-
-
+            animator.SetBool("IsAttacking", true);
+            setCooldown();
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.Find("AttackPoint").position, attackRange, whatIsEnemy);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
@@ -28,14 +28,13 @@ public class ZombieAttack : AnimatedAbility
                 source.Play();
             }
 
-            setCooldown();
-            //animator.SetBool("IsAttacking", false);
+
         }
 
         else
         {
             currentCooldown -= Time.deltaTime;
-
+            animator.SetBool("IsAttacking", false);
         }
 
     }

@@ -79,8 +79,6 @@ public class UnlockingChests : PlayerAbility
                     {
                         col[i].GetComponent<Chest>().checkIfOpen();
                         setCooldown();
-
-
                     }
                 }
             }

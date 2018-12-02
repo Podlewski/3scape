@@ -152,6 +152,8 @@ public static class InputM
 
     private static void Load()
     {
+        int returnValue = 0;
+
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file;
 
@@ -161,6 +163,19 @@ public static class InputM
             keys = (Dictionary<string, KeyCode>)binaryFormatter.Deserialize(file);
             file.Close();
         }
+        else
+        {
+            keys = new Dictionary<string, KeyCode>();
+            keys.Add("Up", KeyCode.W);
+            keys.Add("Down", KeyCode.S);
+            keys.Add("Left", KeyCode.A);
+            keys.Add("Right", KeyCode.D);
+            keys.Add("Swap", KeyCode.Space);
+            keys.Add("Skill1", KeyCode.J);
+            keys.Add("Skill2", KeyCode.K);
+            keys.Add("Attack", KeyCode.L);
+            returnValue += 1;
+        }
 
         if(CheckSaves(GlobalVariable.uiFilepath))
         {
@@ -168,6 +183,19 @@ public static class InputM
             ui = (Dictionary<string, int>)binaryFormatter.Deserialize(file);
             file.Close();
         }
+        else
+        {
+            Debug.Log("ui reset");
+            ui = new Dictionary<string, int>();
+            ui.Add("HudDD", 0);
+            ui.Add("HealthbarDD", 0);
+            returnValue += 2;
+        }
+
+        if (returnValue > 0)
+            Save();
+
+        Debug.Log("InputM load error: " + returnValue);
     }
 
     private static bool CheckSaves(string filepath)

@@ -26,7 +26,7 @@ public class UnlockingChests : PlayerAbility
 
     void Update ()
     {
-        if (isAbilityReady())
+        if (isAbilityReady() && isPositionProper())
         {
             Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
 

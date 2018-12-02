@@ -8,19 +8,27 @@ public class Chest : MonoBehaviour{
     public SpriteRenderer spriteRenderer;
     public Sprite openSprite;
     private bool isOpen = false;
+    private bool isFilled = false;
 
     public GameObject[] objects;
-    public Transform spawnPoint;
+    public Transform spawnPoint;  
 
     public Image timeBar;
 
     private void Update()
     {
-        if(timeBar.fillAmount == 1 || timeBar.fillAmount == 0)
+        if(timeBar.fillAmount == 1 && isFilled == false)
         {
             timeBar.enabled = false;
         }
-        if (timeBar.fillAmount < 1 && timeBar.fillAmount > 0)
+
+        if (timeBar.fillAmount == 0 && isFilled == false)
+        {
+            timeBar.enabled = false;
+            isFilled = true;
+        }
+
+        if (timeBar.fillAmount < 1 && timeBar.fillAmount > 0 && isFilled == false)
         {
             timeBar.enabled = true;
         }

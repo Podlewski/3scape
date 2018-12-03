@@ -182,7 +182,7 @@ public class InputSettingsMenu : MonoBehaviour
             returnValue += 2;
         }
 
-        Debug.Log(returnValue);
+        Debug.Log("Load error: " + returnValue);
         return returnValue;
     }
 

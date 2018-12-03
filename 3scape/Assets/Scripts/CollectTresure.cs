@@ -8,7 +8,7 @@ public class CollectTresure : MonoBehaviour
     private Score levelScore;
     public GameObject itemButton;
     public int tresureValue;
-    private Text valueText;
+    public Text valueText;
 
     private void Start()
     {

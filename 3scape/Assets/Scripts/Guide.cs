@@ -4,22 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Guide : MonoBehaviour {
+public class Guide : MonoBehaviour
+{
     public GameObject guide;
-    public GameObject partyMember;
-    public float range;
+    private GameObject partyPosition;
+    public float range = 5;
     public Text txt;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        partyPosition = GameObject.Find("playerAvgPos");
+
         if(txt != null) txt.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (guide != null && partyMember != null && range > 0 && txt != null)
+        if (guide != null && partyPosition != null && range > 0 && txt != null)
         {
-            float distance = Math.Abs(guide.transform.position.x - partyMember.transform.position.x);
+            float distance = Math.Abs(guide.transform.position.x - partyPosition.transform.position.x);
             if (distance < range)
             {
                 //Debug.Log("triggered" + distance);

@@ -80,5 +80,10 @@ public class UnlockingChests : PlayerAbility
         {
             currentCooldown -= Time.deltaTime;
         }
+
+        if (!isPositionProper())
+            FirstSkillCoolDown.fillAmount = 1;
+        else
+            FirstSkillCoolDown.fillAmount = 0;
     }
 }

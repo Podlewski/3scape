@@ -10,8 +10,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class InputM
 {
-    public static Dictionary<string, KeyCode> keys;
-    public static Dictionary<string, int> ui;
+    public static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
+    public static Dictionary<string, int> ui = new Dictionary<string, int>();
 
     /// <summary>
     /// It is noteworthy that GetButton-like function won't really work as expected and
@@ -102,7 +102,7 @@ public static class InputM
     /// <returns></returns>
     public static float GetAxisRaw(string axisName)
     {
-        switch(axisName)
+        switch (axisName)
         {
             case "Horizontal":
                 if (Input.GetKey(keys["Right"]))
@@ -150,8 +150,10 @@ public static class InputM
         file.Close();
     }
 
-    private static void Load()
+    private static int Load()
     {
+        int returnValue = 0;
+
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file;
 
@@ -161,13 +163,39 @@ public static class InputM
             keys = (Dictionary<string, KeyCode>)binaryFormatter.Deserialize(file);
             file.Close();
         }
+        else
+        {
+            Debug.Log("keys reset");
+            keys.Add("Up", KeyCode.W);
+            keys.Add("Down", KeyCode.S);
+            keys.Add("Left", KeyCode.A);
+            keys.Add("Right", KeyCode.D);
+            keys.Add("Swap", KeyCode.Space);
+            keys.Add("Skill1", KeyCode.J);
+            keys.Add("Skill2", KeyCode.K);
+            keys.Add("Attack", KeyCode.L);
+            returnValue += 1;
+        }
 
-        if(CheckSaves(GlobalVariable.uiFilepath))
+        if (CheckSaves(GlobalVariable.uiFilepath))
         {
             file = File.Open(GlobalVariable.uiFilepath, FileMode.Open);
             ui = (Dictionary<string, int>)binaryFormatter.Deserialize(file);
             file.Close();
         }
+        else
+        {
+            Debug.Log("ui reset");
+            ui.Add("HudDD", 0);
+            ui.Add("HealthbarDD", 0);
+            returnValue += 2;
+        }
+
+        if (returnValue > 0)
+            Save();
+
+        Debug.Log("InputM load error: " + returnValue);
+        return returnValue;
     }
 
     private static bool CheckSaves(string filepath)

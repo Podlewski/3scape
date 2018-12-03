@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
 
     private void NewGame()
     {
-        //SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level01", LoadSceneMode.Single);
     }
 
     private void SelectLevelMenu()

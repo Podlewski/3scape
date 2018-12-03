@@ -1,9 +1,19 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PhysicalShield : ColorAbility
 {
     CharacterController2D characterController2D;
-    public Image SecondSkillCoolDown;
+
+    public Image FirstSkillCoolDown;
+    private Color defaultColor;
+    private bool defaultDirection;
+
+    void Start()
+    {
+        defaultColor = FirstSkillCoolDown.color;
+        defaultDirection = FirstSkillCoolDown.fillClockwise;
+    }
 
     void Update()
     {
@@ -19,7 +29,7 @@ public class PhysicalShield : ColorAbility
 
                 setCooldown();
 
-                // SecondSkillCoolDown.fillAmount = 1;
+                FirstSkillCoolDown.fillAmount = 1;
             }
         }
 
@@ -33,12 +43,25 @@ public class PhysicalShield : ColorAbility
 
             reduceCooldown();
 
-            // SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+            //FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
-        //if (!isPositionProper())
-        //    SecondSkillCoolDown.fillAmount = 1;
-        //else
-        //    SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        if (isAbilityStillWorking())
+        {
+            FirstSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
+            FirstSkillCoolDown.fillClockwise = !defaultDirection;
+            FirstSkillCoolDown.fillAmount = remaindingDuration / duration;
+        }
+        else
+        {
+            FirstSkillCoolDown.color = defaultColor;
+            FirstSkillCoolDown.fillClockwise = defaultDirection;
+            FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        }
+
+        if (!isPositionProper())
+            FirstSkillCoolDown.fillAmount = 1;
+        else if (!isAbilityStillWorking())
+            FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 }

@@ -16,6 +16,8 @@ public class MagicShield : PlayerAbility
     public Color32 magicColor = new Color32(0, 255, 216, 225);
 
     public Image SecondSkillCoolDown;
+    private Color defaultColor;
+    private bool defaultDirection;
 
     private void Start()
     {
@@ -26,6 +28,9 @@ public class MagicShield : PlayerAbility
         srKnight = GameObject.Find("knight").GetComponent<SpriteRenderer>();
         srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
         srArcher = GameObject.Find("archer").GetComponent<SpriteRenderer>();
+
+        defaultColor = SecondSkillCoolDown.color;
+        defaultDirection = SecondSkillCoolDown.fillClockwise;
     }
 
     void Update()
@@ -68,12 +73,25 @@ public class MagicShield : PlayerAbility
 
             reduceCooldown();
 
+            //SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        }
+
+        if (isAbilityStillWorking())
+        {
+            SecondSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
+            SecondSkillCoolDown.fillClockwise = !defaultDirection;
+            SecondSkillCoolDown.fillAmount = remaindingDuration / duration;
+        }
+        else
+        {
+            SecondSkillCoolDown.color = defaultColor;
+            SecondSkillCoolDown.fillClockwise = defaultDirection;
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
         if (!isPositionProper())
             SecondSkillCoolDown.fillAmount = 1;
-        else
+        else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 }

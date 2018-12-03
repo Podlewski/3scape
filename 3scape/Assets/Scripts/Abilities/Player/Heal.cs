@@ -9,9 +9,22 @@ public class Heal : PlayerAbility
     private Player mage;
     private Player archer;
 
+    /*jak zmiana na zielony sie nie przyjmie to zakomentowac*/
+    //////////////////////////////////////////////////
+    private SpriteRenderer srKnight;
+    private SpriteRenderer srMage;
+    private SpriteRenderer srArcher;
+
+    private Color32 playerColor = new Color32(255, 255, 255, 225);
+    public Color32 magicColor = new Color32(3, 0, 255, 255);
+    //////////////////////////////////////////////////
+
+
     public Image FirstSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
+
+    public float timeLeft = 1.0f;
 
     private void Start()
     {
@@ -21,18 +34,32 @@ public class Heal : PlayerAbility
 
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
+
+        /*jak zmiana na zielony sie nie przyjmie to zakomentowac*/
+        //////////////////////////////////////////////////
+        srKnight = GameObject.Find("knight").GetComponent<SpriteRenderer>();
+        srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
+        srArcher = GameObject.Find("archer").GetComponent<SpriteRenderer>();
+        //////////////////////////////////////////////////
     }
 
     void Update()
     {
-        animator.SetBool("IsHealing", false);
         if (isAbilityReady())
         {
-            //animator.SetBool("IsUsing", true);
+            timeLeft = 1.0f;
 
             if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsHealing", true);
+
+                /*jak zmiana na zielony sie nie przyjmie to zakomentowac*/
+                //////////////////////////////////////////////////
+                srKnight.color = magicColor;
+                srMage.color = magicColor;
+                srArcher.color = magicColor;
+                //////////////////////////////////////////////////
+
 
                 knight.isBeingHealed = true;
                 archer.isBeingHealed = true;
@@ -41,7 +68,7 @@ public class Heal : PlayerAbility
                 mage.Heal(healValue);
                 archer.Heal(healValue);
                 knight.Heal(healValue);
-                //animator.SetBool("IsUsing", false);
+                
 
                 setCooldown();
 
@@ -50,9 +77,25 @@ public class Heal : PlayerAbility
         }
         else if (!isAbilityStillWorking() || !isPositionProper())
         {
+
+            
             reduceCooldown();
 
             //FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        }
+
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0 && animator.GetBool("IsHealing"))
+        {
+            /*jak zmiana na zielony sie nie przyjmie to zakomentowac*/
+            //////////////////////////////////////////////////
+            srKnight.color = playerColor;
+            srMage.color = playerColor;
+            srArcher.color = playerColor;
+            //////////////////////////////////////////////////
+            
+            animator.SetBool("IsHealing", false);
+            timeLeft = 1.0f;
         }
 
         if (knight.isBeingHealed) knight.HealAnimation();

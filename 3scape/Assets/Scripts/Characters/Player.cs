@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
             //healthBar.fillAmount += 1.0f / waitTime * Time.deltaTime;
             //healthBarHUD.fillAmount += 1.0f / waitTime * Time.deltaTime;
             healthBarPicked.fillAmount += 1.0f / waitTime * Time.deltaTime;
+
         }
         else
         {

@@ -732,6 +732,8 @@ MonoBehaviour:
   startHealth: 30
   speed: 0.2
   optionalHealthBar: {fileID: 1630929612}
+  shouldExplode: 0
+  PossibleExplosion: {fileID: 0}
 --- !u!58 &70525289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25629,7 +25631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 0.1
   duration: 0
   animator: {fileID: 382437316}
   castTime: 0
@@ -25750,8 +25752,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9044613f78a01b47ac09603c20e45a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2
-  duration: 2
+  cooldown: 4
+  duration: 4
   animator: {fileID: 382437316}
   castTime: 0
   requiredPosition: 2
@@ -29098,6 +29100,9 @@ MonoBehaviour:
   startHealth: 20
   speed: 0
   optionalHealthBar: {fileID: 664363346}
+  shouldExplode: 1
+  PossibleExplosion: {fileID: 1464438809117552, guid: d04769e63bd97fc40bda433f0c6e95bf,
+    type: 2}
 --- !u!61 &766856626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29543,6 +29548,9 @@ MonoBehaviour:
   startHealth: 20
   speed: 0
   optionalHealthBar: {fileID: 1430536412}
+  shouldExplode: 1
+  PossibleExplosion: {fileID: 1464438809117552, guid: d04769e63bd97fc40bda433f0c6e95bf,
+    type: 2}
 --- !u!61 &820540840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29694,7 +29702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 0.1
   duration: 0
   animator: {fileID: 833718568}
   castTime: 0
@@ -32951,7 +32959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 0.1
   duration: 0
   animator: {fileID: 1170955589}
   castTime: 0
@@ -33075,7 +33083,11 @@ MonoBehaviour:
   castTime: 0
   requiredPosition: 3
   healValue: 50
+  magicColor:
+    serializedVersion: 2
+    rgba: 4294901763
   FirstSkillCoolDown: {fileID: 1330030545}
+  timeLeft: 1
 --- !u!1 &1171910202
 GameObject:
   m_ObjectHideFlags: 0
@@ -38035,6 +38047,9 @@ MonoBehaviour:
   startHealth: 20
   speed: 0
   optionalHealthBar: {fileID: 221480408}
+  shouldExplode: 1
+  PossibleExplosion: {fileID: 1464438809117552, guid: d04769e63bd97fc40bda433f0c6e95bf,
+    type: 2}
 --- !u!61 &1784204636
 BoxCollider2D:
   m_ObjectHideFlags: 0

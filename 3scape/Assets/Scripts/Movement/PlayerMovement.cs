@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public static float runSpeed = 20f;
     public float x;
 
-    public AudioClip jumpSound;
-    public AudioSource source;
+   // public AudioClip jumpSound;
+   // public AudioSource source;
 
     bool jump = false;
     bool crouch = false;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        source.clip = jumpSound;
+       // source.clip = jumpSound;
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(InputM.keys["Up"]))
         {
             jump = true;
-            source.Play();
+           // source.Play();
             animator.SetBool("Jump", true);
             animator.SetBool("IsGrounded", controller.GetGrounded());
         }

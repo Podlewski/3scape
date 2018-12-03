@@ -5,13 +5,10 @@ public class RangedAttack : PlayerAbility
     public Transform firePoint;
     public GameObject arrowPrefab;
 
-    public AudioClip shootSound;
+
     public AudioSource source;
 
-    void Start()
-    {
-        source.clip = shootSound;
-    }
+ 
 
     void Update()
     {

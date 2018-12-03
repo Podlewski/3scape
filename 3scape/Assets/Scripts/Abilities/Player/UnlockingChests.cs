@@ -10,7 +10,6 @@ public class UnlockingChests : PlayerAbility
     public bool ready = false;
 
     // public AudioClip attemptSound;
-    public AudioClip openingSound;
     public AudioSource source;
 
     public Transform unlockPos;
@@ -26,7 +25,6 @@ public class UnlockingChests : PlayerAbility
     private void Start()
     {
         time = timeAmt;
-        source.clip = openingSound;
     }
 
     void Update ()

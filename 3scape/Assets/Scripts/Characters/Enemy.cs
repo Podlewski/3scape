@@ -15,9 +15,14 @@ public class Enemy : MonoBehaviour
     public GameObject PossibleExplosion;
 
     bool m_FacingLeft = true;
+
+    public AudioClip barrelSound;
+    public AudioSource source;
+
     void Start()
     {
         health = startHealth;
+        source.clip = barrelSound;
     }
 
     void Update()
@@ -30,6 +35,12 @@ public class Enemy : MonoBehaviour
                 vector3.y += 0.8f;
                 Instantiate(PossibleExplosion, vector3, transform.rotation = Quaternion.identity);
             }
+
+            if (gameObject.tag == "Barrel")
+            {
+                source.Play();
+            }
+
             Destroy(gameObject);
         }
     }

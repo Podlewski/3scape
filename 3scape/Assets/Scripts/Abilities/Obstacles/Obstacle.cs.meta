@@ -3,7 +3,9 @@ guid: 504136760aace984e852496a426a0132
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - barrelSound: {fileID: 8300000, guid: f8fec78b682e5054d9592e11996a8611, type: 3}
+  - source: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

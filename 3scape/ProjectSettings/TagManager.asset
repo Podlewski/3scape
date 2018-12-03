@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Chest
+  - Barrel
   layers:
   - Default
   - TransparentFX

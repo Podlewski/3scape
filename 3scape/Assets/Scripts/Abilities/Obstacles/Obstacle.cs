@@ -21,6 +21,7 @@ public class Obstacle : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+
         }
     }
 

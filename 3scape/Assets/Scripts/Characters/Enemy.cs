@@ -42,16 +42,10 @@ public class Enemy : MonoBehaviour
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
 
                 }
-                else if (Physics2D.Raycast(transform.position, Vector2.right, 7, 1 << 8 /*player layerMask*/))
+                if (Physics2D.Raycast(transform.position, Vector2.right, 7, 1 << 8 /*player layerMask*/))
                 {
-                    if(m_FacingLeft)
-                     Flip();
-                    m_FacingLeft = false;
+                    Flip();
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
-                }
-                else
-                {
-                    GetComponent<Animator>().SetFloat("Speed", 0);
                 }
             }
             else
@@ -73,6 +67,10 @@ public class Enemy : MonoBehaviour
 
     void Flip()
     {
+        if (m_FacingLeft)
+        {
             transform.Rotate(0f, 180f, 0f);
+            m_FacingLeft = false;
+        }
     }
 }

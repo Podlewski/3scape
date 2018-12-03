@@ -25812,7 +25812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.1
+  cooldown: 0.5
   duration: 0
   animator: {fileID: 382437316}
   castTime: 0
@@ -25938,9 +25938,9 @@ MonoBehaviour:
   animator: {fileID: 382437316}
   castTime: 0
   requiredPosition: 2
-  abilityColor:
+  fastColor:
     serializedVersion: 2
-    rgba: 3774875647
+    rgba: 3779789055
   SecondSkillCoolDown: {fileID: 1180003489}
 --- !u!1 &384972245
 GameObject:
@@ -26881,7 +26881,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487621371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.377182, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.498821, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 155895182}
@@ -29152,7 +29152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.1
+  cooldown: 0.5
   duration: 0
   animator: {fileID: 833718568}
   castTime: 0
@@ -32439,6 +32439,17 @@ MonoBehaviour:
   health: 200
   healthBar: {fileID: 800577054}
   healthBarHUD: {fileID: 0}
+--- !u!114 &1170955592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170955588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5dda29e8bc17a4baaa14a4691041b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1170955593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32455,7 +32466,7 @@ MonoBehaviour:
   animator: {fileID: 1170955589}
   castTime: 0
   requiredPosition: 2
-  abilityColor:
+  magicColor:
     serializedVersion: 2
     rgba: 3789094656
   SecondSkillCoolDown: {fileID: 54887875}
@@ -32470,7 +32481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11874d6aeac62a42b1900499b986d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.1
+  cooldown: 0.5
   duration: 0
   animator: {fileID: 1170955589}
   castTime: 0

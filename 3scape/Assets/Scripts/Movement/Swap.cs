@@ -9,9 +9,15 @@ public class Swap : PlayerAbility
     private Vector3 newPosition;
     private List<Vector3> positions;
 
+    public void Change()
+    {
+        // [HideInInspector]
+        requiredPosition = 10;
+    }
+
     void FixedUpdate()
     {
-        if (isAbilityReady() &&  isButtonDownProper())
+        if (isAbilityReady() && isButtonDownProper())
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
 
@@ -38,23 +44,23 @@ public class Swap : PlayerAbility
         else
         {
             positions = getCurrentPossitions();
+
             GetComponent<CapsuleCollider2D>().enabled = true;
+
             currentCooldown -= Time.deltaTime;
         }
-
         position = GetComponent<PlayerMovement>().position;
     }
 
     private List<Vector3> getCurrentPossitions()
     {
-        List<Vector3> positions = new List<Vector3>
-        {
-            GameObject.Find("knight").transform.position,
-            GameObject.Find("archer").transform.position,
-            GameObject.Find("mage").transform.position
-        };
+        List<Vector3> positions = new List<Vector3>();
 
-        positions = positions.OrderBy(v => v.x).ToList();
+        positions.Add(GameObject.Find("knight").transform.position);
+        positions.Add(GameObject.Find("archer").transform.position);
+        positions.Add(GameObject.Find("mage").transform.position);
+
+        positions = positions.OrderBy(v => v.x).ToList<Vector3>();
         positions.Reverse();
 
         return positions;

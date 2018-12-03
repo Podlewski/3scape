@@ -29,16 +29,13 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            source.Play();
+
             if (shouldExplode && PossibleExplosion != null)
             {
                 Vector3 vector3 = gameObject.transform.position;
                 vector3.y += 0.8f;
                 Instantiate(PossibleExplosion, vector3, transform.rotation = Quaternion.identity);
-            }
-
-            if (gameObject.tag == "Barrel")
-            {
-                source.Play();
             }
 
             Destroy(gameObject);

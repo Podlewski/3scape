@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     public float speed;
     public Image optionalHealthBar;
+    public bool shouldExplode = false;
+    public GameObject PossibleExplosion;
 
     bool m_FacingLeft = true;
     void Start()
@@ -22,6 +24,12 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            if (shouldExplode && PossibleExplosion != null)
+            {
+                Vector3 vector3 = gameObject.transform.position;
+                vector3.y += 0.8f;
+                Instantiate(PossibleExplosion, vector3, transform.rotation = Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }

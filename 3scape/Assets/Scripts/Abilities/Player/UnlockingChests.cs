@@ -17,7 +17,7 @@ public class UnlockingChests : PlayerAbility
     float time;
     public bool tmp = false;
 
-    public Image FirstSkillCoolDown;
+    public Image SecondSkillCoolDown;
 
     private void Start()
     {
@@ -82,8 +82,8 @@ public class UnlockingChests : PlayerAbility
         }
 
         if (!isPositionProper())
-            FirstSkillCoolDown.fillAmount = 1;
+            SecondSkillCoolDown.fillAmount = 1;
         else
-            FirstSkillCoolDown.fillAmount = 0;
+            SecondSkillCoolDown.fillAmount = 0;
     }
 }

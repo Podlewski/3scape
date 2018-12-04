@@ -17,7 +17,7 @@ public class ColorAbility : PlayerAbility
 
     protected bool needToSwapColor = false;
 
-    void Start()
+    protected void findObjects()
     {
         knight = GameObject.Find("knight").GetComponent<Player>();
         archer = GameObject.Find("archer").GetComponent<Player>();

@@ -10,14 +10,7 @@ public class PhysicalShield : ColorAbility
 
     void Start()
     {
-        knight = GameObject.Find("knight").GetComponent<Player>();
-        archer = GameObject.Find("archer").GetComponent<Player>();
-        mage = GameObject.Find("mage").GetComponent<Player>();
-
-        srKnight = GameObject.Find("knight").GetComponent<SpriteRenderer>();
-        srArcher = GameObject.Find("archer").GetComponent<SpriteRenderer>();
-        srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
-
+        findObjects();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
     }

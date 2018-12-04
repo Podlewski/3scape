@@ -96,7 +96,7 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 ** [x] Pasek życia nie obraca się razem z bohaterami.
 ** [x] Umiejętności które zmieniają kolory bohaterów podczas ich trwania od teraz faktycznie zmieniają ten kolor.
 ** [x] Tabliczki od teraz pokazują się w zależności od średniej pozycji drużyny, a nie pozycji rycerza.
-** [x] Zamiana bohaterów nie blokuje się bez powodu na czas paru sekund -> dotarcie do sedna problemu, usprawnienie działania (nie całkowite wyeliminowanie) oraz przygotowanie kodu do dalszych poprawek (ze względu na planowane zmiany w "zamianie bohaterów" dalsze inwestygowanie nie przyniosło by wymiernych korzyści wzgledem potrzebnego czasu na rozwiązanie problemu przy obecnej implementacji )
+** [ ] Zamiana bohaterów nie blokuje się bez powodu na czas paru sekund -> dotarcie do sedna problemu oraz przygotowanie kodu do dalszych poprawek (ze względu na planowane zmiany w "zamianie bohaterów" dalsze inwestygowanie nie przyniosło by wymiernych korzyści wzgledem potrzebnego czasu na rozwiązanie problemu przy obecnej implementacji)
 * [x] Dodanie nowej umiejętności - tarcza dla rycerza.
 
 <<<

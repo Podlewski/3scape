@@ -787,7 +787,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1.2
   duration: 0
   animator: {fileID: 70525292}
   castTime: 0
@@ -25840,14 +25840,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9044613f78a01b47ac09603c20e45a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 4
-  duration: 4
+  cooldown: 3
+  duration: 5
   animator: {fileID: 382437316}
   castTime: 0
   requiredPosition: 2
-  fastColor:
+  abilityColor:
     serializedVersion: 2
-    rgba: 3779789055
+    rgba: 3359062008
   SecondSkillCoolDown: {fileID: 1323503814}
 --- !u!114 &382437327
 MonoBehaviour:
@@ -25861,13 +25861,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 4
-  duration: 10
+  duration: 6
   animator: {fileID: 382437316}
   castTime: 0
   requiredPosition: 3
   abilityColor:
     serializedVersion: 2
-    rgba: 3590384122
+    rgba: 3355503098
   FirstSkillCoolDown: {fileID: 1364221169}
 --- !u!82 &382437328
 AudioSource:
@@ -29232,7 +29232,7 @@ MonoBehaviour:
   shouldExplode: 1
   PossibleExplosion: {fileID: 1464438809117552, guid: d04769e63bd97fc40bda433f0c6e95bf,
     type: 2}
-  barrelSound: {fileID: 8300000, guid: f8fec78b682e5054d9592e11996a8611, type: 3}
+  barrelSound: {fileID: 8300000, guid: 88f2a72103345ee4299d613d7d5106f6, type: 3}
   source: {fileID: 766856628}
 --- !u!61 &766856626
 BoxCollider2D:
@@ -29276,7 +29276,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 30
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -33738,17 +33738,6 @@ MonoBehaviour:
   healthBarBG: {fileID: 1481499265}
   healthBarHUD: {fileID: 1946782106}
   healthBarHUDBG: {fileID: 1180623748}
---- !u!114 &1170955592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170955588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e5dda29e8bc17a4baaa14a4691041b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1170955593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33761,13 +33750,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 4
-  duration: 4
+  duration: 6
   animator: {fileID: 1170955589}
   castTime: 0
   requiredPosition: 2
-  magicColor:
+  abilityColor:
     serializedVersion: 2
-    rgba: 3789094656
+    rgba: 3371237120
   SecondSkillCoolDown: {fileID: 2126896080}
 --- !u!114 &1170955594
 MonoBehaviour:
@@ -33905,9 +33894,6 @@ MonoBehaviour:
   castTime: 0
   requiredPosition: 3
   healValue: 50
-  magicColor:
-    serializedVersion: 2
-    rgba: 4294901763
   FirstSkillCoolDown: {fileID: 1330030545}
   timeLeft: 1
 --- !u!82 &1170955602
@@ -37355,7 +37341,7 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1550609502}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7523b786505d54143895c75541689def, type: 3}
@@ -37984,7 +37970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1.2
   duration: 0
   animator: {fileID: 1585327779}
   castTime: 0
@@ -38064,7 +38050,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -40967,7 +40953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3292097, g: 0.4990943, b: 0.509434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

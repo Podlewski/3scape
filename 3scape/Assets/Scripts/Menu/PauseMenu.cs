@@ -30,9 +30,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (!DeathScreen.activeDeathScreen && Input.GetKeyDown(pauseKeyCode))
         {
-            if (gamePaused)
-                Resume();
-            else
+            if (!gamePaused)
                 Pause();
         }
 	}

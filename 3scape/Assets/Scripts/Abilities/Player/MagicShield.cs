@@ -1,51 +1,35 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class MagicShield : PlayerAbility
+public class MagicShield : ColorAbility
 {
-    private Player knight;
-    private Player mage;
-    private Player archer;
-
-    private SpriteRenderer srKnight;
-    private SpriteRenderer srMage;
-    private SpriteRenderer srArcher;
-
-    private Color32 playerColor = new Color32(255, 255, 255, 225);
-    private Color32 healtColor = new Color32(19, 255, 0, 255);
-    public Color32 magicColor = new Color32(0, 255, 216, 225);
-
     public Image SecondSkillCoolDown;
+    private Color defaultColor;
+    private bool defaultDirection;
+
+    public float timeLeft = 1.8f;
 
     private void Start()
     {
-        knight = GameObject.Find("knight").GetComponent<Player>();
-        mage = GameObject.Find("mage").GetComponent<Player>();
-        archer = GameObject.Find("archer").GetComponent<Player>();
-
-        srKnight = GameObject.Find("knight").GetComponent<SpriteRenderer>();
-        srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
-        srArcher = GameObject.Find("archer").GetComponent<SpriteRenderer>();
+        findObjects();
+        defaultColor = SecondSkillCoolDown.color;
+        defaultDirection = SecondSkillCoolDown.fillClockwise;
     }
 
     void Update()
     {
         if (isAbilityReady())
         {
+            timeLeft = 1.8f;
             if (isButtonDownProper() && isPositionProper())
             {
+                animator.SetBool("IsShield", true);
+
                 knight.SetMagicImmunity();
                 mage.SetMagicImmunity();
                 archer.SetMagicImmunity();
 
-                knight.healthBar.color = magicColor;
-                mage.healthBar.color = magicColor;
-                archer.healthBar.color = magicColor;
-
-                srKnight.color = magicColor;
-                srMage.color = magicColor;
-                srArcher.color = magicColor;
-
+                SetAbilityColor();
                 setCooldown();
 
                 SecondSkillCoolDown.fillAmount = 1;
@@ -58,22 +42,36 @@ public class MagicShield : PlayerAbility
             mage.DisableMagicImmunity();
             archer.DisableMagicImmunity();
 
-            knight.healthBar.color = healtColor;
-            mage.healthBar.color = healtColor;
-            archer.healthBar.color = healtColor;
-
-            srKnight.color = playerColor;
-            srMage.color = playerColor;
-            srArcher.color = playerColor;
-
+            BackToNormalColor();
             reduceCooldown();
 
+            //SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        }
+
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0 && animator.GetBool("IsShield"))
+        {
+
+            animator.SetBool("IsShield", false);
+            timeLeft = 1.8f;
+        }
+
+        if (isAbilityStillWorking())
+        {
+            SecondSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
+            SecondSkillCoolDown.fillClockwise = !defaultDirection;
+            SecondSkillCoolDown.fillAmount = remaindingDuration / duration;
+        }
+        else
+        {
+            SecondSkillCoolDown.color = defaultColor;
+            SecondSkillCoolDown.fillClockwise = defaultDirection;
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
-        if(!isPositionProper())
+        if (!isPositionProper())
             SecondSkillCoolDown.fillAmount = 1;
-        else
+        else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 }

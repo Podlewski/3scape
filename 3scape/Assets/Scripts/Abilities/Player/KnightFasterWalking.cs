@@ -3,37 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KnightFasterWalking : PlayerAbility
+public class KnightFasterWalking : ColorAbility
 {
     CharacterController2D characterController2D;
 
-    private Player knight;
-    private Player mage;
-    private Player archer;
-
-    private SpriteRenderer srKnight;
-    private SpriteRenderer srMage;
-    private SpriteRenderer srArcher;
-
-    private Color32 playerColor = new Color32(255, 255, 255, 225);
-    private Color32 healtColor = new Color32(19, 255, 0, 255);
-    public Color32 fastColor = new Color32(255, 0, 80, 225);
-
     public Image SecondSkillCoolDown;
+    private Color defaultColor;
+    private bool defaultDirection;
 
-    // Use this for initialization
     void Start()
     {
-        knight = GameObject.Find("knight").GetComponent<Player>();
-        mage = GameObject.Find("mage").GetComponent<Player>();
-        archer = GameObject.Find("archer").GetComponent<Player>();
-
-        srKnight = GameObject.Find("knight").GetComponent<SpriteRenderer>();
-        srMage = GameObject.Find("mage").GetComponent<SpriteRenderer>();
-        srArcher = GameObject.Find("archer").GetComponent<SpriteRenderer>();
+        findObjects();
+        defaultColor = SecondSkillCoolDown.color;
+        defaultDirection = SecondSkillCoolDown.fillClockwise;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isAbilityReady())
@@ -42,14 +26,7 @@ public class KnightFasterWalking : PlayerAbility
             {
                 PlayerMovement.runSpeed = 50f;
 
-                knight.healthBar.color = fastColor;
-                mage.healthBar.color = fastColor;
-                archer.healthBar.color = fastColor;
-
-                srKnight.color = fastColor;
-                srMage.color = fastColor;
-                srArcher.color = fastColor;
-
+                SetAbilityColor();
                 setCooldown();
 
                 SecondSkillCoolDown.fillAmount = 1;
@@ -60,22 +37,28 @@ public class KnightFasterWalking : PlayerAbility
         {
             PlayerMovement.runSpeed = 20f;
 
-            knight.healthBar.color = healtColor;
-            mage.healthBar.color = healtColor;
-            archer.healthBar.color = healtColor;
-
-            srKnight.color = playerColor;
-            srMage.color = playerColor;
-            srArcher.color = playerColor;
-
+            BackToNormalColor();
             reduceCooldown();
 
+            //SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        }
+
+        if (isAbilityStillWorking())
+        {
+            SecondSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
+            SecondSkillCoolDown.fillClockwise = !defaultDirection;
+            SecondSkillCoolDown.fillAmount = remaindingDuration / duration;
+        }
+        else
+        {
+            SecondSkillCoolDown.color = defaultColor;
+            SecondSkillCoolDown.fillClockwise = defaultDirection;
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
         if (!isPositionProper())
             SecondSkillCoolDown.fillAmount = 1;
-        else
+        else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 

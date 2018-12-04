@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public CharacterController2D controller;
     private Animator animator;
     public int position = 1;
     public float distance = 3;
     public static float runSpeed = 20f;
     public float x;
+
+   // public AudioClip jumpSound;
+   // public AudioSource source;
 
     bool jump = false;
     bool crouch = false;
@@ -20,34 +22,35 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+       // source.clip = jumpSound;
     }
 
     // Update is called once per frame
     void Update()
     {
         x = transform.position.x;
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = InputM.GetAxisRaw("Horizontal") * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (Input.GetButtonDown("Jump"))
+        //if (InputM.GetAxisRaw("Vertical") == 1)
+        if (Input.GetKeyDown(InputM.keys["Up"]))
         {
             jump = true;
+           // source.Play();
             animator.SetBool("Jump", true);
             animator.SetBool("IsGrounded", controller.GetGrounded());
         }
-        crouch = Input.GetButton("Crouch");
-
+        //crouch = InputM.GetAxisRaw("Vertical") == -1 ? true : false;
+        crouch = Input.GetKey(InputM.keys["Down"]);
     }
 
     void FixedUpdate()
     {
-
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
         animator.SetBool("Jump", false);
         animator.SetBool("IsGrounded", controller.GetGrounded());
     }
-    void LateUpdate()
-    {
-    }
 
+    void LateUpdate()
+    {}
 }

@@ -6,26 +6,42 @@ public class ZombieAttack : AnimatedAbility
     public float attackRange;
     public int damage;
 
+    public AudioClip zombieSound;
+    public AudioSource source;
+
+    void Start()
+    {
+        source.clip = zombieSound;
+    }
+
     void Update()
     {
-        if (isAbilityReady())
+        if ((Physics2D.Raycast(transform.position, Vector2.left, attackRange, whatIsEnemy /*player layerMask*/)
+          || Physics2D.Raycast(transform.position, Vector2.right, attackRange, whatIsEnemy/*player layerMask*/)))
         {
-            // animator.SetBool("IsAttacking", true);
-
-            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.Find("AttackPoint").position, attackRange, whatIsEnemy);
-            for (int i = 0; i < enemiesToDamage.Length; i++)
+            animator.SetBool("IsAttacking", true);
+            if (isAbilityReady())
             {
-                enemiesToDamage[i].GetComponent<Player>().TakeMagicDamage(damage);
+                setCooldown();
+                var enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.Find("AttackPoint").position, attackRange, 1 << 8);
+                foreach (var enemy in enemiesToDamage)
+                {
+                    enemy.GetComponent<Player>().TakePhysicalDamage(damage);
+                }
+
+                source.Play();
+            }
+            else
+            {
+                currentCooldown -= Time.deltaTime;
             }
 
-            setCooldown();
-            //animator.SetBool("IsAttacking", false);
         }
 
         else
         {
             currentCooldown -= Time.deltaTime;
-
+            animator.SetBool("IsAttacking", false);
         }
 
     }

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PositionChecker : MonoBehaviour
 {
-
     public GameObject knight;
     public GameObject archer;
     public GameObject mage;

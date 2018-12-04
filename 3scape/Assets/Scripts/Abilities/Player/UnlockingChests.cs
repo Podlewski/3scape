@@ -9,6 +9,9 @@ public class UnlockingChests : PlayerAbility
     public float countDown = 2.0f;
     public bool ready = false;
 
+    // public AudioClip attemptSound;
+    public AudioSource source;
+
     public Transform unlockPos;
     public float unlockRange;
     public LayerMask whatCanOpen;
@@ -17,7 +20,7 @@ public class UnlockingChests : PlayerAbility
     float time;
     public bool tmp = false;
 
-    public Image FirstSkillCoolDown;
+    public Image SecondSkillCoolDown;
 
     private void Start()
     {
@@ -26,13 +29,17 @@ public class UnlockingChests : PlayerAbility
 
     void Update ()
     {
-        if (isAbilityReady())
+        if (isAbilityReady() && isPositionProper())
         {
             Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
 
             //animator.SetBool("jakasAnimacja", false);
             if (isButtonPressedProper() && ready == false)
             {
+                if (source != null)
+                {
+                    source.Play();
+                }
                 downTime = Time.time;
                 pressTime = downTime + countDown;
                 ready = true;
@@ -47,6 +54,7 @@ public class UnlockingChests : PlayerAbility
                     if (col[i].tag == "Chest")
                     {
                         col[i].GetComponent<Chest>().timeBar.fillAmount = time / timeAmt;
+
                     }
                 }
             }
@@ -69,8 +77,6 @@ public class UnlockingChests : PlayerAbility
                     {
                         col[i].GetComponent<Chest>().checkIfOpen();
                         setCooldown();
-
-
                     }
                 }
             }
@@ -80,5 +86,10 @@ public class UnlockingChests : PlayerAbility
         {
             currentCooldown -= Time.deltaTime;
         }
+
+        if (!isPositionProper())
+            SecondSkillCoolDown.fillAmount = 1;
+        else
+            SecondSkillCoolDown.fillAmount = 0;
     }
 }

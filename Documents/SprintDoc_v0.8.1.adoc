@@ -98,7 +98,7 @@ Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie s�
 
 === Krzysiek
 
-* [ ] Poprawa fizyki gry -> razem z Bartoszem.
+* [ ] Poprawa fizyki gry.
 * [ ] Poprawa działania kamery.
 * [ ] Dopracowanie SI Zombie.
 
@@ -121,8 +121,8 @@ Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie s�
 
 === Konrad
 
-* [ ] Poprawa animacji postaci przy używaniu umiejętności.
 * [ ] Rozwijanie HUDu. 
+* [ ] Poprawa animacji postaci przy używaniu umiejętności.
 * [ ] Zebranie feedbacku związanego ze zmianami w grze.
 
 === Zbyszek
@@ -133,12 +133,13 @@ Są to zadania wewnętrzne, które mają ułatwić pracę nad projektem - nie s�
 
 === Karol
 
-* [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
 * [ ] Połączenie zmian wprowadzonych przez team w jedną część.
+* [ ] Projektowanie poziomu tutorialowego - wprowadzanie prostych przeszkód pozwalających pokazać zdolności bohaterów i objaśniających jak działa gra. 
 * [ ] Rozpoczęcie prac nad zwykłym, grywalnym poziomem -> razem z Justyną.
 * [ ] Bugmaster - naprawa błędów, które uznany na najkonieczniejsze do poprawy -> razem z Bartoszem.
 * [ ] Dodanie nowej umiejętności, którą uda nam się wymyślić.
-* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+
 
 === Rzeczy dodatkowe
 

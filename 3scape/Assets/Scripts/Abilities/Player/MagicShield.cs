@@ -7,6 +7,8 @@ public class MagicShield : ColorAbility
     private Color defaultColor;
     private bool defaultDirection;
 
+    public float timeLeft = 1.8f;
+
     private void Start()
     {
         findObjects();
@@ -18,8 +20,11 @@ public class MagicShield : ColorAbility
     {
         if (isAbilityReady())
         {
+            timeLeft = 1.8f;
             if (isButtonDownProper() && isPositionProper())
             {
+                animator.SetBool("IsShield", true);
+
                 knight.SetMagicImmunity();
                 mage.SetMagicImmunity();
                 archer.SetMagicImmunity();
@@ -43,22 +48,17 @@ public class MagicShield : ColorAbility
             //SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
 
-        if (isAbilityStillWorking())
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0 && animator.GetBool("IsShield"))
         {
-            SecondSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
-            SecondSkillCoolDown.fillClockwise = !defaultDirection;
-            SecondSkillCoolDown.fillAmount = remaindingDuration / duration;
-        }
-        else
-        {
-            SecondSkillCoolDown.color = defaultColor;
-            SecondSkillCoolDown.fillClockwise = defaultDirection;
-            SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            animator.SetBool("IsShield", false);
+            timeLeft = 1.8f;
         }
 
         if (!isPositionProper())
             SecondSkillCoolDown.fillAmount = 1;
-        else if (!isAbilityStillWorking())
+        else
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 }

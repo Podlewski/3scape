@@ -9,7 +9,6 @@ public class Heal : PlayerAbility
     private Player mage;
     private Player archer;
 
-
     public Image FirstSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
@@ -24,6 +23,7 @@ public class Heal : PlayerAbility
 
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
+
     }
 
     void Update()
@@ -36,13 +36,15 @@ public class Heal : PlayerAbility
             {
                 animator.SetBool("IsHealing", true);
 
+
                 knight.isBeingHealed = true;
                 archer.isBeingHealed = true;
                 mage.isBeingHealed = true;
 
                 mage.Heal(healValue);
                 archer.Heal(healValue);
-                knight.Heal(healValue);             
+                knight.Heal(healValue);
+
 
                 setCooldown();
 
@@ -51,6 +53,8 @@ public class Heal : PlayerAbility
         }
         else if (!isAbilityStillWorking() || !isPositionProper())
         {
+
+
             reduceCooldown();
 
             //FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
@@ -58,7 +62,8 @@ public class Heal : PlayerAbility
 
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0 && animator.GetBool("IsHealing"))
-        {     
+        {
+
             animator.SetBool("IsHealing", false);
             timeLeft = 1.0f;
         }

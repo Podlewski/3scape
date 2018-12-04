@@ -18735,7 +18735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1.2
   duration: 0
   animator: {fileID: 1364555105}
   castTime: 0
@@ -18797,7 +18797,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -19555,7 +19555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1.2
   duration: 0
   animator: {fileID: 1434022443}
   castTime: 0
@@ -19617,7 +19617,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -23637,7 +23637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1.2
   duration: 0
   animator: {fileID: 1755467748}
   castTime: 0
@@ -23717,7 +23717,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -24268,7 +24268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08a21895060914cb2f6de19a6b48a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1.2
   duration: 0
   animator: {fileID: 1793612818}
   castTime: 0
@@ -24348,7 +24348,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -26093,6 +26093,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 3371237120
   SecondSkillCoolDown: {fileID: 191589202}
+  timeLeft: 1.8
 --- !u!114 &1907011500
 MonoBehaviour:
   m_ObjectHideFlags: 0

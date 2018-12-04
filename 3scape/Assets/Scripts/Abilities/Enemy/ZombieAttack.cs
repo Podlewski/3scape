@@ -26,7 +26,7 @@ public class ZombieAttack : AnimatedAbility
                 var enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.Find("AttackPoint").position, attackRange, 1 << 8);
                 foreach (var enemy in enemiesToDamage)
                 {
-                    enemy.GetComponent<Player>().TakeMagicDamage(damage);
+                    enemy.GetComponent<Player>().TakePhysicalDamage(damage);
                 }
 
                 source.Play();

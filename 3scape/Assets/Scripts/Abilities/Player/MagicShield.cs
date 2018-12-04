@@ -56,9 +56,22 @@ public class MagicShield : ColorAbility
             timeLeft = 1.8f;
         }
 
+        if (isAbilityStillWorking())
+        {
+            SecondSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
+            SecondSkillCoolDown.fillClockwise = !defaultDirection;
+            SecondSkillCoolDown.fillAmount = remaindingDuration / duration;
+        }
+        else
+        {
+            SecondSkillCoolDown.color = defaultColor;
+            SecondSkillCoolDown.fillClockwise = defaultDirection;
+            SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        }
+
         if (!isPositionProper())
             SecondSkillCoolDown.fillAmount = 1;
-        else
+        else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 }

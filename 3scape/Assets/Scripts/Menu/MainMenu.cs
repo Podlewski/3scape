@@ -18,6 +18,22 @@ public class MainMenu : MonoBehaviour
     public Button Level01SLB;
     public Button BackSLB;
 
+    public Button LogoB;
+    public SpriteRenderer LogoS;
+    public SpriteRenderer KnightS;
+    private int counter;
+
+    public Sprite LogoBlack;
+    public Sprite LogoBlue;
+    public Sprite LogoGold;
+    public Sprite LogoGreen;
+    public Sprite LogoRed;
+    public Sprite KnightBlack;
+    public Sprite KnightBlue;
+    public Sprite KnightGold;
+    public Sprite KnightGreen;
+    public Sprite KnightRed;
+
     void Start()
     {
         NewGameB.onClick.AddListener(() => SelectLevelMenu());
@@ -29,6 +45,9 @@ public class MainMenu : MonoBehaviour
         TutorialSLB.onClick.AddListener(() => SLTutorial());
         Level01SLB.onClick.AddListener(() => SLLevel01());
         BackSLB.onClick.AddListener(() => SLBack());
+
+        counter = 0;
+        LogoB.onClick.AddListener(() => LogoChange());
     }
 
     // Main Menu
@@ -81,5 +100,39 @@ public class MainMenu : MonoBehaviour
         selectLevelUI.gameObject.SetActive(false);
     }
 
+
+    // Logo & Knight
+    private void LogoChange()
+    {
+        counter++;
+
+        if (counter >= 5)
+            counter = 0;
+
+        switch(counter)
+        {
+            case 0:
+                LogoS.sprite = LogoBlack;
+                KnightS.sprite = KnightBlack;
+                break;
+            case 1:
+                LogoS.sprite = LogoBlue;
+                KnightS.sprite = KnightBlue;
+                break;
+            case 2:
+                LogoS.sprite = LogoGold;
+                KnightS.sprite = KnightGold;
+                break;
+            case 3:
+                LogoS.sprite = LogoGreen;
+                KnightS.sprite = KnightGreen;
+                break;
+            case 4:
+                LogoS.sprite = LogoRed;
+                KnightS.sprite = KnightRed;
+                break;
+        }
+
+    }
 
 }

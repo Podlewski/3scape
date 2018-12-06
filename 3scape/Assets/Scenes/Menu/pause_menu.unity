@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 971794121}
+  settingsMenuUI: {fileID: 0}
   ResumeB: {fileID: 365328853}
   RestartB: {fileID: 2020618122}
   OptionsB: {fileID: 57056721}
@@ -567,7 +568,7 @@ RectTransform:
   m_GameObject: {fileID: 971794121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 365328852}
   - {fileID: 2020618119}

@@ -250,7 +250,7 @@ RectTransform:
   m_GameObject: {fileID: 433869151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 896954471}
   - {fileID: 1361167805}
@@ -962,6 +962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   settingsMenuUI: {fileID: 433869151}
+  inputSettingsMenuUI: {fileID: 0}
   AudioVideoB: {fileID: 896954474}
   ControlsB: {fileID: 1361167808}
   BackB: {fileID: 288522560}

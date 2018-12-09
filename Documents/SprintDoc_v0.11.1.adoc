@@ -1,0 +1,47 @@
+= 3scape - przegląd i planowanie sprintu: *Tydzień 11*
+Ancient Yaks
+0.11.1, 2018-12-01
+:toc:
+:toc-title: Spis Treści
+:version-label: Wersja
+:icons: font
+
+== Obecne założenia gry
+
+3scape jest zręcznościowo-logiczną grą platformową, która działa na silniku Unity.
+
+Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
+
+* wojownik - dysponuje on siłą, która okaże się nieoceniona nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
+* czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
+
+Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ustawienia w rzędzie, dysponują oni innymi umiejętnościami, które potrafią oddziaływać ze sobą w najróżniejszy sposób. Dobre przetasowywanie naszej drużyny to klucz do sukcesu w 3scape.
+
+=== Sterowanie
+
+* Poruszamy się bohaterami za pomocą klawiszy *W A D*, bądź *strzałek*.
+* Zmieniamy kolejność bohaterów za pomocą *Spacji* (każdy posuwa się od lewej do prawej, chyba, że dalej nie może - wtedy się cofa),
+* Klawisze *J K L* odpowiadają za umiejętności naszych bohaterów.
+* Klawisz *J* odpowiada za umiejętności na lewej pozycji:
+** Wojownik podniesie tarczę (wedle założeń - póki co tylko kolor) która sprawi, ze uchroni SIEBIE od obrażeń fizycznych.
+** Łotrzyk rozstawi pułapkę na przeciwników.
+** Mag będzie leczył drużynę.
+* Klawisz *K* odpowiada za umiejętności na środkowej pozycji:
+** Wojownik podniesie morale drużyny, przez co wszyscy będą w stanie poruszać się szybciej i skakać dalej.
+** Łotrzyk potrafi otworzyć skrzynię.
+** Mag sprawi, że drużyna otrzyma tymczasową odporność na magiczne obrażenia.
+* Klawisz *L* odpowiada za umiejętności na prawej pozycji:
+** Każda postać zaatakuje.
+* Klawisz *Esc* otwiera menu pauzy. 
+
+<<<
+== Przegląd sprintu poprawkowego (tydzień 11)
+
+=== Edyta
+
+* [ ] Poprawa wyglądu licznika czasu oraz zebranych skarbów.
+
+=== Gracjan
+
+* [ ] Poprawa animacji zamiany kolejności bohaterów.

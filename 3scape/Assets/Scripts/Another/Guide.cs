@@ -8,19 +8,38 @@ public class Guide : MonoBehaviour
     private GameObject partyPosition;
     public Text txt;
     public float range = 5;
-    
+
+    public enum keysDropdown
+    {
+        Empty,
+        Up,
+        Down,
+        Left,
+        Right,
+        Swap,
+        Skill1,
+        Skill2,
+        Attack
+    };
+
+    public bool smarterText = false;
+
+    [TextArea]
     public string text1;
-    public string position;
+    public keysDropdown dropdown1;
+    [TextArea]
     public string text2;
-    public string keyCode; 
+    public keysDropdown dropdown2;
+    [TextArea]
     public string text3;
 
     // Use this for initialization
     void Start()
     {
-        fillText();
-        partyPosition = GameObject.Find("playerAvgPos");
+        if (smarterText == true)
+            fillText();
 
+        partyPosition = GameObject.Find("playerAvgPos");
         if (txt != null) txt.enabled = false;
     }
 
@@ -45,6 +64,13 @@ public class Guide : MonoBehaviour
 
     void fillText()
     {
-        txt.text = text1 + " " + position + " " + text2 + " " + keyCode + " " + text3;
+        if (dropdown1.ToString() == "Empty")
+            txt.text = text1;
+
+        else if (dropdown2.ToString() == "Empty")
+            txt.text = text1 + " " + InputM.keys[dropdown1.ToString()] + " " + text2;
+
+        else
+            txt.text = text1 + " " + InputM.keys[dropdown1.ToString()] + " " + text2 + " " + InputM.keys[dropdown2.ToString()] + " " + text3;
     }
 }

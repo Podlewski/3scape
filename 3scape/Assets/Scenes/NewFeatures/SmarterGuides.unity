@@ -2068,13 +2068,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 163290227}
-  partyPosition: {fileID: 0}
   txt: {fileID: 1578790721}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: You can jump - press
+  dropdown1: 1
+  text2: button.
+  dropdown2: 0
   text3: 
 --- !u!114 &163290230
 MonoBehaviour:
@@ -26691,13 +26691,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 471314882}
-  partyPosition: {fileID: 0}
   txt: {fileID: 1169361657}
   range: 5
+  smarterText: 0
   text1: 
-  position: 
+  dropdown1: 0
   text2: 
-  keyCode: 
+  dropdown2: 0
   text3: 
 --- !u!114 &471314885
 MonoBehaviour:
@@ -27223,13 +27223,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 546092537}
-  partyPosition: {fileID: 0}
   txt: {fileID: 996888308}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: Violet thonrs deals magic damage. Mage is able to put on a magic shield when
+    he is in the middle and you use
+  dropdown1: 7
+  text2: button.
+  dropdown2: 0
   text3: 
 --- !u!114 &546092540
 MonoBehaviour:
@@ -27658,13 +27659,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 589431083}
-  partyPosition: {fileID: 0}
   txt: {fileID: 743947124}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: For example - everyone will attack while being 1st and pressing
+  dropdown1: 8
+  text2: key.
+  dropdown2: 0
   text3: 
 --- !u!114 &589431086
 MonoBehaviour:
@@ -28346,12 +28347,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 659102542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8913703ca858774eb8b6051b943133a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c962f09dcee4c84ea0922bd3df3284c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 659102542}
-  range: 5
   txt: {fileID: 48902995}
+  range: 5
   smarterText: 1
   text1: Greatings Adventurer! Welcome to the tutorial! Use
   dropdown1: 3
@@ -31818,13 +31819,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 945116830}
-  partyPosition: {fileID: 0}
   txt: {fileID: 67964098}
   range: 5
+  smarterText: 0
   text1: 
-  position: 
+  dropdown1: 0
   text2: 
-  keyCode: 
+  dropdown2: 0
   text3: 
 --- !u!114 &945116833
 MonoBehaviour:
@@ -32621,13 +32622,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1044127055}
-  partyPosition: {fileID: 0}
   txt: {fileID: 1795716684}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: Oh no! You are hurt! Press
+  dropdown1: 6
+  text2: to heal when mage is in the last position.
+  dropdown2: 0
   text3: 
 --- !u!114 &1044127058
 MonoBehaviour:
@@ -34434,13 +34435,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1217166119}
-  partyPosition: {fileID: 0}
   txt: {fileID: 855117223}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: When rogue is in the middle, he can open chest using
+  dropdown1: 7
+  text2: key.
+  dropdown2: 0
   text3: 
 --- !u!114 &1217166122
 MonoBehaviour:
@@ -34581,13 +34582,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1224376140}
-  partyPosition: {fileID: 0}
   txt: {fileID: 207329585}
   range: 5
+  smarterText: 0
   text1: 
-  position: 
+  dropdown1: 0
   text2: 
-  keyCode: 
+  dropdown2: 0
   text3: 
 --- !u!114 &1224376143
 MonoBehaviour:
@@ -34996,13 +34997,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1290346906}
-  partyPosition: {fileID: 0}
   txt: {fileID: 1333921244}
   range: 5
+  smarterText: 0
   text1: 
-  position: 
+  dropdown1: 0
   text2: 
-  keyCode: 
+  dropdown2: 0
   text3: 
 --- !u!114 &1290346909
 MonoBehaviour:
@@ -35810,13 +35811,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1382753695}
-  partyPosition: {fileID: 0}
   txt: {fileID: 1395363463}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: Zombie again? Try to jump over him and place trap by pressing
+  dropdown1: 6
+  text2: key. Rogue need to be on last position.
+  dropdown2: 0
   text3: 
 --- !u!114 &1382753698
 MonoBehaviour:
@@ -36180,8 +36181,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Zombie again? Try to jump over him and place trap (Rogue need to be on 3rd
-    position) by pressing J.
+  m_Text: Zombie again? Try to jump over him and place trap by pressing J key. Rogue
+    need to be on last position.
 --- !u!222 &1395363464
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36237,13 +36238,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1402044077}
-  partyPosition: {fileID: 0}
   txt: {fileID: 797954100}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: You can change your team order using
+  dropdown1: 5
+  text2: key.
+  dropdown2: 0
   text3: 
 --- !u!114 &1402044080
 MonoBehaviour:
@@ -37369,13 +37370,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1510323370}
-  partyPosition: {fileID: 0}
   txt: {fileID: 365038830}
   range: 5
+  smarterText: 0
   text1: 
-  position: 
+  dropdown1: 0
   text2: 
-  keyCode: 
+  dropdown2: 0
   text3: 
 --- !u!114 &1510323373
 MonoBehaviour:
@@ -39458,13 +39459,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1764878544}
-  partyPosition: {fileID: 0}
   txt: {fileID: 384972247}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: Knight will temporary increase movement speed and jump range alies while
+    in he middle and you press
+  dropdown1: 7
+  text2: key.
+  dropdown2: 0
   text3: 
 --- !u!114 &1764878547
 MonoBehaviour:
@@ -41446,13 +41448,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 1955002259}
-  partyPosition: {fileID: 0}
   txt: {fileID: 1579081025}
   range: 5
-  text1: 
-  position: 
-  text2: 
-  keyCode: 
+  smarterText: 1
+  text1: You can destroy this barrel! Press
+  dropdown1: 8
+  text2: to attack.
+  dropdown2: 0
   text3: 
 --- !u!1 &1970250892
 GameObject:

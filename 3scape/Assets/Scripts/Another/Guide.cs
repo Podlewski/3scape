@@ -65,12 +65,12 @@ public class Guide : MonoBehaviour
     void fillText()
     {
         if (dropdown1.ToString() == "Empty")
-            txt.text = text1;
+            txt.text = text1.Trim();
 
         else if (dropdown2.ToString() == "Empty")
-            txt.text = text1 + " " + InputM.keys[dropdown1.ToString()] + " " + text2;
+            txt.text = text1.Trim() + " " + InputM.keys[dropdown1.ToString()] + " " + text2.Trim();
 
         else
-            txt.text = text1 + " " + InputM.keys[dropdown1.ToString()] + " " + text2 + " " + InputM.keys[dropdown2.ToString()] + " " + text3;
+            txt.text = text1.Trim() + " " + InputM.keys[dropdown1.ToString()] + " " + text2.Trim() + " " + InputM.keys[dropdown2.ToString()] + " " + text3.Trim();
     }
 }

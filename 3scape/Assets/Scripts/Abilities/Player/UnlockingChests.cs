@@ -22,6 +22,8 @@ public class UnlockingChests : PlayerAbility
 
     public Image SecondSkillCoolDown;
 
+    private bool isThereKey;
+
     private void Start()
     {
         time = timeAmt;
@@ -29,6 +31,9 @@ public class UnlockingChests : PlayerAbility
 
     void Update ()
     {
+        isThereKey = GameObject.Find("Player").GetComponent<Inventory>().isFull[1];
+        Debug.Log(isThereKey);
+
         if (isAbilityReady() && isPositionProper())
         {
             Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);

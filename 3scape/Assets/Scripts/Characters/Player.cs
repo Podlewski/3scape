@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         magicImmunity = true;
     }
 
-    public void DisbalePhysicalImmunity()
+    public void DisablePhysicalImmunity()
     {
         physicalImmunity = false;
     }

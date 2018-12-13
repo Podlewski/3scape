@@ -30,7 +30,7 @@ public class PositionChecker : MonoBehaviour
     void FixedUpdate()
     {
         objects = objects.OrderByDescending(o => o.transform.position.x).ToList();
-        for (int i = 1; i <= objects.Count; i++)
+        for (var i = 1; i <= objects.Count; i++)
         {
             objects[i - 1].GetComponent<PlayerMovement>().position = i;
             objects[i - 1].GetComponent<Animator>().SetInteger("Position", i);

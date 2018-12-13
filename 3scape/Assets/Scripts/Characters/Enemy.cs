@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
     public AudioClip barrelSound;
     public AudioSource source;
 
+    public float walkDetectionDistance = 0.3f;
+
     void Start()
     {
         health = startHealth;
@@ -45,7 +47,7 @@ public class Enemy : MonoBehaviour
     {
         if (GetComponent<Animator>() != null)
         {
-            if (!(Physics2D.Raycast(transform.position, Vector2.left, 0.3f, 1 << 8 /*player layerMask*/)
+            if (!(Physics2D.Raycast(transform.position, Vector2.left, walkDetectionDistance, 1 << 8 /*player layerMask*/)
                            || (Physics2D.Raycast(transform.position, Vector2.right, 0.3f, 1 << 8 /*player layerMask*/))))
             {
                 GetComponent<Animator>().SetFloat("Speed", speed);
@@ -82,7 +84,7 @@ public class Enemy : MonoBehaviour
         Debug.Log(damage + " damage was taken!");
     }
 
-    void Flip()
+    public void Flip()
     {
         transform.Rotate(0f, 180f, 0f);
     }

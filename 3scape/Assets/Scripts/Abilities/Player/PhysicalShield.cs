@@ -31,7 +31,7 @@ public class PhysicalShield : ColorAbility
         else if (!isAbilityStillWorking() || !isPositionProper())
         {
             PlayerMovement.runSpeed = 20f;
-            knight.DisbalePhysicalImmunity();
+            knight.DisablePhysicalImmunity();
             BackToNormalColor(true, false, false);
             reduceCooldown();
             // FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;

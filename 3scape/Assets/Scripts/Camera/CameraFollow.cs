@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 vec = Vector3.zero;
+        var vec = Vector3.zero;
         vec = (knight.position + mage.position + archer.position) / 3;
         playerAveragePosition.position = vec;
     }

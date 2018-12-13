@@ -10,6 +10,9 @@ public class CollectTresure : MonoBehaviour
     public int tresureValue;
     public Text valueText;
 
+    public AudioSource source;
+    public AudioClip coins;
+
     private void Start()
     {
         levelScore = GameObject.Find("Characters").GetComponent<Score>();
@@ -32,6 +35,7 @@ public class CollectTresure : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        AudioSource.PlayClipAtPoint(coins, gameObject.transform.position);
         levelScore.score += tresureValue;
         Destroy(gameObject);
     }

@@ -14,22 +14,35 @@ public class Enemy : MonoBehaviour
 
     bool m_FacingLeft = true;
 
-    public AudioClip barrelSound;
+    public AudioClip barrelExplosion;
+    public AudioClip zombieDeath;
     public AudioSource source;
 
     void Start()
     {
         health = startHealth;
-        source.clip = barrelSound;
+     //   source.clip = barrelSound;
     }
 
     void Update()
     {
         if (health <= 0)
         {
+
+            if (gameObject.name.Equals("Barrel"))
+            {
+                AudioSource.PlayClipAtPoint(barrelExplosion, this.gameObject.transform.position);
+            }
+
+            if (gameObject.name.Equals("zombie"))
+            {
+                AudioSource.PlayClipAtPoint(zombieDeath, this.gameObject.transform.position);
+            }
+
+           
             if (shouldExplode && PossibleExplosion != null)
             {
-                source.Play();
+               // AudioSource.PlayClipAtPoint(enemySound, this.gameObject.transform.position);
                 Debug.Log("lulz");
 
                 Vector3 vector3 = gameObject.transform.position;

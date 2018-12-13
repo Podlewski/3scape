@@ -37,7 +37,10 @@ public class BlackKnight : AnimatedAbility
 
                     source.Play();
                 }
-                start = false;
+                else
+                {
+                    start = false;
+                }
             }
             else
             {

@@ -27,9 +27,9 @@ public class MeleeAttack : PlayerAbility
                 source.Play();
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
+                foreach (var enemy in enemiesToDamage)
                 {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                enemy.GetComponent<Enemy>().TakeDamage(damage);
                 }
 
                 setCooldown();

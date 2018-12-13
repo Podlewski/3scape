@@ -10434,6 +10434,11 @@ Prefab:
       propertyPath: cooldown
       value: 2.15
       objectReference: {fileID: 0}
+    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
+        type: 2}
+      propertyPath: speed
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
   m_IsPrefabAsset: 0
@@ -12720,7 +12725,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 901054744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.508413, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.519875, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 582788829}

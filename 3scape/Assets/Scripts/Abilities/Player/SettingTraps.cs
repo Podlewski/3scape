@@ -10,6 +10,8 @@ public class SettingTraps : PlayerAbility
     private Color defaultColor;
     private bool defaultDirection;
 
+    public byte maxNumberOfTraps = 3;
+
     void Start()
     {
         defaultColor = FirstSkillCoolDown.color;
@@ -52,6 +54,10 @@ public class SettingTraps : PlayerAbility
 
     void SetTrap()
     {
-        Instantiate(trap, settingPoint.position, settingPoint.rotation);
+        if(GlobalVariable.numberOfTraps < maxNumberOfTraps)
+        {
+            Instantiate(trap, settingPoint.position, settingPoint.rotation);
+            GlobalVariable.numberOfTraps++;
+        }
     }
 }

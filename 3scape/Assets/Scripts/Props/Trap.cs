@@ -26,6 +26,7 @@ public class Trap : MonoBehaviour
                 vector3.y += 0.8f;
                 Instantiate(explosion, vector3, transform.rotation = Quaternion.identity);
                 Destroy(gameObject);
+                GlobalVariable.numberOfTraps--;
                 enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
             }
   

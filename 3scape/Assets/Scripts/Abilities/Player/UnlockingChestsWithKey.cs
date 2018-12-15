@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UnlockingChests : PlayerAbility
+public class UnlockingChestsWithKey : PlayerAbility
 {
     public float downTime, upTime, pressTime = 0;
     public float countDown = 2.0f;
@@ -22,14 +22,20 @@ public class UnlockingChests : PlayerAbility
 
     public Image SecondSkillCoolDown;
 
+    private bool key;
+    public CharactersInventory inventory;
+
     private void Start()
     {
         time = timeAmt;
     }
 
-    void Update ()
+    void Update()
     {
-        if (isAbilityReady() && isPositionProper())
+        inventory = GameObject.Find("Characters").GetComponent<CharactersInventory>();
+
+
+        if (isAbilityReady() && isPositionProper() && inventory.isThereKey[0])
         {
             Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
 
@@ -51,9 +57,9 @@ public class UnlockingChests : PlayerAbility
                 time -= Time.deltaTime * 4.8f;
                 for (int i = 0; i < col.Length; i++)
                 {
-                    if (col[i].tag == "Chest")
+                    if (col[i].tag == "ChestWithKey")
                     {
-                        col[i].GetComponent<Chest>().timeBar.fillAmount = time / timeAmt;
+                        col[i].GetComponent<ChestWithKey>().timeBar.fillAmount = time / timeAmt;
 
                     }
                 }
@@ -73,9 +79,11 @@ public class UnlockingChests : PlayerAbility
 
                 for (int i = 0; i < col.Length; i++)
                 {
-                    if (col[i].tag == "Chest")
+                    if (col[i].tag == "ChestWithKey")
                     {
-                        col[i].GetComponent<Chest>().checkIfOpen();
+                        col[i].GetComponent<ChestWithKey>().checkIfOpen();
+                        inventory.isThereKey[0] = false;
+                        inventory.isFull[0] = false;
 
                         setCooldown();
                     }

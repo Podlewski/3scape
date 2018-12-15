@@ -341,10 +341,6 @@ MonoBehaviour:
   Attack: {fileID: 1567857574}
   BackB: {fileID: 999734276}
   ResetB: {fileID: 2050232577}
-  HudT: {fileID: 0}
-  HealthbarT: {fileID: 0}
-  HudDD: {fileID: 0}
-  HealthbarDD: {fileID: 0}
 --- !u!114 &137894232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,7 +1559,7 @@ RectTransform:
   m_GameObject: {fileID: 937920009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 288115963}
   - {fileID: 999734279}

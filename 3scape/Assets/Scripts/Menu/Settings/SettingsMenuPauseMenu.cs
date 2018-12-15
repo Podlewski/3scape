@@ -9,6 +9,7 @@ public class SettingsMenuPauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
     public GameObject inputSettingsMenuUI;
+    public GameObject audioVideoSettingsMenuUI;
     public Button AudioVideoB;
     public Button ControlsB;
     public Button BackB;
@@ -22,7 +23,11 @@ public class SettingsMenuPauseMenu : MonoBehaviour
 
     //void Update() { }
 
-    private void AudioVideo() { }
+    private void AudioVideo()
+    {
+        settingsMenuUI.SetActive(false);
+        audioVideoSettingsMenuUI.SetActive(true);
+    }
 
     private void Controls()
     {

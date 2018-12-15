@@ -36,7 +36,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
     public Dropdown HealthbarDD;*/
 
     private Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
-    private Dictionary<string, int> ui = new Dictionary<string, int>();
+    //private Dictionary<string, int> ui = new Dictionary<string, int>();
 
     void Start()
     {
@@ -53,8 +53,8 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
             keys.Add("Skill1", KeyCode.J);
             keys.Add("Skill2", KeyCode.K);
             keys.Add("Attack", KeyCode.L);
-            ui.Add("HudDD", 0);
-            ui.Add("HealthbarDD", 0);
+            //ui.Add("HudDD", 0);
+            //ui.Add("HealthbarDD", 0);
             Save();
         }
 
@@ -110,8 +110,8 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         keys["Skill1"] = KeyCode.J;
         keys["Skill2"] = KeyCode.K;
         keys["Attack"] = KeyCode.L;
-        ui["HudDD"] = 0;
-        ui["HealthbarDD"] = 0;
+        //ui["HudDD"] = 0;
+        //ui["HealthbarDD"] = 0;
 
         Save();
 
@@ -145,12 +145,12 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         binaryFormatter.Serialize(file, keys);
         file.Close();
 
-        file = File.Create(GlobalVariable.uiFilepath);
-        binaryFormatter.Serialize(file, ui);
-        file.Close();
+        //file = File.Create(GlobalVariable.uiFilepath);
+        //binaryFormatter.Serialize(file, ui);
+        //file.Close();
 
         InputM.keys = this.keys;
-        InputM.ui = this.ui;
+        //InputM.ui = this.ui;
     }
 
     private int Load()
@@ -171,7 +171,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
             returnValue += 1;
         }
 
-        if (CheckSaves(GlobalVariable.uiFilepath))
+        /*if (CheckSaves(GlobalVariable.uiFilepath))
         {
             file = File.Open(GlobalVariable.uiFilepath, FileMode.Open);
             ui = (Dictionary<string, int>)binaryFormatter.Deserialize(file);
@@ -180,7 +180,7 @@ public class InputSettingsMenuPauseMenu : MonoBehaviour
         else
         {
             returnValue += 2;
-        }
+        }*/
 
         Debug.Log("Load error: " + returnValue);
         return returnValue;

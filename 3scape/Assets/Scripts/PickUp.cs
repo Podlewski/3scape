@@ -5,24 +5,23 @@ using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour 
 {
-    private Inventory inventory;
-    public GameObject itemButton;
+    private CharactersInventory charactersinventory;
 
     private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        charactersinventory = GameObject.Find("Characters").GetComponent<CharactersInventory>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            for (int i = 0; i < inventory.slots; i++)
+            for (int i = 0; i < charactersinventory.slots.Length; i++)
             {
-                if(inventory.isFull[i]==false)
+                if(charactersinventory.isFull[i]==false)
                 {
-                    // item can be added to inventory
-                    inventory.isFull[i] = true;
+                    charactersinventory.isFull[i] = true;
+                    charactersinventory.isThereKey[i] = true;
                     Destroy(gameObject);
                     break;
                 }

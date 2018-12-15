@@ -22,7 +22,8 @@ public class UnlockingChests : PlayerAbility
 
     public Image SecondSkillCoolDown;
 
-    private bool isThereKey;
+    private bool key;
+    public CharactersInventory inventory;
 
     private void Start()
     {
@@ -31,10 +32,10 @@ public class UnlockingChests : PlayerAbility
 
     void Update ()
     {
-        isThereKey = GameObject.Find("Player").GetComponent<Inventory>().isFull[1];
-        Debug.Log(isThereKey);
+        inventory = GameObject.Find("Characters").GetComponent<CharactersInventory>();
+        
 
-        if (isAbilityReady() && isPositionProper())
+        if (isAbilityReady() && isPositionProper() && inventory.isThereKey[0])
         {
             Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
 
@@ -81,6 +82,9 @@ public class UnlockingChests : PlayerAbility
                     if (col[i].tag == "Chest")
                     {
                         col[i].GetComponent<Chest>().checkIfOpen();
+                        inventory.isThereKey[0] = false;
+                        inventory.isFull[0] = false;
+
                         setCooldown();
                     }
                 }

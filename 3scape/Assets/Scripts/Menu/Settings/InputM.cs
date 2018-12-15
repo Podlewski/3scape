@@ -146,12 +146,6 @@ public static class InputM
 
     #endregion controls
 
-    #region sound
-
-
-
-    #endregion sound
-
     #region io
 
     private static void Save()
@@ -222,6 +216,8 @@ public static class InputM
         {
             Debug.Log("sound reset");
             sound.Add("Master", 1);
+            sound.Add("Music", 1);
+            sound.Add("Sfx", 1);
             returnValue += 4;
         }
 

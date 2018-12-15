@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -79,14 +80,37 @@ public class InputSettingsMenu : MonoBehaviour
         {
             Event e = Event.current;
 
-            if (e.isKey)
+            KeyCode xkey = keys[currentKey.name];
+
+            if (e.isKey && IsKeyAvailable(e.keyCode))
             {
                 keys[currentKey.name] = e.keyCode;
                 currentKey.GetComponentInChildren<Text>().text = e.keyCode.ToString();
                 Save();
                 currentKey = null;
             }
+            else if (e.isKey && !IsKeyAvailable(e.keyCode))
+            {
+                keys[currentKey.name] = xkey;
+                currentKey.GetComponentInChildren<Text>().text = xkey.ToString();
+                Save();
+                currentKey = null;
+            }
         }
+    }
+
+    public bool IsKeyAvailable(KeyCode key)
+    {
+        bool availability = true;
+
+        if (keys.Where(x => x.Value == key).ToList().Capacity != 0)
+            availability = false;
+
+        if (currentKey != null)
+            if (keys[currentKey.name] == key)
+                availability = true;
+
+        return availability;
     }
 
     public void ChangeKey(GameObject clicked)

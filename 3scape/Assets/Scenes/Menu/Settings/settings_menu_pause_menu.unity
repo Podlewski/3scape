@@ -250,7 +250,7 @@ RectTransform:
   m_GameObject: {fileID: 433869151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 896954471}
   - {fileID: 1361167805}
@@ -456,7 +456,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AUDIO & VIDEO (WIP)
+  m_Text: 'AUDIO & VIDEO
+
+'
 --- !u!222 &818422845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -499,7 +501,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 230, y: 30}
+  m_SizeDelta: {x: 170, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &896954472
 MonoBehaviour:
@@ -963,6 +965,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 0}
   settingsMenuUI: {fileID: 433869151}
   inputSettingsMenuUI: {fileID: 0}
+  audioVideoSettingsMenuUI: {fileID: 0}
   AudioVideoB: {fileID: 896954474}
   ControlsB: {fileID: 1361167808}
   BackB: {fileID: 288522560}

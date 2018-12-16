@@ -52,6 +52,7 @@ public class SettingTraps : PlayerAbility
 
     void SetTrap()
     {
-        Instantiate(trap, settingPoint.position, settingPoint.rotation);
+        Vector3 v3 = settingPoint.position;
+        Instantiate(trap, v3, settingPoint.rotation);
     }
 }

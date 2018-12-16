@@ -10,4 +10,5 @@ public static class GlobalVariable
     public const string keysFilepath = "./keys.sav";
     public const string uiFilepath = "./ui.sav";
     public const string soundFilepath = "./sound.sav";
+    public static bool direction = false; //right
 }

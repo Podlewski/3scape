@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    bool direction = false; //right
+
     float horizontalMove = 0f;
 
     void Start()
@@ -41,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
         }
         //crouch = InputM.GetAxisRaw("Vertical") == -1 ? true : false;
         crouch = Input.GetKey(InputM.keys["Down"]);
+
+        if (Input.GetKeyDown(KeyCode.A)) GlobalVariable.direction = true;
+        else if (Input.GetKeyDown(KeyCode.D)) GlobalVariable.direction = false;
     }
 
     void FixedUpdate()

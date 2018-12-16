@@ -4,6 +4,20 @@ public class PlayerAbility : AnimatedAbility
 {
     public int requiredPosition;
 
+    void Update()
+    {
+        if (!GlobalVariable.direction)
+        {
+            InputM.keys["Attack"] = KeyCode.L;
+            InputM.keys["Skill1"] = KeyCode.J;
+        }
+        else
+        {
+            InputM.keys["Attack"] = KeyCode.J;
+            InputM.keys["Skill1"] = KeyCode.L;
+        }
+    }
+
     protected KeyCode getKeyCode()
     {
         if (requiredPosition == 1)

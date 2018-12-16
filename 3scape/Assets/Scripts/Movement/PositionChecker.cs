@@ -29,12 +29,15 @@ public class PositionChecker : MonoBehaviour
 
     void FixedUpdate()
     {
-        objects = objects.OrderByDescending(o => o.transform.position.x).ToList();
+        if (!GlobalVariable.direction) objects = objects.OrderByDescending(o => o.transform.position.x).ToList();
+        else objects = objects.OrderBy(o => o.transform.position.x).ToList();
+
         for (var i = 1; i <= objects.Count; i++)
         {
             objects[i - 1].GetComponent<PlayerMovement>().position = i;
             objects[i - 1].GetComponent<Animator>().SetInteger("Position", i);
         }
+        //Debug.Log("Mage: " + mage.GetComponent<PlayerMovement>().position + ", Archer: " + archer.GetComponent<PlayerMovement>().position + ", knight: " + knight.GetComponent<PlayerMovement>().position);
         FixPositions();
     }
 

@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
 
     public float walkDetectionDistance = 0.3f;
 
+    public GameObject deathBlood;
+    public GameObject hurtBlood;
+
     void Start()
     {
         health = startHealth;
@@ -39,9 +42,9 @@ public class Enemy : MonoBehaviour
             if (gameObject.name.Equals("zombie"))
             {
                 AudioSource.PlayClipAtPoint(zombieDeath, this.gameObject.transform.position);
+                Instantiate(deathBlood, transform.position, Quaternion.identity);
             }
 
-           
             if (shouldExplode && PossibleExplosion != null)
             {
                // AudioSource.PlayClipAtPoint(enemySound, this.gameObject.transform.position);
@@ -50,6 +53,7 @@ public class Enemy : MonoBehaviour
                 vector3.y += 0.8f;
                 Instantiate(PossibleExplosion, vector3, transform.rotation = Quaternion.identity);
             }
+            
 
             Destroy(gameObject);
         }
@@ -89,6 +93,10 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        if (gameObject.name.Equals("zombie"))
+        {
+            Instantiate(hurtBlood, transform.position, Quaternion.identity);
+        }
 
         if (optionalHealthBar != null)
             optionalHealthBar.fillAmount = health / startHealth;

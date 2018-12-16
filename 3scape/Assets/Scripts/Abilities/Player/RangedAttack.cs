@@ -5,9 +5,8 @@ public class RangedAttack : PlayerAbility
     public Transform firePoint;
     public GameObject arrowPrefab;
 
-
+    public AudioClip shot;
     public AudioSource source;
-
  
 
     void Update()
@@ -21,9 +20,9 @@ public class RangedAttack : PlayerAbility
     void Shoot()
     {
         Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-        if(source != null)
+        if(source != null && shot != null)
         {
-            source.Play();
+            source.PlayOneShot(shot);
         }
     }
 }

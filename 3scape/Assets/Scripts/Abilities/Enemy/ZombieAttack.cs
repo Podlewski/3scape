@@ -6,13 +6,8 @@ public class ZombieAttack : AnimatedAbility
     public float attackRange;
     public int damage;
 
-    public AudioClip zombieSound;
-    public AudioSource source;
-
-    void Start()
-    {
-        source.clip = zombieSound;
-    }
+   // public AudioClip zombieSound;
+   // public AudioSource source;
 
     void Update()
     {
@@ -28,8 +23,6 @@ public class ZombieAttack : AnimatedAbility
                 {
                     enemy.GetComponent<Player>().TakePhysicalDamage(damage);
                 }
-
-                source.Play();
             }
             else
             {

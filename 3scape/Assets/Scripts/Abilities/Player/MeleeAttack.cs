@@ -12,11 +12,6 @@ public class MeleeAttack : PlayerAbility
     public AudioClip zombieHitting;
     public AudioSource source;
 
-    private void Start()
-    {
-        source.clip = swordSound;
-    }
-
     void Update()
     {
         if (isAbilityReady())
@@ -26,7 +21,7 @@ public class MeleeAttack : PlayerAbility
             if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsAttacking", true);
-                source.Play();
+                source.PlayOneShot(swordSound);
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 foreach (var enemy in enemiesToDamage)

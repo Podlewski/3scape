@@ -13,6 +13,10 @@ public class KnightFasterWalking : ColorAbility
     private bool defaultDirection;
     private RadialBlur effect;
 
+    public AudioClip eurobeat;
+    public AudioSource source;
+    public AudioSource musicSource;
+
     void Start()
     {
         findObjects();
@@ -27,6 +31,9 @@ public class KnightFasterWalking : ColorAbility
         {
             if (isButtonDownProper() && isPositionProper())
             {
+                musicSource.Pause();
+                source.PlayOneShot(eurobeat);
+
                 PlayerMovement.runSpeed = 50f;
 
                 SetAbilityColor();
@@ -40,6 +47,8 @@ public class KnightFasterWalking : ColorAbility
         }
         else if (!isAbilityStillWorking() || !isPositionProper())
         {
+            source.Stop();
+            musicSource.UnPause();
             PlayerMovement.runSpeed = 20f;
 
             BackToNormalColor();

@@ -33,7 +33,7 @@ public class UnlockingChestsWithKey : PlayerAbility
     void Update()
     {
         inventory = GameObject.Find("Characters").GetComponent<CharactersInventory>();
-
+        
 
         if (isAbilityReady() && isPositionProper() && inventory.isThereKey[0])
         {
@@ -54,13 +54,13 @@ public class UnlockingChestsWithKey : PlayerAbility
 
             if (time > 0 && tmp == true)
             {
+                Debug.Log(col.Length);
                 time -= Time.deltaTime * 4.8f;
                 for (int i = 0; i < col.Length; i++)
                 {
                     if (col[i].tag == "ChestWithKey")
                     {
                         col[i].GetComponent<ChestWithKey>().timeBar.fillAmount = time / timeAmt;
-
                     }
                 }
             }
@@ -76,6 +76,7 @@ public class UnlockingChestsWithKey : PlayerAbility
             {
                 ready = false;
                 //animator.SetBool("jakasAnimacja", true);
+                
 
                 for (int i = 0; i < col.Length; i++)
                 {

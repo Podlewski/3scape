@@ -7,6 +7,8 @@ TagManager:
   - Chest
   - Barrel
   - Characters
+  - Tagg
+  - ChestWithKey
   layers:
   - Default
   - TransparentFX
@@ -46,6 +48,9 @@ TagManager:
     locked: 0
   - name: BackgroundThorns
     uniqueID: 814877199
+    locked: 0
+  - name: Grass
+    uniqueID: 4089584799
     locked: 0
   - name: Default
     uniqueID: 0

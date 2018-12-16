@@ -736,6 +736,7 @@ MonoBehaviour:
   PossibleExplosion: {fileID: 0}
   barrelSound: {fileID: 0}
   source: {fileID: 70525295}
+  walkDetectionDistance: 0.3
 --- !u!58 &70525289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2618,7 +2619,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 203172377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -0.07, z: 0}
+  m_LocalPosition: {x: -1.755, y: -0.07, z: 0}
   m_LocalScale: {x: 0.29378495, y: 0.29378495, z: 0.29378495}
   m_Children: []
   m_Father: {fileID: 840298164}
@@ -26933,7 +26934,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487621371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.567226, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.563229, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 155895182}
@@ -29378,6 +29379,7 @@ MonoBehaviour:
     type: 2}
   barrelSound: {fileID: 8300000, guid: 88f2a72103345ee4299d613d7d5106f6, type: 3}
   source: {fileID: 766856628}
+  walkDetectionDistance: 0.3
 --- !u!61 &766856626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29941,6 +29943,7 @@ MonoBehaviour:
     type: 2}
   barrelSound: {fileID: 8300000, guid: f8fec78b682e5054d9592e11996a8611, type: 3}
   source: {fileID: 820540842}
+  walkDetectionDistance: 0.3
 --- !u!61 &820540840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30187,8 +30190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e94a604925d0bb41be473dfdeb9f644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFull: 
-  slots: []
 --- !u!82 &833718572
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30433,7 +30434,6 @@ MonoBehaviour:
   timeAmt: 10
   tmp: 0
   SecondSkillCoolDown: {fileID: 860034068}
-  inventory: {fileID: 0}
 --- !u!114 &833718580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30453,6 +30453,37 @@ MonoBehaviour:
   trap: {fileID: 1406025611992852, guid: 6a07482eaaba9974381684851e9c18d8, type: 2}
   settingPoint: {fileID: 1840613072}
   FirstSkillCoolDown: {fileID: 1026332280}
+--- !u!114 &833718581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833718567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae85f64e29338bb438c29151755400ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  duration: 0
+  animator: {fileID: 833718568}
+  castTime: 0
+  requiredPosition: 2
+  downTime: 0
+  upTime: 0
+  pressTime: 0
+  countDown: 2
+  ready: 0
+  source: {fileID: 0}
+  unlockPos: {fileID: 1428519553}
+  unlockRange: 1
+  whatCanOpen:
+    serializedVersion: 2
+    m_Bits: 2048
+  timeAmt: 10
+  tmp: 0
+  SecondSkillCoolDown: {fileID: 860034068}
+  inventory: {fileID: 0}
 --- !u!1001 &840298163
 Prefab:
   m_ObjectHideFlags: 0
@@ -30462,11 +30493,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.55
+      value: -13.38
       objectReference: {fileID: 0}
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -1.22
       objectReference: {fileID: 0}
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -30508,19 +30539,38 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.3262
+      value: 1.4173908
       objectReference: {fileID: 0}
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.3055999
+      value: 1.3263658
       objectReference: {fileID: 0}
     - target: {fileID: 1375488013871096, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_Name
-      value: Chest
+      value: ChestWithKey
       objectReference: {fileID: 0}
     - target: {fileID: 1375488013871096, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_TagString
-      value: Chest
+      value: ChestWithKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.8094877
+      objectReference: {fileID: 0}
+    - target: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.89586
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
@@ -30540,24 +30590,6 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
     type: 2}
   m_PrefabInternal: {fileID: 840298163}
---- !u!114 &840298167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 840298165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39f9914de060e264b85a7a17dadd41c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 840298166}
-  openSprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
-  objects:
-  - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
-  - {fileID: 1207107385674012, guid: 6dc92e2f2d40d9d45af7df24fd4afe77, type: 2}
-  spawnPoint: {fileID: 203172378}
-  timeBar: {fileID: 518262945}
 --- !u!61 &840298168
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30583,6 +30615,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47916666, y: 0.3125}
   m_EdgeRadius: 0
+--- !u!114 &840298169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840298165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5e69322c6b02f4bbe382d28a94bacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 840298166}
+  openSprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
+  objects:
+  - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
+  spawnPoint: {fileID: 203172378}
+  timeBar: {fileID: 518262945}
 --- !u!1 &841412562
 GameObject:
   m_ObjectHideFlags: 0
@@ -32010,7 +32059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061732a6fd301744890428d8e1be838c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  i: 0
 --- !u!1 &931189876
 GameObject:
   m_ObjectHideFlags: 0
@@ -38596,6 +38644,7 @@ MonoBehaviour:
   PossibleExplosion: {fileID: 0}
   barrelSound: {fileID: 0}
   source: {fileID: 1585327781}
+  walkDetectionDistance: 0.3
 --- !u!61 &1585327776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39755,11 +39804,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.967304
+      value: -5.681
       objectReference: {fileID: 0}
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.209
+      value: -1.242
       objectReference: {fileID: 0}
     - target: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -40425,6 +40474,7 @@ MonoBehaviour:
     type: 2}
   barrelSound: {fileID: 8300000, guid: f8fec78b682e5054d9592e11996a8611, type: 3}
   source: {fileID: 1784204638}
+  walkDetectionDistance: 0.3
 --- !u!61 &1784204636
 BoxCollider2D:
   m_ObjectHideFlags: 0

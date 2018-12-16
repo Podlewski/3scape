@@ -31,19 +31,19 @@ public class MeleeAttack : PlayerAbility
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 foreach (var enemy in enemiesToDamage)
                 {
-                    if (enemiesToDamage[i].gameObject.name.Equals("Barrel"))
+                    if (enemy.gameObject.name.Equals("Barrel"))
                     {
                         source.Stop();
                         source.PlayOneShot(woodHitting);
                     }
 
-                    if (enemiesToDamage[i].gameObject.name.Equals("zombie"))
+                    if (enemy.gameObject.name.Equals("zombie"))
                     {
                         source.Stop();
-                        AudioSource.PlayClipAtPoint(zombieHitting, enemiesToDamage[i].gameObject.transform.position);
+                        AudioSource.PlayClipAtPoint(zombieHitting, enemy.gameObject.transform.position);
                     }
 
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    enemy.GetComponent<Enemy>().TakeDamage(damage);
                 }
 
                 setCooldown();

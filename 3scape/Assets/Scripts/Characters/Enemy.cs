@@ -45,7 +45,6 @@ public class Enemy : MonoBehaviour
             if (shouldExplode && PossibleExplosion != null)
             {
                // AudioSource.PlayClipAtPoint(enemySound, this.gameObject.transform.position);
-                Debug.Log("lulz");
 
                 Vector3 vector3 = gameObject.transform.position;
                 vector3.y += 0.8f;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MorePPEffects;
 
 public class KnightFasterWalking : ColorAbility
 {
@@ -10,12 +11,14 @@ public class KnightFasterWalking : ColorAbility
     public Image SecondSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
+    private RadialBlur effect;
 
     void Start()
     {
         findObjects();
         defaultColor = SecondSkillCoolDown.color;
         defaultDirection = SecondSkillCoolDown.fillClockwise;
+        effect = FindObjectOfType<RadialBlur>();
     }
 
     void Update()
@@ -30,9 +33,11 @@ public class KnightFasterWalking : ColorAbility
                 setCooldown();
 
                 SecondSkillCoolDown.fillAmount = 1;
+
+                if (effect != null)
+                    effect.enabled = true;
             }
         }
-
         else if (!isAbilityStillWorking() || !isPositionProper())
         {
             PlayerMovement.runSpeed = 20f;
@@ -41,6 +46,9 @@ public class KnightFasterWalking : ColorAbility
             reduceCooldown();
 
             //SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            if (effect != null)
+                effect.enabled = false;
         }
 
         if (isAbilityStillWorking())
@@ -57,7 +65,10 @@ public class KnightFasterWalking : ColorAbility
         }
 
         if (!isPositionProper())
+        {
+            SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillAmount = 1;
+        }
         else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }

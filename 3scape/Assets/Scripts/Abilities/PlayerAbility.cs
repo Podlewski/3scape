@@ -4,22 +4,58 @@ public class PlayerAbility : AnimatedAbility
 {
     public int requiredPosition;
 
+    void Update()
+    {
+        if (!GlobalVariable.direction)
+        {
+            InputM.keys["Attack"] = KeyCode.L;
+            InputM.keys["Skill1"] = KeyCode.J;
+        }
+        else
+        {
+            InputM.keys["Attack"] = KeyCode.J;
+            InputM.keys["Skill1"] = KeyCode.L;
+        }
+        //Debug.Log(GlobalVariable.direction);
+    }
+
     protected KeyCode getKeyCode()
     {
-        if (requiredPosition == 1)
-            return InputM.keys["Attack"];
+        if (!GlobalVariable.direction)
+        {
+            if (requiredPosition == 1)
+                return InputM.keys["Attack"];
 
-        else if (requiredPosition == 2)
-            return InputM.keys["Skill2"];
+            else if (requiredPosition == 2)
+                return InputM.keys["Skill2"];
 
-        else if (requiredPosition == 3)
-            return InputM.keys["Skill1"];
+            else if (requiredPosition == 3)
+                return InputM.keys["Skill1"];
 
-        else if (requiredPosition == 10)
-            return InputM.keys["Swap"];
+            else if (requiredPosition == 10)
+                return InputM.keys["Swap"];
 
+            else
+                throw new System.Exception();
+        }
         else
-            throw new System.Exception();
+        {
+            if (requiredPosition == 3)
+                return InputM.keys["Attack"];
+
+            else if (requiredPosition == 2)
+                return InputM.keys["Skill2"];
+
+            else if (requiredPosition == 1)
+                return InputM.keys["Skill1"];
+
+            else if (requiredPosition == 10)
+                return InputM.keys["Swap"];
+
+            else
+                throw new System.Exception();
+        }
+
     }
 
     protected bool isButtonPressedProper()

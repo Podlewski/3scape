@@ -12,6 +12,7 @@ public class Heal : PlayerAbility
     public Image FirstSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
+    public GameObject effect;
 
     public float timeLeft = 1.0f;
 
@@ -49,6 +50,8 @@ public class Heal : PlayerAbility
                 setCooldown();
 
                 FirstSkillCoolDown.fillAmount = 1;
+
+                effect.SetActive(true);
             }
         }
         else if (!isAbilityStillWorking() || !isPositionProper())

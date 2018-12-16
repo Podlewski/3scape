@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using MorePPEffects;
+using UnityEngine;
 using UnityEngine.UI;
+
 public class PhysicalShield : ColorAbility
 {
     CharacterController2D characterController2D;
@@ -7,12 +9,14 @@ public class PhysicalShield : ColorAbility
     public Image FirstSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
+    private Colorization effect;
 
     void Start()
     {
         findObjects();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
+        effect = FindObjectOfType<Colorization>();
     }
 
     void Update()
@@ -26,6 +30,9 @@ public class PhysicalShield : ColorAbility
                 SetAbilityColor(true, false, false);
                 setCooldown();
                 FirstSkillCoolDown.fillAmount = 1;
+
+                if (effect != null)
+                    effect.enabled = true;
             }
         }
         else if (!isAbilityStillWorking() || !isPositionProper())
@@ -35,6 +42,9 @@ public class PhysicalShield : ColorAbility
             BackToNormalColor(true, false, false);
             reduceCooldown();
             // FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            if (effect != null)
+                effect.enabled = false;
         }
 
         if (isAbilityStillWorking())

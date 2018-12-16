@@ -11,4 +11,5 @@ public static class GlobalVariable
     public const string uiFilepath = "./ui.sav";
     public const string soundFilepath = "./sound.sav";
     public static bool direction = false; //right
+    public static byte numberOfTraps = 0;
 }

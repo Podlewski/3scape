@@ -8,13 +8,13 @@ public class PlayerAbility : AnimatedAbility
     {
         if (!GlobalVariable.direction)
         {
-            InputM.SetKey("Attack", KeyCode.L);
-            InputM.SetKey("Skill1", KeyCode.J);
+            InputM.keys["Attack"] = KeyCode.L;
+            InputM.keys["Skill1"] = KeyCode.J;
         }
         else
         {
-            InputM.SetKey("Attack", KeyCode.J);
-            InputM.SetKey("Skill1", KeyCode.L);
+            InputM.keys["Attack"] = KeyCode.J;
+            InputM.keys["Skill1"] = KeyCode.L;
         }
     }
 

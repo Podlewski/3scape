@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class MeleeAttack : PlayerAbility
 {
@@ -7,10 +8,20 @@ public class MeleeAttack : PlayerAbility
     public float attackRange;
     public int damage;
 
+    public Image ThirdSkillCoolDown;
+    private Color defaultColor;
+    private bool defaultDirection;
+
     public AudioClip swordSound;
     public AudioClip woodHitting;
     public AudioClip zombieHitting;
     public AudioSource source;
+
+    void Start()
+    {
+        defaultColor = ThirdSkillCoolDown.color;
+        defaultDirection = ThirdSkillCoolDown.fillClockwise;
+    }
 
     void Update()
     {
@@ -42,12 +53,21 @@ public class MeleeAttack : PlayerAbility
                 }
 
                 setCooldown();
+
+                ThirdSkillCoolDown.fillAmount = 1;
             }
         }
 
         else
             reduceCooldown();
 
+        if (!isPositionProper())
+        {
+            ThirdSkillCoolDown.color = defaultColor;
+            ThirdSkillCoolDown.fillAmount = 1;
+        }
+        else if (!isAbilityStillWorking())
+            ThirdSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 }
 

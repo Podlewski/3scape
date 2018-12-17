@@ -89,7 +89,10 @@ public class Heal : PlayerAbility
         }
 
         if (!isPositionProper())
+        {
+            FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillAmount = 1;
+        }
         else if (!isAbilityStillWorking())
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }

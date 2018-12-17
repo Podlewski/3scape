@@ -74,7 +74,10 @@ public class MagicShield : ColorAbility
         }
 
         if (!isPositionProper())
+        {
+            SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillAmount = 1;
+        }
         else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }

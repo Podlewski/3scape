@@ -175,6 +175,8 @@ public class InputSettingsMenu : MonoBehaviour
 
         InputM.keys = this.keys;
         //InputM.ui = this.ui;
+
+        GlobalVariable.keysChanged = true;
     }
 
     private int Load()
@@ -206,6 +208,7 @@ public class InputSettingsMenu : MonoBehaviour
             returnValue += 2;
         }*/
 
+        GlobalVariable.keysChanged = true;
         Debug.Log(returnValue);
         return returnValue;
     }

@@ -40,6 +40,7 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 === Edyta
 
+<<<<<<< HEAD
 * [ ] Dodanie do gry kolejnych dźwięków oraz muzyki.
 * [ ] Wprowadzenie efektów związanych z uderzeniem (np w beczkę, zombie, ścianę).
 * [ ] Wprowadzenie checkpointów -> razem z Gracjanem.
@@ -54,10 +55,26 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 * [ ] Kolejne prace związane z assetami.
 * [ ] Dodanie ograniczeń do zamiany bohaterów: nie można jej wykonywać m.in. w trakcie skoku, castowania umiejętności.
+=======
+* [x] Dodanie do gry kolejnych dźwięków oraz muzyki.
+* [x] Wprowadzenie efektów związanych z uderzeniem (np w beczkę, zombie, ścianę).
+* [x] Wprowadzenie checkpointów -> razem z Gracjanem.
+
+=== Krzysiek
+
+* [x] Poprawa łączenia się drużyny.
+* [x] Nowy przeciwnik: szkielet boss.
+
+=== Gracjan
+
+* [x] Kolejne prace związane z assetami.
+* [x] Dodanie ograniczeń do zamiany bohaterów: nie można jej wykonywać m.in. w trakcie skoku, castowania umiejętności.
+>>>>>>> sprintDoc
 * [ ] Wprowadzenie checkpointów -> razem z Edytą.
 
 === Justyna
 
+<<<<<<< HEAD
 * [ ] Praca nad grywalnym poziomem -> razem z Karolem.
 * [ ] Dodanie zakończenia poziomu.
 * [ ] Wprowadzenie slotu na zbierane klucze (otwieranie skrzyni na ten moment nic nie daje - czasami musi wypadać coś ekstra poza punktami) oraz obiektów które tylko z tym kluczem działają.
@@ -76,10 +93,32 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 ** [ ] Lekkie powiększenie i wyraźniejsze oddzielenie modułów.
 ** [ ] Naprawienie wszelkich błędów HUDowych.
 * [ ] Poprawa animacji umiejętności - dodanie brakujących, dopasowanie animacji do faktycznego czasu działania.
+=======
+* [x] Praca nad grywalnym poziomem -> razem z Karolem.
+* [x] Dodanie zakończenia poziomu.
+* [x] Wprowadzenie slotu na zbierane klucze (otwieranie skrzyni na ten moment nic nie daje - czasami musi wypadać coś ekstra poza punktami) oraz obiektów które tylko z tym kluczem działają.
+
+=== Bartosz
+ 
+* [x] Bugmaster - usuwanie błędów z gry.
+** [x] Limit pułapek działa poprawnie.
+** [x] Łotrzyk nie stawia już podwójnie pułapek.
+* [x] Poprawa umiejętności - zawsze działają w określoną stronę (np pułapka łotrzyka zawsze się pojawia za drużyną).
+* [x] Zmiana rozumienia kolejności - od teraz liczy się kto przewodzi drużynie, a kto jest z prawej strony.
+
+=== Konrad
+
+* [x] Rozwijanie HUDu:
+** [x] Przeniesienie HUDu na dół.
+** [x] Napisy dotyczące pozycji oraz klawiszy.
+** [x] Lekkie powiększenie i wyraźniejsze oddzielenie modułów.
+* [x] Poprawa animacji umiejętności - dodanie brakujących, dopasowanie animacji do faktycznego czasu działania.
+>>>>>>> sprintDoc
 * [ ] Zebranie feedbacku po 12 tygodniu zajęć.
 
 === Zbyszek
 
+<<<<<<< HEAD
 * [ ] Rozwijanie HUDu:
 ** [ ] Przeniesienie HUDu na dół.
 ** [ ] Napisy dotyczące pozycji oraz klawiszy.
@@ -95,6 +134,20 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 * [ ] Praca nad poziomem tutorialowym. 
 * [ ] Praca nad grywalnym poziomem -> razem z Justyną.
 * [ ] Bugmaster - usuwanie błędów z gry -> razem z Bartoszem.
+=======
+* [x] Naprawianie wszelkich błędów związanych z HUDem:
+** [x] Usprawnienia w input managerze.
+** [x] Poprawa w zachowaniu animacji cooldownu w HUDzie.
+* [x] Rozwijanie ustawień (klawisze nie mogą się nakładać, dodanie ustawień związanych z dźwiękiem, przeniesienie opcji "życie" i "dynamiczny HUD" gdzie indziej).
+* [x] Wprowadzenie delikatniejszych efektów na pokazanie działających umiejętności niż kolorowanie bohaterów.
+
+=== Karol
+
+* [x] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+* [x] Połączenie zmian wprowadzonych przez team w jedną część.
+* [x] Praca nad poziomem tutorialowym. 
+* [x] Praca nad grywalnym poziomem -> razem z Justyną.
+>>>>>>> sprintDoc
 * [x] Poprawa wizualna menu -> menu oraz wybór poziomów uzyskały wygląd, stworzona nowa ikona gry.
 * [x] Poprawa tabliczek - pokazują one aktualne klawisze, zamiast tych domyślnych (tekst nie jest wpisany na sztywno).
 

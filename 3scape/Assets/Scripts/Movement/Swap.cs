@@ -15,9 +15,19 @@ public class Swap : PlayerAbility
         requiredPosition = 10;
     }
 
+    public bool isIdle()
+    {
+        return GetComponent<SpriteRenderer>().sprite.name.Contains("idle");
+    }
+
+    public bool isRun()
+    {
+        return GetComponent<SpriteRenderer>().sprite.name.Contains("run");
+    }
+
     void FixedUpdate()
     {
-        if (isAbilityReady() && isButtonDownProper())
+        if (isAbilityReady() && isButtonDownProper() && (isIdle() || isRun()))
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
 

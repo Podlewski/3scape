@@ -12,10 +12,25 @@ public class RangedAttack : PlayerAbility
 
     void Update()
     {
-        if (isButtonDownProper() && isPositionProper())
+        if (isAbilityReady())
         {
-            Shoot();
+
+            animator.SetBool("IsAttacking", false);
+
+            if (isButtonDownProper() && isPositionProper())
+            {
+                animator.SetBool("IsAttacking", true);
+
+                Shoot();
+                setCooldown();
+            }
         }
+        else
+        {
+            reduceCooldown();
+        }
+
+            
 	}
 
     void Shoot()

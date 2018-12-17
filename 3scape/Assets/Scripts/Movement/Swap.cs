@@ -25,9 +25,29 @@ public class Swap : PlayerAbility
         return GetComponent<SpriteRenderer>().sprite.name.Contains("run");
     }
 
+    public bool isNotActiveSkills()
+    {
+        float knightPhysicalShieldStatus = GameObject.Find("knight").GetComponent<PhysicalShield>().FirstSkillCoolDown.fillAmount;
+        if (!knightPhysicalShieldStatus.Equals(1) && !knightPhysicalShieldStatus.Equals(0)) return false;
+
+        float knightFasterWalkingStatus = GameObject.Find("knight").GetComponent<KnightFasterWalking>().SecondSkillCoolDown.fillAmount;
+        if (!knightFasterWalkingStatus.Equals(1) && !knightFasterWalkingStatus.Equals(0)) return false;
+
+        float mageHealStatus = GameObject.Find("mage").GetComponent<Heal>().FirstSkillCoolDown.fillAmount;
+        if (!mageHealStatus.Equals(1) && !mageHealStatus.Equals(0)) return false;
+
+        float mageMagicShieldStatus = GameObject.Find("mage").GetComponent<MagicShield>().SecondSkillCoolDown.fillAmount;
+        if (!mageMagicShieldStatus.Equals(1) && !mageMagicShieldStatus.Equals(0)) return false;
+
+        float archerTrapStatus = GameObject.Find("archer").GetComponent<SettingTraps>().FirstSkillCoolDown.fillAmount;
+        if (!archerTrapStatus.Equals(1) && !archerTrapStatus.Equals(0)) return false;
+
+        return true;
+    }
+
     void FixedUpdate()
     {
-        if (isAbilityReady() && isButtonDownProper() && (isIdle() || isRun()))
+        if (isAbilityReady() && isButtonDownProper() && isNotActiveSkills() && (isIdle() || isRun()))
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
 

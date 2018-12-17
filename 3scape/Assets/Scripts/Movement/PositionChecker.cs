@@ -43,38 +43,40 @@ public class PositionChecker : MonoBehaviour
 
     private void FixPositions()
     {
+        var tmpobjects = objects.OrderByDescending(o => o.transform.position.x).ToList();
+
         int facing = 1;
-        if (objects[1].GetComponent<CharacterController2D>().m_FacingRight)
+        if (tmpobjects[1].GetComponent<CharacterController2D>().m_FacingRight)
         {
             facing = -1;
         }
-        if (Mathf.Abs(objects[0].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) < 0.8f)
+        if (Mathf.Abs(tmpobjects[0].transform.Find("GroundCheck").position.x - tmpobjects[1].transform.Find("GroundCheck").position.x) < 0.8f)
         {
-            objects[0].transform.Translate(-1 * facing * 0.02f, 0, 0);
+            tmpobjects[0].transform.Translate(-1 * facing * 0.02f, 0, 0);
         }
-        if (Mathf.Abs(objects[2].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) < 0.8f )
+        if (Mathf.Abs(tmpobjects[2].transform.Find("GroundCheck").position.x - tmpobjects[1].transform.Find("GroundCheck").position.x) < 0.8f )
         {
-            objects[2].transform.Translate(facing * 0.02f, 0, 0);
+            tmpobjects[2].transform.Translate(facing * 0.02f, 0, 0);
         }
-        if (Mathf.Abs(objects[0].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) > 1f
-            && Mathf.Abs(objects[0].transform.Find("GroundCheck").position.y - objects[1].transform.Find("GroundCheck").position.y) < 1f)
+        if (Mathf.Abs(tmpobjects[0].transform.Find("GroundCheck").position.x - tmpobjects[1].transform.Find("GroundCheck").position.x) > 1f
+            && Mathf.Abs(tmpobjects[0].transform.Find("GroundCheck").position.y - tmpobjects[1].transform.Find("GroundCheck").position.y) < 1f)
         {
-            objects[0].transform.Translate(1 * facing * 0.02f, 0, 0);
-            objects[0].GetComponent<Animator>().SetFloat("Walk", 20f);
-        }
-        else
-        {
-            objects[0].GetComponent<Animator>().SetFloat("Walk", 0);
-        }
-        if ( Mathf.Abs(objects[2].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) > 1f
-             && Mathf.Abs(objects[2].transform.Find("GroundCheck").position.y - objects[1].transform.Find("GroundCheck").position.y) < 1f)
-        {
-            objects[2].transform.Translate(-1 * facing * 0.02f, 0, 0);
-            objects[2].GetComponent<Animator>().SetFloat("Walk", 20f);
+            tmpobjects[0].transform.Translate(1 * facing * 0.02f, 0, 0);
+            tmpobjects[0].GetComponent<Animator>().SetFloat("Walk", 20f);
         }
         else
         {
-            objects[2].GetComponent<Animator>().SetFloat("Walk", 0);
+            tmpobjects[0].GetComponent<Animator>().SetFloat("Walk", 0);
+        }
+        if ( Mathf.Abs(tmpobjects[2].transform.Find("GroundCheck").position.x - tmpobjects[1].transform.Find("GroundCheck").position.x) > 1f
+             && Mathf.Abs(tmpobjects[2].transform.Find("GroundCheck").position.y - tmpobjects[1].transform.Find("GroundCheck").position.y) < 1f)
+        {
+            tmpobjects[2].transform.Translate(-1 * facing * 0.02f, 0, 0);
+            tmpobjects[2].GetComponent<Animator>().SetFloat("Walk", 20f);
+        }
+        else
+        {
+            tmpobjects[2].GetComponent<Animator>().SetFloat("Walk", 0);
         }
     }
 }

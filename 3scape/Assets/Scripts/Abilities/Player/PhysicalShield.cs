@@ -10,6 +10,7 @@ public class PhysicalShield : ColorAbility
     private Color defaultColor;
     private bool defaultDirection;
     private Colorization effect;
+    public float timeLeft = 3.3f;
 
     void Start()
     {
@@ -23,8 +24,14 @@ public class PhysicalShield : ColorAbility
     {
         if (isAbilityReady())
         {
+
+            timeLeft = 3.3f;
+
+           // animator.SetBool("IsShield", false);
             if (isButtonDownProper() && isPositionProper())
             {
+                animator.SetBool("IsShield", true);
+
                 PlayerMovement.runSpeed = 10f;
                 knight.SetPhysicalImmunity();
                 SetAbilityColor(true, false, false);
@@ -46,6 +53,15 @@ public class PhysicalShield : ColorAbility
             if (effect != null)
                 effect.enabled = false;
         }
+
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0 && animator.GetBool("IsShield"))
+        {
+
+            animator.SetBool("IsShield", false);
+            timeLeft = 3.3f;
+        }
+
 
         if (isAbilityStillWorking())
         {

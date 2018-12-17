@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MorePPEffects;
 
 public class KnightFasterWalking : ColorAbility
 {
@@ -10,12 +11,18 @@ public class KnightFasterWalking : ColorAbility
     public Image SecondSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
+    private RadialBlur effect;
+
+    public AudioClip eurobeat;
+    public AudioSource source;
+    public AudioSource musicSource;
 
     void Start()
     {
         findObjects();
         defaultColor = SecondSkillCoolDown.color;
         defaultDirection = SecondSkillCoolDown.fillClockwise;
+        effect = FindObjectOfType<RadialBlur>();
     }
 
     void Update()
@@ -24,23 +31,33 @@ public class KnightFasterWalking : ColorAbility
         {
             if (isButtonDownProper() && isPositionProper())
             {
+                musicSource.Pause();
+                source.PlayOneShot(eurobeat);
+
                 PlayerMovement.runSpeed = 50f;
 
                 SetAbilityColor();
                 setCooldown();
 
                 SecondSkillCoolDown.fillAmount = 1;
+
+                if (effect != null)
+                    effect.enabled = true;
             }
         }
-
         else if (!isAbilityStillWorking() || !isPositionProper())
         {
+            source.Stop();
+            musicSource.UnPause();
             PlayerMovement.runSpeed = 20f;
 
             BackToNormalColor();
             reduceCooldown();
 
             //SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            if (effect != null)
+                effect.enabled = false;
         }
 
         if (isAbilityStillWorking())
@@ -57,7 +74,10 @@ public class KnightFasterWalking : ColorAbility
         }
 
         if (!isPositionProper())
+        {
+            SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillAmount = 1;
+        }
         else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }

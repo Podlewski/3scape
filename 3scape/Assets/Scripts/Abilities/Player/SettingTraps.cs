@@ -10,6 +10,8 @@ public class SettingTraps : PlayerAbility
     private Color defaultColor;
     private bool defaultDirection;
 
+    public byte maxNumberOfTraps = 3;
+
     void Start()
     {
         defaultColor = FirstSkillCoolDown.color;
@@ -45,13 +47,23 @@ public class SettingTraps : PlayerAbility
         }
 
         if (!isPositionProper())
+        {
+            FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillAmount = 1;
+        }
         else if (!isAbilityStillWorking())
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }
 
     void SetTrap()
     {
-        Instantiate(trap, settingPoint.position, settingPoint.rotation);
+        Vector3 v3 = settingPoint.position;
+
+        if(GlobalVariable.numberOfTraps < maxNumberOfTraps)
+        {
+            Instantiate(trap, settingPoint.position, settingPoint.rotation);
+            GlobalVariable.numberOfTraps++;
+        }
+
     }
 }

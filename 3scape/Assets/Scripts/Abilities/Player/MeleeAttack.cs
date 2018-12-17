@@ -8,12 +8,9 @@ public class MeleeAttack : PlayerAbility
     public int damage;
 
     public AudioClip swordSound;
+    public AudioClip woodHitting;
+    public AudioClip zombieHitting;
     public AudioSource source;
-
-    private void Start()
-    {
-        source.clip = swordSound;
-    }
 
     void Update()
     {
@@ -24,12 +21,24 @@ public class MeleeAttack : PlayerAbility
             if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsAttacking", true);
-                source.Play();
+                source.PlayOneShot(swordSound);
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
                 foreach (var enemy in enemiesToDamage)
                 {
-                enemy.GetComponent<Enemy>().TakeDamage(damage);
+                    if (enemy.gameObject.name.Equals("Barrel"))
+                    {
+                        source.Stop();
+                        source.PlayOneShot(woodHitting);
+                    }
+
+                    if (enemy.gameObject.name.Equals("zombie"))
+                    {
+                        source.Stop();
+                        AudioSource.PlayClipAtPoint(zombieHitting, enemy.gameObject.transform.position);
+                    }
+
+                    enemy.GetComponent<Enemy>().TakeDamage(damage);
                 }
 
                 setCooldown();

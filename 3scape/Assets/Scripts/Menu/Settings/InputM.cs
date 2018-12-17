@@ -10,8 +10,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class InputM
 {
+    //private static readonly List<string> keysAvailable = new List<string>() { "Up", "Down", "Left", "Right", "Swap", "Skill1", "Skill2", "Attack" };
     public static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
     public static Dictionary<string, int> ui = new Dictionary<string, int>();
+    public static Dictionary<string, float> sound = new Dictionary<string, float>();
+
+    #region constructor
 
     /// <summary>
     /// It is noteworthy that GetButton-like function won't really work as expected and
@@ -21,6 +25,10 @@ public static class InputM
     {
         Load();
     }
+
+    #endregion constructor
+
+    #region controls
 
     public static void SetKey(string keyMap, KeyCode key)
     {
@@ -137,6 +145,10 @@ public static class InputM
         }
     }
 
+    #endregion controls
+
+    #region io
+
     private static void Save()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -148,6 +160,12 @@ public static class InputM
         file = File.Create(GlobalVariable.uiFilepath);
         binaryFormatter.Serialize(file, ui);
         file.Close();
+
+        file = File.Create(GlobalVariable.soundFilepath);
+        binaryFormatter.Serialize(file, sound);
+        file.Close();
+
+        GlobalVariable.keysChanged = true;
     }
 
     private static int Load()
@@ -191,9 +209,25 @@ public static class InputM
             returnValue += 2;
         }
 
+        if (CheckSaves(GlobalVariable.soundFilepath))
+        {
+            file = File.Open(GlobalVariable.soundFilepath, FileMode.Open);
+            sound = (Dictionary<string, float>)binaryFormatter.Deserialize(file);
+            file.Close();
+        }
+        else
+        {
+            Debug.Log("sound reset");
+            sound.Add("Master", 1);
+            sound.Add("Music", 1);
+            sound.Add("Sfx", 1);
+            returnValue += 4;
+        }
+
         if (returnValue > 0)
             Save();
 
+        GlobalVariable.keysChanged = true;
         Debug.Log("InputM load error: " + returnValue);
         return returnValue;
     }
@@ -202,4 +236,6 @@ public static class InputM
     {
         return File.Exists(filepath);
     }
+
+    #endregion io
 }

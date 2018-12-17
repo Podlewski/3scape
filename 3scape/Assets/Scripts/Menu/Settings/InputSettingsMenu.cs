@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -29,20 +30,20 @@ public class InputSettingsMenu : MonoBehaviour
     public Button BackB;
     public Button ResetB;
     private GameObject currentKey;
-    public Text HudT;
-    public Text HealthbarT;
-    public Dropdown HudDD;
-    public Dropdown HealthbarDD;
+    //public Text HudT;
+    //public Text HealthbarT;
+    //public Dropdown HudDD;
+    //public Dropdown HealthbarDD;
 
     private Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
-    private Dictionary<string, int> ui = new Dictionary<string, int>();
+    //private Dictionary<string, int> ui = new Dictionary<string, int>();
 
     void Start()
     {
         BackB.onClick.AddListener(() => Back());
         ResetB.onClick.AddListener(() => Reset());
-        HudDD.onValueChanged.AddListener(delegate { Dropdowns("HudDD"); }); // <= workaround for old C# bug
-        HealthbarDD.onValueChanged.AddListener(delegate { Dropdowns("HealthbarDD"); });
+        //HudDD.onValueChanged.AddListener(delegate { Dropdowns("HudDD"); }); // <= workaround for old C# bug
+        //HealthbarDD.onValueChanged.AddListener(delegate { Dropdowns("HealthbarDD"); });
 
         if (Load() != 0)
         {
@@ -54,8 +55,8 @@ public class InputSettingsMenu : MonoBehaviour
             keys.Add("Skill1", KeyCode.J);
             keys.Add("Skill2", KeyCode.K);
             keys.Add("Attack", KeyCode.L);
-            ui.Add("HudDD", 0);
-            ui.Add("HealthbarDD", 0);
+            //ui.Add("HudDD", 0);
+            //ui.Add("HealthbarDD", 0);
             Save();
         }
 
@@ -67,8 +68,8 @@ public class InputSettingsMenu : MonoBehaviour
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();
-        HudDD.value = ui["HudDD"];
-        HealthbarDD.value = ui["HealthbarDD"];
+        //HudDD.value = ui["HudDD"];
+        //HealthbarDD.value = ui["HealthbarDD"];
 
         //InputM.keys = this.keys;
     }
@@ -79,14 +80,37 @@ public class InputSettingsMenu : MonoBehaviour
         {
             Event e = Event.current;
 
-            if (e.isKey)
+            KeyCode xkey = keys[currentKey.name];
+
+            if (e.isKey && IsKeyAvailable(e.keyCode))
             {
                 keys[currentKey.name] = e.keyCode;
                 currentKey.GetComponentInChildren<Text>().text = e.keyCode.ToString();
                 Save();
                 currentKey = null;
             }
+            else if (e.isKey && !IsKeyAvailable(e.keyCode))
+            {
+                keys[currentKey.name] = xkey;
+                currentKey.GetComponentInChildren<Text>().text = xkey.ToString();
+                Save();
+                currentKey = null;
+            }
         }
+    }
+
+    public bool IsKeyAvailable(KeyCode key)
+    {
+        bool availability = true;
+
+        if (keys.Where(x => x.Value == key).ToList().Capacity != 0)
+            availability = false;
+
+        if (currentKey != null)
+            if (keys[currentKey.name] == key)
+                availability = true;
+
+        return availability;
     }
 
     public void ChangeKey(GameObject clicked)
@@ -110,8 +134,8 @@ public class InputSettingsMenu : MonoBehaviour
         keys["Skill1"] = KeyCode.J;
         keys["Skill2"] = KeyCode.K;
         keys["Attack"] = KeyCode.L;
-        ui["HudDD"] = 0;
-        ui["HealthbarDD"] = 0;
+        //ui["HudDD"] = 0;
+        //ui["HealthbarDD"] = 0;
 
         Save();
 
@@ -123,11 +147,11 @@ public class InputSettingsMenu : MonoBehaviour
         Skill1.GetComponentInChildren<Text>().text = keys["Skill1"].ToString();
         Skill2.GetComponentInChildren<Text>().text = keys["Skill2"].ToString();
         Attack.GetComponentInChildren<Text>().text = keys["Attack"].ToString();
-        HudDD.value = 0;
-        HealthbarDD.value = 0;
+        //HudDD.value = 0;
+        //HealthbarDD.value = 0;
     }
 
-    private void Dropdowns(string key)
+    /*private void Dropdowns(string key)
     {
         if (key == "HudDD")
             ui["HudDD"] = HudDD.value;
@@ -135,7 +159,7 @@ public class InputSettingsMenu : MonoBehaviour
             ui["HealthbarDD"] = HealthbarDD.value;
 
         Save();
-    }
+    }*/
 
     private void Save()
     {
@@ -145,12 +169,14 @@ public class InputSettingsMenu : MonoBehaviour
         binaryFormatter.Serialize(file, keys);
         file.Close();
 
-        file = File.Create(GlobalVariable.uiFilepath);
-        binaryFormatter.Serialize(file, ui);
-        file.Close();
+        //file = File.Create(GlobalVariable.uiFilepath);
+        //binaryFormatter.Serialize(file, ui);
+        //file.Close();
 
         InputM.keys = this.keys;
-        InputM.ui = this.ui;
+        //InputM.ui = this.ui;
+
+        GlobalVariable.keysChanged = true;
     }
 
     private int Load()
@@ -171,7 +197,7 @@ public class InputSettingsMenu : MonoBehaviour
             returnValue += 1;
         }
 
-        if (CheckSaves(GlobalVariable.uiFilepath))
+        /*if (CheckSaves(GlobalVariable.uiFilepath))
         {
             file = File.Open(GlobalVariable.uiFilepath, FileMode.Open);
             ui = (Dictionary<string, int>)binaryFormatter.Deserialize(file);
@@ -180,8 +206,9 @@ public class InputSettingsMenu : MonoBehaviour
         else
         {
             returnValue += 2;
-        }
+        }*/
 
+        GlobalVariable.keysChanged = true;
         Debug.Log(returnValue);
         return returnValue;
     }

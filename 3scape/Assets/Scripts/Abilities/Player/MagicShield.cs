@@ -6,6 +6,7 @@ public class MagicShield : ColorAbility
     public Image SecondSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
+    public GameObject effect;
 
     public float timeLeft = 1.8f;
 
@@ -33,9 +34,10 @@ public class MagicShield : ColorAbility
                 setCooldown();
 
                 SecondSkillCoolDown.fillAmount = 1;
+
+                effect.SetActive(true);
             }
         }
-
         else if (!isAbilityStillWorking() || !isPositionProper())
         {
             knight.DisableMagicImmunity();
@@ -46,6 +48,8 @@ public class MagicShield : ColorAbility
             reduceCooldown();
 
             //SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            //effect.SetActive(false);
         }
 
         timeLeft -= Time.deltaTime;
@@ -70,7 +74,10 @@ public class MagicShield : ColorAbility
         }
 
         if (!isPositionProper())
+        {
+            SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillAmount = 1;
+        }
         else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }

@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using MorePPEffects;
+using UnityEngine;
 using UnityEngine.UI;
+
 public class PhysicalShield : ColorAbility
 {
     CharacterController2D characterController2D;
@@ -7,25 +9,37 @@ public class PhysicalShield : ColorAbility
     public Image FirstSkillCoolDown;
     private Color defaultColor;
     private bool defaultDirection;
+    private Colorization effect;
+    public float timeLeft = 3.3f;
 
     void Start()
     {
         findObjects();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
+        effect = FindObjectOfType<Colorization>();
     }
 
     void Update()
     {
         if (isAbilityReady())
         {
+
+            timeLeft = 3.3f;
+
+           // animator.SetBool("IsShield", false);
             if (isButtonDownProper() && isPositionProper())
             {
+                animator.SetBool("IsShield", true);
+
                 PlayerMovement.runSpeed = 10f;
                 knight.SetPhysicalImmunity();
                 SetAbilityColor(true, false, false);
                 setCooldown();
                 FirstSkillCoolDown.fillAmount = 1;
+
+                if (effect != null)
+                    effect.enabled = true;
             }
         }
         else if (!isAbilityStillWorking() || !isPositionProper())
@@ -35,7 +49,19 @@ public class PhysicalShield : ColorAbility
             BackToNormalColor(true, false, false);
             reduceCooldown();
             // FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            if (effect != null)
+                effect.enabled = false;
         }
+
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0 && animator.GetBool("IsShield"))
+        {
+
+            animator.SetBool("IsShield", false);
+            timeLeft = 3.3f;
+        }
+
 
         if (isAbilityStillWorking())
         {
@@ -51,7 +77,10 @@ public class PhysicalShield : ColorAbility
         }
 
         if (!isPositionProper())
+        {
+            FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillAmount = 1;
+        }
         else if (!isAbilityStillWorking())
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
     }

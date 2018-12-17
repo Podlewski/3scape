@@ -14,30 +14,46 @@ public class Enemy : MonoBehaviour
 
     bool m_FacingLeft = true;
 
-    public AudioClip barrelSound;
+    public AudioClip barrelExplosion;
+    public AudioClip zombieDeath;
     public AudioSource source;
 
     public float walkDetectionDistance = 0.3f;
 
+    public GameObject deathBlood;
+    public GameObject hurtBlood;
+
     void Start()
     {
         health = startHealth;
-        source.clip = barrelSound;
+     //   source.clip = barrelSound;
     }
 
     void Update()
     {
         if (health <= 0)
         {
+
+            if (gameObject.name.Equals("Barrel"))
+            {
+                AudioSource.PlayClipAtPoint(barrelExplosion, this.gameObject.transform.position);
+            }
+
+            if (gameObject.name.Equals("zombie"))
+            {
+                AudioSource.PlayClipAtPoint(zombieDeath, this.gameObject.transform.position);
+                Instantiate(deathBlood, transform.position, Quaternion.identity);
+            }
+
             if (shouldExplode && PossibleExplosion != null)
             {
-                source.Play();
-                Debug.Log("lulz");
+               // AudioSource.PlayClipAtPoint(enemySound, this.gameObject.transform.position);
 
                 Vector3 vector3 = gameObject.transform.position;
                 vector3.y += 0.8f;
                 Instantiate(PossibleExplosion, vector3, transform.rotation = Quaternion.identity);
             }
+            
 
             Destroy(gameObject);
         }
@@ -77,6 +93,10 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        if (gameObject.name.Equals("zombie"))
+        {
+            Instantiate(hurtBlood, transform.position, Quaternion.identity);
+        }
 
         if (optionalHealthBar != null)
             optionalHealthBar.fillAmount = health / startHealth;

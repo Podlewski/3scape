@@ -9,4 +9,8 @@ public static class GlobalVariable
     public static float swapCooldown = 0;
     public const string keysFilepath = "./keys.sav";
     public const string uiFilepath = "./ui.sav";
+    public const string soundFilepath = "./sound.sav";
+    public static bool direction = false; //right
+    public static byte numberOfTraps = 0;
+    public static bool keysChanged = false;
 }

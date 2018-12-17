@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class InputM
 {
+    //private static readonly List<string> keysAvailable = new List<string>() { "Up", "Down", "Left", "Right", "Swap", "Skill1", "Skill2", "Attack" };
     public static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
     public static Dictionary<string, int> ui = new Dictionary<string, int>();
     public static Dictionary<string, float> sound = new Dictionary<string, float>();
@@ -163,6 +164,8 @@ public static class InputM
         file = File.Create(GlobalVariable.soundFilepath);
         binaryFormatter.Serialize(file, sound);
         file.Close();
+
+        GlobalVariable.keysChanged = true;
     }
 
     private static int Load()
@@ -224,6 +227,7 @@ public static class InputM
         if (returnValue > 0)
             Save();
 
+        GlobalVariable.keysChanged = true;
         Debug.Log("InputM load error: " + returnValue);
         return returnValue;
     }

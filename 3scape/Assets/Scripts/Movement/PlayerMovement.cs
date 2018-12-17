@@ -44,8 +44,13 @@ public class PlayerMovement : MonoBehaviour
         //crouch = InputM.GetAxisRaw("Vertical") == -1 ? true : false;
         crouch = Input.GetKey(InputM.keys["Down"]);
 
-        if (Input.GetKeyDown(KeyCode.A)) GlobalVariable.direction = true;
-        else if (Input.GetKeyDown(KeyCode.D)) GlobalVariable.direction = false;
+        //if (Input.GetKeyDown(KeyCode.A)) GlobalVariable.direction = true;
+        //else if (Input.GetKeyDown(KeyCode.D)) GlobalVariable.direction = false;
+
+        if (InputM.GetKeyDown("Left"))
+            GlobalVariable.direction = true;
+        else if (InputM.GetKeyDown("Right"))
+            GlobalVariable.direction = false;
     }
 
     void FixedUpdate()

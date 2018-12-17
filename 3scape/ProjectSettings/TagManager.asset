@@ -9,6 +9,7 @@ TagManager:
   - Characters
   - Tagg
   - ChestWithKey
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

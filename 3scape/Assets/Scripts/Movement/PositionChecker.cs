@@ -24,7 +24,7 @@ public class PositionChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BringBackIfTooFarAway();
+        //  BringBackIfTooFarAway();
     }
 
     void FixedUpdate()
@@ -49,43 +49,29 @@ public class PositionChecker : MonoBehaviour
         {
             objects[0].transform.Translate(-1 * facing * 0.02f, 0, 0);
         }
-        if (Mathf.Abs(objects[2].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) < 0.8f)
+        if (Mathf.Abs(objects[2].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) < 0.8f )
         {
             objects[2].transform.Translate(facing * 0.02f, 0, 0);
         }
-    }
-
-    private void BringBackIfTooFarAway()
-    {
-        if (Mathf.Abs(objects[0].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) > 2.0f)
+        if (Mathf.Abs(objects[0].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) > 1f
+            && Mathf.Abs(objects[0].transform.Find("GroundCheck").position.y - objects[1].transform.Find("GroundCheck").position.y) < 1f)
         {
-            timer1 += Time.deltaTime;
-            if (timer1 > 4.0f)
-            {
-                objects[0].transform.position = new Vector3(objects[1].transform.Find("GroundCheck").position.x + 0.8f,
-                                                            objects[1].transform.Find("GroundCheck").position.y + 0.8f,
-                                                            objects[1].transform.Find("GroundCheck").position.z);
-                Debug.Log("Too far away!");
-            }
+            objects[0].transform.Translate(1 * facing * 0.02f, 0, 0);
+            objects[0].GetComponent<Animator>().SetFloat("Walk", 20f);
         }
         else
         {
-            timer1 = 0;
+            objects[0].GetComponent<Animator>().SetFloat("Walk", 0);
         }
-        if (Mathf.Abs(objects[2].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) > 2.0f)
+        if ( Mathf.Abs(objects[2].transform.Find("GroundCheck").position.x - objects[1].transform.Find("GroundCheck").position.x) > 1f
+             && Mathf.Abs(objects[2].transform.Find("GroundCheck").position.y - objects[1].transform.Find("GroundCheck").position.y) < 1f)
         {
-            timer2 += Time.deltaTime;
-            if (timer2 > 4.0f)
-            {
-                objects[2].transform.position = new Vector3(objects[1].transform.Find("GroundCheck").position.x - 0.8f,
-                                                            objects[1].transform.Find("GroundCheck").position.y + 0.8f,
-                                                            objects[1].transform.Find("GroundCheck").position.z);
-                Debug.Log("Too far away!");
-            }
+            objects[2].transform.Translate(-1 * facing * 0.02f, 0, 0);
+            objects[2].GetComponent<Animator>().SetFloat("Walk", 20f);
         }
         else
         {
-            timer2 = 0;
+            objects[2].GetComponent<Animator>().SetFloat("Walk", 0);
         }
     }
 }

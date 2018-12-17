@@ -57,9 +57,7 @@ public class SettingTraps : PlayerAbility
 
     void SetTrap()
     {
-
         Vector3 v3 = settingPoint.position;
-        Instantiate(trap, v3, settingPoint.rotation);
 
         if(GlobalVariable.numberOfTraps < maxNumberOfTraps)
         {

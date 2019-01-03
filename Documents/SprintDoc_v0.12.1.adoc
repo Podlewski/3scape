@@ -40,22 +40,6 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 === Edyta
 
-<<<<<<< HEAD
-* [ ] Dodanie do gry kolejnych dźwięków oraz muzyki.
-* [ ] Wprowadzenie efektów związanych z uderzeniem (np w beczkę, zombie, ścianę).
-* [ ] Wprowadzenie checkpointów -> razem z Gracjanem.
-
-=== Krzysiek
-
-* [ ] Poprawa łączenia się drużyny.
-* [ ] Fizyka gry: zachowanie bohaterów na schodach/ternach pochyłych.
-* [ ] Prace nad AI wrogów: szkielet, ewentualne poprawy zombie.
-
-=== Gracjan
-
-* [ ] Kolejne prace związane z assetami.
-* [ ] Dodanie ograniczeń do zamiany bohaterów: nie można jej wykonywać m.in. w trakcie skoku, castowania umiejętności.
-=======
 * [x] Dodanie do gry kolejnych dźwięków oraz muzyki.
 * [x] Wprowadzenie efektów związanych z uderzeniem (np w beczkę, zombie, ścianę).
 * [x] Wprowadzenie checkpointów -> razem z Gracjanem.
@@ -69,31 +53,10 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 
 * [x] Kolejne prace związane z assetami.
 * [x] Dodanie ograniczeń do zamiany bohaterów: nie można jej wykonywać m.in. w trakcie skoku, castowania umiejętności.
->>>>>>> sprintDoc
 * [ ] Wprowadzenie checkpointów -> razem z Edytą.
 
 === Justyna
 
-<<<<<<< HEAD
-* [ ] Praca nad grywalnym poziomem -> razem z Karolem.
-* [ ] Dodanie zakończenia poziomu.
-* [ ] Wprowadzenie slotu na zbierane klucze (otwieranie skrzyni na ten moment nic nie daje - czasami musi wypadać coś ekstra poza punktami) oraz obiektów które tylko z tym kluczem działają.
-
-=== Bartosz
- 
-* [ ] Bugmaster - usuwanie błędów z gry -> razem z Karolem.
-* [ ] Poprawa umiejętności - zawsze działają w określoną stronę (np pułapka łotrzyka zawsze się pojawia za drużyną).
-* [ ] Zmiana rozumienia kolejności - od teraz liczy się kto przewodzi drużynie, a kto jest z prawej strony.
-
-=== Konrad
-
-* [ ] Rozwijanie HUDu:
-** [ ] Przeniesienie HUDu na dół.
-** [ ] Napisy dotyczące pozycji oraz klawiszy.
-** [ ] Lekkie powiększenie i wyraźniejsze oddzielenie modułów.
-** [ ] Naprawienie wszelkich błędów HUDowych.
-* [ ] Poprawa animacji umiejętności - dodanie brakujących, dopasowanie animacji do faktycznego czasu działania.
-=======
 * [x] Praca nad grywalnym poziomem -> razem z Karolem.
 * [x] Dodanie zakończenia poziomu.
 * [x] Wprowadzenie slotu na zbierane klucze (otwieranie skrzyni na ten moment nic nie daje - czasami musi wypadać coś ekstra poza punktami) oraz obiektów które tylko z tym kluczem działają.
@@ -113,28 +76,10 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 ** [x] Napisy dotyczące pozycji oraz klawiszy.
 ** [x] Lekkie powiększenie i wyraźniejsze oddzielenie modułów.
 * [x] Poprawa animacji umiejętności - dodanie brakujących, dopasowanie animacji do faktycznego czasu działania.
->>>>>>> sprintDoc
-* [ ] Zebranie feedbacku po 12 tygodniu zajęć.
+* [x] Zebranie feedbacku po 12 tygodniu zajęć.
 
 === Zbyszek
 
-<<<<<<< HEAD
-* [ ] Rozwijanie HUDu:
-** [ ] Przeniesienie HUDu na dół.
-** [ ] Napisy dotyczące pozycji oraz klawiszy.
-** [ ] Lekkie powiększenie i wyraźniejsze oddzielenie modułów.
-** [ ] Naprawienie wszelkich błędów HUDowych.
-* [ ] Rozwijanie ustawień (klawisze nie mogą się nakładać, dodanie ustawień związanych z dźwiękiem, przeniesienie opcji "życie" i "dynamiczny HUD" gdzie indziej).
-* [ ] Wprowadzenie delikatniejszych efektów na pokazanie działających umiejętności niż kolorowanie bohaterów.
-
-=== Karol
-
-* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
-* [ ] Połączenie zmian wprowadzonych przez team w jedną część.
-* [ ] Praca nad poziomem tutorialowym. 
-* [ ] Praca nad grywalnym poziomem -> razem z Justyną.
-* [ ] Bugmaster - usuwanie błędów z gry -> razem z Bartoszem.
-=======
 * [x] Naprawianie wszelkich błędów związanych z HUDem:
 ** [x] Usprawnienia w input managerze.
 ** [x] Poprawa w zachowaniu animacji cooldownu w HUDzie.
@@ -147,43 +92,63 @@ Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ust
 * [x] Połączenie zmian wprowadzonych przez team w jedną część.
 * [x] Praca nad poziomem tutorialowym. 
 * [x] Praca nad grywalnym poziomem -> razem z Justyną.
->>>>>>> sprintDoc
 * [x] Poprawa wizualna menu -> menu oraz wybór poziomów uzyskały wygląd, stworzona nowa ikona gry.
 * [x] Poprawa tabliczek - pokazują one aktualne klawisze, zamiast tych domyślnych (tekst nie jest wpisany na sztywno).
 
 <<<
-== Plan sprintu (tydzień 15)
+== Plan sprintu (tydzień 14)
 
 Poniżej przedstawiamy podział obowiązków na ostatni sprint. 
 
 === Edyta
 
-* [ ] _
+* [ ] {Tydzień 13} Checkpointy: faktyczny zapis + brak colliderów spowalniających
+* [ ] Nowa muzyka - menu oraz 2 poziom.
+* [ ] Poprawić efekty dźwiękowe - otwieranie skrzyni łotrzyka, muzyka w tutorialu wciąż się kończy
+* [ ] Dodać ekran ładowania.
 
 === Krzysiek
 
-* [ ] _
+* [ ] Zablokować łącznie się postaci.
+* [ ] Poprawienie colliderów (wciąż możliwe stanie na wrogach).
+* [ ] Poprawa AI bossa (podczas skakania drużyna staje się dla niego niewidoczna).
 
 === Gracjan
 
-* [ ] _
+* [ ] {Tydzień WSZYSTKIE} Poprawa zamiany bohaterów
+* [ ] {Tydzień 13} Checkpointy + brak colliderów spowalniających
+* [ ] Wprowadzenie przeciwnika - szkieleta łucznika.
+* [ ] Rozwój bossa: wprowadzenie paska życia, blokada ukończenia poziomu do póki boss nie zostanie pokonany, większa mobilność.
+* [ ] Zmienić ikonę pola ochronnego (cytat: "Nie wygląda jak pole ochronne").
 
 === Justyna
 
-* [ ] _
+* [ ] Stworzenie 2 poziomu. 
+* [ ] Poprawki w 1 poziomie: niezniszczalna beczka.
 
 === Bartosz
  
-* [ ] _
+* [ ] {Tydzień 13} Odwrócenie zmian sterowania przy zmianie kierunku chodzenia. 
+* [ ] Strona internetowa.
 
 === Konrad
 
-* [ ] _
+* [ ] Dopracowanie HUDu w związku ze zmianą kolejności chodzenia.
+* [ ] HUD: timery umiejętności (ile jeszcze działają, ile się ładują).
+* [ ] Poprawa czytelności HUDu: zebrane punkty oraz czas na dół ekranu.
+* [ ] Wprowadzenie specjalnego miejsca na klucz (od razu widać, że go brakuje).
 
 === Zbyszek
 
-* [ ] _
+* [ ] Usprawnienia dla planszy końcowej po poziomie. 
+* [ ] Licznik dla możliwych do postawienia / postawionych bomb.
+* [ ] Postawione bomby po 20 sekundach same z siebie wybuchają. 
 
 === Karol
 
-* [ ] _
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+* [ ] Połączenie zmian wprowadzonych przez team w jedną część.
+* [ ] Dostosowanie wyglądu ustawień w menu oraz podczas gry do wyglądu menu.
+* [ ] Poprawki w poziomie tutorialowym. 
+* [ ] Balans gry:
+** [ ] Osłabienia: morale rycerza (za duży skok), leczenie maga (zbyt duże leczenie)

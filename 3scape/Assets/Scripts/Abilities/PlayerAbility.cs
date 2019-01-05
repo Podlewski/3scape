@@ -23,7 +23,7 @@ public class PlayerAbility : AnimatedAbility
             //InputM.keys["Attack"] = KeyCode.L;
             //InputM.keys["Skill1"] = KeyCode.J;
         }
-        else
+        /*else
         {
             //UpdateKeys();
 
@@ -32,7 +32,7 @@ public class PlayerAbility : AnimatedAbility
 
             //InputM.keys["Attack"] = KeyCode.J;
             //InputM.keys["Skill1"] = KeyCode.L;
-        }
+        }*/
     }
 
     void UpdateKeys()

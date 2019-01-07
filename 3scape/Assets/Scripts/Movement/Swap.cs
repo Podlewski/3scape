@@ -46,31 +46,35 @@ public class Swap : PlayerAbility
     }
 
     void FixedUpdate()
-    {
-        if (isAbilityReady() && isButtonDownProper() && isNotActiveSkills() && (isIdle() || isRun()))
+    { //&& isButtonDownProper()
+        if (isAbilityReady() && Input.GetButtonDown("SwapRight") && isNotActiveSkills() && (isIdle() || isRun()))
+        {
+
+                GetComponent<CapsuleCollider2D>().enabled = false;
+                newPosition = transform.position;
+                if (position == 1)
+                {
+                    newPosition = positions[1];
+                } else if (position == 2)
+                {
+                    newPosition = positions[0];
+                }
+                transform.position = newPosition;
+           
+        } else if (isAbilityReady() && Input.GetButtonDown("SwapLeft") && isNotActiveSkills() && (isIdle() || isRun()))
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
-
             newPosition = transform.position;
-
-            if (position == 1)
-            {
-                newPosition = positions[2];
-            }
-
-            else if (position == 2)
-            {
-                newPosition = positions[0];
-            }
-
-            else if (position == 3)
+            if (position == 3)
             {
                 newPosition = positions[1];
             }
-
+            else if (position == 2)
+            {
+                newPosition = positions[2];
+            }
             transform.position = newPosition;
         }
-
         else
         {
             positions = getCurrentPossitions();
@@ -95,4 +99,34 @@ public class Swap : PlayerAbility
 
         return positions;
     }
+
+    //private GameObject getCharacterOnPosition(int position)
+    //{
+    //    List<GameObject> gameObjects = new List<GameObject>();
+
+    //    gameObjects.Add(GameObject.Find("knight"));
+    //    gameObjects.Add(GameObject.Find("archer"));
+    //    gameObjects.Add(GameObject.Find("mage"));
+
+    //    for (int i = 0; i < gameObjects.Count; i++)
+    //    {
+    //        for (int j = 1; j < gameObjects.Count - i; j++)
+    //        {
+    //            if (gameObjects[j - 1].transform.position.x > gameObjects[j].transform.position.x)
+    //            {
+    //                SwapT(gameObjects[j - 1], gameObjects[j]);
+    //            }
+    //        }
+    //    }
+
+    //    return gameObjects[position];
+    //}
+
+    //static void SwapT<T>(T lhs, T rhs)
+    //{
+    //    T temp;
+    //    temp = lhs;
+    //    lhs = rhs;
+    //    rhs = temp;
+    //}
 }

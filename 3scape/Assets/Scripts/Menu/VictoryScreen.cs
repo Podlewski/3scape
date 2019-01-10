@@ -42,8 +42,6 @@ public class VictoryScreen : MonoBehaviour
         {
             ActivateVictoryScreen();
         }
-
-        Debug.Log("VictoryScreen : Update : " + levelScore.score);
     }
 
     public void ActivateVictoryScreen()

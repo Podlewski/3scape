@@ -11,12 +11,18 @@ public class Trap : MonoBehaviour
     public int damage;
 
     private bool triggered = false;
-	
-	// Update is called once per frame
-	void Update () {
+    private float startTime;
+
+    void Start()
+    {
+        startTime = Time.time;
+    }
+
+    void Update()
+    {
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(gameObject.transform.position, explosionRange, whatIsEnemy);
 
-        if (!triggered && enemiesToDamage.Length > 0 )
+        if (!triggered && enemiesToDamage.Length > 0)
         {
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
@@ -29,7 +35,16 @@ public class Trap : MonoBehaviour
                 GlobalVariable.numberOfTraps--;
                 enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
             }
-  
+        }
+
+        if (Time.time - startTime > 10)
+        {
+            triggered = true;
+            Vector3 vector3 = gameObject.transform.position;
+            vector3.y += 0.8f;
+            Instantiate(explosion, vector3, transform.rotation = Quaternion.identity);
+            Destroy(gameObject);
+            GlobalVariable.numberOfTraps--;
         }
     }
 }

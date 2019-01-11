@@ -1,0 +1,93 @@
+= 3scape - przegląd i planowanie sprintu: *Tydzień 12*
+Ancient Yaks
+0.12.1, 2018-12-18
+:toc:
+:toc-title: Spis Treści
+:version-label: Wersja
+:icons: font
+
+== Obecne założenia gry
+
+3scape jest zręcznościowo-logiczną grą platformową, która działa na silniku Unity.
+
+Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
+
+* wojownik - dysponuje on siłą, która okaże się nieoceniona nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
+* czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
+
+Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ustawienia w rzędzie, dysponują oni innymi umiejętnościami, które potrafią oddziaływać ze sobą w najróżniejszy sposób. Dobre przetasowywanie naszej drużyny to klucz do sukcesu w 3scape.
+
+=== Sterowanie
+
+* Poruszamy się bohaterami za pomocą klawiszy *W A D*, bądź *strzałek*.
+* Zmieniamy kolejność bohaterów za pomocą *Spacji* (każdy posuwa się od lewej do prawej, chyba, że dalej nie może - wtedy się cofa),
+* Klawisze *J K L* odpowiadają za umiejętności naszych bohaterów.
+* Klawisz *J* odpowiada za umiejętności na lewej pozycji:
+** Wojownik podniesie tarczę (wedle założeń - póki co tylko kolor) która sprawi, ze uchroni SIEBIE od obrażeń fizycznych.
+** Łotrzyk rozstawi pułapkę na przeciwników.
+** Mag będzie leczył drużynę.
+* Klawisz *K* odpowiada za umiejętności na środkowej pozycji:
+** Wojownik podniesie morale drużyny, przez co wszyscy będą w stanie poruszać się szybciej i skakać dalej.
+** Łotrzyk potrafi otworzyć skrzynię.
+** Mag sprawi, że drużyna otrzyma tymczasową odporność na magiczne obrażenia.
+* Klawisz *L* odpowiada za umiejętności na prawej pozycji:
+** Każda postać zaatakuje.
+* Klawisz *Esc* otwiera menu pauzy. 
+
+<<<
+== Przegląd sprintu (tydzień 14)
+
+Poniżej przedstawiamy podział obowiązków na ostatni sprint. 
+
+=== Edyta
+
+* [ ] {Tydzień 13} Checkpointy: faktyczny zapis + brak colliderów spowalniających
+* [ ] Nowa muzyka - menu oraz 2 poziom.
+* [ ] Poprawić efekty dźwiękowe - otwieranie skrzyni łotrzyka, muzyka w tutorialu wciąż się kończy
+* [ ] Dodać ekran ładowania.
+
+=== Krzysiek
+
+* [ ] Zablokować łącznie się postaci.
+* [ ] Poprawienie colliderów (wciąż możliwe stanie na wrogach).
+* [ ] Poprawa AI bossa (podczas skakania drużyna staje się dla niego niewidoczna).
+
+=== Gracjan
+
+* [ ] {Tydzień WSZYSTKIE} Poprawa zamiany bohaterów
+* [ ] {Tydzień 13} Checkpointy + brak colliderów spowalniających
+* [ ] Wprowadzenie przeciwnika - szkieleta łucznika.
+* [ ] Rozwój bossa: wprowadzenie paska życia, blokada ukończenia poziomu do póki boss nie zostanie pokonany, większa mobilność.
+* [ ] Zmienić ikonę pola ochronnego (cytat: "Nie wygląda jak pole ochronne").
+
+=== Justyna
+
+* [ ] Stworzenie 2 poziomu. 
+* [ ] Poprawki w 1 poziomie: niezniszczalna beczka.
+
+=== Bartosz
+ 
+* [x] link:http://bambit.com.pl/3scape[Strona internetowa].
+
+=== Konrad
+
+* [ ] Dopracowanie HUDu w związku ze zmianą kolejności chodzenia.
+* [ ] HUD: timery umiejętności (ile jeszcze działają, ile się ładują).
+* [ ] Poprawa czytelności HUDu: zebrane punkty oraz czas na dół ekranu.
+* [ ] Wprowadzenie specjalnego miejsca na klucz (od razu widać, że go brakuje).
+
+=== Zbyszek
+
+* [ ] Usprawnienia dla planszy końcowej po poziomie. 
+* [ ] Licznik dla możliwych do postawienia / postawionych bomb.
+* [ ] Postawione bomby po 20 sekundach same z siebie wybuchają. 
+
+=== Karol
+
+* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+* [ ] Połączenie zmian wprowadzonych przez team w jedną część.
+* [ ] Dostosowanie wyglądu ustawień w menu oraz podczas gry do wyglądu menu.
+* [ ] Poprawki w poziomie tutorialowym. 
+* [ ] Balans gry:
+** [ ] Osłabienia: morale rycerza (za duży skok), leczenie maga (zbyt duże leczenie)

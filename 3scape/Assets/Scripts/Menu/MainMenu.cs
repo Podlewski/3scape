@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     public GameObject selectLevelUI;
     public Button TutorialSLB;
     public Button Level01SLB;
+    public Button Level02SLB;
     public Button BackSLB;
 
     public Button LogoB;
@@ -44,6 +45,7 @@ public class MainMenu : MonoBehaviour
 
         TutorialSLB.onClick.AddListener(() => SLTutorial());
         Level01SLB.onClick.AddListener(() => SLLevel01());
+        Level02SLB.onClick.AddListener(() => SLLevel02());
         BackSLB.onClick.AddListener(() => SLBack());
 
         counter = 0;
@@ -70,7 +72,7 @@ public class MainMenu : MonoBehaviour
 
     private void Credits()
     {
-        //SceneManager.LoadScene("credits_menu", LoadSceneMode.Single);
+        SceneManager.LoadScene("credits", LoadSceneMode.Single);
     }
 
     private void Quit()
@@ -92,6 +94,11 @@ public class MainMenu : MonoBehaviour
     private void SLLevel01()
     {
         SceneManager.LoadSceneAsync("Level01", LoadSceneMode.Single);
+    }
+
+    private void SLLevel02()
+    {
+        SceneManager.LoadSceneAsync("Level02", LoadSceneMode.Single);
     }
 
     private void SLBack()

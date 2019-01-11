@@ -26,6 +26,7 @@ public class RangedAttack : PlayerAbility
 
             animator.SetBool("IsAttacking", false);
 
+            //if (isButtonPressedProper() && isPositionProper())
             if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsAttacking", true);

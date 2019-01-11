@@ -39,7 +39,7 @@ public class AudioVideoSettingsMenu : MonoBehaviour
 
     private void Back()
     {
-        SceneManager.LoadSceneAsync("settings_menu", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("main_menu", LoadSceneMode.Single);
     }
 
     private void ChangeVolume(string key, Slider slider)

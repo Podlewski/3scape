@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class IngameSettingsMenu : MonoBehaviour
 {
-    public Button BackB;
+   // public Button BackB;
     public Button ResetB;
     public Text HudT;
     public Text HealthbarT;
@@ -20,7 +20,7 @@ public class IngameSettingsMenu : MonoBehaviour
 
     void Start()
     {
-        BackB.onClick.AddListener(() => Back());
+       // BackB.onClick.AddListener(() => Back());
         ResetB.onClick.AddListener(() => Reset());
         HudDD.onValueChanged.AddListener(delegate { Dropdowns("HudDD"); });
         HealthbarDD.onValueChanged.AddListener(delegate { Dropdowns("HealthbarDD"); });
@@ -37,10 +37,10 @@ public class IngameSettingsMenu : MonoBehaviour
         HealthbarDD.value = ui["HealthbarDD"];
     }
 
-    private void Back()
-    {
-        SceneManager.LoadSceneAsync("settings_menu", LoadSceneMode.Single);
-    }
+    //private void Back()
+    //{
+    //    SceneManager.LoadSceneAsync("settings_menu", LoadSceneMode.Single);
+    //}
 
     private void Reset()
     {

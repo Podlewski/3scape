@@ -19,6 +19,11 @@ public class MainMenu : MonoBehaviour
     public Button Level02SLB;
     public Button BackSLB;
 
+    public GameObject optionsUI;
+    public Button AudioVideoOB;
+    public Button ControlsOB;
+    public Button BackOB;
+
     public Button LogoB;
     public SpriteRenderer LogoS;
     public SpriteRenderer KnightS;
@@ -45,8 +50,12 @@ public class MainMenu : MonoBehaviour
 
         TutorialSLB.onClick.AddListener(() => SLTutorial());
         Level01SLB.onClick.AddListener(() => SLLevel01());
-        Level02SLB.onClick.AddListener(() => SLLevel02());
+        //Level02SLB.onClick.AddListener(() => SLLevel02());
         BackSLB.onClick.AddListener(() => SLBack());
+
+        AudioVideoOB.onClick.AddListener(() => OAudioVideo());
+        ControlsOB.onClick.AddListener(() => OControls());
+        BackOB.onClick.AddListener(() => OBack());
 
         counter = 0;
         LogoB.onClick.AddListener(() => LogoChange());
@@ -67,7 +76,8 @@ public class MainMenu : MonoBehaviour
 
     private void Options()
     {
-        SceneManager.LoadScene("settings_menu", LoadSceneMode.Single);
+        optionsUI.gameObject.SetActive(true);
+        mainMenuUI.gameObject.SetActive(false);
     }
 
     private void Credits()
@@ -78,7 +88,7 @@ public class MainMenu : MonoBehaviour
     private void Quit()
     {
         #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
+                UnityEditor.EditorApplication.isPlaying = false;
         #else
             Application.Quit();
         #endif
@@ -105,6 +115,22 @@ public class MainMenu : MonoBehaviour
     {
         mainMenuUI.gameObject.SetActive(true);
         selectLevelUI.gameObject.SetActive(false);
+    }
+
+    private void OAudioVideo()
+    {
+        SceneManager.LoadSceneAsync("audiovideo", LoadSceneMode.Single);
+    }
+    
+    private void OControls()
+    {
+        SceneManager.LoadSceneAsync("controls", LoadSceneMode.Single);
+    }
+
+    private void OBack()
+    {
+        mainMenuUI.gameObject.SetActive(true);
+        optionsUI.gameObject.SetActive(false);
     }
 
 

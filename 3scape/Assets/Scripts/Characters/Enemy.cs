@@ -63,28 +63,34 @@ public class Enemy : MonoBehaviour
     {
         if (GetComponent<Animator>() != null)
         {
-            if (!(Physics2D.Raycast(transform.position, Vector2.left, walkDetectionDistance, 1 << 8 /*player layerMask*/)
-                           || (Physics2D.Raycast(transform.position, Vector2.right, 0.3f, 1 << 8 /*player layerMask*/))))
+            if (!(Physics2D.Raycast(transform.position + new Vector3(0,0.5f,0) , Vector2.left, walkDetectionDistance, 1 << 8 /*player layerMask*/)
+                         || (Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), Vector2.right, walkDetectionDistance, 1 << 8 /*player layerMask*/))))
             {
+              //  Debug.Log("1");
                 GetComponent<Animator>().SetFloat("Speed", speed);
 
-                if (Physics2D.Raycast(transform.position, -1 * transform.right, 7, 1 << 8 /*player layerMask*/))
+                if (Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), -1 * transform.right, 7, 1 << 8 /*player layerMask*/)
+                || (gameObject.name=="black_knight" &&(Physics2D.Raycast(transform.position + new Vector3(0, 1.5f, 0), -1 * transform.right, 7, 1 << 8)
+                    ||  Physics2D.Raycast(transform.position + new Vector3(0, 2.5f, 0), -1 * transform.right, 7, 1 << 8))))
                 {
+               //     Debug.Log("2");
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
                 }
-                else if (Physics2D.Raycast(transform.position, transform.right, 7, 1 << 8 /*player layerMask*/))
+                else if (Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), transform.right, 7, 1 << 8 /*player layerMask*/))
                 {
                         Flip();
-                    
+                  //  Debug.Log("3");
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
                 }
                 else
                 {
+                   // Debug.Log("4");
                     GetComponent<Animator>().SetFloat("Speed", 0);
                 }
             }
             else
             {
+             //   Debug.Log("5");
                 GetComponent<Animator>().SetFloat("Speed", 0);
             }
         }

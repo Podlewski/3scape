@@ -8,20 +8,19 @@ public class PlayerAbility : AnimatedAbility
 
     protected KeyCode getKeyCode()
     {
-        if (requiredPosition == 1)
-            return InputM.keys["Attack"];
-
-        else if (requiredPosition == 2)
-            return InputM.keys["Skill2"];
-
-        else if (requiredPosition == 3)
-            return InputM.keys["Skill1"];
-
-        else if (requiredPosition == 10)
-            return InputM.keys["Swap"];
-
-        else
-            throw new System.Exception();
+        switch (requiredPosition)
+        {
+            case 1:
+                return InputM.keys["Attack"];
+            case 2:
+                return InputM.keys["Skill2"];
+            case 3:
+                return InputM.keys["Skill1"];
+            case 10:
+                return InputM.keys["Swap"];
+            default:
+                throw new System.Exception();
+        }
     }
 
     protected bool isButtonPressedProper()

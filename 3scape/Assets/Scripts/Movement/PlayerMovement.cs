@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = InputM.GetAxisRaw("Horizontal") * runSpeed;
         ObstacleCollider(); // collision checker
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        if (horizontalMove > 0.1f)
+            animator.SetFloat("Walk", 0);
         //if (InputM.GetAxisRaw("Vertical") == 1)
         if (Input.GetKeyDown(InputM.keys["Up"]))
         {
@@ -64,15 +66,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsGrounded", controller.GetGrounded());
     }
 
-    void LateUpdate()
-    {}
-
     void ObstacleCollider()
     {
         int modifier = 1;
         if (GlobalVariable.direction)
             modifier = -1;
-        int layers = (1 << 8); // obstacles and players
+        int layers = (1 << 8) | (1 << 10); // players and enemies
         float distance = 0.2f;
         RaycastHit2D rcRight = Physics2D.Raycast(transform.position, modifier * Vector2.right, layers);
 
@@ -81,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
             if (rcRight.distance < distance * transform.GetComponent<Animator>().GetInteger("Position"))
             {
 
-                Debug.Log(transform.gameObject.name);
+          //      Debug.Log(transform.gameObject.name);
                 Debug.Log(transform.gameObject.name + rcRight.transform.gameObject.name);
                 horizontalMove = 0;
             }

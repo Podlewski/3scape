@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         x = transform.position.x;
 
         horizontalMove = InputM.GetAxisRaw("Horizontal") * runSpeed;
-        ObstacleCollider();
+        ObstacleCollider(); // collision checker
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         //if (InputM.GetAxisRaw("Vertical") == 1)
         if (Input.GetKeyDown(InputM.keys["Up"]))
@@ -71,14 +72,23 @@ public class PlayerMovement : MonoBehaviour
         int modifier = 1;
         if (GlobalVariable.direction)
             modifier = -1;
-        int layers = (1 << 8) | (1 << 11); // obstacles and players
-        float distance = 0.25f;
+        int layers = (1 << 8); // obstacles and players
+        float distance = 0.2f;
         RaycastHit2D rcRight = Physics2D.Raycast(transform.position, modifier * Vector2.right, layers);
-    //    RaycastHit2D rcLeft = Physics2D.Raycast(transform.position, Vector2.right, layers);
-        if (rcRight.distance < distance * transform.GetComponent<Animator>().GetInteger("Position"))
+
+        try // WONKY SHIT IDK WHAT IS GOING HERE IT NEEDS TO BE HERE DON'T CHANGE
         {
-            Debug.Log(transform.gameObject.name + rcRight.transform.gameObject.name);
-            horizontalMove = 0;
+            if (rcRight.distance < distance * transform.GetComponent<Animator>().GetInteger("Position"))
+            {
+
+                Debug.Log(transform.gameObject.name);
+                Debug.Log(transform.gameObject.name + rcRight.transform.gameObject.name);
+                horizontalMove = 0;
+            }
+        }
+        catch (NullReferenceException) 
+        {
+
         }
     }
 }

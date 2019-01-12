@@ -31,7 +31,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         x = transform.position.x;
+
         horizontalMove = InputM.GetAxisRaw("Horizontal") * runSpeed;
+        ObstacleCollider();
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         //if (InputM.GetAxisRaw("Vertical") == 1)
         if (Input.GetKeyDown(InputM.keys["Up"]))
@@ -63,4 +65,20 @@ public class PlayerMovement : MonoBehaviour
 
     void LateUpdate()
     {}
+
+    void ObstacleCollider()
+    {
+        int modifier = 1;
+        if (GlobalVariable.direction)
+            modifier = -1;
+        int layers = (1 << 8) | (1 << 11); // obstacles and players
+        float distance = 0.25f;
+        RaycastHit2D rcRight = Physics2D.Raycast(transform.position, modifier * Vector2.right, layers);
+    //    RaycastHit2D rcLeft = Physics2D.Raycast(transform.position, Vector2.right, layers);
+        if (rcRight.distance < distance * transform.GetComponent<Animator>().GetInteger("Position"))
+        {
+            Debug.Log(transform.gameObject.name + rcRight.transform.gameObject.name);
+            horizontalMove = 0;
+        }
+    }
 }

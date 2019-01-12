@@ -1448,7 +1448,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 3 | L
+  m_Text: Press L
 --- !u!222 &78191044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3373,7 +3373,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 1 | J
+  m_Text: Press J
 --- !u!222 &142454889
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4191,6 +4191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelScore: {fileID: 620043767}
+  levelScoreAtTheEndOfLevel: {fileID: 0}
   score: 0
 --- !u!114 &179821571
 MonoBehaviour:
@@ -4730,7 +4731,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 2 | K
+  m_Text: Press K
 --- !u!222 &203777498
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8171,7 +8172,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398601774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.378087, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.377605, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1279317102}
@@ -11679,9 +11680,12 @@ MonoBehaviour:
   shouldExplode: 1
   PossibleExplosion: {fileID: 1464438809117552, guid: d04769e63bd97fc40bda433f0c6e95bf,
     type: 2}
-  barrelSound: {fileID: 8300000, guid: f8fec78b682e5054d9592e11996a8611, type: 3}
+  barrelExplosion: {fileID: 0}
+  zombieDeath: {fileID: 0}
   source: {fileID: 555882177}
   walkDetectionDistance: 0.3
+  deathBlood: {fileID: 0}
+  hurtBlood: {fileID: 0}
 --- !u!82 &555882177
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13512,7 +13516,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 2 | K
+  m_Text: Press K
 --- !u!222 &630404175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15636,8 +15640,6 @@ MonoBehaviour:
     m_Bits: 2304
   attackRange: 0.2
   damage: 10
-  zombieSound: {fileID: 8300000, guid: ec5e6ccf2be25b64bb658e27a055f160, type: 3}
-  source: {fileID: 702851856}
 --- !u!114 &702851855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15654,9 +15656,12 @@ MonoBehaviour:
   optionalHealthBar: {fileID: 721554349}
   shouldExplode: 0
   PossibleExplosion: {fileID: 0}
-  barrelSound: {fileID: 0}
+  barrelExplosion: {fileID: 0}
+  zombieDeath: {fileID: 0}
   source: {fileID: 702851856}
   walkDetectionDistance: 0.3
+  deathBlood: {fileID: 0}
+  hurtBlood: {fileID: 0}
 --- !u!82 &702851856
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16670,6 +16675,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 3371237120
   SecondSkillCoolDown: {fileID: 117715034}
+  effect: {fileID: 0}
   timeLeft: 1.8
 --- !u!114 &768692618
 MonoBehaviour:
@@ -16707,6 +16713,8 @@ MonoBehaviour:
   firePoint: {fileID: 1046993032}
   arrowPrefab: {fileID: 1017192415200598, guid: cba0785e57678874cb3256a053f67bd9,
     type: 2}
+  ThirdSkillCoolDown: {fileID: 0}
+  shot: {fileID: 0}
   source: {fileID: 0}
 --- !u!114 &768692620
 MonoBehaviour:
@@ -16773,6 +16781,7 @@ MonoBehaviour:
   requiredPosition: 3
   healValue: 50
   FirstSkillCoolDown: {fileID: 216069107}
+  effect: {fileID: 0}
   timeLeft: 1
 --- !u!82 &768692623
 AudioSource:
@@ -18018,7 +18027,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 3 | L
+  m_Text: Press L
 --- !u!222 &847092213
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20267,8 +20276,6 @@ MonoBehaviour:
     m_Bits: 2304
   attackRange: 0.2
   damage: 10
-  zombieSound: {fileID: 8300000, guid: ec5e6ccf2be25b64bb658e27a055f160, type: 3}
-  source: {fileID: 994985262}
 --- !u!114 &994985261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20285,9 +20292,12 @@ MonoBehaviour:
   optionalHealthBar: {fileID: 1437529638}
   shouldExplode: 0
   PossibleExplosion: {fileID: 0}
-  barrelSound: {fileID: 0}
+  barrelExplosion: {fileID: 0}
+  zombieDeath: {fileID: 0}
   source: {fileID: 994985262}
   walkDetectionDistance: 0.3
+  deathBlood: {fileID: 0}
+  hurtBlood: {fileID: 0}
 --- !u!82 &994985262
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28832,8 +28842,6 @@ MonoBehaviour:
     m_Bits: 2304
   attackRange: 0.2
   damage: 10
-  zombieSound: {fileID: 8300000, guid: ec5e6ccf2be25b64bb658e27a055f160, type: 3}
-  source: {fileID: 1382294630}
 --- !u!114 &1382294629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28850,9 +28858,12 @@ MonoBehaviour:
   optionalHealthBar: {fileID: 1058340742}
   shouldExplode: 0
   PossibleExplosion: {fileID: 0}
-  barrelSound: {fileID: 0}
+  barrelExplosion: {fileID: 0}
+  zombieDeath: {fileID: 0}
   source: {fileID: 1382294630}
   walkDetectionDistance: 0.3
+  deathBlood: {fileID: 0}
+  hurtBlood: {fileID: 0}
 --- !u!82 &1382294630
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30980,9 +30991,12 @@ MonoBehaviour:
   optionalHealthBar: {fileID: 188476042}
   shouldExplode: 0
   PossibleExplosion: {fileID: 0}
-  barrelSound: {fileID: 0}
+  barrelExplosion: {fileID: 0}
+  zombieDeath: {fileID: 0}
   source: {fileID: 1509922943}
   walkDetectionDistance: 0.3
+  deathBlood: {fileID: 0}
+  hurtBlood: {fileID: 0}
 --- !u!114 &1509922942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31003,8 +31017,6 @@ MonoBehaviour:
     m_Bits: 2304
   attackRange: 0.2
   damage: 10
-  zombieSound: {fileID: 8300000, guid: ec5e6ccf2be25b64bb658e27a055f160, type: 3}
-  source: {fileID: 1509922943}
 --- !u!82 &1509922943
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32458,7 +32470,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 2 | K
+  m_Text: Press K
 --- !u!222 &1586891160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34747,7 +34759,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 1 | J
+  m_Text: Press J
 --- !u!222 &1679522446
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34907,9 +34919,12 @@ MonoBehaviour:
   optionalHealthBar: {fileID: 766656001}
   shouldExplode: 0
   PossibleExplosion: {fileID: 0}
-  barrelSound: {fileID: 0}
+  barrelExplosion: {fileID: 0}
+  zombieDeath: {fileID: 0}
   source: {fileID: 1683797067}
   walkDetectionDistance: 0.3
+  deathBlood: {fileID: 0}
+  hurtBlood: {fileID: 0}
 --- !u!114 &1683797066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34930,8 +34945,6 @@ MonoBehaviour:
     m_Bits: 2304
   attackRange: 0.2
   damage: 10
-  zombieSound: {fileID: 8300000, guid: ec5e6ccf2be25b64bb658e27a055f160, type: 3}
-  source: {fileID: 1683797067}
 --- !u!82 &1683797067
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35453,7 +35466,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 3 | L
+  m_Text: Press L
 --- !u!222 &1701086322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36490,7 +36503,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 1 | J
+  m_Text: Press J
 --- !u!222 &1758055798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38619,6 +38632,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 779231448}
   settingsMenuUI: {fileID: 1017160290}
   inputSettingsMenuUI: {fileID: 463562149}
+  audioVideoSettingsMenuUI: {fileID: 0}
   AudioVideoB: {fileID: 1674185588}
   ControlsB: {fileID: 701958662}
   BackB: {fileID: 1923296342}
@@ -39698,6 +39712,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 3355503098
   FirstSkillCoolDown: {fileID: 1600561540}
+  timeLeft: 3.3
 --- !u!114 &1940178169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39718,6 +39733,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 3359062008
   SecondSkillCoolDown: {fileID: 1751012494}
+  eurobeat: {fileID: 0}
+  source: {fileID: 0}
+  musicSource: {fileID: 0}
 --- !u!114 &1940178170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39882,7 +39900,10 @@ MonoBehaviour:
     m_Bits: 1024
   attackRange: 0.2
   damage: 10
+  ThirdSkillCoolDown: {fileID: 0}
   swordSound: {fileID: 8300000, guid: 024b57c41ad6f934d8823dcec053668a, type: 3}
+  woodHitting: {fileID: 0}
+  zombieHitting: {fileID: 0}
   source: {fileID: 1940178171}
 --- !u!114 &1940178174
 MonoBehaviour:
@@ -42546,6 +42567,8 @@ MonoBehaviour:
   firePoint: {fileID: 1442623667}
   arrowPrefab: {fileID: 1406025611992852, guid: be416ff8347d0eb4dbb2277977a54671,
     type: 2}
+  ThirdSkillCoolDown: {fileID: 0}
+  shot: {fileID: 0}
   source: {fileID: 0}
 --- !u!114 &2106484108
 MonoBehaviour:
@@ -42615,7 +42638,6 @@ MonoBehaviour:
   pressTime: 0
   countDown: 2
   ready: 0
-  source: {fileID: 0}
   unlockPos: {fileID: 1442623667}
   unlockRange: 1
   whatCanOpen:
@@ -42624,6 +42646,8 @@ MonoBehaviour:
   timeAmt: 10
   tmp: 0
   SecondSkillCoolDown: {fileID: 1296511909}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &2106484111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42643,6 +42667,7 @@ MonoBehaviour:
   trap: {fileID: 1406025611992852, guid: 6a07482eaaba9974381684851e9c18d8, type: 2}
   settingPoint: {fileID: 1079403174}
   FirstSkillCoolDown: {fileID: 830815097}
+  maxNumberOfTraps: 3
 --- !u!82 &2106484112
 AudioSource:
   m_ObjectHideFlags: 0

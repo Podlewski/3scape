@@ -10,7 +10,7 @@ public class NewLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") && !(GameObject.Find("black_knight") != null))
         {
             //SceneManager.LoadScene(levelName);
             levelFinished = true;

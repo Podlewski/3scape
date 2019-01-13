@@ -72,16 +72,15 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 === Konrad
 
-* [ ] Dopracowanie HUDu w związku ze zmianą kolejności chodzenia.
-* [ ] HUD: timery umiejętności (ile jeszcze działają, ile się ładują).
-* [ ] Poprawa czytelności HUDu: zebrane punkty oraz czas na dół ekranu.
-* [ ] Wprowadzenie specjalnego miejsca na klucz (od razu widać, że go brakuje).
+* [ ] Wyszarzenie samych ikon umiejętności, a nie całych slotów.
+* [ ] Timery umiejętności: ile jeszcze działają, ile się ładują.
+* [x] Wprowadzenie specjalnego miejsca na klucz.
+* [ ] Poprawa czytelności HUDu: ilość trapów oraz slot na klucz na dół, lepiej pokazany czas oraz punkty na górze.
 
 === Zbyszek
 
-* [x] Usprawnienia dla planszy końcowej po poziomie. 
+* [x] Stworzenie planszy końcowej po poziomie.
 * [x] Licznik dla możliwych do postawienia / postawionych bomb.
-* [ ] Licznik umiejscowiony w dobrym miejscu.
 * [x] Dodana autodestrukcja do obiektów tworzonych przez gracza: pułapki, strzały/pociski magiczne.
 
 === Karol

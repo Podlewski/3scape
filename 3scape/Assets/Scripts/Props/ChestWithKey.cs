@@ -16,11 +16,20 @@ public class ChestWithKey : MonoBehaviour
 
     public Image timeBar;
 
+    public AudioClip chestSound;
+    public AudioSource source;
+
+    private void Start()
+    {
+        source.clip = chestSound;
+    }
+
     private void Update()
     {
         if (timeBar.fillAmount == 1 && isFilled == false)
         {
             timeBar.enabled = false;
+            source.Play();
         }
 
         if (timeBar.fillAmount == 0 && isFilled == false)

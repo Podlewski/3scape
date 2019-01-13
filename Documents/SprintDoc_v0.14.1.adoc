@@ -44,7 +44,7 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 * [ ] {Tydzień 13} Checkpointy: faktyczny zapis + brak colliderów spowalniających
 * [ ] Nowa muzyka - menu oraz 2 poziom.
-* [ ] Poprawić efekty dźwiękowe - otwieranie skrzyni łotrzyka, muzyka w tutorialu wciąż się kończy
+* [ ] Poprawić efekty dźwiękowe - otwieranie skrzyni łotrzyka, muzyka w tutorialu wciąż się kończy.
 * [ ] Dodać ekran ładowania.
 
 === Krzysiek
@@ -58,8 +58,8 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 * [ ] {Tydzień WSZYSTKIE} Poprawa zamiany bohaterów
 * [ ] {Tydzień 13} Checkpointy + brak colliderów spowalniających
 * [ ] Wprowadzenie przeciwnika - szkieleta łucznika.
-* [ ] Rozwój bossa: wprowadzenie paska życia, blokada ukończenia poziomu do póki boss nie zostanie pokonany, większa mobilność.
-* [ ] Zmienić ikonę pola ochronnego (cytat: "Nie wygląda jak pole ochronne").
+* [x] Rozwój bossa: wprowadzenie paska życia, blokada ukończenia poziomu do póki boss nie zostanie pokonany, większa mobilność.
+* [x] Zmienić ikonę pola ochronnego.
 
 === Justyna
 
@@ -80,16 +80,16 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 === Zbyszek
 
 * [x] Usprawnienia dla planszy końcowej po poziomie. 
-* [x] Licznik dla możliwych do postawienia / postawionych bomb
-* [ ] Licznik umiejscowiony w dobrym miejscu
-* [x] Postawione bomby po 20 sekundach same z siebie wybuchają. 
-* [x] Naprawiony błąd z nieznikającymi strzałami/pociskami oraz wyskakującymi nullami.
+* [x] Licznik dla możliwych do postawienia / postawionych bomb.
+* [ ] Licznik umiejscowiony w dobrym miejscu.
+* [x] Dodana autodestrukcja do obiektów tworzonych przez gracza: pułapki, strzały/pociski magiczne.
 
 === Karol
 
 * [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
 * [ ] Połączenie zmian wprowadzonych przez team w jedną część.
 * [x] Dostosowanie wyglądu ustawień do wyglądu menu.
+* [x] Dodane credity do gry.
 * [ ] Poprawki w poziomie tutorialowym. 
 * [ ] Balans gry:
 ** [ ] Osłabienia: morale rycerza (za duży skok), leczenie maga (zbyt duże leczenie)

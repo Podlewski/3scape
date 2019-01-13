@@ -79,15 +79,17 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 === Zbyszek
 
-* [ ] Usprawnienia dla planszy końcowej po poziomie. 
-* [ ] Licznik dla możliwych do postawienia / postawionych bomb.
-* [ ] Postawione bomby po 20 sekundach same z siebie wybuchają. 
+* [x] Usprawnienia dla planszy końcowej po poziomie. 
+* [x] Licznik dla możliwych do postawienia / postawionych bomb
+* [ ] Licznik umiejscowiony w dobrym miejscu
+* [x] Postawione bomby po 20 sekundach same z siebie wybuchają. 
+* [x] Naprawiony błąd z nieznikającymi strzałami/pociskami oraz wyskakującymi nullami.
 
 === Karol
 
 * [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
 * [ ] Połączenie zmian wprowadzonych przez team w jedną część.
-* [ ] Dostosowanie wyglądu ustawień w menu oraz podczas gry do wyglądu menu.
+* [x] Dostosowanie wyglądu ustawień do wyglądu menu.
 * [ ] Poprawki w poziomie tutorialowym. 
 * [ ] Balans gry:
 ** [ ] Osłabienia: morale rycerza (za duży skok), leczenie maga (zbyt duże leczenie)

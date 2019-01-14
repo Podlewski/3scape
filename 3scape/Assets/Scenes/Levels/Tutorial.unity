@@ -27052,8 +27052,8 @@ MonoBehaviour:
   attackPos: {fileID: 1254526929}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 1024
-  attackRange: 0.2
+    m_Bits: 5120
+  attackRange: 0.3
   damage: 10
   ThirdSkillCoolDown: {fileID: 342643825}
   swordSound: {fileID: 8300000, guid: 024b57c41ad6f934d8823dcec053668a, type: 3}
@@ -27964,7 +27964,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3895
+    m_Bits: 7991
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -31063,7 +31063,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1025605486487810, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
@@ -31146,7 +31146,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 30
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -32087,7 +32087,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelScore: {fileID: 165122512}
-  levelScoreAtTheEndOfLevel: {fileID: 1996772405}
   score: 0
 --- !u!114 &814330895
 MonoBehaviour:
@@ -32169,7 +32168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1025605486487810, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
@@ -46071,7 +46070,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1025605486487810, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}

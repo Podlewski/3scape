@@ -332,7 +332,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1025605486487810, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
@@ -11154,6 +11154,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc92e2f2d40d9d45af7df24fd4afe77, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &529751289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4512252592138814, guid: 6dc92e2f2d40d9d45af7df24fd4afe77,
+    type: 2}
+  m_PrefabInternal: {fileID: 529751288}
 --- !u!1001 &532423109
 Prefab:
   m_ObjectHideFlags: 0
@@ -13471,7 +13476,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3895
+    m_Bits: 7991
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -16260,6 +16265,8 @@ MonoBehaviour:
   - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
   spawnPoint: {fileID: 1508287944}
   timeBar: {fileID: 864222220}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &770555829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19597,7 +19604,7 @@ Transform:
   m_Children:
   - {fileID: 1299360064}
   - {fileID: 2098030052}
-  - {fileID: 1221217032}
+  - {fileID: 529751289}
   - {fileID: 391283796}
   - {fileID: 1567347167}
   - {fileID: 1624346412}
@@ -25282,13 +25289,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f9914de060e264b85a7a17dadd41c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1209252473}
+  spriteRenderer: {fileID: 0}
   openSprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
   objects:
   - {fileID: 1186639840113104, guid: ddb1c78e464864546be40b1f50598c29, type: 2}
   - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
   spawnPoint: {fileID: 1855459516}
   timeBar: {fileID: 1262334489}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &1209252472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25314,11 +25323,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47916666, y: 0.3125}
   m_EdgeRadius: 0
---- !u!212 &1209252473 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 898863355}
 --- !u!1 &1209305771
 GameObject:
   m_ObjectHideFlags: 0
@@ -25544,61 +25548,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1221217032 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4940985741439226, guid: 38d22e1553bfb7943b9544b849dee0dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 898863355}
---- !u!114 &1209252471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209252469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39f9914de060e264b85a7a17dadd41c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1209252473}
-  openSprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
-  objects:
-  - {fileID: 1186639840113104, guid: ddb1c78e464864546be40b1f50598c29, type: 2}
-  - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
-  spawnPoint: {fileID: 1855459516}
-  timeBar: {fileID: 1262334489}
-  chestSound: {fileID: 0}
-  source: {fileID: 0}
---- !u!61 &1209252472
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1209252469}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.47916666, y: 0.3125}
-    newSize: {x: 0.47916666, y: 0.3125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.47916666, y: 0.3125}
-  m_EdgeRadius: 0
---- !u!212 &1209252473 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
-    type: 2}
-  m_PrefabInternal: {fileID: 529751288}
 --- !u!1 &1226945754
 GameObject:
   m_ObjectHideFlags: 0
@@ -36382,8 +36331,8 @@ MonoBehaviour:
   attackPos: {fileID: 182827534}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 1024
-  attackRange: 0.2
+    m_Bits: 5120
+  attackRange: 0.3
   damage: 10
   ThirdSkillCoolDown: {fileID: 1927894690}
   swordSound: {fileID: 8300000, guid: 024b57c41ad6f934d8823dcec053668a, type: 3}

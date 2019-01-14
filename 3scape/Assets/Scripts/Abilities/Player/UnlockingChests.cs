@@ -19,13 +19,9 @@ public class UnlockingChests : PlayerAbility
 
     public Image SecondSkillCoolDown;
 
-    public AudioClip chestSound;
-    public AudioSource source;
-
     private void Start()
     {
         time = timeAmt;
-        source.clip = chestSound;
     }
 
     void Update ()
@@ -50,10 +46,7 @@ public class UnlockingChests : PlayerAbility
                 {
                     if (col[i].tag == "Chest")
                     {
-
-                       // source.Play();
                         col[i].GetComponent<Chest>().timeBar.fillAmount = time / timeAmt;
-
                     }
                 }
             }
@@ -74,7 +67,6 @@ public class UnlockingChests : PlayerAbility
                 {
                     if (col[i].tag == "Chest")
                     {
-                        source.Play();
                         col[i].GetComponent<Chest>().checkIfOpen();
 
                         setCooldown();

@@ -50,7 +50,7 @@ public class MainMenu : MonoBehaviour
 
         TutorialSLB.onClick.AddListener(() => SLTutorial());
         Level01SLB.onClick.AddListener(() => SLLevel01());
-        //Level02SLB.onClick.AddListener(() => SLLevel02());
+        Level02SLB.onClick.AddListener(() => SLLevel02());
         BackSLB.onClick.AddListener(() => SLBack());
 
         AudioVideoOB.onClick.AddListener(() => OAudioVideo());

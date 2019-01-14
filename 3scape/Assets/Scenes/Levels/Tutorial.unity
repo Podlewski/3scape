@@ -1258,6 +1258,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f, type: 2}
   hurtBlood: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9, type: 2}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!58 &70525289
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -26965,6 +26968,7 @@ MonoBehaviour:
   healthBarBG: {fileID: 463807349}
   healthBarHUD: {fileID: 1315527460}
   healthBarHUDBG: {fileID: 1696869474}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!212 &382437319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31097,6 +31101,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 0}
   hurtBlood: {fileID: 0}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!61 &766856626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32200,6 +32207,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 0}
   hurtBlood: {fileID: 0}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!61 &820540840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32693,6 +32703,7 @@ MonoBehaviour:
   healthBarBG: {fileID: 635163842}
   healthBarHUD: {fileID: 629067509}
   healthBarHUDBG: {fileID: 1348647047}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!82 &833718572
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32938,8 +32949,6 @@ MonoBehaviour:
   timeAmt: 10
   tmp: 0
   SecondSkillCoolDown: {fileID: 2079441275}
-  chestSound: {fileID: 8300000, guid: d537a61ec806e1641956aeecbcad98ed, type: 3}
-  source: {fileID: 833718572}
 --- !u!114 &833718580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36251,6 +36260,7 @@ MonoBehaviour:
   - {fileID: 382437318}
   - {fileID: 833718570}
   - {fileID: 1170955591}
+  p1: {fileID: 0}
 --- !u!114 &1054965290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38094,6 +38104,7 @@ MonoBehaviour:
   healthBarBG: {fileID: 1481499265}
   healthBarHUD: {fileID: 1293587980}
   healthBarHUDBG: {fileID: 2128216602}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &1170955593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42715,7 +42726,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.333
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -43802,6 +43813,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f, type: 2}
   hurtBlood: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9, type: 2}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!61 &1585327776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45435,6 +45449,8 @@ MonoBehaviour:
   - {fileID: 1207107385674012, guid: 6dc92e2f2d40d9d45af7df24fd4afe77, type: 2}
   spawnPoint: {fileID: 485454393}
   timeBar: {fileID: 1498114116}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &1745735987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46093,6 +46109,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 0}
   hurtBlood: {fileID: 0}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!61 &1784204636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47008,6 +47027,8 @@ MonoBehaviour:
   - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
   spawnPoint: {fileID: 1133378110}
   timeBar: {fileID: 849597981}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &1865613148
 BoxCollider2D:
   m_ObjectHideFlags: 0

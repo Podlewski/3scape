@@ -42,9 +42,9 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 === Edyta
 
-* [ ] {Tydzień 13} Checkpointy: faktyczny zapis + brak colliderów spowalniających
-* [ ] Nowa muzyka - menu oraz 2 poziom.
-* [ ] Poprawić efekty dźwiękowe - otwieranie skrzyni łotrzyka, muzyka w tutorialu wciąż się kończy.
+* [x] Dokończenie checkpointów.
+* [x] Nowa muzyka: menu, ustawienia, creditsy, 2 poziom.
+* [ ] Poprawa efektów dźwiękowych: otwieranie skrzyni łotrzyka, muzyka w tutorialu.
 * [ ] Dodać ekran ładowania.
 
 === Krzysiek
@@ -63,8 +63,8 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 === Justyna
 
-* [ ] Stworzenie 2 poziomu. 
-* [ ] Poprawki w 1 poziomie: niezniszczalna beczka.
+* [x] Stworzenie 2 poziomu. 
+* [x] Poprawki w 1 poziomie: niezniszczalna beczka.
 
 === Bartosz
  

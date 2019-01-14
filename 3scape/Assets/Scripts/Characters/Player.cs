@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     internal bool isBeingHealed = false;
 
+    public Vector3 respawnPoint;
+
     void Start()
     {
         health = startHealth;
@@ -43,7 +45,8 @@ public class Player : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            transform.position = respawnPoint;
+           // Destroy(gameObject);
         }
     }
 
@@ -116,4 +119,13 @@ public class Player : MonoBehaviour
             "Health: " + health + ", health / startHealth: " + health / startHealth + "\t" +
         "FillAmount: " + healthBar.fillAmount);*/
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Checkpoint")
+        {
+            respawnPoint = collision.transform.position;
+        }
+    }
+
 }

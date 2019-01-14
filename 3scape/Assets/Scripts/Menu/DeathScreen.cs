@@ -11,6 +11,7 @@ public class DeathScreen : MonoBehaviour
     public Button RestartB;
     public Button MenuB;
     public Player[] player;
+    public Player p1;
 
     private readonly int allowedDistance = 20;
     private Dictionary<Player, Vector3> startingCoords = new Dictionary<Player, Vector3>();
@@ -21,7 +22,7 @@ public class DeathScreen : MonoBehaviour
         MenuB.onClick.AddListener(() => Menu());
 
         foreach (var p in player)
-            startingCoords.Add(p, p.GetComponent<Transform>().position);
+            startingCoords.Add(p, p.transform.position);
     }
 
     void Update()
@@ -58,7 +59,7 @@ public class DeathScreen : MonoBehaviour
 
     private void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         DeactivateDeathScreen();
     }
 
@@ -71,10 +72,12 @@ public class DeathScreen : MonoBehaviour
     private void RestartCharacters()    // this function needs to restore starting setup of parameters used to determine if DeathScreen should be activated,
     {                                   // otherwise this script will activate DeathScreen and/or pause game before they change themselves after Restart
         foreach (var p in player)
-            p.health = p.startHealth;
+            if (p != null)
+                p.GetComponent<Transform>().position = p.respawnPoint;
 
         foreach (var p in player)
-            if (p != null)
-                p.GetComponent<Transform>().position = startingCoords[p];
+            p.health = p.startHealth;
+
+        
     }
 }

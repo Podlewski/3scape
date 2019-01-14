@@ -13,6 +13,7 @@ public class RangedAttack : PlayerAbility
     public AudioClip shot;
     public AudioSource source;
 
+
     void Start()
     {
         defaultColor = ThirdSkillCoolDown.color;
@@ -23,7 +24,6 @@ public class RangedAttack : PlayerAbility
     {
         if (isAbilityReady())
         {
-
             animator.SetBool("IsAttacking", false);
 
             //if (isButtonPressedProper() && isPositionProper())
@@ -39,8 +39,9 @@ public class RangedAttack : PlayerAbility
         }
         else
         {
-            reduceCooldown();
+            reduceCooldown(); 
         }
+        
 
         if (!isPositionProper())
         {
@@ -48,7 +49,10 @@ public class RangedAttack : PlayerAbility
             ThirdSkillCoolDown.fillAmount = 1;
         }
         else if (!isAbilityStillWorking())
+        {
             ThirdSkillCoolDown.fillAmount = currentCooldown / cooldown;
+        }
+            
 	}
 
     void Shoot()

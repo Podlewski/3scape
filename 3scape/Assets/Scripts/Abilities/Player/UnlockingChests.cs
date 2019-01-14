@@ -19,8 +19,19 @@ public class UnlockingChests : PlayerAbility
 
     public Image SecondSkillCoolDown;
 
+    public AudioClip chestSound;
+    public AudioSource source;
+
+    private Text secondSkillTextCdArcher;
+
+    private Image skillImage;
+    public Sprite skillSprite;
+    public Sprite skillSpriteUsed;
+
     private void Start()
     {
+        secondSkillTextCdArcher = GameObject.Find("SecondSkillTextCdArcher").GetComponent<Text>();
+        skillImage = GameObject.Find("SecondSkillArcherTrol").GetComponent<Image>();
         time = timeAmt;
     }
 
@@ -28,6 +39,7 @@ public class UnlockingChests : PlayerAbility
     {
         if (isAbilityReady() && isPositionProper())
         {
+            skillImage.sprite = skillSprite;
             Collider2D[] col = Physics2D.OverlapCircleAll(unlockPos.position, unlockRange, whatCanOpen);
 
             //animator.SetBool("jakasAnimacja", false);
@@ -78,10 +90,20 @@ public class UnlockingChests : PlayerAbility
         else
         {
             currentCooldown -= Time.deltaTime;
+            int val = (int)currentCooldown;
+            secondSkillTextCdArcher.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                secondSkillTextCdArcher.text = "";
+            }
         }
 
         if (!isPositionProper())
-            SecondSkillCoolDown.fillAmount = 1;
+        {
+            //SecondSkillCoolDown.fillAmount = 1;
+            skillImage.sprite = skillSpriteUsed;
+        }
+            
         else
             SecondSkillCoolDown.fillAmount = 0;
     }

@@ -12,8 +12,16 @@ public class SettingTraps : PlayerAbility
 
     public byte maxNumberOfTraps = 3;
 
+    private Text firstSkillTextCdArcher;
+
+    private Image skillImage;
+    public Sprite skillSprite;
+    public Sprite skillSpriteUsed;
+
     void Start()
     {
+        firstSkillTextCdArcher = GameObject.Find("FirstSkillTextCdArcher").GetComponent<Text>();
+        skillImage = GameObject.Find("FirstSkillArcher").GetComponent<Image>();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
     }
@@ -22,6 +30,7 @@ public class SettingTraps : PlayerAbility
     {
         if (isAbilityReady() && isPositionProper() && isButtonPressedProper())
         {
+            skillImage.sprite = skillSprite;
             SetTrap();
             setCooldown();
 
@@ -41,15 +50,24 @@ public class SettingTraps : PlayerAbility
         }
         else
         {
+            skillImage.sprite = skillSprite;
             FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillClockwise = defaultDirection;
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            int val = (int)currentCooldown;
+            firstSkillTextCdArcher.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                firstSkillTextCdArcher.text = "";
+            }
         }
 
         if (!isPositionProper())
         {
-            FirstSkillCoolDown.color = defaultColor;
-            FirstSkillCoolDown.fillAmount = 1;
+            //FirstSkillCoolDown.color = defaultColor;
+            //FirstSkillCoolDown.fillAmount = 1;
+            skillImage.sprite = skillSpriteUsed;
         }
         else if (!isAbilityStillWorking())
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;

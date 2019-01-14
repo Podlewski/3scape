@@ -9,9 +9,12 @@ public class CharactersInventory : MonoBehaviour {
     public bool[] isFull;
     public GameObject[] slots;
     public Image[] images;
+    private Text keyText;
 
     private void Start()
     {
+        keyText = GameObject.Find("keyText").GetComponent<Text>();
+
         for(int i=0; i<images.Length; i++)
             images[i].enabled = false;
 
@@ -24,10 +27,16 @@ public class CharactersInventory : MonoBehaviour {
         for(int i = 0; i < isThereKey.Length; i++)
         {
             if(isThereKey[i])
+            {
                 images[i].enabled = true;
-
+                keyText.text = "Good job";
+            } 
             else
+            {
                 images[i].enabled = false;
+                keyText.text = "Find key";
+            }
+                
         }
     }
 }

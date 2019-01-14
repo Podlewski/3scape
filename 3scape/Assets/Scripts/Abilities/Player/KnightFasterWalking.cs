@@ -17,8 +17,16 @@ public class KnightFasterWalking : ColorAbility
     public AudioSource source;
     public AudioSource musicSource;
 
+    private Text secondSkillTextCdKnight;
+
+    private Image skillImage;
+    public Sprite skillSprite;
+    public Sprite skillSpriteUsed;
+
     void Start()
     {
+        secondSkillTextCdKnight = GameObject.Find("SecondSkillTextCdKnight").GetComponent<Text>();
+        skillImage = GameObject.Find("SecondSkillKnight").GetComponent<Image>();
         findObjects();
         defaultColor = SecondSkillCoolDown.color;
         defaultDirection = SecondSkillCoolDown.fillClockwise;
@@ -29,6 +37,7 @@ public class KnightFasterWalking : ColorAbility
     {
         if (isAbilityReady())
         {
+            skillImage.sprite = skillSprite;
             if (isButtonDownProper() && isPositionProper())
             {
                 musicSource.Pause();
@@ -68,15 +77,24 @@ public class KnightFasterWalking : ColorAbility
         }
         else
         {
+            skillImage.sprite = skillSprite;
             SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillClockwise = defaultDirection;
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            int val = (int)currentCooldown;
+            secondSkillTextCdKnight.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                secondSkillTextCdKnight.text = "";
+            }
         }
 
         if (!isPositionProper())
         {
-            SecondSkillCoolDown.color = defaultColor;
-            SecondSkillCoolDown.fillAmount = 1;
+            //SecondSkillCoolDown.color = defaultColor;
+            //SecondSkillCoolDown.fillAmount = 1;
+            skillImage.sprite = skillSpriteUsed;
         }
         else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;

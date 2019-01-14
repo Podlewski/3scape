@@ -23,6 +23,10 @@ public class Enemy : MonoBehaviour
     public GameObject deathBlood;
     public GameObject hurtBlood;
 
+    public bool isReward = false;
+    public GameObject reward;
+    public Transform spawnPoint;
+
     void Start()
     {
         health = startHealth;
@@ -54,8 +58,14 @@ public class Enemy : MonoBehaviour
                 Instantiate(PossibleExplosion, vector3, transform.rotation = Quaternion.identity);
             }
             
+            if(isReward)
+            {
+                GameObject item = Instantiate(reward, spawnPoint.position, spawnPoint.rotation) as GameObject;
+            }
 
             Destroy(gameObject);
+
+            
         }
     }
 

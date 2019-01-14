@@ -27119,8 +27119,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.047167256}
-  m_Size: {x: 0.6107755, y: 0.78676224}
+  m_Offset: {x: 0.1, y: -0.04716726}
+  m_Size: {x: 0.6, y: 0.78676224}
   m_Direction: 0
 --- !u!50 &382437325
 Rigidbody2D:
@@ -32896,8 +32896,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13973188, y: -0.0088091595}
-  m_Size: {x: 0.5554028, y: 0.80429417}
+  m_Offset: {x: 0.1, y: -0.0088091595}
+  m_Size: {x: 0.6, y: 0.80429417}
   m_Direction: 0
 --- !u!50 &833718578
 Rigidbody2D:
@@ -38224,8 +38224,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11505251, y: -0.13507703}
-  m_Size: {x: 0.5609143, y: 0.6703116}
+  m_Offset: {x: 0.1, y: -0.13507703}
+  m_Size: {x: 0.6, y: 0.6703116}
   m_Direction: 0
 --- !u!50 &1170955599
 Rigidbody2D:

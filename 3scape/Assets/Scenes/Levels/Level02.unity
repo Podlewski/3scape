@@ -2137,8 +2137,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11505251, y: -0.13507703}
-  m_Size: {x: 0.5609143, y: 0.6703116}
+  m_Offset: {x: 0.1, y: -0.13507703}
+  m_Size: {x: 0.6, y: 0.6703116}
   m_Direction: 0
 --- !u!50 &94257452
 Rigidbody2D:
@@ -10544,11 +10544,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.41
+      value: -0.40999985
       objectReference: {fileID: 0}
     - target: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.78
+      value: 0.7800002
       objectReference: {fileID: 0}
     - target: {fileID: 4755194373342512, guid: 588d570a52e35c5458973a7d067a2875, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10924,8 +10924,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13973188, y: -0.0088091595}
-  m_Size: {x: 0.5554028, y: 0.80429417}
+  m_Offset: {x: 0.1, y: -0.0088091595}
+  m_Size: {x: 0.6, y: 0.80429417}
   m_Direction: 0
 --- !u!50 &521096276
 Rigidbody2D:
@@ -36386,8 +36386,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.047167256}
-  m_Size: {x: 0.6107755, y: 0.78676224}
+  m_Offset: {x: 0.1, y: -0.047167256}
+  m_Size: {x: 0.6, y: 0.78676224}
   m_Direction: 0
 --- !u!50 &1800203625
 Rigidbody2D:

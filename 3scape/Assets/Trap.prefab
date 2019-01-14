@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1464438809117552, guid: d04769e63bd97fc40bda433f0c6e95bf, type: 2}
+  trapsT: {fileID: 0}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 5120
   explosionRange: 1
   damage: 10
 --- !u!212 &212190824054383356

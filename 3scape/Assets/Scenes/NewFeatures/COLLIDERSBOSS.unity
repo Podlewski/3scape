@@ -2504,6 +2504,7 @@ MonoBehaviour:
   healthBarBG: {fileID: 1125470434}
   healthBarHUD: {fileID: 755770075}
   healthBarHUDBG: {fileID: 156187786}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!82 &94257450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3614,34 +3615,6 @@ Transform:
   - {fileID: 311570075}
   m_Father: {fileID: 292257886}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &142954942
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 142954943}
-  m_Layer: 8
-  m_Name: AttackPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &142954943
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 142954942}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 50, z: 0}
-  m_LocalScale: {x: -165.345, y: 165.344, z: 107.541}
-  m_Children: []
-  m_Father: {fileID: 1902316529}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &144223960
 GameObject:
@@ -10777,8 +10750,6 @@ MonoBehaviour:
   timeAmt: 10
   tmp: 0
   SecondSkillCoolDown: {fileID: 844364673}
-  chestSound: {fileID: 8300000, guid: d537a61ec806e1641956aeecbcad98ed, type: 3}
-  source: {fileID: 521096274}
 --- !u!114 &521096269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10882,6 +10853,7 @@ MonoBehaviour:
   healthBarBG: {fileID: 1478728301}
   healthBarHUD: {fileID: 1053118069}
   healthBarHUDBG: {fileID: 614560739}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!82 &521096274
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12715,6 +12687,8 @@ MonoBehaviour:
   - {fileID: 1186639840113104, guid: ddb1c78e464864546be40b1f50598c29, type: 2}
   spawnPoint: {fileID: 2017996206}
   timeBar: {fileID: 564114235}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &613568489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14240,7 +14214,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669094147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.485373, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.597816, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421078971}
@@ -18934,131 +18908,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1001 &854567391
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1099194448}
-    m_Modifications:
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 67.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.07421875
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: optionalHealthBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: source
-      value: 
-      objectReference: {fileID: 1902316530}
-    - target: {fileID: 50632182725430290, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114730907234313482, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: whatIsEnemy.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 114730907234313482, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: attackRange
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: walkDetectionDistance
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114730907234313482, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: cooldown
-      value: 2.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: speed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: deathBlood
-      value: 
-      objectReference: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f,
-        type: 2}
-    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: hurtBlood
-      value: 
-      objectReference: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9,
-        type: 2}
-    - target: {fileID: 114013555600821806, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: zombieDeath
-      value: 
-      objectReference: {fileID: 8300000, guid: a43b3f80e6eec144ab823536b140a0aa, type: 3}
-    - target: {fileID: 114730907234313482, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: source
-      value: 
-      objectReference: {fileID: 1902316530}
-    - target: {fileID: 114730907234313482, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-        type: 2}
-      propertyPath: zombieSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ec5e6ccf2be25b64bb658e27a055f160, type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &858342393
 GameObject:
   m_ObjectHideFlags: 0
@@ -19382,6 +19231,8 @@ MonoBehaviour:
   - {fileID: 1186639840113104, guid: ddb1c78e464864546be40b1f50598c29, type: 2}
   spawnPoint: {fileID: 427729520}
   timeBar: {fileID: 1727286431}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &875609234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23704,7 +23555,6 @@ Transform:
   - {fileID: 1434022437}
   - {fileID: 1755467746}
   - {fileID: 1400337989}
-  - {fileID: 1902316529}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25082,6 +24932,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 0}
   hurtBlood: {fileID: 0}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!61 &1173594920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25651,6 +25504,8 @@ MonoBehaviour:
   - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
   spawnPoint: {fileID: 1601401336}
   timeBar: {fileID: 1577000807}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &1210252802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29133,6 +28988,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f, type: 2}
   hurtBlood: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9, type: 2}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!114 &1364555101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29973,6 +29831,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f, type: 2}
   hurtBlood: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9, type: 2}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!114 &1400337991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30553,6 +30414,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f, type: 2}
   hurtBlood: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9, type: 2}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!114 &1434022439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36215,6 +36079,8 @@ MonoBehaviour:
   - {fileID: 1479863770931090, guid: d10eecba309275f41bae684175521e72, type: 2}
   spawnPoint: {fileID: 988621919}
   timeBar: {fileID: 1336579505}
+  chestSound: {fileID: 0}
+  source: {fileID: 0}
 --- !u!61 &1684291913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38093,6 +37959,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f, type: 2}
   hurtBlood: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9, type: 2}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!61 &1755467751
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38664,6 +38533,7 @@ MonoBehaviour:
   - {fileID: 1800203623}
   - {fileID: 521096273}
   - {fileID: 94257449}
+  p1: {fileID: 0}
 --- !u!114 &1789575985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38870,6 +38740,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 1784107334119960, guid: a8462fc5979ff1248b695465085c7a3f, type: 2}
   hurtBlood: {fileID: 1605814619520426, guid: db6a93f0fd2a36c49a5ac14d9250ecc9, type: 2}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!61 &1793612815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39362,8 +39235,8 @@ MonoBehaviour:
   attackPos: {fileID: 182827534}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 1024
-  attackRange: 0.2
+    m_Bits: 5120
+  attackRange: 0.3
   damage: 10
   ThirdSkillCoolDown: {fileID: 1927894690}
   swordSound: {fileID: 8300000, guid: 024b57c41ad6f934d8823dcec053668a, type: 3}
@@ -39404,6 +39277,7 @@ MonoBehaviour:
   healthBarBG: {fileID: 1029160337}
   healthBarHUD: {fileID: 1135599990}
   healthBarHUDBG: {fileID: 1450068616}
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!70 &1800203624
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -41815,111 +41689,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901851999}
   m_CullTransparentMesh: 0
---- !u!1 &1902316528 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011539305864, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-    type: 2}
-  m_PrefabInternal: {fileID: 854567391}
---- !u!4 &1902316529 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a,
-    type: 2}
-  m_PrefabInternal: {fileID: 854567391}
---- !u!82 &1902316530
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1902316528}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1904737302
 GameObject:
   m_ObjectHideFlags: 0
@@ -42945,11 +42714,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4593751718048852, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 141.55
+      value: -77
       objectReference: {fileID: 0}
     - target: {fileID: 4593751718048852, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.0300002
+      value: -0.831
       objectReference: {fileID: 0}
     - target: {fileID: 4593751718048852, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -42995,11 +42764,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4593751718048852, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.6123899
+      value: 2.3476396
       objectReference: {fileID: 0}
     - target: {fileID: 1025605486487810, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eb2f5adb2435e74a9f73ead305b1ac3, type: 2}
@@ -43037,6 +42806,9 @@ MonoBehaviour:
   walkDetectionDistance: 0.3
   deathBlood: {fileID: 0}
   hurtBlood: {fileID: 0}
+  isReward: 0
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!82 &1930670298
 AudioSource:
   m_ObjectHideFlags: 0

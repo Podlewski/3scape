@@ -31,5 +31,6 @@ public class Arrow : MonoBehaviour
             hitInfo.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
+
     }
 }

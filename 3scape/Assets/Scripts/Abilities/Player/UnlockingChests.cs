@@ -22,8 +22,11 @@ public class UnlockingChests : PlayerAbility
     public AudioClip chestSound;
     public AudioSource source;
 
+    private Text secondSkillTextCdArcher;
+
     private void Start()
     {
+        secondSkillTextCdArcher = GameObject.Find("SecondSkillTextCdArcher").GetComponent<Text>();
         time = timeAmt;
         source.clip = chestSound;
     }
@@ -86,6 +89,12 @@ public class UnlockingChests : PlayerAbility
         else
         {
             currentCooldown -= Time.deltaTime;
+            int val = (int)currentCooldown;
+            secondSkillTextCdArcher.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                secondSkillTextCdArcher.text = "";
+            }
         }
 
         if (!isPositionProper())

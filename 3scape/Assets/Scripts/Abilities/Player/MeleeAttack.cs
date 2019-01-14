@@ -17,8 +17,11 @@ public class MeleeAttack : PlayerAbility
     public AudioClip zombieHitting;
     public AudioSource source;
 
+    private Text thirdSkillTextCdKnight;
+
     void Start()
     {
+        thirdSkillTextCdKnight = GameObject.Find("ThirdSkillTextCdKnight").GetComponent<Text>();
         defaultColor = ThirdSkillCoolDown.color;
         defaultDirection = ThirdSkillCoolDown.fillClockwise;
     }
@@ -60,7 +63,16 @@ public class MeleeAttack : PlayerAbility
         }
 
         else
+        {
             reduceCooldown();
+            int val = (int)currentCooldown;
+            thirdSkillTextCdKnight.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                thirdSkillTextCdKnight.text = "";
+            }
+        }
+            
 
         if (!isPositionProper())
         {

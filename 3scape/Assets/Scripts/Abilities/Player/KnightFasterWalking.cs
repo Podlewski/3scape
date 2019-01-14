@@ -17,8 +17,11 @@ public class KnightFasterWalking : ColorAbility
     public AudioSource source;
     public AudioSource musicSource;
 
+    private Text secondSkillTextCdKnight;
+
     void Start()
     {
+        secondSkillTextCdKnight = GameObject.Find("SecondSkillTextCdKnight").GetComponent<Text>();
         findObjects();
         defaultColor = SecondSkillCoolDown.color;
         defaultDirection = SecondSkillCoolDown.fillClockwise;
@@ -71,6 +74,13 @@ public class KnightFasterWalking : ColorAbility
             SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillClockwise = defaultDirection;
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            int val = (int)currentCooldown;
+            secondSkillTextCdKnight.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                secondSkillTextCdKnight.text = "";
+            }
         }
 
         if (!isPositionProper())

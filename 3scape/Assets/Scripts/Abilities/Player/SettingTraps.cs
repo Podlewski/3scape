@@ -12,8 +12,11 @@ public class SettingTraps : PlayerAbility
 
     public byte maxNumberOfTraps = 3;
 
+    private Text firstSkillTextCdArcher;
+
     void Start()
     {
+        firstSkillTextCdArcher = GameObject.Find("FirstSkillTextCdArcher").GetComponent<Text>();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
     }
@@ -44,6 +47,13 @@ public class SettingTraps : PlayerAbility
             FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillClockwise = defaultDirection;
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            int val = (int)currentCooldown;
+            firstSkillTextCdArcher.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                firstSkillTextCdArcher.text = "";
+            }
         }
 
         if (!isPositionProper())

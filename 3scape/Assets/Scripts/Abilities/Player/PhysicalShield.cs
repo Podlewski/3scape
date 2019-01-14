@@ -12,8 +12,11 @@ public class PhysicalShield : ColorAbility
     private Colorization effect;
     public float timeLeft = 3.3f;
 
+    private Text firstSkillTextCdKnight;
+
     void Start()
     {
+        firstSkillTextCdKnight = GameObject.Find("FirstSkillTextCdKnight").GetComponent<Text>();
         findObjects();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
@@ -74,6 +77,13 @@ public class PhysicalShield : ColorAbility
             FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillClockwise = defaultDirection;
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
+
+            int val = (int)currentCooldown;
+            firstSkillTextCdKnight.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                firstSkillTextCdKnight.text = "";
+            }
         }
 
         if (!isPositionProper())

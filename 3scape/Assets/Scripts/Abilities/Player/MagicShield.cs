@@ -9,9 +9,11 @@ public class MagicShield : ColorAbility
     public GameObject effect;
 
     public float timeLeft = 1.8f;
+    private Text secondSkillTextCdMage;
 
     private void Start()
     {
+        secondSkillTextCdMage = GameObject.Find("SecondSkillTextCdMage").GetComponent<Text>();
         findObjects();
         defaultColor = SecondSkillCoolDown.color;
         defaultDirection = SecondSkillCoolDown.fillClockwise;
@@ -62,6 +64,7 @@ public class MagicShield : ColorAbility
 
         if (isAbilityStillWorking())
         {
+            
             SecondSkillCoolDown.color = new Color(0.5f, 0.2f, 0.7f, 0.8f);
             SecondSkillCoolDown.fillClockwise = !defaultDirection;
             SecondSkillCoolDown.fillAmount = remaindingDuration / duration;
@@ -71,6 +74,12 @@ public class MagicShield : ColorAbility
             SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillClockwise = defaultDirection;
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
+            int val = (int)currentCooldown;
+            secondSkillTextCdMage.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                secondSkillTextCdMage.text = "";
+            }
         }
 
         if (!isPositionProper())

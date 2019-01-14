@@ -12,9 +12,16 @@ public class RangedAttack : PlayerAbility
 
     public AudioClip shot;
     public AudioSource source;
+    private Text thirdSkillTextCdMage;
+    private Text thirdSkillTextCdArcher;
+
+    private bool mageFlag;
+    private bool archerFlag;
 
     void Start()
     {
+        thirdSkillTextCdMage = GameObject.Find("ThirdSkillTextCdMage").GetComponent<Text>();
+        thirdSkillTextCdArcher = GameObject.Find("ThirdSkillTextCdArcher").GetComponent<Text>();
         defaultColor = ThirdSkillCoolDown.color;
         defaultDirection = ThirdSkillCoolDown.fillClockwise;
     }
@@ -40,6 +47,22 @@ public class RangedAttack : PlayerAbility
         else
         {
             reduceCooldown();
+
+            int val = (int)currentCooldown;
+            
+            thirdSkillTextCdMage.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                thirdSkillTextCdMage.text = "";
+            }
+
+            thirdSkillTextCdArcher.text = val.ToString();
+            if (currentCooldown < 0.1)
+            {
+                thirdSkillTextCdArcher.text = "";
+            }
+
+            
         }
 
         if (!isPositionProper())

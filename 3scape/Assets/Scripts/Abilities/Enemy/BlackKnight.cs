@@ -52,7 +52,6 @@ public class BlackKnight : AnimatedAbility
         {
             currentCooldown -= Time.deltaTime;
             animator.ResetTrigger("IsAttacking");
-        }
-
+        }       
     }
 }

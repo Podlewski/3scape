@@ -17,10 +17,14 @@ public class Heal : PlayerAbility
     public float timeLeft = 1.0f;
     private Text firstSkillTextCd;
 
+    private Image skillImage;
+    public Sprite skillSprite;
+    public Sprite skillSpriteUsed;
 
     private void Start()
     {
         firstSkillTextCd = GameObject.Find("FirstSkillTextCdMage").GetComponent<Text>();
+        skillImage = GameObject.Find("FirstSkillMage").GetComponent<Image>();
 
         knight = GameObject.Find("knight").GetComponent<Player>();
         mage = GameObject.Find("mage").GetComponent<Player>();
@@ -37,6 +41,7 @@ public class Heal : PlayerAbility
         {
             timeLeft = 1.0f;
 
+            skillImage.sprite = skillSprite;
             if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsHealing", true);
@@ -88,6 +93,7 @@ public class Heal : PlayerAbility
         }
         else
         {
+            skillImage.sprite = skillSprite;
             FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillClockwise = defaultDirection;
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
@@ -101,8 +107,9 @@ public class Heal : PlayerAbility
 
         if (!isPositionProper())
         {
-            FirstSkillCoolDown.color = defaultColor;
-            FirstSkillCoolDown.fillAmount = 1;
+          //  FirstSkillCoolDown.color = defaultColor;
+           // FirstSkillCoolDown.fillAmount = 1;
+            skillImage.sprite = skillSpriteUsed;
         }
         else if (!isAbilityStillWorking())
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;

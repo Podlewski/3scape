@@ -11,9 +11,14 @@ public class MagicShield : ColorAbility
     public float timeLeft = 1.8f;
     private Text secondSkillTextCdMage;
 
+    private Image skillImage;
+    public Sprite skillSprite;
+    public Sprite skillSpriteUsed;
+
     private void Start()
     {
         secondSkillTextCdMage = GameObject.Find("SecondSkillTextCdMage").GetComponent<Text>();
+        skillImage = GameObject.Find("SecondSkillMage").GetComponent<Image>();
         findObjects();
         defaultColor = SecondSkillCoolDown.color;
         defaultDirection = SecondSkillCoolDown.fillClockwise;
@@ -24,6 +29,7 @@ public class MagicShield : ColorAbility
         if (isAbilityReady())
         {
             timeLeft = 1.8f;
+            skillImage.sprite = skillSprite;
             if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsShield", true);
@@ -71,6 +77,7 @@ public class MagicShield : ColorAbility
         }
         else
         {
+            skillImage.sprite = skillSprite;
             SecondSkillCoolDown.color = defaultColor;
             SecondSkillCoolDown.fillClockwise = defaultDirection;
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;
@@ -84,8 +91,9 @@ public class MagicShield : ColorAbility
 
         if (!isPositionProper())
         {
-            SecondSkillCoolDown.color = defaultColor;
-            SecondSkillCoolDown.fillAmount = 1;
+            //SecondSkillCoolDown.color = defaultColor;
+            //SecondSkillCoolDown.fillAmount = 1;
+            skillImage.sprite = skillSpriteUsed;
         }
         else if (!isAbilityStillWorking())
             SecondSkillCoolDown.fillAmount = currentCooldown / cooldown;

@@ -14,9 +14,14 @@ public class PhysicalShield : ColorAbility
 
     private Text firstSkillTextCdKnight;
 
+    private Image skillImage;
+    public Sprite skillSprite;
+    public Sprite skillSpriteUsed;
+
     void Start()
     {
         firstSkillTextCdKnight = GameObject.Find("FirstSkillTextCdKnight").GetComponent<Text>();
+        skillImage = GameObject.Find("FirstSkillKnight").GetComponent<Image>();
         findObjects();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
@@ -30,7 +35,8 @@ public class PhysicalShield : ColorAbility
 
             timeLeft = 3.3f;
 
-           // animator.SetBool("IsShield", false);
+            skillImage.sprite = skillSprite;
+            // animator.SetBool("IsShield", false);
             if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsShield", true);
@@ -74,6 +80,7 @@ public class PhysicalShield : ColorAbility
         }
         else
         {
+            skillImage.sprite = skillSprite;
             FirstSkillCoolDown.color = defaultColor;
             FirstSkillCoolDown.fillClockwise = defaultDirection;
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;
@@ -88,8 +95,9 @@ public class PhysicalShield : ColorAbility
 
         if (!isPositionProper())
         {
-            FirstSkillCoolDown.color = defaultColor;
-            FirstSkillCoolDown.fillAmount = 1;
+            //FirstSkillCoolDown.color = defaultColor;
+            //FirstSkillCoolDown.fillAmount = 1;
+            skillImage.sprite = skillSpriteUsed;
         }
         else if (!isAbilityStillWorking())
             FirstSkillCoolDown.fillAmount = currentCooldown / cooldown;

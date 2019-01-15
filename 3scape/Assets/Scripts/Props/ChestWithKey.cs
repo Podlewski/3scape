@@ -24,12 +24,11 @@ public class ChestWithKey : MonoBehaviour
         source.clip = chestSound;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (timeBar.fillAmount == 1 && isFilled == false)
-        {
+        {            
             timeBar.enabled = false;
-            source.Play();
         }
 
         if (timeBar.fillAmount == 0 && isFilled == false)
@@ -41,6 +40,7 @@ public class ChestWithKey : MonoBehaviour
         if (timeBar.fillAmount < 1 && timeBar.fillAmount > 0 && isFilled == false)
         {
             timeBar.enabled = true;
+            source.Play();
         }
     }
 

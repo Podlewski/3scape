@@ -47,7 +47,7 @@ public class Swap : PlayerAbility
 
     void FixedUpdate()
     {
-        if (isAbilityReady() && isButtonDownProper() && isNotActiveSkills() && (isIdle() || isRun()))
+        if (isAbilityReady() && isButtonDownProper() /*&& isNotActiveSkills() && (isIdle() || isRun())*/)
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
 

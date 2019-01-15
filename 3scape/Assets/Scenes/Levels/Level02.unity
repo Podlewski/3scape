@@ -16503,7 +16503,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -26888,7 +26888,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -33077,7 +33077,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -35980,7 +35980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda1cfc202af8f54aa09be200041b583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelScore: {fileID: 0}
+  levelScore: {fileID: 1891600496}
   score: 0
 --- !u!114 &1709113658
 MonoBehaviour:

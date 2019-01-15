@@ -55,7 +55,7 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 === Gracjan
 
-* [x] Zmiana bohaterów na dwóch klawiszach.
+* [x] Zmiana bohaterów na dwóch klawiszach -> zmiana nie ujęta w finalnym buildzie. Gracze którzy zaproponowali taką zmianę po zobaczeniu jej wpływu na grę sami stwierdzili, że nie wpływa to dobrze, zostaliśmy więc przy starym rozwiązaniu z jednym klawiszem.
 * [ ] Wprowadzenie przeciwnika - szkieleta łucznika.
 * [x] Rozwój bossa: wprowadzenie paska życia, blokada ukończenia poziomu do póki boss nie zostanie pokonany, większa mobilność.
 * [x] Zmienić ikonę pola ochronnego.

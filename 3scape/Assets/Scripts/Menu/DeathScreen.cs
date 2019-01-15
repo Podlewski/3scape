@@ -13,6 +13,8 @@ public class DeathScreen : MonoBehaviour
     public Player[] player;
     public Player p1;
 
+    public CheckpointController Checkpoint;
+
     private readonly int allowedDistance = 20;
     private Dictionary<Player, Vector3> startingCoords = new Dictionary<Player, Vector3>();
 
@@ -59,7 +61,9 @@ public class DeathScreen : MonoBehaviour
 
     private void Restart()
     {
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (!Checkpoint.checkpointReached)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         DeactivateDeathScreen();
     }
 

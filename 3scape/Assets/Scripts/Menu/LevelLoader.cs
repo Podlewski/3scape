@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
 
     public GameObject loadingScreen;
+    public GameObject selectLevel;
     public Slider slider;
     public Text progressText;
 
@@ -20,6 +21,7 @@ public class LevelLoader : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         loadingScreen.SetActive(true);
+        selectLevel.SetActive(false);
 
         while (!operation.isDone)
         {

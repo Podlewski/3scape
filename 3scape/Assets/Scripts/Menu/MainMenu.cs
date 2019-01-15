@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -23,6 +22,10 @@ public class MainMenu : MonoBehaviour
     public Button AudioVideoOB;
     public Button ControlsOB;
     public Button BackOB;
+
+    public GameObject loadingScreenUI;
+    public Slider slider;
+    public Text progressText;
 
     public Button LogoB;
     public SpriteRenderer LogoS;
@@ -82,7 +85,7 @@ public class MainMenu : MonoBehaviour
 
     private void Credits()
     {
-        SceneManager.LoadScene("credits", LoadSceneMode.Single);
+        StartCoroutine(LoadAsynchronously("credits"));
     }
 
     private void Quit()
@@ -98,17 +101,17 @@ public class MainMenu : MonoBehaviour
 
     private void SLTutorial()
     {
-        SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Single);
+        StartCoroutine(LoadAsynchronously("Tutorial"));
     }
 
     private void SLLevel01()
     {
-        SceneManager.LoadSceneAsync("Level01", LoadSceneMode.Single);
+        StartCoroutine(LoadAsynchronously("Level01"));
     }
 
     private void SLLevel02()
     {
-        SceneManager.LoadSceneAsync("Level02", LoadSceneMode.Single);
+        StartCoroutine(LoadAsynchronously("Level02"));
     }
 
     private void SLBack()
@@ -119,18 +122,37 @@ public class MainMenu : MonoBehaviour
 
     private void OAudioVideo()
     {
-        SceneManager.LoadSceneAsync("audiovideo", LoadSceneMode.Single);
+        SceneManager.LoadScene("audiovideo", LoadSceneMode.Single);
     }
     
     private void OControls()
     {
-        SceneManager.LoadSceneAsync("controls", LoadSceneMode.Single);
+        SceneManager.LoadScene("controls", LoadSceneMode.Single);
     }
 
     private void OBack()
     {
         mainMenuUI.gameObject.SetActive(true);
         optionsUI.gameObject.SetActive(false);
+    }
+
+    IEnumerator LoadAsynchronously(string sceneName)
+    {
+        Debug.Log("A");
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+
+        mainMenuUI.gameObject.SetActive(false);
+        selectLevelUI.gameObject.SetActive(false);
+        loadingScreenUI.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            progressText.text = progress * 100 + "%";
+
+            yield return null;
+        }
     }
 
 

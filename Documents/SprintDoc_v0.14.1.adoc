@@ -44,19 +44,18 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 * [x] Dokończenie checkpointów.
 * [x] Nowa muzyka: menu, ustawienia, creditsy, 2 poziom.
-* [ ] Poprawa efektów dźwiękowych: otwieranie skrzyni łotrzyka, muzyka w tutorialu.
-* [ ] Dodać ekran ładowania.
+* [x] Poprawa efektów dźwiękowych: otwieranie skrzyni łotrzyka, muzyka w tutorialu.
+* [x] Dodać ekran ładowania.
 
 === Krzysiek
 
-* [ ] Zablokować łącznie się postaci.
-* [ ] Poprawienie colliderów (wciąż możliwe stanie na wrogach).
-* [ ] Poprawa AI bossa (podczas skakania drużyna staje się dla niego niewidoczna).
+* [x] Zablokować łącznie się postaci.
+* [x] Poprawienie colliderów (wciąż możliwe stanie na wrogach).
+* [x] Poprawa AI bossa (podczas skakania drużyna staje się dla niego niewidoczna).
 
 === Gracjan
 
-* [ ] {Tydzień WSZYSTKIE} Poprawa zamiany bohaterów
-* [ ] {Tydzień 13} Checkpointy + brak colliderów spowalniających
+* [x] Zmiana bohaterów na dwóch klawiszach.
 * [ ] Wprowadzenie przeciwnika - szkieleta łucznika.
 * [x] Rozwój bossa: wprowadzenie paska życia, blokada ukończenia poziomu do póki boss nie zostanie pokonany, większa mobilność.
 * [x] Zmienić ikonę pola ochronnego.
@@ -72,10 +71,10 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 === Konrad
 
-* [ ] Wyszarzenie samych ikon umiejętności, a nie całych slotów.
-* [ ] Timery umiejętności: ile jeszcze działają, ile się ładują.
+* [x] Wyszarzenie samych ikon umiejętności, a nie całych slotów.
+* [x] Timery umiejętności: ile jeszcze działają, ile się ładują.
 * [x] Wprowadzenie specjalnego miejsca na klucz.
-* [ ] Poprawa czytelności HUDu: ilość trapów oraz slot na klucz na dół, lepiej pokazany czas oraz punkty na górze.
+* [x] Poprawa czytelności HUDu: ilość trapów oraz slot na klucz na dół, lepiej pokazany czas oraz punkty na górze.
 
 === Zbyszek
 
@@ -85,10 +84,7 @@ Poniżej przedstawiamy podział obowiązków na ostatni sprint.
 
 === Karol
 
-* [ ] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
-* [ ] Połączenie zmian wprowadzonych przez team w jedną część.
+* [x] Przygotowanie kolejnej wersji dokumentu, który pozwoli zobaczyć jak przebiegała praca w sprincie i jakie mamy dalej założenia.
+* [x] Połączenie zmian wprowadzonych przez team w jedną część.
 * [x] Dostosowanie wyglądu ustawień do wyglądu menu.
 * [x] Dodane credity do gry.
-* [ ] Poprawki w poziomie tutorialowym. 
-* [ ] Balans gry:
-** [ ] Osłabienia: morale rycerza (za duży skok), leczenie maga (zbyt duże leczenie)

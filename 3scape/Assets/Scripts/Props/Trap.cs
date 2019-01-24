@@ -21,7 +21,7 @@ public class Trap : MonoBehaviour
         trapsT = GameObject.Find("Traps_Text").GetComponent<Text>();
 
         //  trapsT.text = "Traps: " + GlobalVariable.numberOfTraps + "/3";
-        trapsT.text = GlobalVariable.numberOfTraps + "/3";
+        trapsT.text = GlobalVariable.maximumNumberOfTraps - GlobalVariable.numberOfTraps + "/" + GlobalVariable.maximumNumberOfTraps;
     }
 
     void Update()
@@ -43,7 +43,7 @@ public class Trap : MonoBehaviour
             Destroy(gameObject);
             GlobalVariable.numberOfTraps--;
             //  trapsT.text = "Traps: " + GlobalVariable.numberOfTraps + "/3";
-            trapsT.text = GlobalVariable.numberOfTraps + "/3";
+            trapsT.text = GlobalVariable.maximumNumberOfTraps - GlobalVariable.numberOfTraps + "/" + GlobalVariable.maximumNumberOfTraps;
         }
 
         if (Time.time - startTime > 20)
@@ -55,7 +55,7 @@ public class Trap : MonoBehaviour
             Destroy(gameObject);
             GlobalVariable.numberOfTraps--;
             //trapsT.text = "Traps: " + GlobalVariable.numberOfTraps + "/3";
-            trapsT.text = GlobalVariable.numberOfTraps + "/3";
+            trapsT.text = GlobalVariable.maximumNumberOfTraps - GlobalVariable.numberOfTraps + "/" + GlobalVariable.maximumNumberOfTraps;
         }
     }
 }

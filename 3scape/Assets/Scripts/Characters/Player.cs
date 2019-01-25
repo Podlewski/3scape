@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Image healthBarBG;
     public Image healthBarHUD;
     public Image healthBarHUDBG;
-    private Image healthBarPicked;
+    public Image healthBarPicked;
 
     private bool physicalImmunity = false;
     private bool magicImmunity = false;
@@ -38,15 +38,6 @@ public class Player : MonoBehaviour
         else
         {
             throw new System.Exception();
-        }
-    }
-
-    void Update()
-    {
-        if (health <= 0)
-        {
-            transform.position = respawnPoint;
-           // Destroy(gameObject);
         }
     }
 

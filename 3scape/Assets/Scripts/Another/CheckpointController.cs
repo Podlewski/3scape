@@ -8,7 +8,7 @@ public class CheckpointController : MonoBehaviour
     public Sprite redFlag;
     public Sprite greenFlag;
     private SpriteRenderer checpointSpriteRenderer;
-    public bool checkpointReached;
+    public bool checkpointReached = false;
 
     // Use this for initialization
     void Start()

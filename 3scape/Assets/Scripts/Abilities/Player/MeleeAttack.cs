@@ -28,16 +28,22 @@ public class MeleeAttack : PlayerAbility
         defaultDirection = ThirdSkillCoolDown.fillClockwise;
     }
 
+    void FixedUpdate()
+    {
+        if (isAbilityReady())
+        {
+            animator.SetBool("IsAttacking", false);
+        }
+    }
+
     void Update()
     {
         if (isAbilityReady() && isPositionProper())
         {
-            animator.SetBool("IsAttacking", false);
             skillImage.sprite = skillSprite;
-            //if (isButtonPressedProper() && isPositionProper())
-            if (isButtonDownProper() && isPositionProper())
+            if (isButtonPressedProper() && isPositionProper())
+            //if (isButtonDownProper() && isPositionProper())
             {
-                
                 animator.SetBool("IsAttacking", true);
                 source.PlayOneShot(swordSound);
 
@@ -64,7 +70,6 @@ public class MeleeAttack : PlayerAbility
                 ThirdSkillCoolDown.fillAmount = 1;
             }
         }
-
         else
         {
             reduceCooldown();
@@ -72,10 +77,8 @@ public class MeleeAttack : PlayerAbility
 
         if (!isAbilityStillWorking())
         {
-
             skillImage.sprite = skillSprite;
         }
-
 
         if (!isPositionProper())
         {
@@ -87,7 +90,5 @@ public class MeleeAttack : PlayerAbility
         {
             ThirdSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
-            
     }
 }
-

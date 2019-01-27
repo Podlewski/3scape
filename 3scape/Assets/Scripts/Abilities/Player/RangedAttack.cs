@@ -20,14 +20,20 @@ public class RangedAttack : PlayerAbility
         defaultDirection = ThirdSkillCoolDown.fillClockwise;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isAbilityReady())
         {
             animator.SetBool("IsAttacking", false);
+        }
+    }
 
-            //if (isButtonPressedProper() && isPositionProper())
-            if (isButtonDownProper() && isPositionProper())
+    void Update()
+    {
+        if (isAbilityReady())
+        {
+            if (isButtonPressedProper() && isPositionProper())
+            //if (isButtonDownProper() && isPositionProper())
             {
                 animator.SetBool("IsAttacking", true);
 
@@ -39,9 +45,8 @@ public class RangedAttack : PlayerAbility
         }
         else
         {
-            reduceCooldown(); 
+            reduceCooldown();
         }
-        
 
         if (!isPositionProper())
         {
@@ -52,7 +57,6 @@ public class RangedAttack : PlayerAbility
         {
             ThirdSkillCoolDown.fillAmount = currentCooldown / cooldown;
         }
-            
 	}
 
     void Shoot()

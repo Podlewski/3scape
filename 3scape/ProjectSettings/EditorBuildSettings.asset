@@ -10,10 +10,10 @@ EditorBuildSettings:
     guid: 1466a194c5e05d746a398086a91bd8d1
   - enabled: 1
     path: Assets/Scenes/Menu/Settings/audiovideo.unity
-    guid: 5190a38ec1f4e9b4b8dd01320d7dd623
+    guid: a89e69da76740774daf97e3708c21b7c
   - enabled: 1
     path: Assets/Scenes/Menu/Settings/controls.unity
-    guid: 4c383655899b2ea43aabdf2e10b55298
+    guid: 360a2382bd485af4ba50465c4899b22f
   - enabled: 1
     path: Assets/Scenes/Menu/credits.unity
     guid: 82f286329f2c1c447959d689c097ba1b
@@ -29,5 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/pause_menu.unity
     guid: f09da2420ccecb140b9f70e89b40be95
-
   m_configObjects: {}

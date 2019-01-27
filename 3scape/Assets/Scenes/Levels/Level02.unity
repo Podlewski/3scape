@@ -7541,7 +7541,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 353750794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.377512, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.479201, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1852264220}
@@ -12070,7 +12070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b091cf1bf97274b8b8dcf5bad2e66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 0.917
   duration: 0
   animator: {fileID: 559555666}
   castTime: 0
@@ -12079,7 +12079,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 5120
-  attackRange: 0.3
+  attackRange: 0.65
   damage: 10
   ThirdSkillCoolDown: {fileID: 915389929}
   swordSound: {fileID: 8300000, guid: 024b57c41ad6f934d8823dcec053668a, type: 3}
@@ -18353,7 +18353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c71bf2be77ca344b3a26ebb80c67af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 1
   duration: 0
   animator: {fileID: 844698690}
   castTime: 0
@@ -20764,7 +20764,7 @@ MonoBehaviour:
   - {fileID: 844698697}
   playerAvgPos: {fileID: 1865807975}
   final: {fileID: 0}
-  nextSceneName: Level01
+  nextSceneName: main_menu
 --- !u!114 &939777956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21085,7 +21085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c71bf2be77ca344b3a26ebb80c67af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 0.556
   duration: 0
   animator: {fileID: 944623080}
   castTime: 0

@@ -76,12 +76,16 @@ public class DeathScreen : MonoBehaviour
     private void RestartCharacters()    // this function needs to restore starting setup of parameters used to determine if DeathScreen should be activated,
     {                                   // otherwise this script will activate DeathScreen and/or pause game before they change themselves after Restart
         foreach (var p in player)
+        {
             if (p != null)
-                p.GetComponent<Transform>().position = p.respawnPoint;
+            {
+                p.transform.position = p.respawnPoint;
+                p.health = p.startHealth;
+                p.healthBarPicked.fillAmount = p.health / p.startHealth;
+            }
+           
+        }
 
-        foreach (var p in player)
-            p.health = p.startHealth;
 
-        
     }
 }

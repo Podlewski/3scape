@@ -788,28 +788,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'ANCIENT YAKS
-
-
-
-    Edyta Adamczyk
-
-    Krzysztof Barden
-
-    Gracjan Grala
-
-    Justyna Hubert
-
-    Bartosz Jurczewski
-
-    Konrad Kowalczyk
-
-    Zbigniew Nowacki
-
-    Karol Podlewski
-
-
-'
+  m_Text: "Politechnika L\xF3dzka\n2018/2019\n\nPrzy wsp\xF3\u0142pracy z:\ndr inz.
+    Rafa\u0142 Szrajber\nmgr inz. Slawomir Opalka\n\n\n\nANCIENT YAKS\n\nEdyta Adamczyk\nKrzysztof
+    Barden\nGracjan Grala\nJustyna Hubert\nBartosz Jurczewski\nKonrad Kowalczyk\nZbigniew
+    Nowacki\nKarol Podlewski\n"
 --- !u!222 &2092623474
 CanvasRenderer:
   m_ObjectHideFlags: 0

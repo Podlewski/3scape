@@ -25915,7 +25915,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 2 | K
+  m_Text: Press K
 --- !u!222 &359215320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27542,7 +27542,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487621371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.540308, y: -5.078001, z: -9.8}
+  m_LocalPosition: {x: 10.377512, y: -5.078001, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 155895182}
@@ -29100,7 +29100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 1 | J
+  m_Text: Press J
 --- !u!222 &610368916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31676,7 +31676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pos. 3 | L
+  m_Text: Press L
 --- !u!222 &793044673
 CanvasRenderer:
   m_ObjectHideFlags: 0

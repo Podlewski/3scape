@@ -24,7 +24,7 @@ public class CollectTresure : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine(LateCall()); 
+            StartCoroutine(LateCall());
         }
     }
 
@@ -35,7 +35,8 @@ public class CollectTresure : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        AudioSource.PlayClipAtPoint(coins, gameObject.transform.position);
+        if (coins != null)
+            AudioSource.PlayClipAtPoint(coins, gameObject.transform.position);
         levelScore.score += tresureValue;
         Destroy(gameObject);
     }

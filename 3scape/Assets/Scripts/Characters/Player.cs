@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -116,6 +117,11 @@ public class Player : MonoBehaviour
         if (collision.tag == "Checkpoint")
         {
             respawnPoint = collision.transform.position;
+
+            foreach (var item in FindObjectsOfType<Player>().ToList())
+            {
+                item.respawnPoint = respawnPoint;
+            }
         }
     }
 

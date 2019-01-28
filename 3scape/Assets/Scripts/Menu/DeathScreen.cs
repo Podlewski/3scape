@@ -83,9 +83,6 @@ public class DeathScreen : MonoBehaviour
                 p.health = p.startHealth;
                 p.healthBarPicked.fillAmount = p.health / p.startHealth;
             }
-           
         }
-
-
     }
 }

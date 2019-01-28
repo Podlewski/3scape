@@ -27438,7 +27438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f9914de060e264b85a7a17dadd41c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1209252474}
   openSprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
   objects:
   - {fileID: 1186639840113104, guid: ddb1c78e464864546be40b1f50598c29, type: 2}
@@ -27567,6 +27567,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!212 &1209252474 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212123613294954270, guid: 38d22e1553bfb7943b9544b849dee0dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 898863355}
 --- !u!1 &1209305771
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,32 +45,46 @@ public class Swap : PlayerAbility
         return true;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (isAbilityReady() && isButtonDownProper() /*&& isNotActiveSkills() && (isIdle() || isRun())*/)
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
-
             newPosition = transform.position;
 
-            if (position == 1)
+            if (!GlobalVariable.direction)
             {
-                newPosition = positions[2];
+                switch (position)
+                {
+                    case 1:
+                        newPosition = positions[2];
+                        break;
+                    case 2:
+                        newPosition = positions[0];
+                        break;
+                    case 3:
+                        newPosition = positions[1];
+                        break;
+                }
             }
-
-            else if (position == 2)
+            else
             {
-                newPosition = positions[0];
-            }
-
-            else if (position == 3)
-            {
-                newPosition = positions[1];
+                switch (position)
+                {
+                    case 1:
+                        newPosition = positions[1];
+                        break;
+                    case 2:
+                        newPosition = positions[0];
+                        break;
+                    case 3:
+                        newPosition = positions[2];
+                        break;
+                }
             }
 
             transform.position = newPosition;
         }
-
         else
         {
             positions = getCurrentPossitions();
@@ -79,20 +93,19 @@ public class Swap : PlayerAbility
 
             currentCooldown -= Time.deltaTime;
         }
+
         position = GetComponent<PlayerMovement>().position;
     }
 
     private List<Vector3> getCurrentPossitions()
     {
-        List<Vector3> positions = new List<Vector3>();
+        List<Vector3> positions = new List<Vector3>
+        {
+            GameObject.Find("knight").transform.position,
+            GameObject.Find("archer").transform.position,
+            GameObject.Find("mage").transform.position
+        };
 
-        positions.Add(GameObject.Find("knight").transform.position);
-        positions.Add(GameObject.Find("archer").transform.position);
-        positions.Add(GameObject.Find("mage").transform.position);
-
-        positions = positions.OrderBy(v => v.x).ToList<Vector3>();
-        positions.Reverse();
-
-        return positions;
+        return positions.OrderBy(v => v.x).Reverse().ToList();
     }
 }

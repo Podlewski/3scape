@@ -24,11 +24,12 @@ public class SettingTraps : PlayerAbility
         skillImage = GameObject.Find("FirstSkillArcher").GetComponent<Image>();
         defaultColor = FirstSkillCoolDown.color;
         defaultDirection = FirstSkillCoolDown.fillClockwise;
+        GlobalVariable.maximumNumberOfTraps = maxNumberOfTraps;
     }
 
     void Update ()
     {
-        if (isAbilityReady() && isPositionProper() && isButtonPressedProper())
+        if (isAbilityReady() && isPositionProper() && isButtonPressedProper() && (GlobalVariable.maximumNumberOfTraps - GlobalVariable.numberOfTraps > 0))
         {
             skillImage.sprite = skillSprite;
             SetTrap();

@@ -6,7 +6,7 @@ public class Arrow : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    public int damage;
+    private int damage = 3;
 
     private float startTime;
 

@@ -1,0 +1,97 @@
+= 3scape - przegląd i planowanie sprintu: *Tydzień 16 - sesja*
+Ancient Yaks
+1.0.1, 2018-01-29
+:toc:
+:toc-title: Spis Treści
+:version-label: Wersja
+:icons: font
+
+== Obecne założenia gry
+
+3scape jest zręcznościowo-logiczną grą platformową, która działa na silniku Unity.
+
+Wcielamy się w grupę trzech bohaterów, którzy tylko dzięki swoim połączonym zdolnościom są w stanie pokonywać kolejne przeszkody:
+
+* wojownik - dysponuje on siłą, która okaże się nieoceniona nie tylko przy walce z wrogimi istotami czy niszczeniem przeszkód na drodze,
+* łotrzyk - zwinne palce, spryt, zręczność czy umiejętność strzelania z łuku będą niezwykle przydatne podczas przemierzania świata pełnego zasadzek i pułapek, 
+* czarodziej - wiedza oraz zdolności magiczne będą niejednokrotnie jedyną opcją ratunku dla naszych bohaterów.
+
+Bohaterowie podróżują razem, idąc jeden za drugim. W zależności od ich ustawienia w rzędzie, dysponują oni innymi umiejętnościami, które potrafią oddziaływać ze sobą w najróżniejszy sposób. Dobre przetasowywanie naszej drużyny to klucz do sukcesu w 3scape.
+
+=== Sterowanie
+
+* Poruszamy się bohaterami za pomocą klawiszy *W A D*, bądź *strzałek*.
+* Zmieniamy kolejność bohaterów za pomocą *Spacji* (każdy posuwa się od lewej do prawej, chyba, że dalej nie może - wtedy się cofa),
+* Klawisze *J K L* odpowiadają za umiejętności naszych bohaterów.
+* Klawisz *J* odpowiada za umiejętności na lewej pozycji:
+** Wojownik podniesie tarczę (wedle założeń - póki co tylko kolor) która sprawi, ze uchroni SIEBIE od obrażeń fizycznych.
+** Łotrzyk rozstawi pułapkę na przeciwników.
+** Mag będzie leczył drużynę.
+* Klawisz *K* odpowiada za umiejętności na środkowej pozycji:
+** Wojownik podniesie morale drużyny, przez co wszyscy będą w stanie poruszać się szybciej i skakać dalej.
+** Łotrzyk potrafi otworzyć skrzynię.
+** Mag sprawi, że drużyna otrzyma tymczasową odporność na magiczne obrażenia.
+* Klawisz *L* odpowiada za umiejętności na prawej pozycji:
+** Każda postać zaatakuje.
+* Klawisz *Esc* otwiera menu pauzy. 
+
+<<<
+== Plan sprintu (tydzień 15)
+
+=== Gracjan
+
+* [ ] Wprowadzenie przeciwnika - (szkieleta) łucznika.
+
+<<<
+== Plan sprintu (tydzień 16 - sesja)
+
+Są to zadania dobrowolne - nikt nie będzie miał do was pretensji za ich wykonanie. Nie trzeba też twardo trzymać się przypisać - to tylko propozycja kontynuowania pracy. Szczególnie warto, by ktoś zainteresował się bugami oznaczonymi jako [WAŻNE].
+
+=== Edyta
+
+* [ ] Odświeżenie pasków życia (po przywróceniu ich do maksymalnego poziomu) po checkpoincie.
+* [ ] Informacje o zapisie (Tekst na ekranie "Checkpoint reached!")
+
+=== Krzysiek
+
+* [ ] Poprawa fizyki przy kolizji z przeciwnikami.
+
+=== Gracjan
+
+* [ ] [WAŻNE] Bug: kiedy bohaterowie są zwróceni w lewo, tylko 2 oraz 3 postać się zamieniają w kolejności. 
+
+=== Justyna
+
+* [ ] Otwieranie skrzynek łotrzyka: znikanie paska kiedy umiejętność nie zostanie dokończona.
+* [ ] Poziom 2: rozwiązanie problemu z ograniczoną widocznością w dolnej części ekranu (czy bohaterowie mają skoczyć daleko, czy może iść w dół).
+
+=== Bartosz
+ 
+* [ ] Dodanie tła przy wideo (np. las).
+* [ ] Dodanie informacji do kontaktu (np. mailto) dla osób chętnych.
+
+=== Konrad
+
+* [ ] HUD: ujednolicenie wyglądu (slot na klucze i ilość trapów).
+* [ ] [WAŻNE] HUD: nieaktywne ikony dla umiejętności ataków zasięgowych.
+
+=== Zbyszek
+
+* [ ] Ograniczenie bluru przy umiejętności Rycerza.
+
+=== Karol
+
+* [ ] [WAŻNE] Dokończenie poziomu tutorialowego (po dodaniu wroga łucznika).
+* [ ] [WAŻNE] Dopracowanie creditsów/napisów końcowych (dodanie ich po ukończeniu 2 poziomu?).
+* [ ] Pozbycie się kolorowych poświat podczas używania umiejętności. 
+* [ ] Dodanie linku do strony z poziomu menu. 
+
+=== Ktokolwiek
+
+* [ ] [WAŻNE] Dopracowanie opisu gry.
+* [ ] [WAŻNE] Balans gry.
+* [ ] Usunięcie licznika czasu.
+* [ ] Paski życia: Zmniejszenie ich nad bohaterami (nigdy nie będą się nachodzić na siebie).
+* [ ] Paski życia: poprawa czytelności na ciemnym tle.
+* [ ] HUD: podświetlanie dostępnych umiejętności (dostępnych - możliwych do użycia przy takim ustawieniu drużyny).
+* [ ] Bug: Skrzynia potrafi się nie otworzyć, kiedy wcześniej wielokrotnie próbowano ją otworzyć.

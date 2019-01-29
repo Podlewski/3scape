@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
                 horizontalMove = 0;
             }
         }
-        catch (NullReferenceException) 
+        catch (NullReferenceException)
         {
 
         }

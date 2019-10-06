@@ -325,3 +325,12 @@ header.masthead p {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(28, 117, 117, 0.5) !important;
     box-shadow: 0 0 0 0.2rem rgba(28, 117, 117, 0.5) !important;
 }
+
+.portfolio{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.my-5{
+    padding-bottom: 5rem !important;
+}
